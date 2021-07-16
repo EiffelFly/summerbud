@@ -4,7 +4,7 @@ import SectionContainer from '../components/SectionContainer'
 export default function Home() {
   return (
     <div
-      className="bg-sd-brwhite w-screen h-screen"
+      className="bg-sd-brwhite dark:bg-sd-brblack w-screen h-screen"
     >
       <>
         <SectionContainer>
