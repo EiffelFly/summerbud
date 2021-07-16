@@ -3,9 +3,9 @@ import CustomLink from "../CustomLink";
 
 const AboutButton = () => {
   return (
-    <CustomLink href="/about">
+    <CustomLink href="/series">
       <a className="py-1 font-sans font-semibold text-xl text-sd-black link-underline align-baseline">
-        About
+        Series
       </a>
     </CustomLink>
   );
