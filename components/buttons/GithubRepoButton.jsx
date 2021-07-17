@@ -6,11 +6,7 @@ const GithubRepoButton = () => {
     <CustomLink
       href="https://github.com/EiffelFly"
     >
-      <a
-        className="flex p-2"
-      >
-        <GithubIcon size={5} />
-      </a>
+      <GithubIcon size={5} />
     </CustomLink>
   )
 };

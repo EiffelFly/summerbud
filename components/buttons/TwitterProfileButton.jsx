@@ -6,11 +6,7 @@ const TwitterProfileButton = () => {
     <CustomLink
       href="https://twitter.com/EiffelFly"
     >
-      <a
-        className="flex p-2"
-      >
-        <TwitterIcon size={5} />
-      </a>
+      <TwitterIcon size={5} />
     </CustomLink>
   )
 };
