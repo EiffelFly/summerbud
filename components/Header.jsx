@@ -2,7 +2,6 @@ import SummerbudAvatar from "./SummerbudAvatar";
 import AboutButton from "./buttons/AboutButton";
 import SeriesButton from "./buttons/SeriesButton"
 import ThemeToggle from "./buttons/ThemeToggle";
-import SunFillIcon from "./icons/SunFillIcon";
 
 const Header = () => {
   return (
