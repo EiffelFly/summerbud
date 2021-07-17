@@ -1,6 +1,6 @@
 import React from "react";
 
-// w-5 h-
+// w-5 h-5
 
 const MoonStarsFillIcon = ({ size }) => {
   const iconStyle = `fill-current h-${size} w-${size} m-auto text-sd-black dark:text-sd-white`;
