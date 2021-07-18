@@ -28,12 +28,12 @@ module.exports = {
             color: theme("colors.sd-black"),
             h1: {
               fontWeight: "800",
-              letterSpacing: theme("letterSpacing.tight"),
+              letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
             },
             h2: {
               fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
+              letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
             },
             h3: {
@@ -84,12 +84,12 @@ module.exports = {
             color: theme("colors.sd-white"),
             h1: {
               fontWeight: "800",
-              letterSpacing: theme("letterSpacing.tight"),
+              letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-white"),
             },
             h2: {
               fontWeight: "700",
-              letterSpacing: theme("letterSpacing.tight"),
+              letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brwhite"),
             },
             h3: {
