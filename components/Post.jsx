@@ -1,4 +1,5 @@
 import SectionContainer from "../components/SectionContainer"
+import Footer from "./Footer"
 import Header from "./Header"
 
 const Post = ({ children, meta }) => {
@@ -8,11 +9,10 @@ const Post = ({ children, meta }) => {
     >
       <SectionContainer>
         <Header />
-      </SectionContainer>
-      <SectionContainer>
-        <article className="prose prose-xl prose-indigo py-12 dark:prose-dark">
+        <article className="prose prose-lg py-12 dark:prose-dark">
           {children}
         </article>
+        <Footer />
       </SectionContainer>
     </div>
   )
