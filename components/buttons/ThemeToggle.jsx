@@ -1,10 +1,10 @@
 import React from "react";
-import { ThemeContext } from "../../theme/ThemeContext";
+import { ThemeContext } from "../../contexts/ThemeContext";
 import MoonStarsFillIcon from "../icons/MoonStarsFillIcon";
 import SunFillIcon from "../icons/SunFillIcon";
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = React.useContext(ThemeContext);
+  const [ theme, setTheme ] = React.useContext(ThemeContext);
 
   return (
     <div
