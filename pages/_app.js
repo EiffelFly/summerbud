@@ -1,7 +1,7 @@
 import Head from "next/head";
 import "../styles/tailwind.css";
 import { MDXProvider } from "@mdx-js/react";
-import { ThemeProvider } from "../context/ThemeContext";
+import { ThemeProvider } from "../contexts/ThemeContext";
 import { LanguageProvider } from "../contexts/LanguageContext";
 
 function MyApp({ Component, pageProps }) {
