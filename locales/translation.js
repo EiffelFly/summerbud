@@ -1,14 +1,14 @@
 const translation = {
   "en": {
     components: {
-      AboutButton: "About",
-      SeriesButton: "Series"
+      aboutButton: "About",
+      seriesButton: "Series"
     }
   },
   "zh-tw": {
     components: {
-      AboutButton: "關於我",
-      SeriesButton: "系列文章"
+      aboutButton: "關於我",
+      seriesButton: "系列文章"
     }
   }
 };

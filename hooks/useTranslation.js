@@ -10,13 +10,19 @@ import LangStrings from "../locales/translation";
 const useTranslation = () => {
   const [locale, setLocale] = useContext(LanguageContext);
 
-  function t(key) {
-    if (!LangStrings[locale][key]) {
+  const t = (keys) => {
+    const keyList = keys.split(".");
+
+    const value = keyList.reduce((o, i) => o[i], LangStrings[locale]);
+
+    if (!value) {
       console.warn(`No string '${key}' for locale '${locale}'`);
     }
 
-    return LangStrings[locale][key] || LangStrings[defaultLocale][key] || "";
-  }
+    return (
+      value || keyList.reduce((o, i) => o[i], LangStrings[defaultLocale]) || ""
+    );
+  };
 
   return { t, locale, setLocale, locales };
 };
