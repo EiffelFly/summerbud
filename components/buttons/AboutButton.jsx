@@ -7,7 +7,7 @@ const AboutButton = () => {
 
   return (
     <CustomLink href={`/${locale}/about`}>
-      <div className="py-1 font-sans font-semibold text-xl text-sd-black dark:text-sd-white link-underline align-baseline">
+      <div className="py-1 font-sans cursor-pointer font-semibold text-xl text-sd-black dark:text-sd-white link-underline align-baseline">
         {t("components.aboutButton")}
       </div>
     </CustomLink>
