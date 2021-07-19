@@ -1,9 +1,10 @@
-import Post from "../../../components/Post"
 
-export const meta = {
-  lang: "en",
-  title: "About the author of Summerbud's writing"
-};
+---
+lang: "en"
+title: "About the author of Summerbud's writing"
+components: ["../../../components/Post.jsx"]
+---
+
 
 # Hi, my name is Chiu po chun
 
@@ -31,4 +32,3 @@ and my love Lucy.
 - Writing
   - The builder's life
 
-export default ({ children }) => <Post meta={meta}>{children}</Post>;
