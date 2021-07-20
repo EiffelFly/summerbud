@@ -14,14 +14,16 @@ export function LanguageProvider({ children }) {
       return;
     }
 
-    const language = localStorage.getItem("lang") || locale;
-    setLocale(language);
+    // const language = localStorage.getItem("lang") || locale;
+    // setLocale(language);
+
+    console.log("hello context locale", locale)
 
     if ( query.lang ){
       setLocale(query.lang)
     }
 
-  }, [locale]);
+  }, []);
 
   return (
     <LanguageContext.Provider value={[locale, setLocale]}>

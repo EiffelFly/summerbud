@@ -9,7 +9,7 @@ const TranslationDropdown = ({ className }) => {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   useOnClickOutside(ref, () => setIsOpen(false));
-  const { setLocale } = useTranslation();
+  const { locale, setLocale } = useTranslation();
   const router = useRouter();
   console.log(router);
 
@@ -30,7 +30,10 @@ const TranslationDropdown = ({ className }) => {
             <button
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
-                setLocale("zh-tw");
+                if (locale !== "zh-tw"){
+                  setLocale("zh-tw");
+                }
+                
                 setIsOpen(false);
                 console.log(router.query.lang)
                 if (router.query.lang && router.query.lang === "en") {
@@ -44,7 +47,10 @@ const TranslationDropdown = ({ className }) => {
             <button
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
-                setLocale("en");
+                if (locale !== "en"){
+                  setLocale("en");
+                }
+                
                 setIsOpen(false);
                 if (router.query.lang && router.query.lang === "zh-tw") {
                   url = url.replace("[lang]", "en");
