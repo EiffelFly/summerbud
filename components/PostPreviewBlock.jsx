@@ -1,5 +1,5 @@
 
-const PostCard = ({ title, description }) => {
+const PostPreviewBlock = ({ title, description }) => {
   return (
     <div
       className="flex flex-col gap-y-6 rounded-md bg-sd-white dark:bg-sd-black p-8"
@@ -18,4 +18,4 @@ const PostCard = ({ title, description }) => {
   )
 }
 
-export default PostCard;
+export default PostPreviewBlock;
