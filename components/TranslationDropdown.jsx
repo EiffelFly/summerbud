@@ -3,6 +3,7 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import TranslationIcon from "./icons/TranslationIcon";
 import useTranslation from "../hooks/useTranslation";
 import { useRouter } from "next/dist/client/router";
+import { route } from "next/dist/next-server/server/router";
 
 const TranslationDropdown = ({ className }) => {
   const ref = useRef(null);
@@ -30,8 +31,12 @@ const TranslationDropdown = ({ className }) => {
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
                 setLocale("zh-tw");
-                url = url.replace("[lang]", "zh-tw");
-                router.push(url);
+                setIsOpen(false);
+                console.log(router.query.lang)
+                if (router.query.lang && router.query.lang === "en") {
+                  url = url.replace("[lang]", "zh-tw");
+                  router.push(url);
+                }
               }}
             >
               中文
@@ -40,8 +45,11 @@ const TranslationDropdown = ({ className }) => {
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
                 setLocale("en");
-                url = url.replace("[lang]", "en");
-                router.push(url);
+                setIsOpen(false);
+                if (router.query.lang && router.query.lang === "zh-tw") {
+                  url = url.replace("[lang]", "en");
+                  router.push(url);
+                }
               }}
             >
               English
