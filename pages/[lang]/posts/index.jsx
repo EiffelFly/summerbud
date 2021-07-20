@@ -1,14 +1,10 @@
-import Header from "../../components/Header";
-import SectionContainer from "../../components/SectionContainer";
-import useTranslation from "../../hooks/useTranslation";
-import { getAllSlugs } from "../../lib/files";
-import { getSortedPostsData } from "../../lib/files";
-import Footer from "../../components/Footer";
-import PostPreviewList from "../../components/PostPreviewList";
+import Header from "../../../components/Header";
+import SectionContainer from "../../../components/SectionContainer";
+import { getSortedPostsData } from "../../../lib/files";
+import Footer from "../../../components/Footer";
+import PostPreviewList from "../../../components/PostPreviewList";
 
 const Posts = ({ allPostsData, locale }) => {
-  const { t } = useTranslation();
-
   const postsData = allPostsData.filter((post) => post.lang === locale);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
@@ -23,7 +19,6 @@ const Posts = ({ allPostsData, locale }) => {
 
 export const getStaticProps = async ({ params }) => {
   const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
   return {
     props: {
       allPostsData,
@@ -32,11 +27,12 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = () => {
-  const paths = getAllSlugs("post");
-  console.log(paths);
+export const getStaticPaths = async () => {
   return {
-    paths,
+    paths: [
+      { params: { lang: "en" }},
+      { params: { lang: "zh-tw" }},
+    ],
     fallback: false,
   };
 };
