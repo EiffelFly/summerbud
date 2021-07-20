@@ -7,7 +7,7 @@ const ThemeToggle = () => {
   const [ theme, setTheme ] = React.useContext(ThemeContext);
 
   return (
-    <div
+    <button
       className="rounded-full p-2 flex "
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
@@ -15,7 +15,7 @@ const ThemeToggle = () => {
         ? <SunFillIcon size={5} />
         : <MoonStarsFillIcon size={5} />
       }
-    </div>
+    </button>
   );
 };
 
