@@ -8,6 +8,7 @@ const PostPreviewList = ({ posts }) => {
           key={post.slug}
           title={post.title}
           description={post.description}
+          tags={post.tags}
         />
       ))}
     </div>

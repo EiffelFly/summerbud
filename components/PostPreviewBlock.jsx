@@ -1,19 +1,22 @@
 
-const PostPreviewBlock = ({ title, description }) => {
+import TagListRow from "./TagListRow";
+
+const PostPreviewBlock = ({ title, description, tags }) => {
   return (
     <div
-      className="flex flex-col gap-y-6 rounded-md bg-sd-white dark:bg-sd-black p-8"
+      className="flex flex-col rounded-md bg-sd-white dark:bg-sd-black p-8"
     >
       <h2
-        className="font-sans font-semibold text-2xl text-sd-black dark:text-sd-white"
+        className="mb-6 font-sans font-semibold text-2xl text-sd-black dark:text-sd-white"
       >
         {title}
       </h2>
       <p
-        className="font-sans font-normal text-base text-sd-brgreen dark:text-sd-brcyan"
+        className="mb-6 font-sans font-normal text-base text-sd-brgreen dark:text-sd-brcyan"
       >
         {description}
       </p>
+      <TagListRow tags={tags} />
     </div>
   )
 }
