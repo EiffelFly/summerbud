@@ -1,5 +1,5 @@
-import Header from '../components/Header'
-import SectionContainer from '../components/SectionContainer'
+import Header from '../../components/Header'
+import SectionContainer from '../../components/SectionContainer'
 
 export default function Home() {
   return (

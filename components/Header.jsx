@@ -6,10 +6,11 @@ import PostsButton from "./buttons/PostsButton";
 import CustomLink from "./CustomLink";
 import useTranslation from "../hooks/useTranslation";
 import TranslationDropdown from "./TranslationDropdown";
-
+import { useRouter } from "next/dist/client/router";
 const Header = () => {
   const title = "{ summerbud }";
   const { locale } = useTranslation();
+  const { route } = useRouter();
 
   return (
     <header className="flex flex-row py-8">
@@ -29,7 +30,7 @@ const Header = () => {
         <div
           className="flex flex-row gap-x-4 ml-8"
         >
-          <TranslationDropdown />
+          { !route.includes("posts") && <TranslationDropdown />}
           <ThemeToggle />
         </div>
       </div>

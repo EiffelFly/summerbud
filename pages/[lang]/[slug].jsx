@@ -10,7 +10,9 @@ const MDXPages = ({ code }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
-      <SectionContainer>
+      <SectionContainer
+        gap="gap-y-16"
+      >
         <Header />
         <article className="prose prose-lg py-12 dark:prose-dark">
           <Component components={{ CustomLink: CustomLink }} />
@@ -32,6 +34,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = () => {
   const paths = getAllSlugs("page");
+  console.log(paths)
   return {
     paths,
     fallback: false,
