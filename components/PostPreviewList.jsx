@@ -1,6 +1,6 @@
 import PostPreviewBlock from "./PostPreviewBlock";
 
-const PostPreviewList = ({ posts }) => {
+const PostPreviewList = ({ posts, locale }) => {
   return (
     <div className="flex flex-col">
       {posts.map((post) => (
@@ -9,6 +9,8 @@ const PostPreviewList = ({ posts }) => {
           title={post.title}
           description={post.description}
           tags={post.tags}
+          slug={post.slug}
+          locale={locale}
         />
       ))}
     </div>
