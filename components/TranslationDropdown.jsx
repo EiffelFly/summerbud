@@ -11,8 +11,7 @@ const TranslationDropdown = ({ className }) => {
   useOnClickOutside(ref, () => setIsOpen(false));
   const { locale, setLocale } = useTranslation();
   const router = useRouter();
-  console.log(router);
-
+  
   let url = router.route;
 
   if (router.query.slug) {

@@ -7,20 +7,19 @@ export const LanguageContext = createContext([]);
 
 export function LanguageProvider({ children }) {
   const [locale, setLocale] = useState("zh-tw");
-  const { query } = useRouter()
+  const router = useRouter()
 
   useEffect(() => {
     if (!window) {
       return;
     }
 
-    // const language = localStorage.getItem("lang") || locale;
-    // setLocale(language);
+    const language = localStorage.getItem("lang") || locale;
+    setLocale(language);
 
-    console.log("hello context locale", locale)
-
-    if ( query.lang ){
-      setLocale(query.lang)
+    if ( router.query["lang"] ){
+      console.log("hello", router.query["lang"])
+      setLocale(router.query["lang"])
     }
 
   }, []);
