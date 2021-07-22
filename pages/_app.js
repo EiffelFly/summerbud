@@ -3,6 +3,8 @@ import "../styles/tailwind.css";
 import { MDXProvider } from "@mdx-js/react";
 import { ThemeProvider } from "../contexts/ThemeContext";
 import { LanguageProvider } from "../contexts/LanguageContext";
+import { DefaultSeo } from "next-seo";
+import SEO from "../lib/next-seo.config"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
               name="viewport"
             />
           </Head>
+          <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </MDXProvider>
       </ThemeProvider>
