@@ -7,6 +7,7 @@ import CustomLink from "./CustomLink";
 import useTranslation from "../hooks/useTranslation";
 import TranslationDropdown from "./TranslationDropdown";
 import { useRouter } from "next/dist/client/router";
+import LessenLearnedButton from "./buttons/LessenLearnedButton";
 const Header = () => {
   const title = "{ summerbud }";
   const { locale } = useTranslation();
@@ -27,6 +28,7 @@ const Header = () => {
         <AboutButton />
         <SeriesButton />
         <PostsButton />
+        <LessenLearnedButton />
         <div
           className="flex flex-row gap-x-4 ml-8"
         >
