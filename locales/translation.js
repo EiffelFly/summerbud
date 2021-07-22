@@ -7,7 +7,8 @@ const translation = {
       aboutButton: "About",
       seriesButton: "Series",
       postsButton: "Posts",
-      lessenLearnedButton: "L-L"
+      lessenLearnedButton: "L-L",
+      snippetButton: "Snippet"
     },
     pages: {
       main: {
@@ -24,7 +25,8 @@ const translation = {
       aboutButton: "關於我",
       seriesButton: "系列",
       postsButton: "文章",
-      lessenLearnedButton: "L-L"
+      lessenLearnedButton: "L-L",
+      snippetButton: "Snippet"
     },
     pages: {
       main: {

@@ -8,6 +8,7 @@ import useTranslation from "../hooks/useTranslation";
 import TranslationDropdown from "./TranslationDropdown";
 import { useRouter } from "next/dist/client/router";
 import LessenLearnedButton from "./buttons/LessenLearnedButton";
+import SnippetButton from "./buttons/SnippetButton";
 const Header = () => {
   const title = "{ summerbud }";
   const { locale } = useTranslation();
@@ -29,6 +30,7 @@ const Header = () => {
         <SeriesButton />
         <PostsButton />
         <LessenLearnedButton />
+        <SnippetButton />
         <div
           className="flex flex-row gap-x-4 ml-8"
         >
