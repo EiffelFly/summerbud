@@ -2,7 +2,7 @@ import PostPreviewBlock from "./PostPreviewBlock";
 
 const PostPreviewList = ({ posts, locale }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-y-12">
       {posts.map((post) => (
         <PostPreviewBlock
           key={post.slug}
