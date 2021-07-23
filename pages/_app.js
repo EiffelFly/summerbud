@@ -4,9 +4,22 @@ import { MDXProvider } from "@mdx-js/react";
 import { ThemeProvider } from "../contexts/ThemeContext";
 import { LanguageProvider } from "../contexts/LanguageContext";
 import { DefaultSeo } from "next-seo";
-import SEO from "../lib/next-seo.config"
+import SEO from "../lib/next-seo.config";
+import { useRouter } from "next/dist/client/router";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <LanguageProvider>
       <ThemeProvider>
