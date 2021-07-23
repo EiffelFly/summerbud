@@ -6,7 +6,7 @@ const MainPageHeadline = () => {
 
   return (
     <div
-      className="mx-auto font-sans font-bold text-5xl text-sd-black dark:text-sd-white text-center"
+      className="mx-auto font-sans font-bold text-3xl md:text-5xl text-sd-black dark:text-sd-white text-center"
     >
       {t("pages.main.headline")}
     </div>
