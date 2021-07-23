@@ -7,6 +7,7 @@ import { DefaultSeo } from "next-seo";
 import SEO from "../lib/next-seo.config";
 import { useRouter } from "next/dist/client/router";
 import { useEffect } from "react";
+import * as gtag from "../lib/gtag"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
