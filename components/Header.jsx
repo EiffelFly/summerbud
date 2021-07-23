@@ -10,13 +10,17 @@ import { useRouter } from "next/dist/client/router";
 import LessenLearnedButton from "./buttons/LessenLearnedButton";
 import SnippetButton from "./buttons/SnippetButton";
 import MapIcon from "./icons/MapIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import XIcon from "./icons/XIcon";
 const Header = () => {
   const title = "{ summerbud }";
   const { locale } = useTranslation();
-  const { route } = useRouter();
+  const { route, asPath } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false)
+  }, [asPath])
 
   return (
     <header className="flex flex-col xl:flex-row py-8">
