@@ -19,13 +19,13 @@ const TranslationDropdown = ({ className }) => {
   }
 
   return (
-    <div className={"flex flex-col " + className}>
+    <div className={"flex flex-row lg:flex-col " + className}>
       <button className="p-2" onClick={() => setIsOpen(true)}>
         <TranslationIcon size={5} />
       </button>
       {isOpen && (
         <div className="relative" ref={ref}>
-          <div className="flex flex-col fixed top-20 w-36 border bg-sd-brwhite dark:bg-sd-brblack border-sd-brgreen dark:border-sd-brcyan rounded-md">
+          <div className="flex flex-col lg:fixed lg:top-20 w-36 border bg-sd-brwhite dark:bg-sd-brblack border-sd-brgreen dark:border-sd-brcyan rounded-md">
             <button
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
