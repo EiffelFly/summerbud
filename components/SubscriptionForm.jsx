@@ -61,7 +61,7 @@ const SubscriptionForm = () => {
         {t("components.subscriptionFormTitle")}
       </div>
       <div className="mb-4">{t("components.subscriptionFormDescription")}</div>
-      <div className="flex flex-row gap-x-4 mb-4">
+      <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-4 mb-4">
         <input
           className="px-2 py-1.5 flex-1 rounded-md bg-sd-brcyan bg-opacity-25 dark:bg-sd-brgreen dark:bg-opacity-25 text-sd-black dark:text-sd-white dark:focus-visible:ring-0 dark:focus-visible:border-sd-brcyan"
           aria-label="Email for newsletter"
