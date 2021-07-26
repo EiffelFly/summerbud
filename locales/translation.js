@@ -14,6 +14,7 @@ const translation = {
       subscriptionWelcomeText: "Cheers! Welcome aboard.",
       subscriptionButton: "Subscribe",
       subscriptionClarification: "I'll only send emails when new content is posted. No spam.",
+      subscriptionDuplicationWarning: "You already subscribed to my mailing list.",
     },
     pages: {
       main: {
@@ -37,6 +38,7 @@ const translation = {
       subscriptionWelcomeText: "Cheers! 歡迎加入",
       subscriptionButton: "Subscribe",
       subscriptionClarification: "我只會在新內容刊登時寄送信件給您，拒絕垃圾信件。",
+      subscriptionDuplicationWarning: "這個電子信箱已經訂閱。",
     },
     pages: {
       main: {

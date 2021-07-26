@@ -2,10 +2,12 @@ import { useRef, useState } from "react";
 import useTranslation from "../hooks/useTranslation";
 import CheckCircleFillIcon from "./icons/CheckCircleFillIcon";
 import { gaHelper } from "../lib/gtag";
+import ExclamationCircleFillIcon from "./icons/ExclamationCircleFillIcon";
 
 const SubscriptionForm = () => {
   const emailAddresss = useRef(null);
   const [success, setSuccess] = useState(false);
+  const [warning, setWarning] = useState(false);
   const { t } = useTranslation();
 
   const [message, setMessage] = useState(
@@ -29,17 +31,24 @@ const SubscriptionForm = () => {
     const { error } = await res.json();
 
     if (error) {
-      setMessage(error);
+      if (error === "MemberExists") {
+        setMessage(t("components.subscriptionDuplicationWarning"));
+      } else {
+        setMessage(error);
+      }
+
+      setWarning(true);
       return;
     }
 
     emailAddresss.current.value = "";
+    setWarning(false);
     setSuccess(true);
     setMessage(t("components.subscriptionWelcomeText"));
     gaHelper.engage({
       action: "join_newsletter",
-      label: "core"
-    })
+      label: "core",
+    });
   };
 
   return (
@@ -67,19 +76,35 @@ const SubscriptionForm = () => {
         </button>
       </div>
 
-      <div className="flex flex-row text-left">
-        {success && (
-          <div className="flex mr-4">
-            <CheckCircleFillIcon
-              size={4}
-              color={"text-sd-yellow dark:text-sd-yellow"}
-            />
+      {warning ? (
+        <div className="flex flex-row text-left gap-x-4">
+          <div className="flex">
+            <ExclamationCircleFillIcon size={4} color={"text-red-500"} />
           </div>
-        )}
-        <div className={success ? "text-sd-yellow" : "text-sd-brcyan"}>
-          {message}
+          <div className="text-red-500 font-sans font-semibold">{message}</div>
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-row text-left gap-x-4">
+          {success && (
+            <div className="flex">
+              <CheckCircleFillIcon
+                size={4}
+                color={"text-sd-yellow dark:text-sd-yellow"}
+              />
+            </div>
+          )}
+          <div
+            className={
+              success
+                ? "text-sd-yellow "
+                : "text-sd-brcyan " 
+                + "font-sans font-normal"
+            }
+          >
+            {message}
+          </div>
+        </div>
+      )}
     </form>
   );
 };

@@ -20,6 +20,10 @@ export default async (req, res) => {
 
     return res.status(201).json({ error: '' });
   } catch (error) {
+    console.log(error.response.body)
+    if ( error.response.body.title === "Member Exists"){
+      return res.status(500).json({ error: "MemberExists" });
+    }
     return res.status(500).json({ error: error.message || error.toString() });
   }
 };
