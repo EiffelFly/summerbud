@@ -7,6 +7,7 @@ import CustomLink from "../../../components/CustomLink";
 import Footer from "../../../components/Footer";
 import PostTitle from "../../../components/PostTitle";
 import PostSeo from "../../../components/PostSeo";
+import SubscriptionForm from "../../../components/SubscriptionForm";
 
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -18,7 +19,9 @@ const MDXPages = ({ code, metadata }) => {
         <article className="prose prose-lg py-12 dark:prose-dark">
           <PostTitle title={metadata.title} tags={metadata.tags} className={"mb-20"} />
           <Component components={{ CustomLink: CustomLink }} />
+          <SubscriptionForm />
         </article>
+        
         <Footer />
       </SectionContainer>
     </div>
