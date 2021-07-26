@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import useTranslation from "../hooks/useTranslation";
 import CheckCircleFillIcon from "./icons/CheckCircleFillIcon";
 import { gaHelper } from "../lib/gtag";
-import ExclamationCircleFillIcon from "./icons/ExclamationCircleFillIcon";
+import SubscriptionWarningMessage from "./SubscriptionWarningMessage";
+import SubscriptionSuccessMessage from "./SubscriptionSuccessMessage";
 
 const SubscriptionForm = () => {
   const emailAddresss = useRef(null);
@@ -77,33 +78,11 @@ const SubscriptionForm = () => {
       </div>
 
       {warning ? (
-        <div className="flex flex-row text-left gap-x-4">
-          <div className="flex">
-            <ExclamationCircleFillIcon size={4} color={"text-red-500"} />
-          </div>
-          <div className="text-red-500 font-sans font-semibold">{message}</div>
-        </div>
+        <SubscriptionWarningMessage>{message}</SubscriptionWarningMessage>
       ) : (
-        <div className="flex flex-row text-left gap-x-4">
-          {success && (
-            <div className="flex">
-              <CheckCircleFillIcon
-                size={4}
-                color={"text-sd-yellow dark:text-sd-yellow"}
-              />
-            </div>
-          )}
-          <div
-            className={
-              success
-                ? "text-sd-yellow "
-                : "text-sd-brcyan " 
-                + "font-sans font-normal"
-            }
-          >
-            {message}
-          </div>
-        </div>
+        <SubscriptionSuccessMessage success={success}>
+          {message}
+        </SubscriptionSuccessMessage>
       )}
     </form>
   );
