@@ -13,7 +13,7 @@ const CustomLink = ({ href, children, ...props }) => {
     const fullPath = "/" + locale + href;
     return (
       <Link href={fullPath} {...props}>
-        {children}
+        {children} 
       </Link>
     );
   }

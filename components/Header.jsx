@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header className="flex flex-col xl:flex-row py-8">
-      <div className="flex flex-row mb-8">
+      <div className="flex flex-row mb-8 md:mb-0">
         <CustomLink href={"/"}>
           <a className="flex flex-row items-center mr-auto gap-x-6">
             <SummerbudAvatar size="45" />
