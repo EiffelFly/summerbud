@@ -115,8 +115,14 @@ module.exports = {
               color: theme("colors.sd-brwhite"),
             },
             code: {
+              fontWeight: 600,
               color: theme("colors.sd-brwhite"),
-              backgroundColor: theme("colors.sd-black"),
+              backgroundColor: theme("colors.green.900"),
+              borderRadius: "0.5rem",
+              paddingLeft: "0.5rem",
+              paddingRight: "0.5rem",
+              paddingTop: "0.125rem",
+              paddingBottom: "0.125rem"
             },
             a: {
               color: theme("colors.indigo.400"),
@@ -125,6 +131,10 @@ module.exports = {
             pre: {
               color: theme("colors.sd-white"),
               backgroundColor: theme("colors.sd-black"),
+              code: {
+                color: theme("colors.sd-brwhite"),
+                backgroundColor: theme("colors.sd-black")
+              }
             },
             blockquote: {
               color: theme("colors.sd-brwhite"),
