@@ -5,24 +5,26 @@ series: "blogging-with-nextjs"
 tags: ["Blog", "Next.js", "Newsletter"]
 components: []
 hasTranslation: false
-publishedAt: 
-lastModified: 
+publishedAt:
+lastModified:
 description: 這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能
 ---
 
 ## 大綱
 
 1. 設定環境參數
-1. 獲得 MailChimp 重要資料
-2. 設立環境參數
-3. Subscription form 設計
-4. 使用 API route 發送請求
-5. 錯誤處理
-6. 總結
+1. 獲得 Mailchimp 重要資料
+1. 設立環境參數
+1. Subscription form 設計
+1. 使用 API route 發送請求
+1. 錯誤處理
+1. 總結
 
 Next.js 的架構非常有助於我們串接 API 的服務，其中的原因在於它具有在伺服器端預設出 API 端點的功能。透過它我們可以架出類似 AWS Lambda function 的 Serverless function 來乘載實際上請求第三方服務的函式，不僅減少使用者端的運算與 Bundle 大小，更可以運用伺服器端的環境變數來儲藏敏感的資料。
 
 基於介面簡潔，兩千筆訂閱數以內免費、有完善的 API、開發者文件完整等等原因，第三方的電子信管理程式我選擇 Mailchimp。如果你有付費訂閱需求的話，可以考慮 ButtonDown [^1]。
+
+---
 
 ## 優勢
 
@@ -31,8 +33,11 @@ Next.js 的架構非常有助於我們串接 API 的服務，其中的原因在�
 - 使用 Vercel deploy 非常省時省力
 - 所有函式在同一個 Repo 裡共同管理
 
+---
+
 ## 設定環境參數
-由於以下資料大多屬於個人機密資料，所以我們需要開環境參數來儲存它。於根目錄處設立 `.env.local`，如果 NEXT 有讀取到，它會於 npm run dev 的 terminal 顯示以下訊息。 `info  - Loaded env from <root_folder>/.env.local`
+
+由於以下資料大多屬於個人機密資料，所以我們需要開環境參數來儲存它。於根目錄處設立 `.env.local`，如果 NEXT 有讀取到，它會於 npm run dev 的 terminal 顯示以下訊息。 `info - Loaded env from <root_folder>/.env.local`
 
 如果你是使用 `npx create-next-app` 開局，.gitignore 已經預設有 .env.local。若不是使用 npx 請記得把 .env.local 加入 .gitignore 的清單之中。
 
@@ -41,6 +46,8 @@ MAILCHIMP_API_KEY=
 MAILCHIMP_API_SERVER=
 MAILCHIMP_LIST_ID=
 ```
+
+---
 
 ## 獲得 Mailchimp 重要資料
 
@@ -59,19 +66,155 @@ API_KEY 務必保密，它與帳密等價，可以調用所有 Mailchimp 的服�
 - 文件連結[^3]
 
 ### SERVER_PREFIX
+
 這代表你的伺服器位置，請查看登入 Dashboard 時的 URL。以 `https://us19.admin.mailchimp.com/` 為例，你的 `SERVER_PREFIX = us19`
 
 - 文件連結[^4]
 
+---
 
+## 設置 API route
 
+首先安裝 mailchimp 的 SDK `npm install @mailchimp/mailchimp_marketing`。接著建立 `<root_folder>/api/subscribe.js` 的檔案，如此一來 Next.js 會自動幫你在 `https://<domain_name>/api/subscribe` 建構 api 端點。是不是超方便啊。
 
+```js
+import mailchimp from '@mailchimp/mailchimp_marketing';
 
+mailchimp.setConfig({
+  apiKey: process.env.MAILCHIMP_API_KEY
+  server: process.env.MAILCHIMP_API_SERVER // e.g. us19
+});
+
+export default async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  try {
+    await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
+      email_address: email,
+      status: 'subscribed'
+    });
+
+    return res.status(201).json({ error: '' });
+  } catch (error) {
+    // Error handling 會放在最後一個章節解釋
+    if ( error.response.body.title === "Member Exists"){
+      return res.status(500).json({ error: "MemberExists" });
+    }
+    return res.status(500).json({ error: error.message || error.toString() });
+  }
+};
+```
+
+---
+
+## Subscription form 設計
+
+這裡就是你發揮個人特色之處了，我只會大概羅列應該包含的元素。
+
+```jsx
+const SubscriptionForm = () => {
+  const emailAddresss = useRef(null);
+  const [message, setMessage] = useState("我只會在新內容刊登時寄送信件給您，拒絕垃圾信件。");
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+
+    // 1. 我們使用原生 Fetch 請求 api 端點
+    const res = await fetch("/api/subscribe", {
+      body: JSON.stringify({
+        email: emailAddresss.current.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+
+    // 2. 錯誤處理（重複訂閱）
+
+    if (error) {
+      if (error === "MemberExists") {
+        setMessage("這個電子信箱已經訂閱。");
+      } else {
+        setMessage(error);
+      }
+
+      setWarning(true);
+      return;
+    }
+
+    // 3. 歡迎訊息
+
+    emailAddresss.current.value = "";
+    setSuccess(true);
+    setMessage("Cheers! 歡迎加入"));
+  };
+
+  return (
+    <form
+      onSubmit={subscribe}
+      className="flex flex-col"
+    >
+      <div>
+        訂閱電子信
+      </div>
+      <div>從我這收到關於文學、網頁開發、文學的 Lessen learned。我經常分享近期閱讀到的好文章或書籍，以及技術相關的訊息。</div>
+      <div className="flex flex-col gap-y-4">
+        <input
+          aria-label="Email for newsletter"
+          placeholder="hi@summerbud.org"
+          ref={emailAddresss}
+          type="email"
+        />
+        <button
+          type="submit"
+        >
+          訂閱
+        </button>
+      </div>
+      <div>
+        {message}
+      </div>
+    </form>
+  );
+};
+```
+
+## 錯誤處理
+
+Mailchimp API 最常見的錯誤碼為 400, 500。如果今天發生 Error code 400 的錯誤，你需要查看 `error.response.body` 其中會附有該錯誤的訊息。例如下列錯誤訊息即發生於重複訂閱之時。
+
+```
+{
+    title: 'Member Exists',
+    status: 400,
+    detail: 'eric525282@gmail.com is already a list member. Use PUT to insert or update list members.',
+    instance: '9dd52fa4-9e01-5e62-65fc-1b81f7631f37'
+}
+```
+
+## 總結
+
+Next.js 提供了預設的伺服器 API 端點，其操作方式接近於 REST API，上手可以極快。然而實際施作時還是有許多細節需要考量，包括 Mailchimp API 的特性、Next.js/api 端點的設置，環境參數的設置以及錯誤訊息的處理等等。然而我認為以 Blogging 而言，Next.js 的存在提供了非常良好的解決方案，歡迎大家來嘗試看看。
+
+  
+    
+     
+  
+  
+  
+  
+  
 
 
 - [^1] - [ButtonDown official site](https://buttondown.email/)
-- [^1] - [Mailchimp - About API Keys](https://mailchimp.com/help/about-api-keys/)
-- [^2] - [Mailchimp - Find Your Audience ID](https://mailchimp.com/help/find-audience-id/)
-- [^3] - [Make your first API call](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call)]
-
-
+- [^2] - [Mailchimp - About API Keys](https://mailchimp.com/help/about-api-keys/)
+- [^3] - [Mailchimp - Find Your Audience ID](https://mailchimp.com/help/find-audience-id/)
+- [^4] - [Make your first API call](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call)
+- [^5] - [Mailchimp - Error documentaion](https://mailchimp.com/developer/marketing/docs/errors/)
