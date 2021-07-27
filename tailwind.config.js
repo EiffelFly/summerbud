@@ -37,7 +37,7 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             h3: {
-              fontWeight: "600",
+              fontWeight: "700",
               color: theme("colors.sd-brblack"),
             },
             "h4, h5, h6": {
@@ -59,8 +59,14 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             code: {
-              color: theme("colors.sd-brblack"),
-              backgroundColor: theme("colors.sd-white"),
+              fontWeight: 600,
+              color: theme("colors.sd-black"),
+              backgroundColor: theme("colors.green.300"),
+              borderRadius: "0.5rem",
+              paddingLeft: "0.5rem",
+              paddingRight: "0.5rem",
+              paddingTop: "0.125rem",
+              paddingBottom: "0.125rem"
             },
             a: {
               color: theme("colors.indigo.800"),
@@ -69,6 +75,10 @@ module.exports = {
             pre: {
               color: theme("colors.sd-white"),
               backgroundColor: theme("colors.sd-black"),
+              code: {
+                color: theme("colors.sd-white"),
+                backgroundColor: theme("colors.sd-black"),
+              }
             },
             blockquote: {
               color: theme("colors.sd-brblack"),
@@ -93,7 +103,7 @@ module.exports = {
               color: theme("colors.sd-brwhite"),
             },
             h3: {
-              fontWeight: "600",
+              fontWeight: "700",
               color: theme("colors.sd-brwhite"),
             },
             "h4, h5, h6": {
@@ -116,8 +126,8 @@ module.exports = {
             },
             code: {
               fontWeight: 600,
-              color: theme("colors.sd-brwhite"),
-              backgroundColor: theme("colors.green.900"),
+              color: theme("colors.sd-white"),
+              backgroundColor: theme("colors.green.800"),
               borderRadius: "0.5rem",
               paddingLeft: "0.5rem",
               paddingRight: "0.5rem",

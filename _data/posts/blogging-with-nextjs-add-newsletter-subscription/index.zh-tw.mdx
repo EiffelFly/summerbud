@@ -1,0 +1,77 @@
+---
+lang: zh-tw
+title: Blogging with Next.js - 用 Next.js API route + Mailchimp 施作電子信訂閱
+series: "blogging-with-nextjs"
+tags: ["Blog", "Next.js", "Newsletter"]
+components: []
+hasTranslation: false
+publishedAt: 
+lastModified: 
+description: 這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能
+---
+
+## 大綱
+
+1. 設定環境參數
+1. 獲得 MailChimp 重要資料
+2. 設立環境參數
+3. Subscription form 設計
+4. 使用 API route 發送請求
+5. 錯誤處理
+6. 總結
+
+Next.js 的架構非常有助於我們串接 API 的服務，其中的原因在於它具有在伺服器端預設出 API 端點的功能。透過它我們可以架出類似 AWS Lambda function 的 Serverless function 來乘載實際上請求第三方服務的函式，不僅減少使用者端的運算與 Bundle 大小，更可以運用伺服器端的環境變數來儲藏敏感的資料。
+
+基於介面簡潔，兩千筆訂閱數以內免費、有完善的 API、開發者文件完整等等原因，第三方的電子信管理程式我選擇 Mailchimp。如果你有付費訂閱需求的話，可以考慮 ButtonDown [^1]。
+
+## 優勢
+
+- Serverless function 彈性高，隨時可以曝露出來給除了自己以外的人使用，方便串接各方服務
+- 減少使用者端運算與 Bundle 大小
+- 使用 Vercel deploy 非常省時省力
+- 所有函式在同一個 Repo 裡共同管理
+
+## 設定環境參數
+由於以下資料大多屬於個人機密資料，所以我們需要開環境參數來儲存它。於根目錄處設立 `.env.local`，如果 NEXT 有讀取到，它會於 npm run dev 的 terminal 顯示以下訊息。 `info  - Loaded env from <root_folder>/.env.local`
+
+如果你是使用 `npx create-next-app` 開局，.gitignore 已經預設有 .env.local。若不是使用 npx 請記得把 .env.local 加入 .gitignore 的清單之中。
+
+```bash
+MAILCHIMP_API_KEY=
+MAILCHIMP_API_SERVER=
+MAILCHIMP_LIST_ID=
+```
+
+## 獲得 Mailchimp 重要資料
+
+### API_KEY（secret）
+
+API_KEY 務必保密，它與帳密等價，可以調用所有 Mailchimp 的服務[^2]。請務必把這組密鑰放在 .local.env 裏，並且儲存在伺服器的環境參數之中。
+
+- 取得路徑：Accounct -> Extra -> API leys -> Create new
+- 文件連結[^2]
+
+### LIST_ID or AUDIENCE_ID
+
+在 Mailchimp 的 Dashboard 中它被稱為 Audience，在 API 的文件之中又被稱為 LIST，有時會讓人搞混，不過你只要知道這代表你的訂閱者清單即可。
+
+- 取得路徑：Audience -> Settings -> Audience name and campaign defaults
+- 文件連結[^3]
+
+### SERVER_PREFIX
+這代表你的伺服器位置，請查看登入 Dashboard 時的 URL。以 `https://us19.admin.mailchimp.com/` 為例，你的 `SERVER_PREFIX = us19`
+
+- 文件連結[^4]
+
+
+
+
+
+
+
+- [^1] - [ButtonDown official site](https://buttondown.email/)
+- [^1] - [Mailchimp - About API Keys](https://mailchimp.com/help/about-api-keys/)
+- [^2] - [Mailchimp - Find Your Audience ID](https://mailchimp.com/help/find-audience-id/)
+- [^3] - [Make your first API call](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call)]
+
+
