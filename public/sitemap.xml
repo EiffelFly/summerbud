@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://summerbud.org/en</loc>
+  </url>
+  <url>
+    <loc>https://summerbud.org/zh-tw</loc>
+  </url>
+  <url>
+    <loc>https://summerbud.org/en/lessen-learned</loc>
+  </url>
+  <url>
+    <loc>https://summerbud.org/zh-tw/lessen-learned</loc>
+  </url>
+  <url>
+    <loc>https://summerbud.org/en/posts</loc>
+  </url>
+  <url>
+    <loc>https://summerbud.org/zh-tw/posts</loc>
+  </url>
+
+  <url>
     <loc>https://summerbud.org/en/about</loc>
   </url>
 
