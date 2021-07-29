@@ -23,7 +23,7 @@ const Header = () => {
   }, [asPath])
 
   return (
-    <header className="flex flex-col xl:flex-row py-8">
+    <header className="flex flex-col lg:flex-row py-8">
       <div className="flex flex-row mb-8 md:mb-0">
         <CustomLink href={"/"}>
           <a className="flex flex-row items-center mr-auto gap-x-6">
@@ -34,14 +34,14 @@ const Header = () => {
           </a>
         </CustomLink>
         <button
-          className="xl:hidden my-auto ml-auto w-8 h-8 border border-sd-brgreen dark:border-sd-brcyan rounded-md"
+          className="lg:hidden my-auto ml-auto w-8 h-8 border border-sd-brgreen dark:border-sd-brcyan rounded-md"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <XIcon size={6} /> : <MapIcon size={4} />}
         </button>
       </div>
 
-      <div className="hidden xl:flex xl:flex-row items-center ml-auto gap-x-8">
+      <div className="hidden lg:flex lg:flex-row items-center ml-auto gap-x-8">
         <AboutButton />
         <SeriesButton />
         <PostsButton />
@@ -54,13 +54,13 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <div className="flex flex-col xl:hidden gap-y-4">
+        <div className="flex flex-col lg:hidden gap-y-4">
           <AboutButton />
           <SeriesButton />
           <PostsButton />
           <LessenLearnedButton />
           <SnippetButton />
-          <div className="flex flex-col gap-y-4 xl:gap-x-4 justify-items-start items-start mt-8">
+          <div className="flex flex-col gap-y-4 lg:gap-x-4 justify-items-start items-start mt-8">
             {!route.includes("posts") && <TranslationDropdown />}
             <ThemeToggle />
           </div>
