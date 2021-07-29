@@ -13,7 +13,6 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "esbuild": "^0.12.15",
-    "globby": "^12.0.0",
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^5.1.2",
     "next": "latest",
