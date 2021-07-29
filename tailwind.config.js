@@ -66,7 +66,8 @@ module.exports = {
               paddingLeft: "0.5rem",
               paddingRight: "0.5rem",
               paddingTop: "0.125rem",
-              paddingBottom: "0.125rem"
+              paddingBottom: "0.125rem",
+              wordBreak: "break-word",
             },
             a: {
               color: theme("colors.indigo.800"),
@@ -82,7 +83,7 @@ module.exports = {
                 paddingLeft: "0rem",
                 paddingRight: "0rem",
                 paddingTop: "0rem",
-                paddingBottom: "0rem"
+                paddingBottom: "0rem",
               }
             },
             blockquote: {
@@ -140,7 +141,8 @@ module.exports = {
               paddingLeft: "0.5rem",
               paddingRight: "0.5rem",
               paddingTop: "0.125rem",
-              paddingBottom: "0.125rem"
+              paddingBottom: "0.125rem",
+              wordBreak: "break-word",
             },
             a: {
               color: theme("colors.indigo.400"),
