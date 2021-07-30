@@ -45,8 +45,6 @@ const Header = () => {
         <AboutButton />
         <SeriesButton />
         <PostsButton />
-        <LessenLearnedButton />
-        <SnippetButton />
         <div className="flex flex-row gap-x-4 ml-8">
           {!route.includes("posts") && <TranslationDropdown />}
           <ThemeToggle />
@@ -58,8 +56,6 @@ const Header = () => {
           <AboutButton />
           <SeriesButton />
           <PostsButton />
-          <LessenLearnedButton />
-          <SnippetButton />
           <div className="flex flex-col gap-y-4 lg:gap-x-4 justify-items-start items-start mt-8">
             {!route.includes("posts") && <TranslationDropdown />}
             <ThemeToggle />
