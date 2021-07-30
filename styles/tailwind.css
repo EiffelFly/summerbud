@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  sup {
+    padding: 0 6px 0 4px
+  }
+
+  .dot-emphasize-text {
+    text-emphasis-style: dot;
+    text-emphasis-position: under left;
+    -webkit-text-emphasis-style: dot;
+    -webkit-text-emphasis-position: under left;
+    font-size: 100%
+  }
+
   .link-underline {
     @apply hover:text-indigo-900;
     position: relative;
@@ -10,7 +22,7 @@
   }
 
   .link-underline::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -21,10 +33,14 @@
     transform: scaleX(0);
     transition: transform 0.5s ease;
   }
-  
+
   .link-underline:hover::before {
     transform-origin: bottom left;
     transform: scaleX(1);
   }
 }
 
+a.footnote-backref {
+  margin-left: 10px !important;
+  text-decoration: none !important;
+}

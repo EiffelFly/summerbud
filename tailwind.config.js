@@ -37,7 +37,7 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             h3: {
-              fontWeight: "600",
+              fontWeight: "700",
               color: theme("colors.sd-brblack"),
             },
             "h4, h5, h6": {
@@ -59,8 +59,15 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             code: {
-              color: theme("colors.sd-brblack"),
-              backgroundColor: theme("colors.sd-white"),
+              fontWeight: 600,
+              color: theme("colors.sd-black"),
+              backgroundColor: theme("colors.green.300"),
+              borderRadius: "0.5rem",
+              paddingLeft: "0.5rem",
+              paddingRight: "0.5rem",
+              paddingTop: "0.125rem",
+              paddingBottom: "0.125rem",
+              wordBreak: "break-word",
             },
             a: {
               color: theme("colors.indigo.800"),
@@ -69,6 +76,15 @@ module.exports = {
             pre: {
               color: theme("colors.sd-white"),
               backgroundColor: theme("colors.sd-black"),
+              code: {
+                fontWeight: 300,
+                color: theme("colors.sd-white"),
+                backgroundColor: theme("colors.sd-black"),
+                paddingLeft: "0rem",
+                paddingRight: "0rem",
+                paddingTop: "0rem",
+                paddingBottom: "0rem",
+              }
             },
             blockquote: {
               color: theme("colors.sd-brblack"),
@@ -77,6 +93,9 @@ module.exports = {
               paddingBottom: "1px",
               paddingTop: "1px"
             },
+            hr: {
+              borderColor: theme("colors.sd-brcyan"),
+            }
           },
         },
         dark: {
@@ -93,7 +112,7 @@ module.exports = {
               color: theme("colors.sd-brwhite"),
             },
             h3: {
-              fontWeight: "600",
+              fontWeight: "700",
               color: theme("colors.sd-brwhite"),
             },
             "h4, h5, h6": {
@@ -115,8 +134,15 @@ module.exports = {
               color: theme("colors.sd-brwhite"),
             },
             code: {
-              color: theme("colors.sd-brwhite"),
-              backgroundColor: theme("colors.sd-black"),
+              fontWeight: 600,
+              color: theme("colors.sd-white"),
+              backgroundColor: theme("colors.green.800"),
+              borderRadius: "0.5rem",
+              paddingLeft: "0.5rem",
+              paddingRight: "0.5rem",
+              paddingTop: "0.125rem",
+              paddingBottom: "0.125rem",
+              wordBreak: "break-word",
             },
             a: {
               color: theme("colors.indigo.400"),
@@ -125,12 +151,24 @@ module.exports = {
             pre: {
               color: theme("colors.sd-white"),
               backgroundColor: theme("colors.sd-black"),
+              code: {
+                fontWeight: 300,
+                color: theme("colors.sd-brwhite"),
+                backgroundColor: theme("colors.sd-black"),
+                paddingLeft: "0rem",
+                paddingRight: "0rem",
+                paddingTop: "0rem",
+                paddingBottom: "0rem"
+              }
             },
             blockquote: {
               color: theme("colors.sd-brwhite"),
               borderLeftColor: theme("colors.sd-brwhite"),
               backgroundColor: theme("colors.sd-black"),
             },
+            hr: {
+              borderColor: theme("colors.sd-brgreen"),
+            }
           },
         },
       }),

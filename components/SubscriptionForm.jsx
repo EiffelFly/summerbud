@@ -78,7 +78,9 @@ const SubscriptionForm = () => {
       </div>
 
       {warning ? (
-        <SubscriptionWarningMessage>{message}</SubscriptionWarningMessage>
+        <SubscriptionWarningMessage>
+          {message}
+        </SubscriptionWarningMessage>
       ) : (
         <SubscriptionSuccessMessage success={success}>
           {message}

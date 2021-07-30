@@ -1,9 +1,17 @@
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
 module.exports = withBundleAnalyzer({
   pageExtensions: ["js", "jsx", "mdx"],
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./lib/generate-sitemap');
+    }
+
+    return config;
+  },
   // webpack: (config, options) => {
   //   config.module.rules.push({
   //     test: /\.mdx/,
