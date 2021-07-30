@@ -10,6 +10,7 @@ lastModified:
 description: 這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能
 ---
 
+
 ## 大綱
 
 1. 設定環境參數
@@ -188,7 +189,7 @@ const SubscriptionForm = () => {
 
 ## 錯誤處理
 
-Mailchimp API 最常見的錯誤碼為 400, 500。如果今天發生 Error code 400 的錯誤，你需要查看 `error.response.body` 其中會附有該錯誤的訊息。例如下列錯誤訊息即發生於重複訂閱之時。
+Mailchimp API 最常見的錯誤碼為 400[^5], 500。如果今天發生 Error code 400 的錯誤，你需要查看 `error.response.body` 其中會附有該錯誤的訊息。例如下列錯誤訊息即發生於重複訂閱之時。
 
 ```
 {
@@ -203,8 +204,8 @@ Mailchimp API 最常見的錯誤碼為 400, 500。如果今天發生 Error code 
 
 Newsletter 是衡量內容是否被讀者需要的重要指標，希望藉由這篇文章讓大家知道，除了電子信管理的提供商之外，你不需要其他的資源，自己就可以串接電子信的服務。
 
-- [^1] - [ButtonDown official site](https://buttondown.email/)
-- [^2] - [Mailchimp - About API Keys](https://mailchimp.com/help/about-api-keys/)
-- [^3] - [Mailchimp - Find Your Audience ID](https://mailchimp.com/help/find-audience-id/)
-- [^4] - [Make your first API call](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call)
-- [^5] - [Mailchimp - Error documentaion](https://mailchimp.com/developer/marketing/docs/errors/)
+[^1]: [ButtonDown official site](https://buttondown.email/)
+[^2]: [Mailchimp - About API Keys](https://mailchimp.com/help/about-api-keys/)
+[^3]: [Mailchimp - Find Your Audience ID](https://mailchimp.com/help/find-audience-id/)
+[^4]: [Make your first API call](https://mailchimp.com/developer/marketing/guides/quick-start/#make-your-first-api-call)
+[^5]: [Mailchimp - Error documentaion](https://mailchimp.com/developer/marketing/docs/errors/)

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  sup {
+    padding: 0 6px 0 4px
+  }
+
   .dot-emphasize-text {
     text-emphasis-style: dot;
     text-emphasis-position: under left;
@@ -34,4 +38,9 @@
     transform-origin: bottom left;
     transform: scaleX(1);
   }
+}
+
+a.footnote-backref {
+  margin-left: 10px !important;
+  text-decoration: none !important;
 }
