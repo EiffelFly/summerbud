@@ -20,7 +20,7 @@ const MDXPages = ({ code, metadata }) => {
         <article className="prose prose-lg py-12 dark:prose-dark">
           <PostTitle title={metadata.title} tags={metadata.tags} className={"mb-20"} />
           <Component components={{ CustomLink: CustomLink, DotEmphasizeText: DotEmphasizeText }} />
-          <SubscriptionForm />
+          <SubscriptionForm className={"mt-80"} />
         </article>
         
         <Footer />
