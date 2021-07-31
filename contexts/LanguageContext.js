@@ -23,11 +23,8 @@ export function LanguageProvider({ children }) {
     setLocale(language);
 
     if ( query["lang"] ){
-      console.log("hello", query["lang"])
       setLocale(query["lang"])
     }
-
-    console.log(locale)
 
   }, [query["lang"]]);
 

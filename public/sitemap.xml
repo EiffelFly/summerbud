@@ -67,12 +67,14 @@
 
   <url>
     <loc
-      >https://summerbud.org/posts/zh-tw/how-to-soft-wrap-vscode-mardown-file-only</loc
+      >https://summerbud.org/posts/zh-tw/how-to-implement-footnotes-in-mdx-bundler-project</loc
     >
   </url>
 
   <url>
-    <loc>https://summerbud.org/posts/zh-tw/test</loc>
+    <loc
+      >https://summerbud.org/posts/zh-tw/how-to-soft-wrap-vscode-mardown-file-only</loc
+    >
   </url>
 
   <url>
@@ -96,6 +98,12 @@
   <url>
     <loc
       >https://summerbud.org/posts/zh-tw/the-other-end-of-line-1-about-the-eduction-system-in-taiwan</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://summerbud.org/posts/zh-tw/the-other-end-of-the-line-2-the-bus-baggage-room-without-air-conditioning</loc
     >
   </url>
 </urlset>
