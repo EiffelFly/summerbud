@@ -9,20 +9,38 @@ import PostTitle from "../../../components/PostTitle";
 import PostSeo from "../../../components/PostSeo";
 import SubscriptionForm from "../../../components/SubscriptionForm";
 import DotEmphasizeText from "../../../components/DotEmphasizeText";
+import PostSeriesBreadcrum from "../../../components/PostSeriesBreadcrum";
+import useTranslation from "../../../hooks/useTranslation";
 
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
+  const { t } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
         <Header />
         <PostSeo metadata={metadata} />
-        <article className="prose prose-lg py-12 dark:prose-dark">
-          <PostTitle title={metadata.title} tags={metadata.tags} className={"mb-20"} />
-          <Component components={{ CustomLink: CustomLink, DotEmphasizeText: DotEmphasizeText }} />
+        <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
+          {metadata.belongToSeries && (
+            <PostSeriesBreadcrum
+              seriesUrl={metadata.seriesSlug}
+              seriesName={t(`series.${metadata.seriesKey}`)}
+            />
+          )}
+          <PostTitle
+            title={metadata.title}
+            tags={metadata.tags}
+            className={"mb-20"}
+          />
+          <Component
+            components={{
+              CustomLink: CustomLink,
+              DotEmphasizeText: DotEmphasizeText,
+            }}
+          />
           <SubscriptionForm className={"mt-80"} />
         </article>
-        
+
         <Footer />
       </SectionContainer>
     </div>

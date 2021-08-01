@@ -16,7 +16,7 @@ const MDXPages = ({ code, metadata }) => {
       >
         <PageSeo metadata={metadata} />
         <Header />
-        <article className="prose prose-lg py-12 dark:prose-dark">
+        <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <Component components={{ CustomLink: CustomLink }} />
         </article>
         <Footer />

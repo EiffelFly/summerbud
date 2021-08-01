@@ -21,7 +21,7 @@ const translation = {
       main: {
         headline: "Summerbud's writing",
         subHeadline: "This blog is mostly about literature, programming and entrepreneurship. Hopefully, every reader will leave with something worth noting. In that spirit, each article here is as concise as possible and contains actionable content."
-      }
+      },
     },
     footer: {
       pages: {
@@ -59,6 +59,11 @@ const translation = {
         twitter: "Twitter",
         github: "Github",
       },
+    },
+    series: {
+      bloggingWithNextjs: "Blogging with Next.js",
+      theOtherEndOfLine: "The other end of line",
+      theBuildersLife: "The builder's life"
     }
   },
   "zh-tw": {
@@ -96,7 +101,7 @@ const translation = {
       },
       series: {
         _title: "系列",
-        nextjs: "以 Nextjs 開啟的部落格之旅",
+        nextjs: "以 Next.js 開啟的部落格之旅",
         builder: "The builder's life",
         endOfLine: "電話的另一端",
         literature: "台文所與顛倒世界"
@@ -121,6 +126,11 @@ const translation = {
         twitter: "Twitter",
         github: "Github",
       },
+    },
+    series: {
+      bloggingWithNextjs: "以 Next.js 開啟的部落格之旅",
+      theOtherEndOfLine: "電話的另一端",
+      theBuildersLife: "The builder's life"
     }
   }
 };
