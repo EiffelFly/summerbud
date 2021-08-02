@@ -37,7 +37,6 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = () => {
   const paths = getAllSlugs("page");
-  console.log(paths)
   return {
     paths,
     fallback: false,
