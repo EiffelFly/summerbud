@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import useTranslation from "../hooks/useTranslation";
-import CheckCircleFillIcon from "./icons/CheckCircleFillIcon";
 import { gaHelper } from "../lib/gtag";
 import SubscriptionWarningMessage from "./SubscriptionWarningMessage";
 import SubscriptionSuccessMessage from "./SubscriptionSuccessMessage";
@@ -52,10 +51,15 @@ const SubscriptionForm = ({ className }) => {
     });
   };
 
+  console.log(className)
+
   return (
     <form
       onSubmit={subscribe}
-      className={"flex flex-col bg-sd-white dark:bg-sd-black border border-sd-black dark:border-sd-white rounded-lg p-8 " + className }
+      className={
+        "flex flex-col bg-sd-white dark:bg-sd-black border border-sd-black dark:border-sd-white rounded-lg p-8 " +
+        className
+      }
     >
       <div className="mb-3 font-sans font-semibold text-2xl text-sd-black dark:text-sd-white">
         {t("components.subscriptionFormTitle")}
@@ -78,9 +82,7 @@ const SubscriptionForm = ({ className }) => {
       </div>
 
       {warning ? (
-        <SubscriptionWarningMessage>
-          {message}
-        </SubscriptionWarningMessage>
+        <SubscriptionWarningMessage>{message}</SubscriptionWarningMessage>
       ) : (
         <SubscriptionSuccessMessage success={success}>
           {message}
