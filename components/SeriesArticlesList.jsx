@@ -2,7 +2,7 @@ import CustomLink from "./CustomLink";
 
 const SeriesArticlesList = ({ articles, className }) => {
   return (
-    <div className={"flex flex-col gap-y-8 " + className} >
+    <div className={"flex flex-col gap-y-8 " + className}>
       {articles.map((article) => (
         <CustomLink href={article.path} key={article.path}>
           <div
