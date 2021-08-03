@@ -1,4 +1,3 @@
-//import { getContent } from "../../lib/files";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import SectionContainer from "../../components/SectionContainer";
