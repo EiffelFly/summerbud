@@ -3,6 +3,7 @@ import useTranslation from "../hooks/useTranslation";
 import { gaHelper } from "../lib/gtag";
 import SubscriptionWarningMessage from "./SubscriptionWarningMessage";
 import SubscriptionSuccessMessage from "./SubscriptionSuccessMessage";
+import SubscriptionClarificationMessage from "./SubscriptionClarificationMessage";
 
 const SubscriptionForm = ({ className }) => {
   const emailAddresss = useRef(null);
@@ -10,9 +11,7 @@ const SubscriptionForm = ({ className }) => {
   const [warning, setWarning] = useState(false);
   const { t } = useTranslation();
 
-  const [message, setMessage] = useState(
-    t("components.subscriptionClarification")
-  );
+  const [message, setMessage] = useState(null);
 
   const subscribe = async (e) => {
     setSuccess(false);
@@ -51,8 +50,6 @@ const SubscriptionForm = ({ className }) => {
     });
   };
 
-  console.log(className)
-
   return (
     <form
       onSubmit={subscribe}
@@ -81,12 +78,20 @@ const SubscriptionForm = ({ className }) => {
         </button>
       </div>
 
-      {warning ? (
+      {warning && (
         <SubscriptionWarningMessage>{message}</SubscriptionWarningMessage>
-      ) : (
+      )}
+
+      {success && (
         <SubscriptionSuccessMessage success={success}>
           {message}
         </SubscriptionSuccessMessage>
+      )}
+
+      {!success && !warning && (
+        <SubscriptionClarificationMessage>
+          {t("components.subscriptionClarification")}
+        </SubscriptionClarificationMessage>
       )}
     </form>
   );
