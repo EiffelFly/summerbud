@@ -1,4 +1,4 @@
-import { getAllSlugs, getContent } from "../../lib/files";
+//import { getContent } from "../../lib/files";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import SectionContainer from "../../components/SectionContainer";
@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import CustomLink from "../../components/CustomLink";
 import Footer from "../../components/Footer";
 import PageSeo from "../../components/PageSeo";
+import { getAllPagesPath, getPagesIndexContent } from "../../lib/files";
 
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -26,7 +27,10 @@ const MDXPages = ({ code, metadata }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { slug, code, metadata } = await getContent(params.slug, params.lang, "page");
+  const { code, metadata } = await getPagesIndexContent({
+    slug: params.slug,
+    lang: params.lang
+  });
   return {
     props: {
       code,
@@ -36,7 +40,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = () => {
-  const paths = getAllSlugs("page");
+  const paths = getAllPagesPath()
+  console.log(paths)
   return {
     paths,
     fallback: false,
