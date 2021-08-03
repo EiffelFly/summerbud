@@ -1,7 +1,7 @@
 import CustomLink from "./CustomLink";
 import TagListRow from "./TagListRow";
 
-const PostPreviewBlock = ({ title, description, tags, locale, slug }) => {
+const PostPreviewBlock = ({ title, description, tags, slug }) => {
   return (
     <CustomLink
       href={`/posts/${slug}`}
