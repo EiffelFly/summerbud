@@ -23,7 +23,7 @@ const MDXPages = ({ metadata, code, articles }) => {
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
-        <Header />
+        <Header hasTranslation={metadata.hasTranslation} />
         <PostSeo metadata={metadata} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle
@@ -37,7 +37,7 @@ const MDXPages = ({ metadata, code, articles }) => {
               DotEmphasizeText: DotEmphasizeText,
             }}
           />
-          
+
           <SeriesArticlesList articles={articles} className={"mt-20"} />
           <SubscriptionForm className={"mt-60"} />
         </article>
@@ -62,18 +62,22 @@ export const getStaticProps = async ({ params }) => {
     const introIndex = articlePaths.indexOf(`${params.series}/intro`);
     articlePaths.splice(introIndex, 1);
     for (const articlePath of articlePaths) {
-      const slug = articlePath.split("/")[1];
-      const { metadata } = await getSeriesPostsContent({
-        series: params.series,
-        slug: slug,
-        lang: params.lang,
-      });
-      articles.push({
-        path: `/series/${articlePath}`,
-        metadata: metadata,
-      });
+      try {
+        const slug = articlePath.split("/")[1];
+        const { metadata } = await getSeriesPostsContent({
+          series: params.series,
+          slug: slug,
+          lang: params.lang,
+        });
+        articles.push({
+          path: `/series/${articlePath}`,
+          metadata: metadata,
+        });
+      } catch (err) {
+        console.log(err);
+      }
     }
-    articles.sort((a, b) => a.metadata.seriesIndex - b.metadata.seriesIndex)
+    articles.sort((a, b) => a.metadata.seriesIndex - b.metadata.seriesIndex);
   }
 
   console.log(articles);

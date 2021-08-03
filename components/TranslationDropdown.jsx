@@ -3,7 +3,6 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside";
 import TranslationIcon from "./icons/TranslationIcon";
 import useTranslation from "../hooks/useTranslation";
 import { useRouter } from "next/dist/client/router";
-import { route } from "next/dist/next-server/server/router";
 
 const TranslationDropdown = ({ className }) => {
   const ref = useRef(null);
@@ -11,12 +10,10 @@ const TranslationDropdown = ({ className }) => {
   useOnClickOutside(ref, () => setIsOpen(false));
   const { locale, setLocale } = useTranslation();
   const router = useRouter();
-  
-  let url = router.route;
 
-  if (router.query.slug) {
-    url = url.replace("[slug]", router.query.slug);
-  }
+  let url = router.asPath;
+
+  console.log(router, url);
 
   return (
     <div className={"flex flex-row lg:flex-col " + className}>
@@ -29,15 +26,16 @@ const TranslationDropdown = ({ className }) => {
             <button
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
-                if (locale !== "zh-tw"){
+                if (locale !== "zh-tw") {
                   setLocale("zh-tw");
                 }
-                
+
                 setIsOpen(false);
-                console.log(router.query.lang)
                 if (router.query.lang && router.query.lang === "en") {
-                  url = url.replace("[lang]", "zh-tw");
-                  router.push(url);
+                  let urlChunk = url.split("/");
+                  urlChunk.splice(1, 1, "zh-tw")
+                  const newUrl = urlChunk.join("/")
+                  router.push(newUrl);
                 }
               }}
             >
@@ -46,14 +44,18 @@ const TranslationDropdown = ({ className }) => {
             <button
               className="px-4 py-2 text-left text-sd-black dark:text-sd-white hover:bg-sd-white dark:hover:bg-sd-black rounded-md"
               onClick={() => {
-                if (locale !== "en"){
+                if (locale !== "en") {
                   setLocale("en");
                 }
-                
+
                 setIsOpen(false);
                 if (router.query.lang && router.query.lang === "zh-tw") {
-                  url = url.replace("[lang]", "en");
-                  router.push(url);
+                  let urlChunk = url.split("/");
+                  console.log(urlChunk)
+                  urlChunk.splice(1, 1, "en")
+                  const newUrl = urlChunk.join("/")
+                  console.log(newUrl)
+                  router.push(newUrl);
                 }
               }}
             >

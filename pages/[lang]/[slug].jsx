@@ -15,7 +15,7 @@ const MDXPages = ({ code, metadata }) => {
         gap="gap-y-16"
       >
         <PageSeo metadata={metadata} />
-        <Header />
+        <Header hasTranslation={true} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <Component components={{ CustomLink: CustomLink }} />
         </article>
