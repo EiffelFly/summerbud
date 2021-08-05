@@ -21,6 +21,9 @@ const translation = {
         headline: "Summerbud's writing",
         subHeadline: "This blog is mostly about literature, programming and entrepreneurship. Hopefully, every reader will leave with something worth noting. In that spirit, each article here is as concise as possible and contains actionable content."
       },
+      postList: {
+        title: "I do think we can't only rely on pure listing to display data. We should re-think and re-design it. In near future, this page would have multiple display method for you to choose which article best suit your need."
+      }
     },
     footer: {
       pages: {
@@ -87,6 +90,9 @@ const translation = {
       main: {
         headline: "Summerbud 的部落格",
         subHeadline: "這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。"
+      },
+      postList: {
+        title: "我認為我們不該只使用條列式，而應該使用多種載體來呈現資料。這些載體的設計方法，正是我這陣子思考的主要方向。未來這個頁面將會有各種不同的呈現方式，供你自由選擇。"
       }
     },
     footer: {

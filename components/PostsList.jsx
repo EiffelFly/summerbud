@@ -12,7 +12,7 @@ const PostsList = ({ posts }) => {
           href={`${post.slug}`}
         >
           <div
-            className="flex flex-col gap-y-2 md:gap-y-0 md:flex-row font-sans group"
+            className="flex flex-col gap-y-2 md:gap-y-0 md:flex-row font-sans group cursor-pointer"
           >
             <div className="text-base text-sd-black dark:text-sd-white mr-auto group-hover:underline">
               {post.metadata.title}

@@ -3,13 +3,15 @@ import SectionContainer from "../../../components/SectionContainer";
 import { getSortedPostsData } from "../../../lib/files";
 import Footer from "../../../components/Footer";
 import PostsList from "../../../components/PostsList";
+import PostIntro from "../../../components/PostsIntro";
 
 const Posts = ({ allPostsData, locale }) => {
   const postsData = allPostsData.filter((post) => post.metadata.lang === locale);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
-      <SectionContainer gap="gap-y-16">
+      <SectionContainer gap="gap-y-8">
         <Header />
+        <PostIntro />
         <PostsList posts={postsData} />
         <Footer />
       </SectionContainer>
