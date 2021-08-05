@@ -15,7 +15,6 @@ const translation = {
       subscriptionButton: "Subscribe",
       subscriptionClarification: "I'll only send emails when new content is posted. No spam.",
       subscriptionDuplicationWarning: "You already subscribed to my mailing list.",
-      
     },
     pages: {
       main: {

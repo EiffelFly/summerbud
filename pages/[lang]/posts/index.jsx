@@ -2,15 +2,15 @@ import Header from "../../../components/Header";
 import SectionContainer from "../../../components/SectionContainer";
 import { getSortedPostsData } from "../../../lib/files";
 import Footer from "../../../components/Footer";
-import PostPreviewList from "../../../components/PostPreviewList";
+import PostsList from "../../../components/PostsList";
 
 const Posts = ({ allPostsData, locale }) => {
-  const postsData = allPostsData.filter((post) => post.lang === locale);
+  const postsData = allPostsData.filter((post) => post.metadata.lang === locale);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
         <Header />
-        <PostPreviewList posts={postsData} locale={locale} />
+        <PostsList posts={postsData} />
         <Footer />
       </SectionContainer>
     </div>
@@ -18,7 +18,7 @@ const Posts = ({ allPostsData, locale }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
       allPostsData,
