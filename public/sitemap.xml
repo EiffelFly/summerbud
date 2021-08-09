@@ -44,6 +44,14 @@
   </url>
 
   <url>
+    <loc>https://summerbud.org/en/projects</loc>
+  </url>
+
+  <url>
+    <loc>https://summerbud.org/zh-tw/projects</loc>
+  </url>
+
+  <url>
     <loc>https://summerbud.org/en/series</loc>
   </url>
 
@@ -57,13 +65,5 @@
 
   <url>
     <loc>https://summerbud.org/zh-tw/snippets</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/en/what-i-am-working-on</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/what-i-am-working-on</loc>
   </url>
 </urlset>
