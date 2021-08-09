@@ -13,7 +13,6 @@ const TranslationDropdown = ({ className }) => {
 
   let url = router.asPath;
 
-  console.log(router, url);
 
   return (
     <div className={"flex flex-row lg:flex-col " + className}>
@@ -51,10 +50,8 @@ const TranslationDropdown = ({ className }) => {
                 setIsOpen(false);
                 if (router.query.lang && router.query.lang === "zh-tw") {
                   let urlChunk = url.split("/");
-                  console.log(urlChunk)
                   urlChunk.splice(1, 1, "en")
                   const newUrl = urlChunk.join("/")
-                  console.log(newUrl)
                   router.push(newUrl);
                 }
               }}

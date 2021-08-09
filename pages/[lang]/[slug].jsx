@@ -40,7 +40,6 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = () => {
   const paths = getAllPagesPath()
-  console.log(paths)
   return {
     paths,
     fallback: false,
