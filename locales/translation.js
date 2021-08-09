@@ -49,7 +49,7 @@ const translation = {
       },
       projects: {
         _title: "Projects",
-        working: "What I am currently working on",
+        working: "What I am working on",
         totuslink: "Totuslink",
         hologram: "Hologram",
         hololink: "Hololink",
@@ -119,7 +119,7 @@ const translation = {
       },
       projects: {
         _title: "專案",
-        working: "我在做什麼",
+        working: "我正在開發的專案",
         totuslink: "Totuslink",
         hologram: "Hologram",
         hololink: "Hololink",

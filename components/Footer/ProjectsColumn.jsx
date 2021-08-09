@@ -8,7 +8,7 @@ const ProjectsColumn = () => {
     links: [
       {
         title: t("footer.projects.working"),
-        url: "projects/what-i-am-currently-working-on",
+        url: "/projects",
       },
       {
         title: t("footer.projects.totuslink"),
