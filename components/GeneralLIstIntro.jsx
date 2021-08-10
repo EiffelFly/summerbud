@@ -1,5 +1,5 @@
 import useTranslation from "../hooks/useTranslation";
-const DevLogsIntro = ({ className }) => {
+const DevLogsIntro = ({ className, children }) => {
   const { t } = useTranslation();
   return (
     <div
@@ -7,7 +7,7 @@ const DevLogsIntro = ({ className }) => {
         "mt-20 mb-8 pb-2 font-sans text-3xl font-bold border-b border-sd-brgreen dark:border-sd-brcyan" + className
       }
     >
-      {t("components.devlogs")}
+      {children}
     </div>
   );
 };
