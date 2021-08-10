@@ -8,6 +8,7 @@ import Footer from "../../../../components/Footer";
 import CustomLink from "../../../../components/CustomLink";
 import PostTitle from "../../../../components/PostTitle";
 import SubscriptionForm from "../../../../components/SubscriptionForm";
+
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
   return (

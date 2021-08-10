@@ -40,7 +40,6 @@ const MDXPages = ({ code, metadata }) => {
           />
           <SubscriptionForm className={"mt-80"} />
         </article>
-
         <Footer />
       </SectionContainer>
     </div>
