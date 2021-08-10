@@ -11,11 +11,13 @@ import {
 } from "../../../../lib/files";
 import CustomLink from "../../../../components/CustomLink";
 import { useMemo } from "react";
-import DevlogsList from "../../../../components/DevlogsList";
-import DevLogsIntro from "../../../../components/DevlogsIntro";
+import GeneralList from "../../../../components/GeneralList";
+import GeneralLIstIntro from "../../../../components/GeneralLIstIntro";
+import useTranslation from "../../../../hooks/useTranslation";
 
 const MDXPage = ({ code, metadata, devlogs }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
+  const { t } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
@@ -23,8 +25,10 @@ const MDXPage = ({ code, metadata, devlogs }) => {
         <Header hasTranslation={true} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <Component components={{ CustomLink: CustomLink }} />
-          <DevLogsIntro />
-          <DevlogsList devlogs={devlogs} />
+          <GeneralLIstIntro>
+            {t("components.devlogs")}
+          </GeneralLIstIntro>
+          <GeneralList elements={devlogs} />
         </article>
         <Footer />
       </SectionContainer>
