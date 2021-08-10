@@ -1,4 +1,4 @@
-import { getAllSlugs, getContent } from "../../../lib/files";
+import { getPostsPath, getPostContent } from "../../../lib/files";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import SectionContainer from "../../../components/SectionContainer";
@@ -48,11 +48,10 @@ const MDXPages = ({ code, metadata }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { slug, code, metadata } = await getContent(
-    params.slug,
-    params.lang,
-    "post"
-  );
+  const { code, metadata } = await getPostContent({
+    lang: params.lang,
+    slug: params.slug
+  });
   return {
     props: {
       code,
@@ -62,7 +61,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = () => {
-  const paths = getAllSlugs("post");
+  const paths = getPostsPath();
   return {
     paths,
     fallback: false,
