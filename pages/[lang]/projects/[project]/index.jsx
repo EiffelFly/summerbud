@@ -39,7 +39,6 @@ export const getStaticProps = async ({ params }) => {
     lang: params.lang,
   });
   const devlogs = await getProjectDevlogMeta({ projectName: params.project })
-  console.log(devlogs)
   return {
     props: {
       code,

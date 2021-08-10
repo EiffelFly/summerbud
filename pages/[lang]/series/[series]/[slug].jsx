@@ -80,8 +80,6 @@ export const getStaticProps = async ({ params }) => {
     articles.sort((a, b) => a.metadata.seriesIndex - b.metadata.seriesIndex);
   }
 
-  console.log(articles);
-
   return {
     props: {
       code: code,
