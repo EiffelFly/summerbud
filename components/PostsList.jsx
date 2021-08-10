@@ -9,7 +9,7 @@ const PostsList = ({ posts }) => {
       {posts.map((post) => (
         <CustomLink
           key={post.metadata.title}
-          href={`${post.slug}`}
+          href={`${post.path}`}
         >
           <div
             className="flex flex-col gap-y-2 md:gap-y-0 md:flex-row font-sans group cursor-pointer"
