@@ -8,19 +8,19 @@ const SeriesColumn = () => {
     links: [
       {
         title: t("footer.series.builder"),
-        url: "series/the-builders-life",
+        url: "/series/the-builders-life/intro",
       },
       {
         title: t("footer.series.nextjs"),
-        url: "series/blogging-with-nextjs",
+        url: "/series/blogging-with-nextjs/intro",
       },
       {
         title: t("footer.series.endOfLine"),
-        url: "series/the-other-end-of-line",
+        url: "/series/the-other-end-of-line/intro",
       },
       {
         title: t("footer.series.literature"),
-        url: "series/the-master-degree-of-taiwanese-literature",
+        url: "/series/the-master-degree-of-taiwanese-literature/intro",
       },
     ],
   };
