@@ -1,13 +1,13 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
-import Header from "../../../components/Header";
-import PageSeo from "../../../components/PageSeo";
-import SectionContainer from "../../../components/SectionContainer";
-import { getLessenLearnedContent, getLessenLearnedPostsMeta } from "../../../lib/files";
-import CustomLink from "../../../components/CustomLink";
-import Footer from "../../../components/Footer";
-import GeneralListIntro from "../../../components/GeneralLIstIntro";
-import GeneralList from "../../../components/GeneralList";
+import Header from "../../components/Header";
+import PageSeo from "../../components/PageSeo";
+import SectionContainer from "../../components/SectionContainer";
+import { getLessenLearnedContent, getLessenLearnedPostsMeta } from "../../lib/files";
+import CustomLink from "../../components/CustomLink";
+import Footer from "../../components/Footer";
+import GeneralListIntro from "../../components/GeneralLIstIntro";
+import GeneralList from "../../components/GeneralList";
 
 const MDXPage = ({ metadata, code, lessenLearnedPosts }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -31,7 +31,7 @@ const MDXPage = ({ metadata, code, lessenLearnedPosts }) => {
 
 export const getStaticProps = async ({ params }) => {
   const { code, metadata } = await getLessenLearnedContent({
-    isPage: true,
+    isPageRoot: true,
     lang: params.lang,
   });
   const lessenLearnedPosts = getLessenLearnedPostsMeta({ lang: params.lang });
