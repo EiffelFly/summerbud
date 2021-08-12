@@ -16,6 +16,13 @@ const translation = {
       subscriptionClarification: "I'll only send emails when new content is posted. No spam.",
       subscriptionDuplicationWarning: "You already subscribed to my mailing list.",
       devlogs: "Devlogs",
+      projectListShortIntro: {
+        township: "Dedicated management tool for discussion communities",
+        totuslink: "Research project about how listing make us stumble",
+        hologram: "Bi-directional link reference tool",
+        pnyx: "Text discussion tool built upon graph",
+        basestone: "Articles tokenize, summarize tool"
+      }
     },
     pages: {
       main: {
@@ -87,6 +94,13 @@ const translation = {
       subscriptionClarification: "我只會在新內容刊登時寄送信件給您，拒絕垃圾信件。",
       subscriptionDuplicationWarning: "這個電子信箱已經訂閱。",
       devlogs: "開發日記",
+      projectListShortIntro: {
+        township: "討論性社群管理工具",
+        totuslink: "探詢條列式帶來的問題的研究計畫",
+        hologram: "雙向連結參考資料工具",
+        pnyx: "以力圖為主要呈現方式的討論論壇",
+        basestone: "文章斷詞、總結工具"
+      }
     },
     pages: {
       main: {
