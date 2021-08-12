@@ -54,7 +54,6 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = () => {
   const paths = getAllLessenLearnedPath();
-  console.log(paths);
   return {
     paths,
     fallback: false,

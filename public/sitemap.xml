@@ -20,22 +20,6 @@
   </url>
 
   <url>
-    <loc>https://summerbud.org/en/about</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/about</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/en/lessen-learned</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/lessen-learned</loc>
-  </url>
-
-  <url>
     <loc>https://summerbud.org/en/novels</loc>
   </url>
 
@@ -52,18 +36,14 @@
   </url>
 
   <url>
-    <loc>https://summerbud.org/en/series</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/series</loc>
-  </url>
-
-  <url>
     <loc>https://summerbud.org/en/snippets</loc>
   </url>
 
   <url>
     <loc>https://summerbud.org/zh-tw/snippets</loc>
+  </url>
+
+  <url>
+    <loc>https://summerbud.org/posts/zh-tw/test</loc>
   </url>
 </urlset>
