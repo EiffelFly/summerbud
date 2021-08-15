@@ -8,15 +8,15 @@ const NovelsColumn = () => {
     links: [
       {
         title: t("footer.novels.rat"),
-        url: "/novels/the-rat",
+        //url: "/novels/the-rat",
       },
       {
         title: t("footer.novels.beast"),
-        url: "/novels/the-beast",
+        //url: "/novels/the-beast",
       },
       {
         title: t("footer.novels.breakfast"),
-        url: "/novels/a-boiled-egg-for-breakfast",
+        //url: "/novels/a-boiled-egg-for-breakfast",
       },
     ],
   };

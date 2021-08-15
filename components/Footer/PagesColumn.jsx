@@ -19,7 +19,8 @@ const PagesColumn = () => {
         url: "/series",
       },
       {
-        title: t("footer.pages.projects")
+        title: t("footer.pages.projects"),
+        url: "/projects"
       },
       {
         title: t("footer.pages.lessonLearned"),
