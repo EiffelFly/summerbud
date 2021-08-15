@@ -4,12 +4,22 @@ import { getSortedPostsData } from "../../../lib/files";
 import Footer from "../../../components/Footer";
 import PostsList from "../../../components/PostsList";
 import PostIntro from "../../../components/PostsIntro";
+import useTranslation from "../../../hooks/useTranslation";
+import PageSeo from "../../../components/PageSeo";
 
 const Posts = ({ allPostsData, locale }) => {
+  const { t } = useTranslation();
+
+  const metadata = {
+    title: t("common.article") + " | Summerbud's writing",
+    description: "",
+
+  }
   const postsData = allPostsData.filter((post) => post.metadata.lang === locale);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-8">
+        <PageSeo metadata={metadata} />
         <Header />
         <PostIntro />
         <PostsList posts={postsData} />
