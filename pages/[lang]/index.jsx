@@ -8,7 +8,7 @@ const index = () => {
   return (
     <div className="flex bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-8">
-        <Header />
+        <Header hasTranslation={true} />
         <div
           className="flex-grow flex-col flex gap-y-6 my-auto mt-48"
         >

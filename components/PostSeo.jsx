@@ -9,7 +9,7 @@ const PostSeo = ({ metadata }) => {
   return (
     <>
       <NextSeo 
-        title={`Summerbud's writing | ${metadata.title}`}
+        title={`${metadata.title}`}
         description={metadata.description}
         //canonical={``}
         openGraph={{
@@ -38,7 +38,7 @@ const PostSeo = ({ metadata }) => {
         datePublished={`${metadata.publishedAt}`}
         dateModified={`${metadata.lastModified}`}
         authorName="Summerbud | Po Chun Chiu"
-        publisherName="summerbud.io"
+        publisherName="summerbud.org"
         description={metadata.description}
       />
     </>

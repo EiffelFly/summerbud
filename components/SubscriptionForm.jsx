@@ -1,19 +1,17 @@
 import { useRef, useState } from "react";
 import useTranslation from "../hooks/useTranslation";
-import CheckCircleFillIcon from "./icons/CheckCircleFillIcon";
 import { gaHelper } from "../lib/gtag";
 import SubscriptionWarningMessage from "./SubscriptionWarningMessage";
 import SubscriptionSuccessMessage from "./SubscriptionSuccessMessage";
+import SubscriptionClarificationMessage from "./SubscriptionClarificationMessage";
 
-const SubscriptionForm = () => {
+const SubscriptionForm = ({ className }) => {
   const emailAddresss = useRef(null);
   const [success, setSuccess] = useState(false);
   const [warning, setWarning] = useState(false);
   const { t } = useTranslation();
 
-  const [message, setMessage] = useState(
-    t("components.subscriptionClarification")
-  );
+  const [message, setMessage] = useState(null);
 
   const subscribe = async (e) => {
     setSuccess(false);
@@ -55,7 +53,10 @@ const SubscriptionForm = () => {
   return (
     <form
       onSubmit={subscribe}
-      className="mt-24 flex flex-col bg-sd-white dark:bg-sd-black border border-sd-black dark:border-sd-white rounded-lg p-8"
+      className={
+        "flex flex-col bg-sd-white dark:bg-sd-black border border-sd-black dark:border-sd-white rounded-lg p-8 " +
+        className
+      }
     >
       <div className="mb-3 font-sans font-semibold text-2xl text-sd-black dark:text-sd-white">
         {t("components.subscriptionFormTitle")}
@@ -77,14 +78,20 @@ const SubscriptionForm = () => {
         </button>
       </div>
 
-      {warning ? (
-        <SubscriptionWarningMessage>
-          {message}
-        </SubscriptionWarningMessage>
-      ) : (
+      {warning && (
+        <SubscriptionWarningMessage>{message}</SubscriptionWarningMessage>
+      )}
+
+      {success && (
         <SubscriptionSuccessMessage success={success}>
           {message}
         </SubscriptionSuccessMessage>
+      )}
+
+      {!success && !warning && (
+        <SubscriptionClarificationMessage>
+          {t("components.subscriptionClarification")}
+        </SubscriptionClarificationMessage>
       )}
     </form>
   );

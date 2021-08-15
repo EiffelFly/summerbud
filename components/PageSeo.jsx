@@ -8,7 +8,7 @@ const PageSeo = ({ metadata }) => {
   return (
     <>
       <NextSeo 
-        title={`Summerbud's writing | ${metadata.title}`}
+        title={`${metadata.title}`}
         description={metadata.description}
         //canonical={``}
         openGraph={{

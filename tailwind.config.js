@@ -59,6 +59,7 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             code: {
+              fontSize: theme("fontSize.base"),
               fontWeight: 600,
               color: theme("colors.sd-black"),
               backgroundColor: theme("colors.green.300"),
@@ -134,6 +135,7 @@ module.exports = {
               color: theme("colors.sd-brwhite"),
             },
             code: {
+              fontSize: theme("fontSize.base"),
               fontWeight: 600,
               color: theme("colors.sd-white"),
               backgroundColor: theme("colors.green.800"),

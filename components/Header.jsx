@@ -7,12 +7,11 @@ import CustomLink from "./CustomLink";
 import useTranslation from "../hooks/useTranslation";
 import TranslationDropdown from "./TranslationDropdown";
 import { useRouter } from "next/dist/client/router";
-import LessenLearnedButton from "./buttons/LessenLearnedButton";
-import SnippetButton from "./buttons/SnippetButton";
 import MapIcon from "./icons/MapIcon";
 import { useEffect, useState } from "react";
 import XIcon from "./icons/XIcon";
-const Header = () => {
+
+const Header = ({ hasTranslation }) => {
   const title = "{ summerbud }";
   const { locale } = useTranslation();
   const { route, asPath } = useRouter();
@@ -46,7 +45,7 @@ const Header = () => {
         <SeriesButton />
         <PostsButton />
         <div className="flex flex-row gap-x-4 ml-8">
-          {!route.includes("posts") && <TranslationDropdown />}
+          {hasTranslation && <TranslationDropdown />}
           <ThemeToggle />
         </div>
       </div>
@@ -57,7 +56,7 @@ const Header = () => {
           <SeriesButton />
           <PostsButton />
           <div className="flex flex-col gap-y-4 lg:gap-x-4 justify-items-start items-start mt-8">
-            {!route.includes("posts") && <TranslationDropdown />}
+            {hasTranslation && <TranslationDropdown />}
             <ThemeToggle />
           </div>
         </div>
