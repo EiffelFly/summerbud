@@ -7,17 +7,13 @@ const ProjectsColumn = () => {
     title: t("footer.projects._title"),
     links: [
       {
-        title: t("footer.projects.working"),
-        url: "/projects",
-      },
-      {
         title: t("footer.projects.township"),
         url: "/projects/township"
       },
-      {
-        title: t("footer.projects.totuslink"),
-        url: "/projects/totuslink",
-      },
+      // {
+      //   title: t("footer.projects.totuslink"),
+      //   url: "/projects/totuslink",
+      // },
       // {
       //   title: t("footer.projects.hologram"),
       //   url: "/projects/hologram",

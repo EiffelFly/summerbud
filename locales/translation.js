@@ -39,6 +39,7 @@ const translation = {
         about: "About",
         posts: "Posts",
         series: "Series",
+        projects: "Projects",
         snippets: "Snippets",
         lessonLearned: "Lesson Learned"
       },
@@ -56,7 +57,7 @@ const translation = {
         breakfast: "A boiled egg for breakfast"
       },
       projects: {
-        _title: "Projects",
+        _title: "What I am working on",
         working: "What I am working on",
         township: "Township",
         totuslink: "Totuslink",
@@ -117,6 +118,7 @@ const translation = {
         about: "關於我",
         posts: "文章",
         series: "系列",
+        projects: "專案",
         snippets: "Snippets",
         lessonLearned: "Lesson Learned"
       },
@@ -134,7 +136,7 @@ const translation = {
         breakfast: "早餐一顆水煮蛋"
       },
       projects: {
-        _title: "專案",
+        _title: "我正在開發的專案",
         working: "我正在開發的專案",
         township: "Township",
         totuslink: "Totuslink",
