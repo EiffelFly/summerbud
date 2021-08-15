@@ -13,7 +13,7 @@ import PostTitle from "../../../../components/PostTitle";
 import PostSeo from "../../../../components/PostSeo";
 import SubscriptionForm from "../../../../components/SubscriptionForm";
 import DotEmphasizeText from "../../../../components/DotEmphasizeText";
-import PostSeriesBreadcrum from "../../../../components/PostSeriesBreadcrum";
+//import PostSeriesBreadcrum from "../../../../components/PostSeriesBreadcrum";
 import useTranslation from "../../../../hooks/useTranslation";
 import SeriesArticlesList from "../../../../components/SeriesArticlesList";
 

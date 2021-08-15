@@ -1,7 +1,7 @@
 const translation = {
   "en": {
     common: {
-      "article": "Article"
+      "article": "Posts",
     },
     components: {
       aboutButton: "About",
@@ -80,7 +80,7 @@ const translation = {
   },
   "zh-tw": {
     common: {
-      "article": "文章"
+      "article": "文章",
     },
     components: {
       aboutButton: "關於我",
