@@ -2,8 +2,8 @@ import Header from "../../../components/Header";
 import PageSeo from "../../../components/PageSeo";
 import SectionContainer from "../../../components/SectionContainer";
 import {
-  getAllLessenLearnedPath,
-  getLessenLearnedContent,
+  getAllLessonLearnedPath,
+  getLessonLearnedContent,
 } from "../../../lib/files";
 import PostTitle from "../../../components/PostTitle";
 import { useMemo } from "react";
@@ -39,7 +39,7 @@ const MDXPage = ({ code, metadata }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { metadata, code } = await getLessenLearnedContent({
+  const { metadata, code } = await getLessonLearnedContent({
     isPage: false,
     lang: params.lang,
     slug: params.slug,
@@ -53,7 +53,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = () => {
-  const paths = getAllLessenLearnedPath();
+  const paths = getAllLessonLearnedPath();
   return {
     paths,
     fallback: false,

@@ -7,8 +7,6 @@ import CustomLink from "./CustomLink";
 import useTranslation from "../hooks/useTranslation";
 import TranslationDropdown from "./TranslationDropdown";
 import { useRouter } from "next/dist/client/router";
-import LessenLearnedButton from "./buttons/LessenLearnedButton";
-import SnippetButton from "./buttons/SnippetButton";
 import MapIcon from "./icons/MapIcon";
 import { useEffect, useState } from "react";
 import XIcon from "./icons/XIcon";

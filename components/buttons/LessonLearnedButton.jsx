@@ -1,7 +1,7 @@
 import CustomLink from "../CustomLink";
 import useTranslation from "../../hooks/useTranslation";
 
-const LessenLearnedButton = () => {
+const LessonLearnedButton = () => {
 
   const { t, locale } = useTranslation();
 
@@ -14,4 +14,4 @@ const LessenLearnedButton = () => {
   );
 };
 
-export default LessenLearnedButton;
+export default LessonLearnedButton;

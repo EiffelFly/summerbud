@@ -7,10 +7,10 @@ const translation = {
       aboutButton: "About",
       seriesButton: "Series",
       postsButton: "Posts",
-      lessenLearnedButton: "L-L",
+      lessonLearnedButton: "L-L",
       snippetButton: "Snippet",
       subscriptionFormTitle: "Subscribe to the newsletter",
-      subscriptionFormDescription: "Get email from me about the lessen learned of literature, web development and entrepreneurship, I frequently share some of my favorite articles I've read, as well as anything fascinating about literature and technology.",
+      subscriptionFormDescription: "Get email from me about the lesson learned of literature, web development and entrepreneurship, I frequently share some of my favorite articles I've read, as well as anything fascinating about literature and technology.",
       subscriptionWelcomeText: "Cheers! Welcome aboard.",
       subscriptionButton: "Subscribe",
       subscriptionClarification: "I'll only send emails when new content is posted. No spam.",
@@ -40,7 +40,7 @@ const translation = {
         posts: "Posts",
         series: "Series",
         snippets: "Snippets",
-        lessenLearned: "Lessen Learned"
+        lessonLearned: "Lesson Learned"
       },
       series: {
         _title: "Series",
@@ -85,10 +85,10 @@ const translation = {
       aboutButton: "關於我",
       seriesButton: "系列",
       postsButton: "文章",
-      lessenLearnedButton: "L-L",
+      lessonLearnedButton: "L-L",
       snippetButton: "Snippet",
       subscriptionFormTitle: "訂閱電子信",
-      subscriptionFormDescription: "從我這收到關於文學、網頁開發、文學的 Lessen learned。我經常分享近期閱讀到的好文章或書籍，以及技術相關的訊息。",
+      subscriptionFormDescription: "從我這收到關於文學、網頁開發、文學的 Lesson learned。我經常分享近期閱讀到的好文章或書籍，以及技術相關的訊息。",
       subscriptionWelcomeText: "Cheers! 歡迎加入",
       subscriptionButton: "Subscribe",
       subscriptionClarification: "我只會在新內容刊登時寄送信件給您，拒絕垃圾信件。",
@@ -118,7 +118,7 @@ const translation = {
         posts: "文章",
         series: "系列",
         snippets: "Snippets",
-        lessenLearned: "Lessen Learned"
+        lessonLearned: "Lesson Learned"
       },
       series: {
         _title: "系列",
