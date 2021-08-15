@@ -21,7 +21,7 @@ const translation = {
         totuslink: "Research project about how listing make us stumble",
         hologram: "Bi-directional link reference tool",
         pnyx: "Text discussion tool built upon graph",
-        basestone: "Articles tokenize, summarize tool"
+        basestone: "Articles tokenize, summarize, highlight tool"
       }
     },
     pages: {
@@ -99,7 +99,7 @@ const translation = {
         totuslink: "探詢條列式帶來的問題的研究計畫",
         hologram: "雙向連結參考資料工具",
         pnyx: "以力圖為主要呈現方式的討論論壇",
-        basestone: "文章斷詞、總結工具"
+        basestone: "文章斷詞、總結、Highlight 工具"
       }
     },
     pages: {
