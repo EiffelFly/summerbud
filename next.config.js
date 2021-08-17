@@ -27,21 +27,21 @@ module.exports = withBundleAnalyzer({
   // },
   async redirects() {
     return [
-      {
-        source: '/',
-        has: [
-          {
-            type: 'header',
-            key: 'x-vercel-ip-country',
-            value: 'TW'
-          }
-        ],
-        destination: '/zh-tw',
-        permanent: true,
-      },
+      // {
+      //   source: '/',
+      //   has: [
+      //     {
+      //       type: 'header',
+      //       key: 'x-vercel-ip-country',
+      //       value: 'TW'
+      //     }
+      //   ],
+      //   destination: '/zh-tw',
+      //   permanent: true,
+      // },
       {
         source: "/",
-        destination: "/en",
+        destination: "/zh-tw",
         permanent: true,
       }
     ]
