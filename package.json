@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 3005",
     "build": "next build",
     "start": "next start"
   },

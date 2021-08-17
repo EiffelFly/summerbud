@@ -20,7 +20,7 @@ const SeriesColumn = () => {
       },
       {
         title: t("footer.series.literature"),
-        url: "/series/the-master-degree-of-taiwanese-literature/intro",
+        url: "/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/intro",
       },
     ],
   };
