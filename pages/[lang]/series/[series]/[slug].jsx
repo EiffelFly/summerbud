@@ -61,6 +61,7 @@ export const getStaticProps = async ({ params }) => {
     articlePaths = await getTargetSeriesPaths({ seriesName: params.series });
     const introIndex = articlePaths.indexOf(`${params.series}/intro`);
     articlePaths.splice(introIndex, 1);
+    console.log(articlePaths)
     for (const articlePath of articlePaths) {
       try {
         const slug = articlePath.split("/")[1];
@@ -91,6 +92,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = await getAllSeriesSlugs();
+  console.log(paths)
   return {
     paths,
     fallback: false,

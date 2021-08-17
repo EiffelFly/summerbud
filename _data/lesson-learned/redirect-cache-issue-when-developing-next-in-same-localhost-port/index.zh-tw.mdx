@@ -38,7 +38,7 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-事情都很順利，不管是在 production 還是 development 你都成功導引訪客到目標網址。然而當你想要開發另外一個 nextjs 專案，在 development 時使用同樣的開發網址http://localhost:3000。你會發現事情怪怪的，即使沒有在 `next.config.js` 指定轉址，它一樣把你轉到了 http://localhost:3000/en
+事情進行得很順利，不管是在 production 還是 development 都可以成功導引訪客到目標網址。然而當我想要開發另外一個 nextjs 專案，並且在 development 時使用同樣的開發網址 http://localhost:3000 你會發現事情怪怪的，即使沒有在 `next.config.js` 指定轉址，它一樣把你轉到了 http://localhost:3000/en
 
 ### 原因
 
@@ -53,7 +53,7 @@ module.exports = nextConfig
 
 在 Next.js 的專案中，我們使用 `permanent: true` 這個設定來判斷這件事，如果設定值為 `true` Next 會自動以 308 轉址。相反的，設定為 `false` 則使用 307。[^7]
 
-那接下來的問題就會是，如果我想要在 production 環境設置 308 Permanent Redirect，但我在本地開發其他專案，想要使用同一個 Port 卻又不想被 cache 影響該怎麼做。
+那接下來的問題就會是，如果我想要在 production 環境設置 308 Permanent Redirect，但在本地開發其他專案時，想要使用同一個 Port 卻又不想被 cache 影響該怎麼做。
 
 ### 解決方法
 
