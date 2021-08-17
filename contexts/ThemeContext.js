@@ -10,18 +10,18 @@ export const ThemeContext = React.createContext(defaultState);
 export const ThemeProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = React.useState("light");
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.localStorage) {
-      const storedPrefs = window.localStorage.getItem("color-theme");
-      if (typeof storedPrefs === "string" && storedPrefs === "dark" ) {
-        setTheme("dark");
-      }
-      const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
-      if (userMedia.matches) {
-        setTheme("dark");
-      }
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (typeof window !== "undefined" && window.localStorage) {
+  //     const storedPrefs = window.localStorage.getItem("color-theme");
+  //     if (typeof storedPrefs === "string" && storedPrefs === "dark" ) {
+  //       setTheme("dark");
+  //     }
+  //     const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
+  //     if (userMedia.matches) {
+  //       setTheme("dark");
+  //     }
+  //   }
+  // }, [])
 
   const rawSetTheme = (rawTheme) => {
     const root = window.document.documentElement;
