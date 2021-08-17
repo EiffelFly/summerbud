@@ -58,9 +58,8 @@ module.exports = nextConfig
 ### 解決方法
 
 1. 無差別：每次轉換開發專案時就清理一次 cache（清除瀏覽記錄）
-2. 只清理 localhost:3000：在轉換專案時，於 http:localhost:3000 長按重新整理鈕，「選擇清除快取並強制重新載入」（Chrome） 
-3. 無差別（不推薦）：Developer tool -> Network -> check disable cache（Chrome）
-4. 使用 Browser hard refresh[^8]
+2. 只清理 localhost:3000：在轉換專案時，進入 Google Developer tool -> Network -> check disable cache（Chrome）後於 http:localhost:3000 長按重新整理鈕，「選擇清除快取並強制重新載入」（Chrome） -> uncheck disable cache
+3. 使用 Browser hard refresh[^8]
 
 
 使用這三種方法其一後，瀏覽器就不會 cache 轉址指令。在同一個 port 開發時也不會有突然被莫名轉址的問題了！
