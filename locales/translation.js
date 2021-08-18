@@ -75,7 +75,8 @@ const translation = {
     series: {
       bloggingWithNextjs: "Blogging with Next.js",
       theOtherEndOfLine: "The other end of line",
-      theBuildersLife: "The builder's life"
+      theBuildersLife: "The builder's life",
+      theMasterDegreeOfTaiwanese: "The master degree of Taiwanese literature"
     }
   },
   "zh-tw": {
@@ -154,7 +155,8 @@ const translation = {
     series: {
       bloggingWithNextjs: "以 Next.js 開啟的部落格之旅",
       theOtherEndOfLine: "電話的另一端",
-      theBuildersLife: "The builder's life"
+      theBuildersLife: "The builder's life",
+      theMasterDegreeOfTaiwanese: "台文所與顛倒世界"
     }
   }
 };

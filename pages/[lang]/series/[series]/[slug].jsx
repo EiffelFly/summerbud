@@ -16,6 +16,7 @@ import DotEmphasizeText from "../../../../components/DotEmphasizeText";
 //import PostSeriesBreadcrum from "../../../../components/PostSeriesBreadcrum";
 import useTranslation from "../../../../hooks/useTranslation";
 import SeriesArticlesList from "../../../../components/SeriesArticlesList";
+import BackToSeries from "../../../../components/buttons/BackToSeries";
 
 const MDXPages = ({ metadata, code, articles }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -39,6 +40,12 @@ const MDXPages = ({ metadata, code, articles }) => {
           />
 
           <SeriesArticlesList articles={articles} className={"mt-20"} />
+          {metadata.seriesIndex !== 0 && (
+            <BackToSeries
+              seriesKey={metadata.seriesKey}
+              seriesSlug={metadata.seriesSlug}
+            />
+          )}
           <SubscriptionForm className={"mt-60"} />
         </article>
         <Footer />
@@ -61,7 +68,7 @@ export const getStaticProps = async ({ params }) => {
     articlePaths = await getTargetSeriesPaths({ seriesName: params.series });
     const introIndex = articlePaths.indexOf(`${params.series}/intro`);
     articlePaths.splice(introIndex, 1);
-    console.log(articlePaths)
+    console.log(articlePaths);
     for (const articlePath of articlePaths) {
       try {
         const slug = articlePath.split("/")[1];
@@ -92,7 +99,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = await getAllSeriesSlugs();
-  console.log(paths)
+  console.log(paths);
   return {
     paths,
     fallback: false,
