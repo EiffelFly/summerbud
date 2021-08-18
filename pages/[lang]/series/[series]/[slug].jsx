@@ -16,6 +16,7 @@ import DotEmphasizeText from "../../../../components/DotEmphasizeText";
 //import PostSeriesBreadcrum from "../../../../components/PostSeriesBreadcrum";
 import useTranslation from "../../../../hooks/useTranslation";
 import SeriesArticlesList from "../../../../components/SeriesArticlesList";
+import BackToSeries from "../../../../components/buttons/BackToSeries";
 
 const MDXPages = ({ metadata, code, articles }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -39,6 +40,12 @@ const MDXPages = ({ metadata, code, articles }) => {
           />
 
           <SeriesArticlesList articles={articles} className={"mt-20"} />
+          {metadata.seriesIndex !== 0 && (
+            <BackToSeries
+              seriesKey={metadata.seriesKey}
+              seriesSlug={metadata.seriesSlug}
+            />
+          )}
           <SubscriptionForm className={"mt-60"} />
         </article>
         <Footer />
@@ -52,6 +59,7 @@ export const getStaticProps = async ({ params }) => {
   let articlePaths = [];
 
   const { code, metadata } = await getSeriesPostsContent({
+    pathProvided: false,
     series: params.series,
     slug: params.slug,
     lang: params.lang,
@@ -59,19 +67,19 @@ export const getStaticProps = async ({ params }) => {
 
   if (params.slug === "intro") {
     articlePaths = await getTargetSeriesPaths({ seriesName: params.series });
-    const introIndex = articlePaths.indexOf(`${params.series}/intro`);
-    articlePaths.splice(introIndex, 1);
-    console.log(articlePaths)
+    articlePaths = articlePaths.filter((path) => !path.includes("/intro/"));
+
     for (const articlePath of articlePaths) {
       try {
         const slug = articlePath.split("/")[1];
+        const lang = articlePath.split("/")[2].split(".")[1];
         const { metadata } = await getSeriesPostsContent({
           series: params.series,
           slug: slug,
-          lang: params.lang,
+          lang: lang,
         });
         articles.push({
-          path: `/series/${articlePath}`,
+          path: `/series/${params.series}/${slug}`,
           metadata: metadata,
         });
       } catch (err) {
@@ -92,7 +100,6 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = await getAllSeriesSlugs();
-  console.log(paths)
   return {
     paths,
     fallback: false,
