@@ -7,7 +7,7 @@ module.exports = withBundleAnalyzer({
   pageExtensions: ["js", "jsx", "mdx"],
   webpack: (config, { isServer }) => {
     if (isServer) {
-      require('./lib/generate-sitemap');
+      //require('./lib/generate-sitemap');
     }
 
     return config;
