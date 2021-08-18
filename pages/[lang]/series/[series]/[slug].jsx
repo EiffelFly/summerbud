@@ -100,7 +100,6 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const paths = await getAllSeriesSlugs();
-  console.log(paths);
   return {
     paths,
     fallback: false,
