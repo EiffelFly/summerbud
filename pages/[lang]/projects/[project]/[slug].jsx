@@ -8,7 +8,8 @@ import Footer from "../../../../components/Footer";
 import CustomLink from "../../../../components/CustomLink";
 import PostTitle from "../../../../components/PostTitle";
 import SubscriptionForm from "../../../../components/SubscriptionForm";
-import Image from 'next/image';
+import CustomImage from "../../../../components/CustomImage";
+
 
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -23,7 +24,7 @@ const MDXPages = ({ code, metadata }) => {
             tags={metadata.tags}
             className={"mb-20"}
           />
-          <Component components={{ CustomLink: CustomLink, Image: Image }} />
+          <Component components={{ CustomLink: CustomLink, Image: CustomImage }} />
           <SubscriptionForm className={"mt-80"} />
         </article>
         <Footer />
