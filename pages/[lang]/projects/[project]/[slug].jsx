@@ -9,6 +9,7 @@ import CustomLink from "../../../../components/CustomLink";
 import PostTitle from "../../../../components/PostTitle";
 import SubscriptionForm from "../../../../components/SubscriptionForm";
 import CustomImage from "../../../../components/CustomImage";
+import PostSeo from "../../../../components/PostSeo";
 
 
 const MDXPages = ({ code, metadata }) => {
@@ -16,7 +17,7 @@ const MDXPages = ({ code, metadata }) => {
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap={"gap-y-16"}>
-        <PageSeo metadata={metadata} />
+        <PostSeo metadata={metadata} locale={locale} type={"projects"} />
         <Header hasTranslation={metadata.hasTranslation} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle

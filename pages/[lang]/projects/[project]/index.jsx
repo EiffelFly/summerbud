@@ -17,11 +17,11 @@ import useTranslation from "../../../../hooks/useTranslation";
 
 const MDXPage = ({ code, metadata, devlogs }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
-        <PageSeo metadata={metadata} />
+        <PageSeo metadata={metadata} locale={locale} />
         <Header hasTranslation={true} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <Component components={{ CustomLink: CustomLink }} />

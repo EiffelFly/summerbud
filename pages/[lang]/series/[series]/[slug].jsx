@@ -26,7 +26,7 @@ const MDXPages = ({ metadata, code, articles }) => {
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
         <Header hasTranslation={metadata.hasTranslation} />
-        <PostSeo metadata={metadata} />
+        <PostSeo metadata={metadata} locale={locale} type={"series"} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle
             title={metadata.title}

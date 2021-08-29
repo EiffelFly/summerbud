@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 //import useTranslation from "../hooks/useTranslation";
 
-const PageSeo = ({ metadata, locale, type }) => {
+const PageSeo = ({ metadata, locale }) => {
 
   //const { t, locale } = useTranslation();
 
