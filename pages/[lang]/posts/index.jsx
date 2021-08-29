@@ -13,13 +13,13 @@ const Posts = ({ allPostsData, locale }) => {
   const metadata = {
     title: t("common.article") + " | Summerbud's writing",
     description: "",
-
+    baseSlug: "posts"
   }
   const postsData = allPostsData.filter((post) => post.metadata.lang === locale);
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-8">
-        <PageSeo metadata={metadata} />
+        <PageSeo metadata={metadata} locale={locale} />
         <Header />
         <PostIntro />
         <PostsList posts={postsData} />

@@ -2,6 +2,7 @@ import {
   getSeriesPostsContent,
   getAllSeriesSlugs,
   getTargetSeriesPaths,
+  getOneLayerSlug,
 } from "../../../../lib/files";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
@@ -20,12 +21,12 @@ import BackToSeries from "../../../../components/buttons/BackToSeries";
 
 const MDXPages = ({ metadata, code, articles }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
         <Header hasTranslation={metadata.hasTranslation} />
-        <PostSeo metadata={metadata} />
+        <PostSeo metadata={metadata} locale={locale} type={"series"} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle
             title={metadata.title}
@@ -88,6 +89,9 @@ export const getStaticProps = async ({ params }) => {
     }
     articles.sort((a, b) => a.metadata.seriesIndex - b.metadata.seriesIndex);
   }
+
+  const files = getOneLayerSlug({type: "series"})
+  console.log(files)
 
   return {
     props: {

@@ -11,13 +11,16 @@ import { getMDXComponent } from "mdx-bundler/client";
 import CustomLink from "../../../components/CustomLink";
 import SubscriptionForm from "../../../components/SubscriptionForm";
 import Footer from "../../../components/Footer";
+import useTranslation from "../../../hooks/useTranslation";
+import PostSeo from "../../../components/PostSeo";
 
 const MDXPage = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
+  const { locale } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap="gap-y-16">
-        <PageSeo metadata={metadata} />
+        <PostSeo metadata={metadata} locale={locale} type={"lesson-learned"} />
         <Header hasTranslation={metadata.hasTranslation} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle

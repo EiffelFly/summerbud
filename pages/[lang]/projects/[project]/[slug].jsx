@@ -9,14 +9,16 @@ import CustomLink from "../../../../components/CustomLink";
 import PostTitle from "../../../../components/PostTitle";
 import SubscriptionForm from "../../../../components/SubscriptionForm";
 import CustomImage from "../../../../components/CustomImage";
-
+import PostSeo from "../../../../components/PostSeo";
+import useTranslation from "../../../../hooks/useTranslation";
 
 const MDXPages = ({ code, metadata }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
+  const { locale } = useTranslation();
   return (
     <div className="bg-sd-brwhite dark:bg-sd-brblack w-screen min-h-screen">
       <SectionContainer gap={"gap-y-16"}>
-        <PageSeo metadata={metadata} />
+        <PostSeo metadata={metadata} locale={locale} type={"projects"} />
         <Header hasTranslation={metadata.hasTranslation} />
         <article className="md:mx-auto prose prose-lg py-12 dark:prose-dark">
           <PostTitle
@@ -24,7 +26,9 @@ const MDXPages = ({ code, metadata }) => {
             tags={metadata.tags}
             className={"mb-20"}
           />
-          <Component components={{ CustomLink: CustomLink, Image: CustomImage }} />
+          <Component
+            components={{ CustomLink: CustomLink, Image: CustomImage }}
+          />
           <SubscriptionForm className={"mt-80"} />
         </article>
         <Footer />

@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 //import useTranslation from "../hooks/useTranslation";
 
-const PageSeo = ({ metadata }) => {
+const PageSeo = ({ metadata, locale }) => {
 
   //const { t, locale } = useTranslation();
 
@@ -12,7 +12,7 @@ const PageSeo = ({ metadata }) => {
         description={metadata.description}
         //canonical={``}
         openGraph={{
-          //url: `https://ekomenyong.com/posts/${frontMatter.slug}`,
+          url: `https://summerbud.org/${locale}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
           // images: [

@@ -1,11 +1,6 @@
 
 import { NextSeo, ArticleJsonLd } from "next-seo";
-//import useTranslation from "../hooks/useTranslation";
-
-const PostSeo = ({ metadata }) => {
-
-  //const { t, locale } = useTranslation();
-
+const PostSeo = ({ metadata, type, locale }) => {
   return (
     <>
       <NextSeo 
@@ -13,7 +8,7 @@ const PostSeo = ({ metadata }) => {
         description={metadata.description}
         //canonical={``}
         openGraph={{
-          //url: `https://ekomenyong.com/posts/${frontMatter.slug}`,
+          url: `https://summerbud.org/${locale}/${type}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
           // images: [
@@ -32,7 +27,7 @@ const PostSeo = ({ metadata }) => {
         }}
       />
       <ArticleJsonLd 
-        //url={`https://ekomenyong.com/posts/${metadata.slug}`}
+        url={`https://summerbud.org/${locale}/${type}${metadata.baseSlug}`}
         title={metadata.title}
         //images={[`https://ekomenyong.com${metadata.image}`]}
         datePublished={`${metadata.publishedAt}`}
