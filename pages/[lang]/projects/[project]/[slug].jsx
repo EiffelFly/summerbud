@@ -15,7 +15,7 @@ import CustomImage from "../../../../components/CustomImage";
 import PostSeo from "../../../../components/PostSeo";
 import useTranslation from "../../../../hooks/useTranslation";
 import GeneralList from "../../../../components/GeneralList";
-import GeneralListIntro from "../../../../components/GeneralListIntro";
+
 
 const MDXPages = ({ code, metadata, devlogs }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
