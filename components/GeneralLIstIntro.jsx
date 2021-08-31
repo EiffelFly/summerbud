@@ -1,5 +1,5 @@
 import useTranslation from "../hooks/useTranslation";
-const DevLogsIntro = ({ className, children }) => {
+const GeneralListIntro = ({ className, children }) => {
   const { t } = useTranslation();
   return (
     <div
@@ -12,4 +12,4 @@ const DevLogsIntro = ({ className, children }) => {
   );
 };
 
-export default DevLogsIntro;
+export default GeneralListIntro;

@@ -8,19 +8,19 @@ const SeriesColumn = () => {
     links: [
       {
         title: t("footer.series.builder"),
-        url: "/series/the-builders-life/intro",
+        url: "/series/the-builders-life/outline",
       },
       {
         title: t("footer.series.nextjs"),
-        url: "/series/blogging-with-nextjs/intro",
+        url: "/series/blogging-with-nextjs/outline",
       },
       {
         title: t("footer.series.endOfLine"),
-        url: "/series/the-other-end-of-line/intro",
+        url: "/series/the-other-end-of-line/outline",
       },
       {
         title: t("footer.series.literature"),
-        url: "/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/intro",
+        url: "/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/outline",
       },
     ],
   };

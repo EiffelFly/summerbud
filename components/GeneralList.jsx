@@ -1,7 +1,7 @@
 import CustomLink from "./CustomLink";
 import TimeBlock from "./TimeBlock";
 
-const DevlogsList = ({ elements }) => {
+const GeneralList = ({ elements }) => {
   return (
     <div className="flex flex-col gap-y-4">
       {elements.map((element) => (
@@ -23,4 +23,4 @@ const DevlogsList = ({ elements }) => {
   );
 };
 
-export default DevlogsList;
+export default GeneralList;

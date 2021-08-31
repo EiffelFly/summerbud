@@ -8,7 +8,7 @@ const ProjectsColumn = () => {
     links: [
       {
         title: t("footer.projects.township"),
-        url: "/projects/township"
+        url: "/projects/township/outline"
       },
       // {
       //   title: t("footer.projects.totuslink"),
