@@ -15,7 +15,7 @@ import CustomImage from "../../../../components/CustomImage";
 import PostSeo from "../../../../components/PostSeo";
 import useTranslation from "../../../../hooks/useTranslation";
 import GeneralList from "../../../../components/GeneralList";
-
+import GeneralListIntro from "../../../../components/GeneralLIstIntro";
 
 const MDXPages = ({ code, metadata, devlogs }) => {
   const Component = useMemo(() => getMDXComponent(code), [code]);
@@ -34,6 +34,7 @@ const MDXPages = ({ code, metadata, devlogs }) => {
           <Component
             components={{ CustomLink: CustomLink, Image: CustomImage }}
           />
+          
           {devlogs.length > 0 && (
             <Fragment>
               <GeneralListIntro>{t("components.devlogs")}</GeneralListIntro>
