@@ -1,9 +1,8 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import Header from "../../../../components/Header";
-import PageSeo from "../../../../components/PageSeo";
 import SectionContainer from "../../../../components/SectionContainer";
-import { getAllProjectPath, getProjectContent } from "../../../../lib/files";
+import { constructPathParams, getAllArticleContent } from "../../../../lib/files";
 import Footer from "../../../../components/Footer";
 import CustomLink from "../../../../components/CustomLink";
 import PostTitle from "../../../../components/PostTitle";
@@ -38,12 +37,12 @@ const MDXPages = ({ code, metadata }) => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { code, metadata } = await getProjectContent({
-    isIndex: false,
-    project: params.project,
-    lang: params.lang,
-    slug: params.slug,
-  });
+
+  const { code, metadata } = await getAllArticleContent({
+    type: "projects",
+    pathTail: `${params.project}/${params.slug}/index.${params.lang}.mdx`
+  })
+
   return {
     props: {
       code,
@@ -53,7 +52,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = () => {
-  const paths = getAllProjectPath({ isIndex: false });
+  const paths = constructPathParams("projects")
   return {
     paths,
     fallback: false,
