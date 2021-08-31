@@ -2,7 +2,6 @@ import {
   getSeriesPostsContent,
   getAllSeriesSlugs,
   getTargetSeriesPaths,
-  getOneLayerSlug,
 } from "../../../../lib/files";
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
@@ -66,9 +65,9 @@ export const getStaticProps = async ({ params }) => {
     lang: params.lang,
   });
 
-  if (params.slug === "intro") {
+  if (params.slug === "outline") {
     articlePaths = await getTargetSeriesPaths({ seriesName: params.series });
-    articlePaths = articlePaths.filter((path) => !path.includes("/intro/"));
+    articlePaths = articlePaths.filter((path) => !path.includes("/outline/"));
 
     for (const articlePath of articlePaths) {
       try {
@@ -89,9 +88,6 @@ export const getStaticProps = async ({ params }) => {
     }
     articles.sort((a, b) => a.metadata.seriesIndex - b.metadata.seriesIndex);
   }
-
-  const files = getOneLayerSlug({type: "series"})
-  console.log(files)
 
   return {
     props: {
