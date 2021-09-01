@@ -1,191 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://summerbud.org/zh-tw</loc>
+    <loc>https://www.summerbud.org/zh-tw</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en</loc>
+    <loc>https://www.summerbud.org/en</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/zh-tw/about</loc>
+    <loc>https://www.summerbud.org/zh-tw/about</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en/about</loc>
+    <loc>https://www.summerbud.org/en/about</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/zh-tw/lesson-learned</loc>
+    <loc>https://www.summerbud.org/zh-tw/lesson-learned</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en/lesson-learned</loc>
+    <loc>https://www.summerbud.org/en/lesson-learned</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/zh-tw/posts</loc>
+    <loc>https://www.summerbud.org/zh-tw/posts</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en/posts</loc>
+    <loc>https://www.summerbud.org/en/posts</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/zh-tw/series</loc>
+    <loc>https://www.summerbud.org/zh-tw/series</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en/series</loc>
+    <loc>https://www.summerbud.org/en/series</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/zh-tw/projects</loc>
+    <loc>https://www.summerbud.org/zh-tw/projects</loc>
   </url>
   <url>
-    <loc>https://summerbud.org/en/projects</loc>
+    <loc>https://www.summerbud.org/en/projects</loc>
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/lesson-learned/construct-your-own-git-commit-system</loc
+      >https://www.summerbud.org/zh-tw/lesson-learned/construct-your-own-git-commit-system</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/lesson-learned/how-to-implement-footnotes-in-mdx-bundler-project</loc
+      >https://www.summerbud.org/zh-tw/lesson-learned/how-to-implement-footnotes-in-mdx-bundler-project</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/lesson-learned/how-to-soft-wrap-vscode-mardown-file-only</loc
+      >https://www.summerbud.org/zh-tw/lesson-learned/how-to-soft-wrap-vscode-mardown-file-only</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/lesson-learned/redirect-cache-issue-when-developing-next-in-same-localhost-port</loc
+      >https://www.summerbud.org/zh-tw/lesson-learned/redirect-cache-issue-when-developing-next-in-same-localhost-port</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/blogging-with-nextjs/add-newsletter-subscription</loc
+      >https://www.summerbud.org/zh-tw/series/blogging-with-nextjs/add-newsletter-subscription</loc
     >
   </url>
 
   <url>
-    <loc>https://summerbud.org/en/series/blogging-with-nextjs/outline</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/series/blogging-with-nextjs/outline</loc>
+    <loc>https://www.summerbud.org/en/series/blogging-with-nextjs/outline</loc>
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-builders-life/1-the-decision-about-dropping-taiwanese-literature-master-degree</loc
+      >https://www.summerbud.org/zh-tw/series/blogging-with-nextjs/outline</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-builders-life/2-writing-programming-and-train-platform</loc
+      >https://www.summerbud.org/zh-tw/series/the-builders-life/1-the-decision-about-dropping-taiwanese-literature-master-degree</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-builders-life/3-hololink-the-origin-of-the-name</loc
+      >https://www.summerbud.org/zh-tw/series/the-builders-life/2-writing-programming-and-train-platform</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-builders-life/6-basestone-and-stellar</loc
-    >
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/en/series/the-builders-life/outline</loc>
-  </url>
-
-  <url>
-    <loc>https://summerbud.org/zh-tw/series/the-builders-life/outline</loc>
-  </url>
-
-  <url>
-    <loc
-      >https://summerbud.org/en/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/outline</loc
+      >https://www.summerbud.org/zh-tw/series/the-builders-life/3-hololink-the-origin-of-the-name</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/outline</loc
+      >https://www.summerbud.org/zh-tw/series/the-builders-life/6-basestone-and-stellar</loc
+    >
+  </url>
+
+  <url>
+    <loc>https://www.summerbud.org/en/series/the-builders-life/outline</loc>
+  </url>
+
+  <url>
+    <loc>https://www.summerbud.org/zh-tw/series/the-builders-life/outline</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/en/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/outline</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/1-about-the-eduction-system-in-taiwan</loc
+      >https://www.summerbud.org/zh-tw/series/the-master-degree-of-taiwanese-literature-and-the-upside-down-world/outline</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/2-the-bus-baggage-room-without-air-conditioning</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/1-about-the-eduction-system-in-taiwan</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/3-short-though-about-working-after-one-month</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/2-the-bus-baggage-room-without-air-conditioning</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/4-the-detail-of-my-work</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/3-short-though-about-working-after-one-month</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/5-get-information-one-by-one</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/4-the-detail-of-my-work</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/6-the-people-of-tower</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/5-get-information-one-by-one</loc
     >
   </url>
 
   <url>
     <loc
-      >https://summerbud.org/zh-tw/series/the-other-end-of-line/7-we-can-know-each-other-very-well</loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/6-the-people-of-tower</loc
     >
   </url>
 
   <url>
-    <loc>https://summerbud.org/en/series/the-other-end-of-line/outline</loc>
+    <loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/7-we-can-know-each-other-very-well</loc
+    >
   </url>
 
   <url>
-    <loc>https://summerbud.org/zh-tw/series/the-other-end-of-line/outline</loc>
+    <loc>https://www.summerbud.org/en/series/the-other-end-of-line/outline</loc>
   </url>
 
   <url>
-    <loc>https://summerbud.org/en/projects/township/outline</loc>
+    <loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/outline</loc
+    >
   </url>
 
   <url>
-    <loc>https://summerbud.org/zh-tw/projects/township/outline</loc>
+    <loc>https://www.summerbud.org/en/projects/township/outline</loc>
   </url>
 
   <url>
-    <loc>https://summerbud.org/zh-tw/projects/township/township-dev-log-1</loc>
+    <loc>https://www.summerbud.org/zh-tw/projects/township/outline</loc>
   </url>
 
   <url>
-    <loc>https://summerbud.org/zh-tw/projects/township/township-dev-log-2</loc>
+    <loc
+      >https://www.summerbud.org/zh-tw/projects/township/township-dev-log-1</loc
+    >
   </url>
 
   <url>
-    <loc>https://summerbud.org/zh-tw/projects/township/township-dev-log-3</loc>
+    <loc
+      >https://www.summerbud.org/zh-tw/projects/township/township-dev-log-2</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/projects/township/township-dev-log-3</loc
+    >
   </url>
 </urlset>
