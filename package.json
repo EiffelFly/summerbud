@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev -p 3005",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.55",
@@ -26,6 +27,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4"
