@@ -129,6 +129,12 @@
 
   <url>
     <loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/10-why-we-need-a-conslusion</loc
+    >
+  </url>
+
+  <url>
+    <loc
       >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/2-the-bus-baggage-room-without-air-conditioning</loc
     >
   </url>
@@ -160,6 +166,18 @@
   <url>
     <loc
       >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/7-we-can-know-each-other-very-well</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/8-avalon</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/series/the-other-end-of-line/9-after-ashoring</loc
     >
   </url>
 
@@ -202,6 +220,18 @@
   <url>
     <loc
       >https://www.summerbud.org/zh-tw/projects/township/township-dev-log-4</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/projects/township/township-dev-log-5</loc
+    >
+  </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/how-to/how-to-send-email-with-aws-ses-and-nodemailer</loc
     >
   </url>
 </urlset>
