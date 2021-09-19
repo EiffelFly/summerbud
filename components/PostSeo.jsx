@@ -10,7 +10,7 @@ const PostSeo = ({ metadata, type, locale }) => {
         openGraph={{
           type: "website",
           locale: locale === "zh-tw" ? "zh_TW" : "en_US",
-          url: `https://summerbud.org/${locale}/${type}${metadata.baseSlug}`,
+          url: `https://www.summerbud.org/${locale}/${type}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
           images: [

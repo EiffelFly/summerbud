@@ -14,7 +14,7 @@ const PageSeo = ({ metadata, locale }) => {
         openGraph={{
           type: "website",
           locale: locale === "zh-tw" ? "zh_TW" : "en_US",
-          url: `https://summerbud.org/${locale}${metadata.baseSlug}`,
+          url: `https://www.summerbud.org/${locale}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
           images: [
