@@ -17,14 +17,14 @@ const PageSeo = ({ metadata, locale }) => {
           url: `https://summerbud.org/${locale}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
-          // images: [
-          //   {
-          //     url: ``,
-          //     width: 1200,
-          //     height: 720,
-          //     alt: `Cover image for ${frontMatter.title}`,
-          //   },
-          // ],
+          images: [
+            {
+              url: `https://www.summerbud.org/me.jpeg`,
+              width: 512,
+              height: 512,
+              alt: `Cover image for ${metadata.title}`,
+            },
+          ],
         }}
         twitter= {{
           handle: '@eiffelfly',
