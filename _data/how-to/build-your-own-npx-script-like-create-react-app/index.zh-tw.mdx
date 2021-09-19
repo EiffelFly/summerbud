@@ -1,7 +1,7 @@
 ---
 lang: zh-tw
 title: How to - 如何打造像是 create-react-app 的 npx script （以 create-threejs-starter-pack 為例）
-baseSlug: "/build-your-own-npx-script-like-create-ract-app"
+baseSlug: "/build-your-own-npx-script-like-create-react-app"
 belongToSeries: false
 seriesKey: 
 seriesSlug:
@@ -13,9 +13,9 @@ lastModified: "2021-09-19T12:00:00"
 description: Npx Script 將大幅提升我們開發、部署的速度，透過 create-threejs-starter-pack 為例，這篇文章解釋了你如何創建自已的 npx script
 ---
 
-上一篇文章 [How to - 打造自己的 Three.js boilerplate](https://www.summerbud.org/zh-tw/how-to/build-your-own-threejs-boilerplate) 講述了如何從零開始用 Webpack 打造自己的 Three.js boilerplate，雖然我們可以用 git clone 把資料放下來，但那樣我們還是需要重新安裝套件，重新設定 package.json 和 git，縱使只需要十分鐘左右，卻仍不夠自動化。
+上一篇文章 [How to - 打造自己的 Three.js boilerplate](https://www.summerbud.org/zh-tw/how-to/build-your-own-threejs-boilerplate) 講述了如何從零開始用 Webpack 打造自己的 Three.js boilerplate。雖然可以用 git clone 把資料放下來，但那樣還是需要重新安裝套件，重新設定 package.json 和 git，縱使只需十分鐘左右，卻仍不夠自動化。
 
-這邊我持守的心智模型是，一但有重複動作的行為，都要盡可能自動化，這也是為什麼我統一使用相同的 git commit 模板的原因（[Lesson-learned - 創造你自己的 git commit 系統](https://www.summerbud.org/zh-tw/lesson-learned/construct-your-own-git-commit-system)）。以下跟大家分享如何使用 npm 中的 npx command line 來自動化這一系列動作，如此一來我們可以把原本需要十分鐘做完的事情，縮減成一分鐘內就可以自動完成。
+我持守的心智模型是：一但有重複動作的行為，都要盡可能自動化，這也是為什麼我統一使用相同的 git commit 模板的原因（[Lesson-learned - 創造你自己的 git commit 系統](https://www.summerbud.org/zh-tw/lesson-learned/construct-your-own-git-commit-system)）。以下跟大家分享如何使用 npm 中的 npx command line 來自動化這一系列動作，如此一來我們可以把原本需要十分鐘做完的事情，縮減成一分鐘內就可以自動完成！
 
 > Npx === Speed
 
