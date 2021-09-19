@@ -8,6 +8,8 @@ const PostSeo = ({ metadata, type, locale }) => {
         description={metadata.description}
         //canonical={``}
         openGraph={{
+          type: "website",
+          locale: locale === "zh-tw" ? "zh_TW" : "en_US",
           url: `https://summerbud.org/${locale}/${type}${metadata.baseSlug}`,
           title: `${metadata.title}`,
           description: `${metadata.description}`,
@@ -29,7 +31,7 @@ const PostSeo = ({ metadata, type, locale }) => {
       <ArticleJsonLd 
         url={`https://summerbud.org/${locale}/${type}${metadata.baseSlug}`}
         title={metadata.title}
-        //images={[`https://ekomenyong.com${metadata.image}`]}
+        //images={}
         datePublished={`${metadata.publishedAt}`}
         dateModified={`${metadata.lastModified}`}
         authorName="Summerbud | Po Chun Chiu"
