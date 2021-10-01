@@ -23,7 +23,7 @@ jobs:
         id: lighthouseCheck
         uses: foo-software/lighthouse-check-action@master
         with:
-          accessToken: ${{ steps.secrets.outputs.GITHUB_TOKEN }}
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }}
           branch: ${{ github.ref }}
           outputDirectory: /tmp/artifacts
