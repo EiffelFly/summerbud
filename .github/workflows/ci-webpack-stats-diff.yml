@@ -51,21 +51,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-head, build-base]
     steps: 
+      # In order to maintain file structure
+      # https://github.com/actions/download-artifact#compatibility-between-v1-and-v2
       - name: Download base artifact
         uses: actions/download-artifact@v2
         with:
           name: base-stats
+          path: base-stats
 
       - name: Download head artifact
         uses: actions/download-artifact@v2
         with:
           name: head-stats
+          path: head-stats
 
       - name: Diff between base & head
         uses: chronotruck/webpack-stats-diff-action@1.3.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           comment_title: 'Bundle difference'
-          base_stats_path: ./base-stats
-          head_stats_path: ./head-stats
+          base_stats_path: ./base-stats/client.json
+          head_stats_path: ./head-stats/client.json
 
