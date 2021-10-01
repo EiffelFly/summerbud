@@ -66,6 +66,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           comment_title: 'Bundle difference'
-          base_stats_path: ./base-stats/client.json
-          head_stats_path: ./head-stats/client.json
+          base_stats_path: ./base-stats
+          head_stats_path: ./head-stats
 
