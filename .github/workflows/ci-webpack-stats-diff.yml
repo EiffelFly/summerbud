@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Install dependencies
         run: npm ci
@@ -66,6 +66,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           comment_title: 'Bundle difference'
-          base_stats_path: ./base-stats/client.json
-          head_stats_path: ./head-stats/client.json
+          base_stats_path: ./base-stats
+          head_stats_path: ./head-stats
 
