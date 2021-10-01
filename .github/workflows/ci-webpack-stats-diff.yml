@@ -51,6 +51,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-head, build-base]
     steps: 
+      - uses: actions/checkout@v2
+      
       # In order to maintain file structure
       # https://github.com/actions/download-artifact#compatibility-between-v1-and-v2
       - name: Download base artifact
