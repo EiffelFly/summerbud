@@ -1,2 +1,6 @@
 name: cd-staging-deploy
 
+on:
+  push:
+    branches:
+      - 'staging'

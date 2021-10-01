@@ -21,7 +21,7 @@ jobs:
       - name: Upload stats.json
         uses: actions/upload-artifact@v2
         with:
-          name: pr-stats
+          name: pr
           path: .next/analyze/client.json
 
   build-base:
@@ -42,7 +42,7 @@ jobs:
       - name: Upload stats.json
         uses: actions/upload-artifact@v2
         with:
-          name: base-stats
+          name: base
           path: .next/analyze/client.json
 
   compare:
@@ -56,21 +56,21 @@ jobs:
       - name: Download base artifact
         uses: actions/download-artifact@v2
         with:
-          name: base-stats
-          path: base-stats
+          name: base
+          path: base
 
       - name: Download PR stats
         uses: actions/download-artifact@v2
         with:
-          name: pr-stats
-          path: pr-stats
+          name: pr
+          path: pr
 
       - name: Get diff
         id: get-diff
         uses: NejcZdovc/bundle-size-diff@v1
         with:
-          base_path: './base-stats/client.json'
-          pr_path: './pr-stats/client.json'
+          base_path: './base/client.json'
+          pr_path: './pr/client.json'
 
       - name: Comment
         uses: NejcZdovc/comment-pr@v1.1.1
