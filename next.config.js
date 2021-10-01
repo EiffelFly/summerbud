@@ -1,14 +1,19 @@
-
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-
-module.exports = withBundleAnalyzer({
+module.exports = {
   pageExtensions: ["js", "jsx", "mdx"],
   webpack: (config, { isServer }) => {
     if (isServer) {
-      require('./lib/generate-sitemap');
+      require("./lib/generate-sitemap");
     }
+
+    const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+    config.plugins.push(
+      new BundleAnalyzerPlugin({
+        analyzerMode: "json",
+        reportFilename: isServer
+          ? "../analyze/server.json"
+          : "./analyze/client.json",
+      })
+    );
 
     return config;
   },
@@ -43,7 +48,7 @@ module.exports = withBundleAnalyzer({
         source: "/",
         destination: "/zh-tw",
         permanent: true,
-      }
-    ]
-  }
-});
+      },
+    ];
+  },
+};

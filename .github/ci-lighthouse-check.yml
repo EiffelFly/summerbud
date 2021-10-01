@@ -1,0 +1,48 @@
+name: ci-lighthouse-check
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  lighthouse-check:
+    # skip if the event is triggered by the release-please-bot opening a PR to main
+    if: ${{ !contains(github.head_ref, 'release') }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Create temporary folder for artifacts
+        run: mkdir /tmp/artifacts
+
+      - name: Run Lighthouse
+        id: lighthouseCheck
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          accessToken: ${{ steps.secrets.outputs.GITHUB_TOKEN }}
+          author: ${{ github.actor }}
+          branch: ${{ github.ref }}
+          outputDirectory: /tmp/artifacts
+          emulatedFormFactor: 'all'
+          urls: 'https://www.summerbug.org'
+          sha: ${{ github.sha }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
+
+      - name: Handle Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: '80'
+          minBestPracticesScore: '50'
+          minPerformanceScore: '50'
+          minProgressiveWebAppScore: '10'
+          minSeoScore: '50'
