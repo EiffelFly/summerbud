@@ -10,8 +10,7 @@ jobs:
     name: 'Build head'
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v1
 
       - name: Install dependencies
         run: npm ci
@@ -19,7 +18,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload stats
+      - name: Upload stats.json
         uses: actions/upload-artifact@v1
         with:
           name: head-stats
@@ -29,9 +28,9 @@ jobs:
     name: 'Build base'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
         with:
-          ## github.base.ref only work at pull_request, it means the branch we want to pull into
+          ## Here we do not checkout the current branch, but we checkout the base branch.
           ref: ${{ github.base_ref }}
 
       - name: Install dependencies
@@ -40,21 +39,17 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload stat
+      - name: Upload stats.json
         uses: actions/upload-artifact@v1
         with:
           name: base-stats
           path: .next/analyze/client.json
 
-  compare-diff:
-    name: 'Compare bundle sizes difference'
+  compare:
+    name: 'Compare base & head bundle sizes'
     runs-on: ubuntu-latest
-    needs: [build-head, build-base]
-    steps: 
-      - uses: actions/checkout@v2
-      
-      # In order to maintain file structure
-      # https://github.com/actions/download-artifact#compatibility-between-v1-and-v2
+    needs: [build-base, build-head]
+    steps:
       - name: Download base artifact
         uses: actions/download-artifact@v1
         with:
@@ -66,10 +61,8 @@ jobs:
           name: head-stats
 
       - name: Diff between base & head
-        uses: chronotruck/webpack-stats-diff-action@1.3.0
+        uses: chronotruck/webpack-stats-diff-action@1.1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          comment_title: 'Bundle difference'
           base_stats_path: ./base-stats/client.json
           head_stats_path: ./head-stats/client.json
-
