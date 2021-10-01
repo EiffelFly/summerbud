@@ -8,7 +8,8 @@ module.exports = {
     const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
     config.plugins.push(
       new BundleAnalyzerPlugin({
-        analyzerMode: "json",
+        analyzerMode: "disabled",
+        generateStatsFile: true,
         reportFilename: isServer
           ? "../analyze/server.json"
           : "./analyze/client.json",
