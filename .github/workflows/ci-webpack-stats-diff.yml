@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: pr
-          path: .next/analyze/client.json
+          path: .next/stats.json
 
   build-base:
     name: 'Build base stats'
@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: base
-          path: .next/analyze/client.json
+          path: .next/stats.json
 
   compare:
     name: 'Compare base & head bundle sizes'
@@ -69,8 +69,8 @@ jobs:
         id: get-diff
         uses: NejcZdovc/bundle-size-diff@v1
         with:
-          base_path: './base/client.json'
-          pr_path: './pr/client.json'
+          base_path: './base/stats.json'
+          pr_path: './pr/stats.json'
 
       - name: Comment
         uses: NejcZdovc/comment-pr@v1.1.1
