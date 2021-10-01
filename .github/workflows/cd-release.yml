@@ -1,0 +1,6 @@
+name: cd-release-please
+
+on:
+  push:
+    branches:
+      - main
