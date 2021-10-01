@@ -1,0 +1,5 @@
+name: cd-prod-deploy
+
+on:
+  release:
+    types: [published, deleted]
