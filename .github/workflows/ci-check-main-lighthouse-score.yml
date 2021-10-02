@@ -22,6 +22,8 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
           scope: ${{ secrets.VERCEL_ORG_ID }}
+          alias-domains: |
+            summerbud-main-site.main.{{PR_NUMBER}}.vercel.app
           # working-directory: ./sub-directory
 
       - name: Create temporary folder for artifacts
