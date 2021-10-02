@@ -34,7 +34,7 @@ jobs:
           prCommentEnabled: true
           outputDirectory: /tmp/artifacts
           emulatedFormFactor: 'all'
-          urls: ${{ steps.deployToVercelStaging.outputs.preview-url }}
+          urls: ${{ steps.deployToVercelMain.outputs.preview-url }}
           sha: ${{ github.sha }}
 
       - name: Handle Lighthouse Check results
