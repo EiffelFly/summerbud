@@ -1,39 +1,30 @@
-name: cd-prod-deploy
+name: ci-check-main-lighthouse-score
 
 on:
-  release:
-    types: [published, deleted]
-
+  pull_request:
+    branches:
+      - 'main'
 
 jobs:
-  deploy-prod:
-    # skipping if the event is triggered by prerelease
-    if: '!github.event.release.prerelease'
-
+  check-main-lighthouse-score:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - id: latestRelease
-        uses: thebritican/fetch-latest-release@v1.0.3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Checkout
-        uses: actions/checkout@v2.3.3
-        with:
-          ref: ${{ steps.latestRelease.outputs.tag_name }}
+        uses: actions/checkout@v2
 
-      - name: deploy-to-vercel-prod
-        id: deployToVercelProd
+      - name: deploy-to-vercel-main
+        id: deployToVercelMain
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-          vercel-args: '--prod' #Optional
+          vercel-args: '--main' #Optional
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
           scope: ${{ secrets.VERCEL_ORG_ID }}
-
+          # working-directory: ./sub-directory
+      
       - name: examine-lighthouse
         id: lighthouseCheck
         uses: foo-software/lighthouse-check-action@master
@@ -56,10 +47,3 @@ jobs:
           minPerformanceScore: '50'
           minProgressiveWebAppScore: '10'
           minSeoScore: '50'
-
-
-
-
-  
-
-  
