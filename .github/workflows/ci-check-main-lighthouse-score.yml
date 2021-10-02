@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
 
       - name: deploy-to-vercel-main
         id: deployToVercelMain
@@ -23,6 +23,9 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
           scope: ${{ secrets.VERCEL_ORG_ID }}
           # working-directory: ./sub-directory
+
+      - name: Create temporary folder for artifacts
+        run: mkdir /tmp/artifacts
       
       - name: examine-lighthouse
         id: lighthouseCheck
@@ -36,6 +39,13 @@ jobs:
           emulatedFormFactor: 'all'
           urls: ${{ steps.deployToVercelMain.outputs.preview-url }}
           sha: ${{ github.sha }}
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
+
 
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
