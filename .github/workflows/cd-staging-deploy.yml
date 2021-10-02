@@ -21,9 +21,25 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
-          alias-domains: |
-            summerbud-main-site.staging.vercel.app
           scope: ${{ secrets.VERCEL_ORG_ID }}
+          github-comment: false
           # working-directory: ./sub-directory
+      
+      - name: Render template
+        id: template
+        uses: chuhlomin/render-template@v1.2
+        with:
+          template: .github/templates/vercel-deploy-comment.md
+          vars: |
+            branch: staging
+            preview-url: ${{ $steps.deployToVercelStaging.outputs.preview-url }}
+
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ${{ steps.template.outputs.result }}
+          reactions: rocket
 
     
