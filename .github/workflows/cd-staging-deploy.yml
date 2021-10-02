@@ -22,7 +22,7 @@ jobs:
           vercel-args: '--staging' #Optional
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
-          scope: ${{ secrets.ORG_ID }}
+          scope: ${{ secrets.VERCEL_ORG_ID }}
           # working-directory: ./sub-directory
 
     
