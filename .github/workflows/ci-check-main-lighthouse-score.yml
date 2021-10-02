@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
       - name: deploy-to-vercel-main
         id: deployToVercelMain
         uses: amondnet/vercel-action@v20
@@ -20,9 +23,6 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
           scope: ${{ secrets.VERCEL_ORG_ID }}
           # working-directory: ./sub-directory
-
-      - name: Checkout
-        uses: actions/checkout@main
 
       - name: Create temporary folder for artifacts
         run: mkdir /tmp/artifacts
