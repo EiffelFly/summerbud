@@ -32,7 +32,7 @@ jobs:
           template: .github/templates/vercel-deploy-comment.md
           vars: |
             branch: staging
-            preview-url: ${{ $steps.deployToVercelStaging.outputs.preview-url }}
+            preview-url: ${{ steps.deployToVercelStaging.outputs.preview-url }}
 
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v1
