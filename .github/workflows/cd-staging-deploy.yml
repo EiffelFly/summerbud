@@ -21,8 +21,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
-          alias-domains: |
-            summerbud-main-site.staging.vercel.app
           scope: ${{ secrets.VERCEL_ORG_ID }}
           # working-directory: ./sub-directory
 
