@@ -6,5 +6,6 @@
 
 ## CD Worflow
 
-1. When PR into staging, deploy to staging preview
-2. When PR release into main, deploy to production
+1. When PR into staging, deploy to staging preview (cd-staging-deploy)
+2. When PR release into main, deploy to production (cd-prod-deploy)
+
