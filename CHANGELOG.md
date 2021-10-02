@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.0.0...v1.0.1) (2021-10-02)
+
+
+### Bug Fixes
+
+* fix vercel action scope error ([c598cc6](https://www.github.com/EiffelFly/summerbud-main-site/commit/c598cc6b59cc6f1fdf8b202a5cb25e28fa8a975d))
+* remove cd-main-deploy ([2d14499](https://www.github.com/EiffelFly/summerbud-main-site/commit/2d144990691f14811a454ae1a595aa3d6d8cdc83))
+
 ## 1.0.0 (2021-10-02)
 
 
