@@ -24,5 +24,22 @@ jobs:
           scope: ${{ secrets.VERCEL_ORG_ID }}
           github-comment: false
           # working-directory: ./sub-directory
+      
+      - name: Render template
+        id: template
+        uses: chuhlomin/render-template@v1.2
+        with:
+          template: .github/templates/vercel-deploy-comment.md
+          vars: |
+            branch: staging
+            preview-url: ${{ $steps.deployToVercelStaging.outputs.preview-url }}
+
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ${{ steps.template.outputs.result }}
+          reactions: rocket
 
     
