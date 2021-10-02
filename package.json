@@ -32,5 +32,6 @@
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4",
     "webpack-bundle-analyzer": "^4.4.2"
-  }
+  },
+  "version": "1.0.0"
 }
