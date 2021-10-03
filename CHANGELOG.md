@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.2](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.1...v1.1.2) (2021-10-03)
+
+
+### Bug Fixes
+
+* remove deploy prod prerelease condition ([fd24c94](https://www.github.com/EiffelFly/summerbud-main-site/commit/fd24c9477953f0279acb47d1691ed3173a8572a7))
+
 ### [1.1.1](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.0...v1.1.1) (2021-10-03)
 
 
