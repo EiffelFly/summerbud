@@ -1,7 +1,7 @@
 Deploy preview for summerbud-main-site ready!
 
 📍 Branch
-{{ .branch }}
+{{ BRANCH }}
 
 ✅ Preview
-{{ .preview-url }}
+{{ PREVIEW_URL }}
