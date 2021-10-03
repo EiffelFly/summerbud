@@ -129,7 +129,7 @@ jobs:
       - name: Comment
         uses: NejcZdovc/comment-pr@v1.1.1
         with:
-          file: 'templates/webpack-diff-comment.md'
+          file: '../templates/webpack-diff-comment.md'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           OLD: ${{steps.get-diff.outputs.base_file_string}}
