@@ -25,6 +25,15 @@ jobs:
           scope: ${{ secrets.VERCEL_ORG_ID }}
           # working-directory: ./sub-directory
 
+      - name: Comment
+        uses: NejcZdovc/comment-pr@v1.1.1
+        with:
+          file: "templates/vercel-deploy-comment.md"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          BRANCH: "main"
+          PREVIEW_URL: ${{steps.deployToVercelMain.outputs.preview-url}}
+
       - name: Create temporary folder for artifacts
         run: mkdir /tmp/artifacts
       
@@ -46,7 +55,6 @@ jobs:
         with:
           name: Lighthouse reports
           path: /tmp/artifacts
-
 
       - name: Handle Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
