@@ -246,4 +246,10 @@
       >https://www.summerbud.org/zh-tw/how-to/send-email-with-aws-ses-and-nodemailer</loc
     >
   </url>
+
+  <url>
+    <loc
+      >https://www.summerbud.org/zh-tw/how-to/use-github-action-to-compare-webpack-bundle-difference</loc
+    >
+  </url>
 </urlset>
