@@ -24,12 +24,3 @@ jobs:
           scope: ${{ secrets.VERCEL_ORG_ID }}
           github-comment: false
           # working-directory: ./sub-directory
-
-      - name: Comment
-        uses: NejcZdovc/comment-pr@v1.1.1
-        with:
-          file: "templates/vercel-deploy-comment.md"
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          BRANCH: "staging"
-          PREVIEW_URL: ${{steps.deployToVercelStaging.outputs.preview-url}}
