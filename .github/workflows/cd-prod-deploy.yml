@@ -2,7 +2,7 @@ name: cd-prod-deploy
 
 on:
   release:
-    types: [published, deleted]
+    types: [published, deleted, created]
 
 
 jobs:
