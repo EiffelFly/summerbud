@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.1.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.0.0...v1.1.0) (2021-10-03)
+
+
+### Features
+
+* add alias-domain into actions ([76c526b](https://www.github.com/EiffelFly/summerbud-main-site/commit/76c526bc71e6ef1a2ab34c3ae9046814cd0060af))
+* add ci-check-main-lighthouse-score ([7b1b692](https://www.github.com/EiffelFly/summerbud-main-site/commit/7b1b692c169875cea514b01dcd3c4c9bdf10832d))
+* add description at webpack bundle diff comment md ([35a567f](https://www.github.com/EiffelFly/summerbud-main-site/commit/35a567f7d887577f1bcb36768d3944bef316dcf1))
+* add new article: How to - 如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異 ([bc63bdf](https://www.github.com/EiffelFly/summerbud-main-site/commit/bc63bdfdda24ae7d7ab137f055af68beb780afe9))
+* add workflow to create our own comment ([91e8624](https://www.github.com/EiffelFly/summerbud-main-site/commit/91e8624d59ce3725c7790c2bce69d55d6de3ec9c))
+* disable vercel action comment ([098d29b](https://www.github.com/EiffelFly/summerbud-main-site/commit/098d29b3ae1dfe51ef5b2e4fda29c358a770f313))
+
+
+### Bug Fixes
+
+* add scope into vercel deployment action ([8502757](https://www.github.com/EiffelFly/summerbud-main-site/commit/8502757e709c837c0d6cc974dfadd5bb7b261474))
+* fix ci-lighthouse not checking out issue ([4081b66](https://www.github.com/EiffelFly/summerbud-main-site/commit/4081b66cce8476b9b49e9557ab64c649475d91ae))
+* fix comment issue ([5488244](https://www.github.com/EiffelFly/summerbud-main-site/commit/54882440d8a43b625dcf8776f6eae956773c16d7))
+* fix comment template path ([522be6d](https://www.github.com/EiffelFly/summerbud-main-site/commit/522be6d5e816feab4a2b73aac8a0cd88b3287dc6))
+* fix docu typo ([d9fd416](https://www.github.com/EiffelFly/summerbud-main-site/commit/d9fd4163b6c202b35d05a178d57efef9aff404c0))
+* fix examine lighthouse ref step id error ([b9e6280](https://www.github.com/EiffelFly/summerbud-main-site/commit/b9e628044977fe1d9972ac48d85193878672c686))
+* fix lighthouse can't output artifact issue ([1172294](https://www.github.com/EiffelFly/summerbud-main-site/commit/117229444e8ee1260fc74b3d3f0ea74a96e063ca))
+* fix templates file structure and template's env ([48b7802](https://www.github.com/EiffelFly/summerbud-main-site/commit/48b7802a1a51651ad3b90c97ef869fb9b03f444a))
+* fix typo ([da37e8a](https://www.github.com/EiffelFly/summerbud-main-site/commit/da37e8a4583bca0117034399b31227a374afa094))
+* fix vercel action scope error ([c598cc6](https://www.github.com/EiffelFly/summerbud-main-site/commit/c598cc6b59cc6f1fdf8b202a5cb25e28fa8a975d))
+* fix vercel alias domain ([d7eea32](https://www.github.com/EiffelFly/summerbud-main-site/commit/d7eea3296f3c72a1013c67a5408d1d961f565dac))
+* fix wrong vercel-args issue ([261021f](https://www.github.com/EiffelFly/summerbud-main-site/commit/261021f81a17a6775d5cbe3302efea1b5a9a1ebd))
+* remove cd-main-deploy ([2d14499](https://www.github.com/EiffelFly/summerbud-main-site/commit/2d144990691f14811a454ae1a595aa3d6d8cdc83))
+* remove cd-staging-deploy redundant code ([78d7409](https://www.github.com/EiffelFly/summerbud-main-site/commit/78d7409519bdf347d5b36a34d6dd3e12898002e4))
+* remove domain alias ([535c8f4](https://www.github.com/EiffelFly/summerbud-main-site/commit/535c8f43fc33e62e4f8134251a0ab9dc217d8b56))
+* replace chuhlomin/render-template@v1.2 with NejcZdovc/comment-pr@v1.1.1 ([c069cde](https://www.github.com/EiffelFly/summerbud-main-site/commit/c069cde36037c2378067b53f47ac3516c893787a))
+
 ## 1.0.0 (2021-10-02)
 
 
