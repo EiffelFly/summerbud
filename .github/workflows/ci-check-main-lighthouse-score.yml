@@ -28,7 +28,7 @@ jobs:
       - name: Comment
         uses: NejcZdovc/comment-pr@v1.1.1
         with:
-          file: "templates/vercel-deploy-comment.md"
+          file: "../templates/vercel-deploy-comment.md"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           BRANCH: "main"
