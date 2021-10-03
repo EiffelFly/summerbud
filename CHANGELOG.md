@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.3...v1.2.0) (2021-10-03)
+
+
+### Features
+
+* deploy prod when create release ([363b1c9](https://www.github.com/EiffelFly/summerbud-main-site/commit/363b1c97c071f0828abf04cab423501c689bd9d3))
+
+
+### Bug Fixes
+
+* fix release-please token issue ([4bafe62](https://www.github.com/EiffelFly/summerbud-main-site/commit/4bafe625e8abdc7ff09cbb75489203250c50cb2c))
+
 ### [1.1.3](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.2...v1.1.3) (2021-10-03)
 
 
