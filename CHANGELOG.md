@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.0...v1.1.1) (2021-10-03)
+
+
+### Bug Fixes
+
+* fix typo ([bbb5a40](https://www.github.com/EiffelFly/summerbud-main-site/commit/bbb5a40e54874224daaed1dc75507f42ff563b4d))
+
 ## [1.1.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.0.0...v1.1.0) (2021-10-03)
 
 
