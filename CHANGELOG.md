@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.2.0...v1.3.0) (2021-10-09)
+
+
+### Features
+
+* add new article - 如何在 Storybook 中加入 TailwindCSS ([fb00e43](https://www.github.com/EiffelFly/summerbud-main-site/commit/fb00e43b6372e69d6bfde7500f02b579c5f03c90))
+
+
+### Bug Fixes
+
+* fix lighthouse output path mismatch ([179c756](https://www.github.com/EiffelFly/summerbud-main-site/commit/179c75612e08fcc96c8c02650d1fdbffa55c61c3))
+* fix vercel-deploy-comment template env typo ([682cc49](https://www.github.com/EiffelFly/summerbud-main-site/commit/682cc490456ef3d57af5280a10f02d355da89160))
+* stop pre-release triggered event ([d902dab](https://www.github.com/EiffelFly/summerbud-main-site/commit/d902dabdf4e17534e0a204d2b587a64a15904174))
+
 ## [1.2.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.1.3...v1.2.0) (2021-10-03)
 
 
