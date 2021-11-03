@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.3.0...v1.4.0) (2021-11-03)
+
+
+### Features
+
+* add thought sub category ([c6fd684](https://www.github.com/EiffelFly/summerbud-main-site/commit/c6fd684867afc37b2c07c4f27c6807d4b96e64dd))
+
 ## [1.3.0](https://www.github.com/EiffelFly/summerbud-main-site/compare/v1.2.0...v1.3.0) (2021-10-09)
 
 
