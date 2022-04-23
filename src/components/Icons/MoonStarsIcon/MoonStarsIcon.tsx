@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import IconBase from "../IconBase";
 
-type MoonStarsIconProps = {
+export type MoonStarsIconProps = {
   styleName: string;
 };
 

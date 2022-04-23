@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import IconBase from "../IconBase";
 
-type SunIconProps = {
+export type SunIconProps = {
   styleName: string;
 };
 

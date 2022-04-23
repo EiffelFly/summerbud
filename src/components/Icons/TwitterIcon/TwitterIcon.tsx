@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import IconBase from "../IconBase";
 
-type TwitterIconProps = {
+export type TwitterIconProps = {
   styleName: string;
 };
 

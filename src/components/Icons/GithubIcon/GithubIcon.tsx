@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 import IconBase from "../IconBase";
 
-type GithubIconProps = {
+export type GithubIconProps = {
   styleName: string;
 };
 
