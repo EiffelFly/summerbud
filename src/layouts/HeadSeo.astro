@@ -4,10 +4,10 @@
  * https://github.com/withastro/astro/blob/main/examples/docs/src/components/HeadSEO.astro
  */
 
-import { SITE, OPEN_GRAPH } from "../../site-config"
+import { SITE, OPEN_GRAPH } from "../site-config"
 
-export interface SeoProps {
-	content: {
+export interface Props {
+	meta: {
     title: string;
     ogLocale: string;
     description: string
@@ -19,31 +19,32 @@ export interface SeoProps {
 	canonicalURL: URL | string;
 }
 
-const { content, canonicalURL } = Astro.props as SeoProps;
-const formattedContentTitle = content.title ? `${content.title} | ${SITE.title}` : SITE.title;
-const imageSrc = content.image.src ?? OPEN_GRAPH.image.src;
+const { meta, canonicalURL } = Astro.props as Props;
+const formattedContentTitle = meta.title ? `${meta.title} | ${SITE.title}` : SITE.title;
+const imageSrc = meta.image.src ?? OPEN_GRAPH.image.src;
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
-const imageAlt = content.image.alt ?? OPEN_GRAPH.image.alt;
+const imageAlt = meta.image.alt ?? OPEN_GRAPH.image.alt;
 ---
 
 <!-- Page Metadata -->
 <link rel="canonical" href={canonicalURL} />
+<title>{formattedContentTitle}</title>
 
 <!-- OpenGraph Tags -->
 <meta property="og:title" content={formattedContentTitle} />
 <meta property="og:type" content="article" />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:locale" content={content.ogLocale ?? SITE.defaultLanguage} />
+<meta property="og:locale" content={meta.ogLocale ?? SITE.defaultLanguage} />
 <meta property="og:image" content={canonicalImageSrc} />
 <meta property="og:image:alt" content={imageAlt} />
-<meta name="description" property="og:description" content={content.description ? content.description : SITE.description} />
+<meta name="description" property="og:description" content={meta.description ? meta.description : SITE.description} />
 <meta property="og:site_name" content={SITE.title} />
 
 <!-- Twitter Tags -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content={OPEN_GRAPH.twitter} />
 <meta name="twitter:title" content={formattedContentTitle} />
-<meta name="twitter:description" content={content.description ? content.description : SITE.description} />
+<meta name="twitter:description" content={meta.description ? meta.description : SITE.description} />
 <meta name="twitter:image" content={canonicalImageSrc} />
 <meta name="twitter:image:alt" content={imageAlt} />
 
