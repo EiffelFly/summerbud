@@ -1,13 +1,12 @@
 import { Component } from "solid-js";
 import cn from "clsx";
-import meImgRef from "../../../../public/me.jpeg";
 
 export type SummberbudAvatarProps = {
   styleName: string;
 };
 
 const SummberbudAvatar: Component<SummberbudAvatarProps> = ({ styleName }) => {
-  return <img src={meImgRef} class={cn("rounded-full", styleName)} />;
+  return <img src="/me.jpeg" class={cn("rounded-full my-auto", styleName)} />;
 };
 
 export default SummberbudAvatar;
