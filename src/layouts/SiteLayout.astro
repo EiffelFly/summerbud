@@ -1,0 +1,30 @@
+---
+import { Props as HeadSeoProps } from "./HeadSeo.astro";
+import { Footer } from "../components/Footer";
+import { Markdown } from "astro/components";
+import cn from "clsx";
+
+export interface Props extends HeadSeoProps {
+  content: string;
+  fullWidth: boolean;
+}
+
+const props = Astro.props as Props;
+---
+
+<html>
+  <head>
+    <!-- <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} /> -->
+  </head>
+  <body>
+    <div
+      class={cn(
+        "flex flex-col min-h-screen px-6 sm:px-8 lg:px-0",
+        props.fullWidth ? "w-full" : "max-w-4xl mx-auto lg:max-w-5xl"
+      )}
+    >
+      <Markdown content={props.content} />
+      <Footer />
+    </div>
+  </body>
+</html>
