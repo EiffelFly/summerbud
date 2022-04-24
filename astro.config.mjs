@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     solid(),
     tailwind({
-      config: { path: "./custom-config.js" },
+      config: { path: "./tailwind.config.cjs" },
     }),
   ],
 });
