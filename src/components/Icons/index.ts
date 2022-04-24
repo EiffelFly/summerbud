@@ -6,6 +6,8 @@ import SunIcon from "./SunIcon";
 import type { SunIconProps } from "./SunIcon";
 import TwitterIcon from "./TwitterIcon";
 import type { TwitterIconProps } from "./TwitterIcon";
+import SlashIcon from "./SlashIcon";
+import type { SlashIconProps } from "./SlashIcon";
 
 export {
   GithubIcon,
@@ -16,4 +18,6 @@ export {
   SunIconProps,
   TwitterIcon,
   TwitterIconProps,
+  SlashIcon,
+  SlashIconProps,
 };
