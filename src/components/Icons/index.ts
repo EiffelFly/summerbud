@@ -8,6 +8,8 @@ import TwitterIcon from "./TwitterIcon";
 import type { TwitterIconProps } from "./TwitterIcon";
 import SlashIcon from "./SlashIcon";
 import type { SlashIconProps } from "./SlashIcon";
+import ListIcon from "./ListIcon";
+import type { ListIconProps } from "./ListIcon";
 
 export {
   GithubIcon,
@@ -20,4 +22,6 @@ export {
   TwitterIconProps,
   SlashIcon,
   SlashIconProps,
+  ListIcon,
+  ListIconProps,
 };
