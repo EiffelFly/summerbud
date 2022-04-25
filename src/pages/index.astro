@@ -1,85 +1,24 @@
 ---
-import {Content as TourContent} from '../content/Tour.md';
-import Logo from '../components/Logo.astro';
-import '../styles/global.css';
-import '../styles/home.css';
-import SolidCounter from '../components/SolidCounter.jsx';
+import SiteLayout, {
+  Props as SiteLayoutProps,
+} from "../layouts/SiteLayout.astro";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+let content = "";
+let siteMeta: SiteLayoutProps["meta"] = {
+  title: "test",
+  ogLocale: "",
+  description: "",
+  image: {
+    src: "",
+    alt: "",
+  },
+};
 ---
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>{title}</title>
 
-	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-	<style>
-		header {
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: min(100%, 68ch);
-		}
-		article {
-			padding-top: 2em;
-			line-height: 1.5;
-			display: flex;
-			flex-direction: column;
-			gap: 1em;
-			max-width: 70ch;
-		}
-		.banner {
-			text-align: center;
-			font-size: 1.2rem;
-			background: var(--color-light);
-			padding: 1em 1.5em;
-			padding-left: 0.75em;
-			border-radius: 4px;
-		}
-	</style>
-	<style is:global>
-		pre {
-			padding: 1rem;
-		}
-	</style>
-</head>
-<body>
-	<main>
-		<header>
-			<div>
-				<Logo width={60} height={80} />
-				<h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-			</div>
-		</header>
-
-		<article>
-			<div class="banner">
-				<p><strong>🧑‍🚀 Seasoned astronaut?</strong> Delete this template and have fun!</p>
-			</div>
-			<TourContent />
-		</article>
-
-		<!--
-
-		You can also use imported framework components directly in your markup!
-		
-		Note: by default, these components are NOT interactive on the client.
-		The `client:visible` directive tells Astro to make it interactive.
-		
-		See https://docs.astro.build/core-concepts/component-hydration/ 
-
-		-->
-
-		<SolidCounter client:visible />
-	</main>
-</body>
-</html>
+<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={""}>
+  <p
+    class="m-auto font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center"
+  >
+    這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。
+  </p>
+</SiteLayout>
