@@ -1,7 +1,7 @@
 ---
 lang: zh-tw
 title: How to - 使用 nodemailer 和 AWS SES 寄送 Email
-baseSlug: "/send-email-with-aws-ses-and-nodemailer"
+baseSlug: "send-email-with-aws-ses-and-nodemailer"
 belongToSeries: false
 seriesKey: 
 seriesSlug:

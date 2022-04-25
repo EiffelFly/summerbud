@@ -1,7 +1,7 @@
 ---
 lang: zh-tw
 title: How to - 打造自己的 Three.js boilerplate
-baseSlug: "/build-your-own-threejs-boilerplate"
+baseSlug: "build-your-own-threejs-boilerplate"
 belongToSeries: false
 seriesKey: 
 seriesSlug:

@@ -1,7 +1,7 @@
 ---
 lang: zh-tw
 title: How to - 如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異
-baseSlug: "/use-github-action-to-compare-webpack-bundle-difference"
+baseSlug: "use-github-action-to-compare-webpack-bundle-difference"
 belongToSeries: false
 seriesKey: 
 seriesSlug:

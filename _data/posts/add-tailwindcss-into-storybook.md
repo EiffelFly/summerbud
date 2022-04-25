@@ -1,7 +1,7 @@
 ---
 lang: zh-tw
 title: How to - 如何在 Storybook 中加入 TailwindCSS
-baseSlug: "/add-tailwindcss-into-storybook"
+baseSlug: "add-tailwindcss-into-storybook"
 belongToSeries: false
 seriesKey: 
 seriesSlug:
