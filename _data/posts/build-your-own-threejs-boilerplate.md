@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: How to - 打造自己的 Three.js boilerplate
+title: "How to - 打造自己的 Three.js boilerplate"
 baseSlug: "build-your-own-threejs-boilerplate"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
 tags: ["how-to", "threejs", "webpack", "boilerplate"]
-components: []
-hasTranslation: false
 publishedAt: "2021-09-15T12:00:00"
 lastModified: "2021-09-15T12:00:00"
-description: 近期 3D 的趨勢越來越明顯，我決定從 Three.js 開始學習關於 3D 的事。然而，找了許久都沒有發現適合自己的 boilerplate，我決定自己來做一個！
+description: "近期 3D 的趨勢越來越明顯，我決定從 Three.js 開始學習關於 3D 的事。然而，找了許久都沒有發現適合自己的 boilerplate，我決定自己來做一個！"
 ---
 
 最近深感 3D 的趨勢越來越明顯，Facebook 等大型企業相繼宣告踏足 Metaverse 的建設，未來五年內關於 3D 的創業機會將越來越多。思考一陣子後決定投入時間經營 3D 的能力，並從 Three.js 開始探索（關於為什麼是 Three.js 等我玩一陣子之後再來回顧）。找了許多資源，卻發現網路上的 boilerplate 都沒有很好用，有些需要 git clone，有些使用舊的 Webpack，等等這些資源都不符合我對於 boilerplate 的要求，因此我決定自己來打造一個，條件如下。

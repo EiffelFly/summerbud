@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: How to - 如何在 Storybook 中加入 TailwindCSS
+title: "How to - 如何在 Storybook 中加入 TailwindCSS"
 baseSlug: "add-tailwindcss-into-storybook"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
 tags: ["how-to", "storybook", "tailwind-css"]
-components: []
-hasTranslation: false
 publishedAt: "2021-10-07T12:00:00"
 lastModified: "2021-10-07T12:00:00"
-description: 這篇文章將和你分享如何在 Storybook 裡使用 TailwindCSS
+description: "這篇文章將和你分享如何在 Storybook 裡使用 TailwindCSS"
 ---
 
 以往在設立 CRA、Vue、Vite、Next 的專案時，往往都會有 `npx --template` 可以使用，然而 Storybook 縱使有 `npx sb init`，也無法幫我們自動插入 TailwindCSS 的設定。這篇文章將跟大家分享如何在 Storybook 裡使用 TailwindCSS。（如果你是使用 CRA 請參考這一篇[^1]）

@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: How to - 如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異
+title: "How to - 如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異"
 baseSlug: "use-github-action-to-compare-webpack-bundle-difference"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
 tags: ["how-to", "webpack", "github-action", "ci"]
-components: []
-hasTranslation: false
 publishedAt: "2021-10-03T12:00:00"
 lastModified: "2021-10-03T12:00:00"
-description: 前端開發中，在佈建 production 環境之前有許多測試需要做。這篇文章分享了如何使用 github action 自動比較功能分支與 production bundle 大小的差異。
+description: "前端開發中，在佈建 production 環境之前有許多測試需要做。這篇文章分享了如何使用 github action 自動比較功能分支與 production bundle 大小的差異。"
 ---
 
 前端開發中有許多在實際佈建前需要確認的事，諸如與 API 端口的連接狀況、小物件的穩定測試、串接 Lighthouse 測試 SEO 分數、甚至是使用 cypress 進行使用者體驗的測試等等。為了方便我們都會將它整合在 CI/CD 的流程裡。
@@ -51,7 +45,7 @@ module.exports = {
 2. `NejcZdovc/comment-pr@v1.1.1` 需要你指定一個 markdown template，並如範例那般制定 placeholder[^5]。我將其置放在 `.github/templates/webpack-diff-comment.md` 的路徑下。
 3. 如果你想要比較 Server side bundle 的大小的話，next 同樣有提供這個分析檔，只不過路徑不同，正確路徑如下：`.next/server/chunks/stats.json`
 
-```yml
+```
 name: ci-webpack-stats-diff
 
 on:
@@ -136,7 +130,6 @@ jobs:
           NEW: ${{steps.get-diff.outputs.pr_file_string}}
           DIFF: ${{steps.get-diff.outputs.diff_file_string}}
           DIFF_PERCENT: ${{steps.get-diff.outputs.percent}}
-
 ```
 
 ```md
@@ -148,8 +141,6 @@ you can change whatever you need, but do keep the placeholder
 | Old size | New size | Diff                     |
 | -------- | -------- | ------------------------ |
 | {OLD}    | {NEW}    | {DIFF} ({DIFF_PERCENT}%) |
-
-
 ```
 
 
@@ -157,7 +148,7 @@ you can change whatever you need, but do keep the placeholder
 
 如此一來我們需要固定時間清除 artifact，為了達成這個目的我們可以設定 cron job 如下。
 
-```yml
+```
 name: cron-remove-old-artifacts-daily
 
 on:

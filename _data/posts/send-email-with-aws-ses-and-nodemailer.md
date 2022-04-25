@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: How to - 使用 nodemailer 和 AWS SES 寄送 Email
+title: "How to - 使用 nodemailer 和 AWS SES 寄送 Email"
 baseSlug: "send-email-with-aws-ses-and-nodemailer"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
 tags: ["how-to", "nodemailer", "AWS-SES", "email"]
-components: []
-hasTranslation: false
 publishedAt: "2021-09-10T12:00:00"
 lastModified: "2021-09-10T12:00:00"
-description: 説 email 是現在人最常使用的協定之一一點都不為過，然而實際施作 email 的寄發卻需要跨越多道關卡，這篇文章嘗試指出其中可以使用的工具與方法，讓你也可以輕鬆寄出自己的 email
+description: "説 email 是現在人最常使用的協定之一一點都不為過，然而實際施作 email 的寄發卻需要跨越多道關卡，這篇文章嘗試指出其中可以使用的工具與方法，讓你也可以輕鬆寄出自己的 email"
 ---
 
 ## Intro
