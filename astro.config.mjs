@@ -11,4 +11,8 @@ export default defineConfig({
       config: { path: "./tailwind.config.cjs" },
     }),
   ],
+  markdown: {
+    // Can be 'shiki' (default), 'prism' or false to disable highlighting
+    syntaxHighlight: "prism",
+  },
 });
