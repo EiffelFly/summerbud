@@ -1,6 +1,6 @@
 ---
 title: "How to - 使用 nodemailer 和 AWS SES 寄送 Email"
-baseSlug: "send-email-with-aws-ses-and-nodemailer"
+slug: "send-email-with-aws-ses-and-nodemailer"
 tags: ["how-to", "nodemailer", "AWS-SES", "email"]
 publishedAt: "2021-09-10T12:00:00"
 lastModified: "2021-09-10T12:00:00"

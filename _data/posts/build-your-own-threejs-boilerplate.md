@@ -1,6 +1,6 @@
 ---
 title: "How to - 打造自己的 Three.js boilerplate"
-baseSlug: "build-your-own-threejs-boilerplate"
+slug: "build-your-own-threejs-boilerplate"
 tags: ["how-to", "threejs", "webpack", "boilerplate"]
 publishedAt: "2021-09-15T12:00:00"
 lastModified: "2021-09-15T12:00:00"
