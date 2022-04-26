@@ -3,8 +3,13 @@ import { SummerbudAvatars } from "../Avatars";
 import { ThemeToggle } from "../Buttons";
 import { ListIcon, SlashIcon } from "../Icons";
 import "./Navbar.css";
+import cn from "clsx";
 
-const NavBar: Component = () => {
+export type NavBarProps = {
+  marginBottom?: string;
+};
+
+const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
   const [open, setOpen] = createSignal(false);
 
   const navigations = [
@@ -34,7 +39,7 @@ const NavBar: Component = () => {
   );
 
   return (
-    <header className="flex flex-col py-8 md:flex-row">
+    <header className={cn("flex flex-col py-8 md:flex-row", marginBottom)}>
       <div className="flex flex-grow flex-row">
         <a href="/" className="mr-auto flex flex-row gap-x-6">
           <SummerbudAvatars styleName="w-10 h-10" />
