@@ -1,0 +1,50 @@
+---
+import { getFormattedTime } from "../../utils";
+import SiteLayout, {
+  Props as SiteLayoutProps,
+} from "../../layouts/SiteLayout.astro";
+import { ArticleFrontMatter } from "../../types/general";
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob<ArticleFrontMatter>(
+    "../../../_data/posts/*.md"
+  );
+
+  return posts.map((e) => {
+    return {
+      params: {
+        slug: e.frontmatter.slug,
+      },
+      props: {
+        post: e,
+      },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+const publishedTime = getFormattedTime(post.frontmatter.publishedAt);
+
+const siteMeta: SiteLayoutProps["meta"] = {
+  title: post.frontmatter.title,
+  ogLocale: "zh-TW",
+  description: post.frontmatter.description,
+  image: {
+    src: "",
+    alt: "",
+  },
+};
+
+console.log(post.file);
+---
+
+<SiteLayout fullWidth={false} meta={siteMeta} canonicalURL={""}>
+  <article class="mx-auto prose lg:prose-lg dark:prose-dark">
+    <h1>{post.frontmatter.title}</h1>
+    <p>{publishedTime}</p>
+    <p></p>
+    <div class="w-full border border-sd-brgreen mb-20"></div>
+    <post.Content></post.Content>
+  </article>
+</SiteLayout>
