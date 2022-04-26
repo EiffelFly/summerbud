@@ -29,6 +29,7 @@ module.exports = {
               fontWeight: "800",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
+              lineHeight: theme("lineHeight.normal")
             },
             h2: {
               fontWeight: "700",
@@ -105,6 +106,7 @@ module.exports = {
               fontWeight: "800",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-white"),
+              lineHeight: theme("lineHeight.normal")
             },
             h2: {
               fontWeight: "700",
