@@ -13,10 +13,10 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
   const [open, setOpen] = createSignal(false);
 
   const navigations = [
-    {
-      title: "About",
-      path: "/about",
-    },
+    // {
+    //   title: "About",
+    //   path: "/about",
+    // },
     {
       title: "Thoughts",
       path: "/thoughts",
@@ -24,7 +24,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
     {
       title: "dev-notes",
       path: "/dev-notes",
-    }
+    },
   ];
 
   const navigationSet = (
