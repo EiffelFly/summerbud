@@ -1,4 +1,5 @@
 ---
+import Giscus from "../../components/Giscus";
 import { getFormattedTime } from "../../utils";
 import SiteLayout, {
   Props as SiteLayoutProps,
@@ -46,10 +47,11 @@ const siteMeta: SiteLayoutProps["meta"] = {
 ---
 
 <SiteLayout fullWidth={false} meta={siteMeta} canonicalURL={""}>
-  <article class="mx-auto prose lg:prose-lg dark:prose-dark">
+  <article class="mx-auto prose lg:prose-lg dark:prose-dark mb-20">
     <h1>{post.frontmatter.title}</h1>
     <p>{publishedTime}</p>
     <div class="w-full border border-sd-brgreen mb-20"></div>
     <post.Content></post.Content>
   </article>
+  <Giscus client:load />
 </SiteLayout>
