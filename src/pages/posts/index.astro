@@ -30,6 +30,10 @@ const pageMeta: SiteLayoutProps["meta"] = {
 };
 ---
 
-<SiteLayout fullWidth={false} meta={pageMeta} canonicalURL={""}>
+<SiteLayout
+  fullWidth={false}
+  meta={pageMeta}
+  canonicalURL={""}
+>
   <PostList posts={allPosts} />
 </SiteLayout>
