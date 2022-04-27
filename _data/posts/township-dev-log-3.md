@@ -1,12 +1,12 @@
 ---
 title: "township 開發日記 #3"
-baseSlug: "township-dev-log-3"
+slug: "township-dev-log-3"
 tags: ["township", "dev-log", "community"]
 publishedAt: "2021-08-22T12:00:00"
 lastModified: "2021-08-22T12:00:00"
 description: "這篇開發日記中，紀錄了我們近期藉由訪問了七名讀書會主持人所做出的轉折，以及關於自製色版、township 前期開發等大小事"
 setup: |
-  import { Image } from "../src/components/Image"
+  import Image from "../../src/components/Image"
 ---
 
 2021 年第 34 週總共訪談了七個對象，全部都是參與或經營過讀書會的人，年紀分佈為 40 歲以下。訪談這些對象之後，township 的核心功能與目標逐漸裸露出來。在這一系列的轉向中，這週看似小巧，實則充滿掙扎。
@@ -45,6 +45,7 @@ setup: |
   width="w-full"
   src="/summerbud-shiny-dark-mode-palette.png"
   alt="summerbud shiny dark mode palette"
+  client:visible
 />
 
 這次自製色版真的是很開心的體驗，卻也感受到一些沒有被服務的需求。例如專門製作 Dark mode 的工具：可以馬上在 Component 上切換深色亮色，雖然 Figma 可以做到這件事，但在使用上卻仍需要大量時間。除此之外還有很簡易的色版分享功能，目前網路上大多是五色、六色、七色並排的分享，例如 Adobe Color 和 Coolors，如果能有個呈現如我的照片那樣的版面的網站，應該會更好使用。
@@ -57,6 +58,7 @@ setup: |
   width="w-full"
   src="/meet-summerbud-calendar.png"
   alt="meet summerbud calendar"
+  client:visible
 />
 
 除此之外還使用了 Google book api 做了一個簡易的書架功能，找到了 https://www.recommendmeabook.com 網站，萌生出了一系列關於書本封面如何優化的思考，或許之後可以來做做看。

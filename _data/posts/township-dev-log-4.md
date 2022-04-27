@@ -1,6 +1,6 @@
 ---
 title: "township 開發日記 #4"
-baseSlug: "township-dev-log-4"
+slug: "township-dev-log-4"
 tags: ["township", "dev-log", "community"]
 publishedAt: "2021-08-29T12:00:00"
 lastModified: "2021-08-29T12:00:00"
