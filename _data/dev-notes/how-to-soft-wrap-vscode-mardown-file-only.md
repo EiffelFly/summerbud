@@ -1,6 +1,6 @@
 ---
 title: "如何讓 vscode 中的 markdown 文件自動斷行"
-baseSlug: "how-to-soft-wrap-vscode-mardown-file-only"
+slug: "how-to-soft-wrap-vscode-mardown-file-only"
 tags: ["lesson_learned", "softwrap", "mdx", "markdown"]
 publishedAt: "2021-07-29T18:00:00"
 lastModified: "2021-07-29T18:00:00"
