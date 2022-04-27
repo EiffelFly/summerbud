@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
 title: "電話的另一端 #3 - 工作一個月的短想"
-baseSlug: "/the-other-end-of-line/3-short-though-about-working-after-one-month"
-belongToSeries: true
-seriesKey: "theOtherEndOfLine"
-seriesSlug: "the-other-end-of-line"
-seriesIndex: 3
+slug: "short-though-about-working-after-one-month"
 tags: ["電話的另一端", "教育", "台灣", "補教業"]
-components: []
-hasTranslation: false
 publishedAt: "2018-07-09T12:00:00"
 lastModified: "2018-07-09T12:00:00"
-description: 這篇文章講述了工作一個月後的短想，從一中街這個場域的殘酷切入，思考到底是什麼導致了這件事，又是什麼蘊釀出了「升學」本身的殘酷氛圍。於最終回歸自身，思考我到底在追尋什麼？
+description: "這篇文章講述了工作一個月後的短想，從一中街這個場域的殘酷切入，思考到底是什麼導致了這件事，又是什麼蘊釀出了「升學」本身的殘酷氛圍。於最終回歸自身，思考我到底在追尋什麼"
 ---
 
 目前為止，工作維持某種程度上的協調性，與它時常被傳唱的直接相連。舉例來說，為了被給付薪水辦了新的銀行帳戶，拿到了只要再勾選一個項目就可以轉換為信用卡的小小卡片，卡片上漂浮著星雲般的細密亮點，逆著光看的時候彷彿有無數個細孔。以及開始早起通勤。

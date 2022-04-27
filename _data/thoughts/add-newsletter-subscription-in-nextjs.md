@@ -1,19 +1,11 @@
 ---
-lang: zh-tw
-title: Blogging with Next.js - 用 Next.js API route + Mailchimp 施作電子信訂閱
-baseSlug: "/blogging-with-nextjs/add-newsletter-subscription"
-belongToSeries: true
-seriesKey: "bloggingWithNextjs"
-seriesSlug: "blogging-with-nextjs"
-seriesIndex: 1
+title: 用 Next.js API route + Mailchimp 施作電子信訂閱
+slug: "add-newsletter-subscription-in-nextjs"
 tags: ["Blog", "Next.js", "Newsletter"]
-components: []
-hasTranslation: false
 publishedAt: "2021-07-28T18:00:00"
 lastModified: "2021-07-28T18:00:00"
-description: 這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能
+description: "這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能"
 ---
-
 
 ## 大綱
 

@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
-title: The builder's life 2 - 關於創作、撰寫程式與火車月台
-baseSlug: "/the-builders-life/2-writing-programming-and-train-platform"
-belongToSeries: true
-seriesKey: "theBuildersLife"
-seriesSlug: "the-builders-life"
-seriesIndex: 2
+title: "The builder's life #2 - 關於創作、撰寫程式與火車月台"
+slug: "writing-programming-and-train-platform"
 tags: ["文學", "創作", "程式設計", "火車月台"]
-components: []
-hasTranslation: false
 publishedAt: "2021-07-05T12:00:00"
 lastModified: "2021-07-05T12:00:00"
-description: 創作文學與程式設計對我產生了非常有趣的化學效應，結合創作的「火車月台」的概念，這篇文章嘗試指出我們可以從這兩者的互動中學到什麼。
+description: "創作文學與程式設計對我產生了非常有趣的化學效應，結合創作的「火車月台」的概念，這篇文章嘗試指出我們可以從這兩者的互動中學到什麼。"
 ---
 
 2018年夏季，為了養活自己並賺取未來讀台文所時的生活費，我投入了一間位於台中的傳產公司。

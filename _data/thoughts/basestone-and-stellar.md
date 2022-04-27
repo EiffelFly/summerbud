@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
-title: The builder's life 6 - 最初的方法論： Basestone & Stellar 詞彙與其比例帶來的洞見
-baseSlug: "/the-builders-life/6-basestone-and-stellar"
-belongToSeries: true
-seriesKey: "theBuildersLife"
-seriesSlug: "the-builders-life"
-seriesIndex: 6
+title: "The builder's life #6 - 最初的方法論： Basestone & Stellar 詞彙與其比例帶來的洞見"
+slug: "basestone-and-stellar"
 tags: ["程式設計", "Totuslink", "Startup"]
-components: []
-hasTranslation: false
 publishedAt: "2021-07-11T12:00:00"
 lastModified: "2021-07-11T12:00:00"
-description: 資料本身，其價值、意義大多是比較出來的。在資訊的世代，我們面對的是一群本質上或許根本沒有意義的虛無物體，透過與他者連結，與眾多看似有意義的事物連結來產生意義。
+description: "資料本身，其價值、意義大多是比較出來的。在資訊的世代，我們面對的是一群本質上或許根本沒有意義的虛無物體，透過與他者連結，與眾多看似有意義的事物連結來產生意義"
 ---
 
 Totuslink 是我於 2020 年夏開始的實驗，那個時候它還叫作 Hololink。之所以取用這兩個名字是因為 Totus 和 Holo 雖然尺度不同，但都有全面、完整的含義。我期待這個軟體能在資訊與知識的場域帶給人們這種感受。（由於 Hololink 已經被其他公司使用，因此我於 2021 年開始使用 Totuslink）

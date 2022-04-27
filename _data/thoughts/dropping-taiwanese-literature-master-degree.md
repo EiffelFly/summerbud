@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
-title: The builder's life 1 - 我決定不讀台文所了。
-baseSlug: "/the-builders-life/1-the-decision-about-dropping-taiwanese-literature-master-degree"
-belongToSeries: true
-seriesKey: "theBuildersLife"
-seriesSlug: "the-builders-life"
-seriesIndex: 1
+title: "The builder's life #1 - 我決定不讀台文所了"
+slug: "dropping-taiwanese-literature-master-degree"
 tags: ["文學", "創作"]
-components: []
-hasTranslation: false
 publishedAt: "2021-06-27T12:00:00"
 lastModified: "2021-06-27T12:00:00"
-description: 寫作對我來說至關重要，它是自我成立且自我終結的。針對一個特定的題目頑強、殘酷、毫無妥協地挖掘下去。直到某一個沒有什麼特殊意味的時刻，在日常的流動之中忽然意識到，它已經自我完結了。我把它稱為銜尾蛇的寫作觀，這樣的觀點對我的生命產生了重大的影響。
+description: "寫作對我來說至關重要，它是自我成立且自我終結的。針對一個特定的題目頑強、殘酷、毫無妥協地挖掘下去。直到某一個沒有什麼特殊意味的時刻，在日常的流動之中忽然意識到，它已經自我完結了。我把它稱為銜尾蛇的寫作觀，這樣的觀點對我的生命產生了重大的影響。"
 ---
 
 寫作對我來說是接近於「銜尾蛇」那類的事物，它的起因和成果是自我終結的，針對一個特定的題目頑強、殘酷、毫無妥協地挖掘下去。直到某一個沒有什麼特殊意味的時刻，在日常的流動之中忽然意識到，它已經自我完結了。
