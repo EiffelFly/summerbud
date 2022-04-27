@@ -1,4 +1,5 @@
 ---
+import HeadSeo from "./HeadSeo.astro";
 import NavBar from "../components/NavBar";
 import { Props as HeadSeoProps } from "./HeadSeo.astro";
 import { Footer } from "../components/Footer";
@@ -15,7 +16,7 @@ const props = Astro.props as Props;
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="/prism-atom-dark.css" rel="stylesheet" />
-    <!-- <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} /> -->
+    <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} />
   </head>
   <body>
     <div
@@ -29,8 +30,8 @@ const props = Astro.props as Props;
           props.fullWidth ? "" : "max-w-4xl mx-auto lg:max-w-5xl"
         )}
       >
-        <NavBar marginBottom="mb-40" client:visible />
-        <div class="flex flex-col flex-1 mb-40">
+        <NavBar marginBottom="mb-20" client:visible />
+        <div class="flex flex-col flex-1 mb-20">
           <slot />
         </div>
         <Footer />
