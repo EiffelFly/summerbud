@@ -1,16 +1,11 @@
 ---
 lang: zh-tw
 title: "2022年1月 - 嘉年華會的身體記憶"
-baseSlug: "/202201-body-memory-of-carvinal"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
+slug: "202201-body-memory-of-carvinal"
 tags: ["thought", "software", "path-of-exile", "gaming", "mind-frame"]
-components: []
-hasTranslation: false
 publishedAt: "2022-02-07T12:00:00"
 lastModified: "2022-02-07T12:00:00"
-description: 這篇文章嘗試探討嘉年華會的影響力，其形塑出身體記憶的方法，以及我們該如何將這類方法論運用在軟體的社群經營上
+description: "這篇文章嘗試探討嘉年華會的影響力，其形塑出身體記憶的方法，以及我們該如何將這類方法論運用在軟體的社群經營上"
 ---
 
 > 這篇文章嘗試探討嘉年華會的影響力，其形塑出身體記憶的方法，以及我們該如何將這類方法論運用在軟體的社群經營上。
@@ -30,6 +25,7 @@ description: 這篇文章嘗試探討嘉年華會的影響力，其形塑出身�
 為了思考這個問題，我打算先提到另外一個例子，同樣處於軟體業，一間位於紐西蘭，名為 Grinding Gear Game 的公司打造的遊戲 Path of Exile[^1]，從致敬暗黑破壞神系列的個人興趣專案出發，至今已經儼然成為這種遊戲類型的代表作，巔峰遊戲人數達到十五萬人，根據 githyp 的資料，這是 Steam 平台內數千款遊戲中高峰值第二名[^2]，我想要從 Path of Exile(POE) 的故事出發，導引到我認為軟體業目前經營「社群活動」的問題。
 
 ### POE 的嘉年華會
+
 POE 每年以三個月為期劃分出四個挑戰聯盟，每次挑戰聯盟的遊戲內容都會有巨大的改變，同時伺服器也會刷新，所有玩家從零開始。
 
 聯盟開季日普遍定於月底的週六，台灣時間凌晨三點。從這一天往前推算兩個禮拜是 POE 聯盟賽季的推廣期。在第一週的時間，資訊像是拼圖一樣，沒有人知道完整的樣貌，例如 3.13 的第一片拼圖，只是遊戲中角色的喃喃自語，充滿意象與詩意，在照片底部藏著用 Photoshop 掩蓋的資訊，甚至連照片裡的 metadata 都藏著秘密，引發玩家探索的好奇心。直到第二週，也就是開季前一週的禮拜三，官方才會釋出包含所有更新資訊的 Patch note，在這個時刻玩家的熱情來到高點，一路到禮拜六，實況主與內容創造者相繼釋放出大量關於如何順暢遊玩的內容，論壇充滿各式各樣關於新聯盟機制的討論，充滿熱情與活力。
@@ -70,7 +66,6 @@ POE 每年以三個月為期劃分出四個挑戰聯盟，每次挑戰聯盟的�
 
 而你的 Headline 也會從 Become a productivity pro in one day（在一天之內成為生產力專家）轉化成：Together to cultivate better productivity method in one day。（與夥伴一同成為生產力專家）
 
-
 ### 以 Gather town 和 airbytes 為例，來競賽吧。
 
 然而軟體業也不盡然全都是年會性的社群活動，如 Gather[^5] 或 Airbytes[^6] 藉由競賽類的活動來刺激社群的成長。
@@ -101,7 +96,7 @@ Gather 未來或許會將這類的活動擴大，如果他們舉辦年會的話�
 
 ## 致謝
 
-謝謝晏如、敬智、力介、逸昌、Wen閱讀這篇文章的初稿，沒有他們，不會有這篇文章。
+謝謝晏如、敬智、力介、逸昌、Wen 閱讀這篇文章的初稿，沒有他們，不會有這篇文章。
 
 [^1]: [Path of Exile official site](https://www.pathofexile.com/)
 [^2]: [Githyp - Path of Exile player count](https://www.githyp.com/path-of-exile-100607/?tab=player-count)
@@ -110,6 +105,5 @@ Gather 未來或許會將這類的活動擴大，如果他們舉辦年會的話�
 [^5]: [Gather](https://gather.town/app)
 [^6]: [Airbytes](https://airbyte.com/)
 [^7]: [gather.town - map-making forum](https://forum.gather.town/c/mapmaking/5)
-[^8]:  [Gather Creator Contest: Experiences](https://www.notion.so/Gather-Creator-Contest-Experiences-0c9b3b96b1b74bf08c62d5e9d9042b35)
+[^8]: [Gather Creator Contest: Experiences](https://www.notion.so/Gather-Creator-Contest-Experiences-0c9b3b96b1b74bf08c62d5e9d9042b35)
 [^9]: [Airbyte Hacktoberfest](https://airbyte.com/connector-contest)
-

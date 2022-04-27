@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: 10月 - 回到受雇者的生活以及影響我最大的兩個概念
-baseSlug: "/202110-back-to-work-and-two-ideas"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
+title: 2021年10月 - 回到受雇者的生活以及影響我最大的兩個概念
+slug: "202110-back-to-work-and-two-ideas"
 tags: ["thought", "instill-ai", "hamming", "mind-frame"]
-components: []
-hasTranslation: false
 publishedAt: "2021-11-03T12:00:00"
 lastModified: "2021-11-03T12:00:00"
-description: Hamming question 和 framer variant with Feynman technique 是我近期最重要的思想錨點。這篇文章希望能介紹這些方法論給你，並且簡略介紹目前我正在打造什麼。
+description: "Hamming question 和 framer variant with Feynman technique 是我近期最重要的思想錨點。這篇文章希望能介紹這些方法論給你，並且簡略介紹目前我正在打造什麼。"
 ---
 
 這篇文章想跟大家分享這個月的近況，以及近期影響我最大的兩個概念，分別是 Hamming question 以及 Framer variant - Feynman technique。前者是由 Richard Hamming 於 1986 年的演講提出的論點[^1]，鏗鏘有力，直指一個研究者或是實作者在生命之中應該持續詰問的問題。而後者則是我最近閱讀完《造局者》之後結合自身經驗構建而成的方法論。這兩個論點以超越我預想的方式影響了我，使得我的思考更加清澈，能更快速地吸收概念，並整合進自己的思考體系內。
@@ -39,7 +33,7 @@ Hamming Question 實作起來並沒有表面看來那麼簡單，我們可能會
 
 然而在使用這個技巧時你會發現，解釋給五歲小孩的段落大多只是一種內省的方式，而不是向外傳遞資訊的方式。它的主要作用在於檢視自己是否真的了解某一概念的核心。在這裡我們要小心的是，看似簡單、且容易輕鬆解釋的概念，不往往總是正確，它有可能只是迎合了某種這個社會普遍接受的意念，並且偽裝成自己懷有洞見而已。
 
-- - -
+---
 
 這個月脫離了自僱者的角色，加入了一間做電腦視覺的 ML 新創，我們想要服務的是任何一個希望從大量照片資料獲得洞見的程式設計師或是公司，例如從自己的相簿裡挑出重複的人臉、辨識發票、書寫文字轉電子文字；又或是替大量晶圓照片檢查耗損、監控孩子的狀況等等。
 
