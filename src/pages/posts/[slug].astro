@@ -6,9 +6,17 @@ import SiteLayout, {
 import { ArticleFrontMatter } from "../../types/general";
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob<ArticleFrontMatter>(
-    "../../../_data/posts/*.md"
-  );
+  let posts = await Astro.glob<ArticleFrontMatter>("../../../_data/posts/*.md");
+
+  posts = posts.sort((a, b) => {
+    if (
+      new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
+    ) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
 
   return posts.map((e) => {
     return {
@@ -35,15 +43,12 @@ const siteMeta: SiteLayoutProps["meta"] = {
     alt: "",
   },
 };
-
-console.log(post.file);
 ---
 
 <SiteLayout fullWidth={false} meta={siteMeta} canonicalURL={""}>
   <article class="mx-auto prose lg:prose-lg dark:prose-dark">
     <h1>{post.frontmatter.title}</h1>
     <p>{publishedTime}</p>
-    <p></p>
     <div class="w-full border border-sd-brgreen mb-20"></div>
     <post.Content></post.Content>
   </article>
