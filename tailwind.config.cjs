@@ -27,9 +27,10 @@ module.exports = {
             color: theme("colors.sd-black"),
             h1: {
               fontWeight: "800",
+              fontSize: theme("fontSize.4xl"),
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
-              lineHeight: theme("lineHeight.normal")
+              lineHeight: theme("lineHeight.normal"),
             },
             h2: {
               fontWeight: "700",
@@ -104,9 +105,10 @@ module.exports = {
             color: theme("colors.sd-white"),
             h1: {
               fontWeight: "800",
+              fontSize: theme("fontSize.4xl"),
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-white"),
-              lineHeight: theme("lineHeight.normal")
+              lineHeight: theme("lineHeight.normal"),
             },
             h2: {
               fontWeight: "700",
@@ -171,6 +173,17 @@ module.exports = {
             },
             hr: {
               borderColor: theme("colors.sd-brgreen"),
+            },
+          },
+        },
+        lg: {
+          css: {
+            h1: {
+              fontWeight: "800",
+              fontSize: theme("fontSize.4xl"),
+              letterSpacing: theme("letterSpacing.wide"),
+              color: theme("colors.sd-brblack"),
+              lineHeight: theme("lineHeight.normal"),
             },
           },
         },
