@@ -1,0 +1,39 @@
+---
+import PostList from "../../components/PostList";
+import { ArticleFrontMatter } from "../../types/general";
+import SiteLayout, {
+  Props as SiteLayoutProps,
+} from "../../layouts/SiteLayout.astro";
+
+let allPosts = await Astro.glob<ArticleFrontMatter>(
+  "../../../_data/thoughts/*.md"
+);
+
+allPosts = allPosts.sort((a, b) => {
+  if (
+    new Date(a.frontmatter.publishedAt) > new Date(b.frontmatter.publishedAt)
+  ) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+
+const pageMeta: SiteLayoutProps["meta"] = {
+  title: "Thoughts",
+  ogLocale: "zh-TW",
+  description: "This is Summerbud's posts archive",
+  image: {
+    src: "",
+    alt: "",
+  },
+};
+---
+
+<SiteLayout
+  fullWidth={false}
+  meta={pageMeta}
+  canonicalURL={""}
+>
+  <PostList slugPrefix="thoughts" posts={allPosts} />
+</SiteLayout>

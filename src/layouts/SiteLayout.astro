@@ -1,0 +1,41 @@
+---
+import HeadSeo from "./HeadSeo.astro";
+import NavBar from "../components/NavBar";
+import { Props as HeadSeoProps } from "./HeadSeo.astro";
+import { Footer } from "../components/Footer";
+import cn from "clsx";
+
+export interface Props extends HeadSeoProps {
+  fullWidth: boolean;
+}
+
+const props = Astro.props as Props;
+---
+
+<html class="dark">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/prism-atom-dark.css" rel="stylesheet" />
+    <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} />
+  </head>
+  <body>
+    <div
+      class={cn(
+        "flex flex-col min-h-screen w-screen px-6 sm:px-8 lg:px-0 bg-sd-brwhite dark:bg-sd-brblack"
+      )}
+    >
+      <div
+        class={cn(
+          "flex flex-col w-full flex-1",
+          props.fullWidth ? "" : "max-w-4xl mx-auto lg:max-w-5xl"
+        )}
+      >
+        <NavBar marginBottom="mb-20" client:visible />
+        <div class="flex flex-col flex-1 mb-20">
+          <slot />
+        </div>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+import SiteLayout, {
+  Props as SiteLayoutProps,
+} from "../layouts/SiteLayout.astro";
+
+let content = "";
+let siteMeta: SiteLayoutProps["meta"] = {
+  title: "test",
+  ogLocale: "",
+  description: "",
+  image: {
+    src: "",
+    alt: "",
+  },
+};
+---
+
+<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={""}>
+  <p
+    class="m-auto font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center"
+  >
+    這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。
+  </p>
+</SiteLayout>
