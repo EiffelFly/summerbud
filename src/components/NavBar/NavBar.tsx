@@ -19,7 +19,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
     },
     {
       title: "Posts",
-      path: "./posts",
+      path: "/posts",
     },
   ];
 
