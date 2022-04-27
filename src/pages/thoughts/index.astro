@@ -6,7 +6,7 @@ import SiteLayout, {
 } from "../../layouts/SiteLayout.astro";
 
 let allPosts = await Astro.glob<ArticleFrontMatter>(
-  "../../../_data/posts/*.md"
+  "../../../_data/thoughts/*.md"
 );
 
 allPosts = allPosts.sort((a, b) => {
@@ -20,7 +20,7 @@ allPosts = allPosts.sort((a, b) => {
 });
 
 const pageMeta: SiteLayoutProps["meta"] = {
-  title: "Posts",
+  title: "Thoughts",
   ogLocale: "zh-TW",
   description: "This is Summerbud's posts archive",
   image: {
