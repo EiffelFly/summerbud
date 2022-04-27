@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
 title: "電話的另一端 #6 - 塔的子民"
-baseSlug: "/the-other-end-of-line/6-the-people-of-tower"
-belongToSeries: true
-seriesKey: "theOtherEndOfLine"
-seriesSlug: "the-other-end-of-line"
-seriesIndex: 6
+slug: "the-people-of-tower"
 tags: ["電話的另一端", "電訪"]
-components: []
-hasTranslation: false
 publishedAt: "2018-08-13T12:00:00"
 lastModified: "2018-08-13T12:00:00"
-description: 寫自己的故事寫久了會被肅穆感給俘虜，那個時候再怎麼寫也寫不下去了，因此夾帶一些寫其他角色的故事，可以找到不同的著力點。在這篇文章裡我想要分享的是，關於塔的子民的故事。
+description: "寫自己的故事寫久了會被肅穆感給俘虜，那個時候再怎麼寫也寫不下去了，因此夾帶一些寫其他角色的故事，可以找到不同的著力點。在這篇文章裡我想要分享的是，關於塔的子民的故事"
 ---
 
 寫關於自己的事情寫久了，會變得有些孤僻，連結思緒的字句常常被雕塑地過於狹長，手上豎著的火被從下而上強勁的風吹地微顫顫時，心情會逐漸肅穆起來，字變得凝重甚至到凝滯的地步。到這種時候就怎麼寫也寫不下去了，鑽頭探到了一層暫時沒有辦法的土層，敲一敲鏟子，動作大地把鏟子插在一旁的土堆，雙手盤在胸前，「怎麼辦才好呢？」那樣嘆一口氣。

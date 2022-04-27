@@ -1,17 +1,10 @@
 ---
-lang: zh-tw
 title: "電話的另一端 #7 - 我們詳知彼此"
-baseSlug: "/the-other-end-of-line/7-we-can-know-each-other-very-well"
-belongToSeries: true
-seriesKey: "theOtherEndOfLine"
-seriesSlug: "the-other-end-of-line"
-seriesIndex: 7
+slug: "we-can-know-each-other-very-well"
 tags: ["電話的另一端", "電訪"]
-components: []
-hasTranslation: false
 publishedAt: "2018-08-22T12:00:00"
 lastModified: "2018-08-22T12:00:00"
-description: 村上春樹在《發條鳥年代記》中裡從未揭露電話中的女人所說的「只要十分鐘就可以了解對方」的聖杯，在電訪的場域這件事則被忽略，身為電訪人員，只需要讓你問錯問題就可以了
+description: "村上春樹在《發條鳥年代記》中裡從未揭露電話中的女人所說的「只要十分鐘就可以了解對方」的聖杯，在電訪的場域這件事則被忽略，身為電訪人員，只需要讓你問錯問題就可以了"
 ---
 
 「只需要十分鐘，我們一定可以了解彼此，一定可以。」
