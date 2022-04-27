@@ -1,18 +1,11 @@
 ---
-lang: zh-tw
-title: Lesson-learned - 創造你自己的 git commit 系統
-baseSlug: "/construct-your-own-git-commit-system"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
+title: "創造你自己的 git commit message 系統"
+slug: "construct-your-own-git-commit-message-system"
 tags: ["lessen_learned", "git", "emoji"]
-components: []
-hasTranslation: false
 publishedAt: "2021-08-21T12:00:00"
 lastModified: "2021-07-21T12:00:00"
-description: Git commit 是一件雖然細小，卻有可能會影響你的程式碼質量的事，這篇文章分享了我使用 git commit 的方法論，並分享了 Vscode keyboard shortcuts 設定檔，歡迎修改成適合你的樣子。
+description: "Git commit 是一件雖然細小，卻有可能會影響你的程式碼質量的事，這篇文章分享了我使用 git commit 的方法論，並分享了 Vscode keyboard shortcuts 設定檔，歡迎修改成適合你的樣子"
 ---
-
 
 ### Intro
 

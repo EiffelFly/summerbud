@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: Lesson-learned - 如何讓 vscode 中的 markdown 文件自動斷行
-baseSlug: "/how-to-soft-wrap-vscode-mardown-file-only"
-belongToSeries: false
-seriesKey: 
-seriesSlug: 
+title: "如何讓 vscode 中的 markdown 文件自動斷行"
+baseSlug: "how-to-soft-wrap-vscode-mardown-file-only"
 tags: ["lesson_learned", "softwrap", "mdx", "markdown"]
-components: []
-hasTranslation: false
 publishedAt: "2021-07-29T18:00:00"
 lastModified: "2021-07-29T18:00:00"
-description: 這篇文章將教你如何讓 Vscode 中的 Markdown 文件自動斷行，且不s影響其他文件。
+description: "這篇文章將教你如何讓 Vscode 中的 Markdown 文件自動斷行，且不s影響其他文件"
 ---
 
 

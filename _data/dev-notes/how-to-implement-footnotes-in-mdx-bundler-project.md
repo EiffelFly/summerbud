@@ -1,16 +1,10 @@
 ---
-lang: zh-tw
-title: Lesson-learned - 如何在 mdx-bundler 的專案中施作註解（Footnotes）
-baseSlug: "/how-to-implement-footnotes-in-mdx-bundler-project"
-belongToSeries: false
-seriesKey: 
-seriesSlug:
+title: "如何在 mdx-bundler 的專案中施作註解（Footnotes）"
+slug: "how-to-implement-footnotes-in-mdx-bundler-project"
 tags: ["lessen_learned", "blog", "nextjs", "markdown"]
-components: []
-hasTranslation: false
 publishedAt: "2021-07-30T07:38:00"
 lastModified: "2021-07-30T07:38:00"
-description: 這篇文章將教你如何使用 mdx-bundler, remark-footnotes 插件以及 tailwind css 來施作註記。
+description: "這篇文章將教你如何使用 mdx-bundler, remark-footnotes 插件以及 tailwind css 來施作註記"
 ---
 
 ### 大綱
