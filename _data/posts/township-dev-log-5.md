@@ -1,21 +1,10 @@
 ---
-lang: zh-tw
-type: dev-log
 title: "township 開發日記 #5"
-baseSlug: "/township/township-dev-log-5"
-belongToSeries: false
-seriesKey: 
-seriesSlug: 
+baseSlug: "township-dev-log-5"
 tags: ["township", "dev-log", "community"]
-hasTranslation: true
-components: []
 publishedAt: "2021-09-05T12:00:00"
 lastModified: "2021-09-05T12:00:00"
-description: 這篇開發日記記錄了這個月使用者訪談的總結，並且詳細頗析了使我們方向轉折的各個因素，希望讀者能從這篇文章窺看新創的痛苦與甜蜜。
-project: township
-projectType: community
-projectYear: 2021
-projectTeamSize: 2
+description: "這篇開發日記記錄了這個月使用者訪談的總結，並且詳細頗析了使我們方向轉折的各個因素，希望讀者能從這篇文章窺看新創的痛苦與甜蜜。"
 ---
 
 township 幾乎每個禮拜都有方向的變動，而為了驗證這些假說，每週六日我都在重新整理訪綱。整體訪談的對象也逐漸從內容創造者如何去經營社群、小型興趣團體如何經營，慢慢轉向到我們該如何製作出可以在重要環節幫助社群經營者的工具。

@@ -1,21 +1,10 @@
 ---
-lang: zh-tw
-type: dev-log
 title: "township 開發日記 #4"
-baseSlug: "/township/township-dev-log-4"
-belongToSeries: false
-seriesKey: 
-seriesSlug: 
+baseSlug: "township-dev-log-4"
 tags: ["township", "dev-log", "community"]
-hasTranslation: true
-components: []
 publishedAt: "2021-08-29T12:00:00"
 lastModified: "2021-08-29T12:00:00"
-description: 這篇開發日記中，紀錄了這一週新的轉折，我們放棄了小而精緻的社群，並且重新定義了 township 作為一種工具具備的功能。
-project: township
-projectType: community
-projectYear: 2021
-projectTeamSize: 2
+description: "這篇開發日記中，紀錄了這一週新的轉折，我們放棄了小而精緻的社群，並且重新定義了 township 作為一種工具具備的功能。"
 ---
 
 上一個禮拜「小而精緻」的假說並沒有通過驗證，我們把客群重新定調為籌辦社群，並期待社群成長的領導者們。我們了調整訪綱，並且盡量訪談有建構過社群的人們。
@@ -38,7 +27,6 @@ projectTeamSize: 2
 
 他笑著說因為自己也算是演藝圈裡的人，很清楚這是怎麼運作的，隨後話鋒一轉，認真地建議我們考慮這件事：「人們是會付費參與這種活動的，讓原本處於私領域的這些活動袒露進公領域，是演藝圈常常使用的手法。現在或許時機已經成熟了，重點就在於你們是否可以找到有潛力的人，由他帶動整個平台成長。」
 
-
 ### 關於社群
 
 我們很幸運地於這週訪談到一個剛起步的社群的經營者。這是個知識社群，內容關於各式各樣的書籍，他們過去每週都會邀請某個領域的專家來分享知識，以線下活動為主。Facebook group 人數約為一千人，過去兩個月的成長趨緩。他提到 Facebook Group 的分析功能不好用，無法明確計算社群內的貼文被哪些族群閱讀？也無法長期追蹤社群的動向，安排更好的內容。
@@ -60,9 +48,5 @@ projectTeamSize: 2
 
 Cheers!
 
-
-[^1]: 秀異指稱社會中的人們有意識或無意識地運用各種策略來凸顯與其他個體的差異 [Distinction (sociology)](https://en.wikipedia.org/wiki/Distinction_(sociology))
+[^1]: 秀異指稱社會中的人們有意識或無意識地運用各種策略來凸顯與其他個體的差異 [Distinction (sociology)](<https://en.wikipedia.org/wiki/Distinction_(sociology)>)
 [^2]: Zapier 是一流程自動化工具，它串接上百種軟體，讓你能夠快速處理重複性的工作[Connect your apps and automate workflows - Zapier](https://zapier.com/)
-
-
-

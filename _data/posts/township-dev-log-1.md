@@ -1,26 +1,15 @@
 ---
-lang: zh-tw
-type: dev-log
 title: "township 開發日記 #1"
-baseSlug: "/township/township-dev-log-1"
-belongToSeries: false
-seriesKey: 
-seriesSlug: 
+slug: "township-dev-log-1"
 tags: ["township", "dev-log", "podcast"]
-hasTranslation: true
-components: []
 publishedAt: "2021-08-08T12:00:00"
 lastModified: "2021-08-08T12:00:00"
-description: 這是 township 的第一篇開發日記，提到了我使用的幾種心智模型，市場調查類的訪談是如何進行，以及我們期待 township 完成的任務。
-project: township
-projectType: community
-projectYear: 2021
-projectTeamSize: 2
+description: "這是 township 的第一篇開發日記，提到了我使用的幾種心智模型，市場調查類的訪談是如何進行，以及我們期待 township 完成的任務。"
 ---
 
 這是 township 的第一個 dev-logs。
 
-雖然我與夥伴已在這個點子上打轉至少半個月，真正可行的方案卻是在我們訪問了四個 Podcaster之後慢慢浮現，並且於當前訪問了十個 Podcaster 後才可謂啟程。
+雖然我與夥伴已在這個點子上打轉至少半個月，真正可行的方案卻是在我們訪問了四個 Podcaster 之後慢慢浮現，並且於當前訪問了十個 Podcaster 後才可謂啟程。
 
 在這兩個禮拜，我幾乎沒進行程式上的開發，只有了解在 email 之中嵌入問卷的可行性而已。時間完全用在思索該從什麼角度切入？該進入哪個市場？該服務哪種顧客？以及設計訪綱驗證假說，並投入大量心理能量於第一原則的思索上。
 

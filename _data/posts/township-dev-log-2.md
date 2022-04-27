@@ -1,21 +1,10 @@
 ---
-lang: zh-tw
-type: dev-log
 title: "township 開發日記 #2"
-baseSlug: "/township/township-dev-log-2"
-belongToSeries: false
-seriesKey: 
-seriesSlug: 
+slug: "township-dev-log-2"
 tags: ["township", "dev-log", "community"]
-hasTranslation: true
-components: []
 publishedAt: "2021-08-15T12:00:00"
 lastModified: "2021-08-15T12:00:00"
-description: 在這篇 township 開發日記中我提到了這個禮拜密集訪談下學到的事物，包括我們經歷了一次重大的轉折，雖然讓人煩惱且耗費時間，但我認爲這些都是值得的。在新創的初期，不只是客戶挑選我們，我們也挑選客戶，在最初要找到你願意一起合作的顧客，與他們一同成長。
-project: township
-projectType: community
-projectYear: 2021
-projectTeamSize: 2
+description: "在這篇 township 開發日記中我提到了這個禮拜密集訪談下學到的事物，包括我們經歷了一次重大的轉折，雖然讓人煩惱且耗費時間，但我認爲這些都是值得的。在新創的初期，不只是客戶挑選我們，我們也挑選客戶，在最初要找到你願意一起合作的顧客，與他們一同成長。"
 ---
 
 在創業的初期，最讓人痛苦的經歷莫過於自己感興趣的問題、想解決的困難不被重視。這有許多原因，其中最顯著的是你還沒有找到與你同樣重視的人，你不知道他們在哪裡。在這個困境中久了你的思考會出現明顯的盲點。同時為了填補自信、塑造使命感，有可能會幻想出不存在的問題，只為了讓自己能夠沈浸在「自己做的東西有價值」的幻覺之中，匍匐前進。
