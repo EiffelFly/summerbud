@@ -21,6 +21,10 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
       title: "Thoughts",
       path: "/thoughts",
     },
+    {
+      title: "dev-notes",
+      path: "/dev-notes",
+    }
   ];
 
   const navigationSet = (
