@@ -1,6 +1,7 @@
 import { Component, createSignal } from "solid-js";
 import { MoonStarsIcon, SunIcon } from "../../Icons";
 import cn from "clsx";
+const ssr = import.meta.env.SSR;
 
 export interface ThemeToggleProps {
   styleName?: string;
@@ -29,6 +30,7 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
           theme: "light",
         },
       });
+      localStorage.setItem("darkMode", "false");
       setIsDark(false);
     } else {
       html.classList.add("dark");
@@ -37,6 +39,7 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
           theme: "dark",
         },
       });
+      localStorage.setItem("darkMode", "true");
       setIsDark(true);
     }
   };
