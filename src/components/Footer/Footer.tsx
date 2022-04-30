@@ -16,7 +16,7 @@ const Footer: Component = () => {
           target="_blank"
           rel="noreferrer noopenner"
         >
-          <GithubIcon styleName="w-5 h-5 fill-sb-brgreen" />
+          <GithubIcon styleName="w-5 h-5 fill-sd-brgreen dark:fill-sd-brcyan" />
         </a>
       </div>
     </div>

@@ -1,10 +1,13 @@
 import { Component, createEffect, createSignal } from "solid-js";
-import { MoonStarsIcon, SunIcon } from "../../Icons";
 import cn from "clsx";
 
 export interface ThemeToggleProps {
   styleName?: string;
 }
+
+// We change toggle icon color instead of changing hidden property, it turns out
+// the former is mcuh faster than later. If we use hidden property the transition will
+// be very weird.
 
 const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
   const [theme, setTheme] = createSignal<string>("dark");
@@ -13,12 +16,12 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
     const iframe = document.querySelector(
       "iframe.giscus-frame"
     ) as HTMLIFrameElement;
-    
+
     // We may already injected the iframe, but it is still not visible, if we call
     // it right now, it will cause browser complaint about the origin is not the target
     // It's style will be null before initiation, we leverage this to prvent error
 
-    if (!iframe.getAttribute("style")) return;
+    if (!iframe || !iframe.getAttribute("style")) return;
     iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
   };
 
@@ -69,13 +72,15 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
 
   return (
     <button
-      className={cn("flex h-10 w-10 p-2", styleName)}
+      className={cn("flex gap-x-3 p-2", styleName)}
       onClick={() => toggleTheme()}
     >
       <svg
         class={cn(
-          "theme-toggle-sun m-auto h-5 w-5 fill-sd-black dark:fill-sd-white",
-          theme() === "dark" ? "hidden" : ""
+          "theme-toggle-moon m-auto h-4 w-4 fill-sd-brblue transition-colors",
+          theme() === "light"
+            ? " dark:fill-sd-brgreen"
+            : "dark:fill-sd-yellow"
         )}
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -86,8 +91,10 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
 
       <svg
         class={cn(
-          "theme-toggle-moon m-auto h-5 w-5 fill-sd-black dark:fill-sd-white",
-          theme() === "dark" ? "" : "hidden"
+          "theme-toggle-sun m-auto h-5 w-5 fill-sd-brblue dark:fill-sd-brgreen transition-colors",
+          theme() === "light"
+            ? "fill-sd-yellow"
+            : "fill-sd-brblue dark:fill-sd-brgreen"
         )}
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"

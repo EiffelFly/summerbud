@@ -20,9 +20,6 @@ const props = Astro.props as Props;
     <script is:inline>
       // credit: https://github.com/withastro/docs/blob/main/src/layouts/MainLayout.astro
       const html = document.querySelector("html");
-      const themeToggleSunIcon = document.querySelector("theme-toggle-sun");
-      const themeToggleMoonIcon = document.querySelector("theme-toggle-moon");
-
       const theme = (() => {
         if (
           typeof localStorage !== "undefined" &&
@@ -36,17 +33,12 @@ const props = Astro.props as Props;
         return "light";
       })();
 
-      if (theme === "light") {
-        if (themeToggleSunIcon) {
-          themeToggleSunIcon.classList.add("hidden");
-        }
+      // The ThemeToggle icon will reset to initial state once we change page, we need to change
+      // it back to correct one before page first paint
 
+      if (theme === "light") {
         html.classList.remove("dark");
       } else {
-        if (themeToggleMoonIcon) {
-          themeToggleMoonIcon.classList.add("hidden");
-        }
-
         html.classList.add("dark");
       }
     </script>
