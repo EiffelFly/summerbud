@@ -48,7 +48,7 @@ const siteMeta: SiteLayoutProps["meta"] = {
 ---
 
 <SiteLayout fullWidth={false} meta={siteMeta} canonicalURL={`${SITE.domain}/dev-notes/${slug}`}>
-  <article class="mx-auto prose lg:prose-lg dark:prose-dark mb-20">
+  <article class="mx-auto w-full prose lg:prose-lg dark:prose-dark mb-20">
     <h1>{post.frontmatter.title}</h1>
     <p>{publishedTime}</p>
     <div class="w-full border border-sd-brgreen mb-20"></div>
