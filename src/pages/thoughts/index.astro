@@ -4,6 +4,7 @@ import { ArticleFrontMatter } from "../../types/general";
 import SiteLayout, {
   Props as SiteLayoutProps,
 } from "../../layouts/SiteLayout.astro";
+import { SITE } from '../../site-config';
 
 let allPosts = await Astro.glob<ArticleFrontMatter>(
   "../../../_data/thoughts/*.md"
@@ -24,8 +25,8 @@ const pageMeta: SiteLayoutProps["meta"] = {
   ogLocale: "zh-TW",
   description: "This is Summerbud's posts archive",
   image: {
-    src: "",
-    alt: "",
+    src: null,
+    alt: null,
   },
 };
 ---
@@ -33,7 +34,7 @@ const pageMeta: SiteLayoutProps["meta"] = {
 <SiteLayout
   fullWidth={false}
   meta={pageMeta}
-  canonicalURL={""}
+  canonicalURL={`${SITE.domain}/thoughts`}
 >
   <PostList slugPrefix="thoughts" posts={allPosts} />
 </SiteLayout>

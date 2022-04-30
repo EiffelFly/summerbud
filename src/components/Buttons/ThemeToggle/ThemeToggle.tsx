@@ -13,7 +13,12 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
     const iframe = document.querySelector(
       "iframe.giscus-frame"
     ) as HTMLIFrameElement;
-    if (!iframe) return;
+    
+    // We may already injected the iframe, but it is still not visible, if we call
+    // it right now, it will cause browser complaint about the origin is not the target
+    // It's style will be null before initiation, we leverage this to prvent error
+
+    if (!iframe.getAttribute("style")) return;
     iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
   };
 

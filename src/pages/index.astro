@@ -2,20 +2,21 @@
 import SiteLayout, {
   Props as SiteLayoutProps,
 } from "../layouts/SiteLayout.astro";
+import { SITE } from "../site-config";
 
 let content = "";
 let siteMeta: SiteLayoutProps["meta"] = {
-  title: "test",
-  ogLocale: "",
-  description: "",
+  title: null,
+  ogLocale: "zh-TW",
+  description: null,
   image: {
-    src: "",
-    alt: "",
+    src: null,
+    alt: null,
   },
 };
 ---
 
-<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={""}>
+<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain}>
   <p
     class="m-auto font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center"
   >
