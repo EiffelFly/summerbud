@@ -12,35 +12,36 @@ export interface Props extends HeadSeoProps {
 const props = Astro.props as Props;
 ---
 
-<html>
+<html class="dark">
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="/prism-atom-dark.css" rel="stylesheet" />
     <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} />
-    <script>
-      const storedDarkMode = localStorage.getItem("darkMode");
-
-      const preferDark =
-        window &&
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-      const isDark = storedDarkMode
-        ? storedDarkMode === "true"
-          ? true
-          : fasle
-        : preferDark
-        ? true
-        : false;
-
+    <script is:inline>
+      // credit: https://github.com/withastro/docs/blob/main/src/layouts/MainLayout.astro
       const html = document.querySelector("html");
+      const themeToggleSunIcon = document.querySelector("theme-toggle-sun");
+      const themeToggleMoonIcon = document.querySelector("theme-toggle-moon");
 
-      console.log("isDark");
+      const theme = (() => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
 
-      if (isDark) {
-        html.classList.add("dark");
-      } else {
+      if (theme === "light") {
+        themeToggleSunIcon.classList.add("hidden");
         html.classList.remove("dark");
+      } else {
+        themeToggleMoonIcon.classList.add("hidden");
+        html.classList.add("dark");
       }
     </script>
   </head>
