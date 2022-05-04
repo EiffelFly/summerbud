@@ -1,5 +1,5 @@
 ---
-title: 用 Next.js API route + Mailchimp 施作電子信訂閱
+title: 如何用 Next.js API route + Mailchimp 施作電子信訂閱
 slug: "add-newsletter-subscription-in-nextjs"
 tags: ["Blog", "Next.js", "Newsletter"]
 publishedAt: "2021-07-28T18:00:00"

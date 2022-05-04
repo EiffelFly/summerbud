@@ -1,5 +1,5 @@
 ---
-title: "How to - 如何打造像是 create-react-app 的 npx script （以 create-threejs-starter-pack 為例）"
+title: "如何打造像是 create-react-app 的 npx script （以 create-threejs-starter-pack 為例）"
 slug: "build-your-own-npx-script-like-create-react-app"
 tags: ["how-to", "npx", "boilerplate"]
 publishedAt: "2021-09-19T12:00:00"

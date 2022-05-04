@@ -1,5 +1,5 @@
 ---
-title: "How to - 如何在 Storybook 中加入 TailwindCSS"
+title: "如何在 Storybook 中加入 TailwindCSS"
 slug: "add-tailwindcss-into-storybook"
 tags: ["how-to", "storybook", "tailwind-css"]
 publishedAt: "2021-10-07T12:00:00"

@@ -1,5 +1,5 @@
 ---
-title: "How to - 如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異"
+title: "如何使用 github action 於佈建 Next.js 專案時自動比較 Webpack bundle 差異"
 slug: "use-github-action-to-compare-webpack-bundle-difference"
 tags: ["how-to", "webpack", "github-action", "ci"]
 publishedAt: "2021-10-03T12:00:00"

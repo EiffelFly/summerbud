@@ -1,5 +1,5 @@
 ---
-title: "創造你自己的 git commit message 系統"
+title: "如何創造你自己的 git commit message 系統"
 slug: "construct-your-own-git-commit-message-system"
 tags: ["lessen_learned", "git", "emoji"]
 publishedAt: "2021-08-21T12:00:00"
