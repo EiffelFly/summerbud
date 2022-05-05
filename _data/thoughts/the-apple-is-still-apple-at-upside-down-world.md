@@ -1,9 +1,9 @@
 ---
-title: "關於台文所的考試#2：顛倒世界的蘋果還是蘋果"
+title: "關於台文所的考試 #2：顛倒世界的蘋果還是蘋果"
 slug: "the-apple-is-still-apple-at-upside-down-world"
 tags: ["thought", "writing", "taiwan-literature"]
-publishedAt: "2018-05-02T12:00:00"
-lastModified: "2018-05-02T12:00:00"
+publishedAt: "2018-05-06T12:00:00"
+lastModified: "2018-05-06T12:00:00"
 description: "我總在消防廳舍二樓的會議室讀書，澎湖的九月，面西的廳舍在午後燥熱不堪，在讀著台灣文學史的過程中，我的內心對於寫作的願景被撼動了。"
 ---
 

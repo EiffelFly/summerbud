@@ -1,5 +1,5 @@
 ---
-title: "關於台文所的考試#1 - 入口，在顛倒世界"
+title: "關於台文所的考試 #1 - 入口，在顛倒世界"
 slug: "the-entry-is-at-upside-down-world"
 tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-04-09T12:00:00"
