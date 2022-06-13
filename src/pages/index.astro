@@ -1,4 +1,5 @@
 ---
+import NewPostBanner from "../components/NewPostBanner/NewPostBanner";
 import SiteLayout, {
   Props as SiteLayoutProps,
 } from "../layouts/SiteLayout.astro";
@@ -17,9 +18,11 @@ let siteMeta: SiteLayoutProps["meta"] = {
 ---
 
 <SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain}>
-  <p
-    class="m-auto font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center"
-  >
-    這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。
-  </p>
+  <div class="flex flex-col m-auto">
+    <p class="font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center mx-auto mb-16">
+      這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。
+    </p>
+    <NewPostBanner title="Build the theme toggle button with Astrojs and tailwindCSS"
+      url="/dev-notes/build-theme-toggle-button-with-astrojs-and-tailwind-css" position="mx-auto" />
+  </div>
 </SiteLayout>
