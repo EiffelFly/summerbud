@@ -12,7 +12,7 @@ export interface ThemeToggleProps {
 const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
   const [theme, setTheme] = createSignal<string>("dark");
 
-  const sendMessageToGiscus = (message) => {
+  const sendMessageToGiscus = (message: Record<string, any>) => {
     const iframe = document.querySelector(
       "iframe.giscus-frame"
     ) as HTMLIFrameElement;
@@ -21,7 +21,8 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
     // it right now, it will cause browser complaint about the origin is not the target
     // It's style will be null before initiation, we leverage this to prvent error
 
-    if (!iframe || !iframe.getAttribute("style")) return;
+    if (!iframe || !iframe.getAttribute("style") || !iframe.contentWindow)
+      return;
     iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
   };
 
@@ -48,6 +49,8 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
     // https://github.com/giscus/giscus/issues/336#issuecomment-1007922777
 
     const html = document.querySelector("html");
+
+    if (!html) return;
 
     if (theme() === "dark") {
       html.classList.remove("dark");
@@ -78,9 +81,7 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
       <svg
         class={cn(
           "theme-toggle-moon m-auto h-4 w-4 fill-sd-brblue transition-colors",
-          theme() === "light"
-            ? " dark:fill-sd-brgreen"
-            : "dark:fill-sd-yellow"
+          theme() === "light" ? " dark:fill-sd-brgreen" : "dark:fill-sd-yellow"
         )}
         viewBox="0 0 16 16"
         xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +92,7 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
 
       <svg
         class={cn(
-          "theme-toggle-sun m-auto h-5 w-5 fill-sd-brblue dark:fill-sd-brgreen transition-colors",
+          "theme-toggle-sun m-auto h-5 w-5 fill-sd-brblue transition-colors dark:fill-sd-brgreen",
           theme() === "light"
             ? "fill-sd-yellow"
             : "fill-sd-brblue dark:fill-sd-brgreen"

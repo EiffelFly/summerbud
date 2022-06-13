@@ -6,7 +6,8 @@
     "module": "ES2022",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["astro/env"]
+    "types": ["astro/env"],
+    "strict": true
   },
   "include": ["./src"]
 }

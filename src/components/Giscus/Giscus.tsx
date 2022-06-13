@@ -29,6 +29,8 @@ const Giscus: Component = () => {
 
     const target = document.querySelector(".discus");
 
+    if (!target) return;
+
     if (theme === "light") {
       script.setAttribute("data-theme", "light");
       target.appendChild(script);
