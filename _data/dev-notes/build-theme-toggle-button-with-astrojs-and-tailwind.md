@@ -5,6 +5,9 @@ tags: ["Blog", "Astro.js", "TailwindCSS"]
 publishedAt: "2022-06-13T18:00:00"
 lastModified: "2022-06-13T18:00:00"
 description: "In this article you will learn how to toggle your blog's theme with Astrojs Partial Hydration philosophy and TailwindCSS"
+featureImg: "/1917-christopher-richard-wynne-nevinson-dawn-at-southwark.jpg"
+featureImgAlt: "Dawn At Southwark, 1917, Christopher Richard Wynne Nevinson"
+featureImgSource: "https://www.britishmuseum.org/collection/object/P_1949-0411-2141"
 ---
 
 What Astro had brought to us is a world without Javascript as default. They use this philosophy to reduce bundle size and speed up the first paint of the browser, but it also brings lots of new challenges to the developer, such as toggling the dark theme button on the blog.
