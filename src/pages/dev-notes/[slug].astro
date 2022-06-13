@@ -6,6 +6,7 @@ import SiteLayout, {
 } from "../../layouts/SiteLayout.astro";
 import { ArticleFrontMatter } from "../../types/general";
 import { SITE } from '../../site-config';
+import Image from "../../components/Image";
 
 export async function getStaticPaths() {
   let posts = await Astro.glob<ArticleFrontMatter>("../../../_data/dev-notes/*.md");
@@ -35,19 +36,22 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 const publishedTime = getFormattedTime(post.frontmatter.publishedAt);
+const featureImgSource = post.frontmatter.featureImgSource
 
 const siteMeta: SiteLayoutProps["meta"] = {
   title: post.frontmatter.title,
   ogLocale: "zh-TW",
   description: post.frontmatter.description,
   image: {
-    src: null,
-    alt: null,
+    src: post.frontmatter.featureImg,
+    alt: post.frontmatter.featureImgAlt,
   },
 };
 ---
 
-<SiteLayout fullWidth={false} meta={siteMeta} canonicalURL={`${SITE.domain}/dev-notes/${slug}`}>
+<SiteLayout fullWidth={true} meta={siteMeta} canonicalURL={`${SITE.domain}/dev-notes/${slug}`}>
+  <Image width="w-full" height="h-[600px]" src={siteMeta.image.src} alt={siteMeta.image.alt} source={featureImgSource}
+    marginBottom="mb-20" />
   <article class="mx-auto w-full prose lg:prose-lg dark:prose-dark mb-20">
     <h1>{post.frontmatter.title}</h1>
     <p>{publishedTime}</p>
