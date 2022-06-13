@@ -6,3 +6,5 @@ export type ArticleFrontMatter = {
   lastModified: string;
   description: string;
 };
+
+export type Nullable<T> = T | null;
