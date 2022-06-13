@@ -43,7 +43,12 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
   );
 
   return (
-    <header className={cn("flex flex-col py-8 md:flex-row", marginBottom)}>
+    <header
+      className={cn(
+        "mx-auto flex w-full max-w-4xl flex-col py-8 md:flex-row lg:max-w-5xl",
+        marginBottom
+      )}
+    >
       <div className="flex flex-grow flex-row">
         <a href="/" className="mr-auto flex flex-row gap-x-6">
           <SummerbudAvatars styleName="w-10 h-10" />

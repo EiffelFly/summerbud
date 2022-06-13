@@ -3,7 +3,7 @@ import { GithubIcon } from "../Icons";
 
 const Footer: Component = () => {
   return (
-    <div className="flex flex-row border-t border-sd-brgreen py-10">
+    <div className="mx-auto flex w-full max-w-4xl flex-row border-t border-sd-brgreen py-10 lg:max-w-5xl">
       <div className="mr-auto flex font-sans text-sm font-light text-sd-black dark:text-sd-white">
         <div className="flex flex-row gap-x-4">
           邱柏鈞<span>|</span>
