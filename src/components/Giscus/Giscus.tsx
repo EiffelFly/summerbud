@@ -40,7 +40,7 @@ const Giscus: Component = () => {
     }
   });
 
-  return <div class="discus"></div>;
+  return <div class="discus mx-auto w-full max-w-4xl lg:max-w-5xl"></div>;
 };
 
 export default Giscus;
