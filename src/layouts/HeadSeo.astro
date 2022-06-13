@@ -1,17 +1,18 @@
 ---
 import { SITE, OPEN_GRAPH } from "../site-config";
+import { Nullable } from "../types/general";
 
 export interface Props {
   meta: {
-    title: string;
-    ogLocale: string;
-    description: string;
+    title: Nullable<string>;
+    ogLocale: Nullable<string>;
+    description: Nullable<string>;
     image: {
-      src: string;
-      alt: string;
+      src: Nullable<string>;
+      alt:Nullable<string>;
     };
   };
-  canonicalURL: URL | string;
+  canonicalURL: Nullable<URL | string>;
 }
 
 const { meta, canonicalURL } = Astro.props as Props;
