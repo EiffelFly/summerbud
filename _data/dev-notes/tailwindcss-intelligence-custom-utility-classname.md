@@ -12,23 +12,23 @@ featureImgSource: "https://www.metmuseum.org/art/collection/search/435809?search
 
 Recently, I finally solved a big issue with the TailwindCSS that bother me for a long period of time. That is TailwindCSS intelligence won't pick up the custom utility classnames using the @layer directive.
 
-When you are building the app with TailwindCSS, at some point you need to add a custom style. You could add custom style within `tailwind.config.js` file. In this way, TailwindCSS intelligence can correctly pick it up for you. 
+When you are building the app with TailwindCSS, at some point you need to add a custom style. You could add custom style within `tailwind.config.js` file. In this way, TailwindCSS intelligence can correctly pick it up for you.
 
 ```js
-// tailwind.config.js 
+// tailwind.config.js
 
 module.exports = {
   theme: {
     extend: {
       colors: {
         primary_colour_light_blue: "#40A8F5",
-	  }
-	}
-  }
-}
+      },
+    },
+  },
+};
 ```
 
-But if we want a much more complicated style? The next step comes naturally with the help of a custom utility class using the @layer directive at the CSS file we just injected into the app root.[^1] 
+But if we want a much more complicated style? The next step comes naturally with the help of a custom utility class using the @layer directive at the CSS file we just injected into the app root.[^1]
 
 ```css
 @tailwind base;
@@ -36,12 +36,12 @@ But if we want a much more complicated style? The next step comes naturally with
 @tailwind utilities;
 
 @layer utilities {
-	".text-header1": {
-		@apply font-sans text-[32px] font-medium leading-[42px];
-	}
-	".custom-shadow": {
-		boxShadow: "0px 0px 0px 3px rgba(64, 168, 245, 0.2)",
-	}
+  ".text-header1": {
+    @apply font-sans text-[32px] font-medium leading-[42px];
+  }
+  ".custom-shadow": {
+    boxshadow: "0px 0px 0px 3px rgba(64, 168, 245, 0.2)";
+  }
 }
 ```
 
@@ -55,39 +55,38 @@ You can use the TailwindCSS plugin to add any custom style you want and intellig
 
 ```js
 module.exports = {
-	plugins: [
-		({addUtilities, addComponents}) => {
-			addUtilities({
-				".custom-shadow": {
-					boxShadow: "0px 0px 0px 3px rgba(64, 168, 245, 0.2)",
-				}
-			})
-		}
-	]
-}
+  plugins: [
+    ({ addUtilities, addComponents }) => {
+      addUtilities({
+        ".custom-shadow": {
+          boxShadow: "0px 0px 0px 3px rgba(64, 168, 245, 0.2)",
+        },
+      });
+    },
+  ],
+};
 ```
 
 You could also add the `@apply` directive in plugin[^3]
 
 ```js
 module.exports = {
-	plugins: [
-		({addUtilities, addComponents}) => {
-			addUtilities({
-				".test-color-red": {
-					"@apply text-red-900": {}
-				}
-			})
-		}
-	]
-}
-
+  plugins: [
+    ({ addUtilities, addComponents }) => {
+      addUtilities({
+        ".test-color-red": {
+          "@apply text-red-900": {},
+        },
+      });
+    },
+  ],
+};
 ```
 
 After setting up your plugin, the intelligence can now correctly pick up the custom style, but this is not an ideal solution but only a comfy workaround. I am looking forward to one day, the TaiwlindCSS have native support for this issue.
 
+Here is some working example: [instill-ai/console](https://github.com/instill-ai/console/blob/d57d2651a450c3d712a95c9d2c6464ee204bba30/tailwind.config.js#L77)
 
 [^1]: [TailwindCSS installation example - Next.js](https://tailwindcss.com/docs/guides/nextjs)
 [^2]: [Tailwind IntelliSense does not list my custom class in @layer Utilities #227](https://github.com/tailwindlabs/tailwindcss-intellisense/issues/227)
 [^3]: [JS API for using `@apply` in Plugins](https://github.com/tailwindlabs/tailwindcss/discussions/2049)
-
