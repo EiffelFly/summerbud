@@ -1,5 +1,5 @@
 ---
-title: "How to solve: TailwindCSS intelligence can't pick up custom utility classname"
+title: "How to solve: TailwindCSS intelligence can't pick up your custom utility classname"
 slug: "tailwindcss-intelligence-custom-utility-classname"
 tags: ["Blog", "TailwindCSS", "IDE"]
 publishedAt: "2022-06-16T18:00:00"
