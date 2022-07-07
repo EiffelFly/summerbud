@@ -27,7 +27,7 @@ These are all great essays, talking about porn, the internet, software, art, and
 ## INTERESTING
 
 - [Synchronizing with Effects - React Docs Beta](https://beta.reactjs.org/learn/synchronizing-with-effects)
-  - This article further explains what is useEffect and its nature. Oerall, a better doc compared to the old one. But after reading the whole article, I feel very confused about what happened to the useEffect, it's so counterintuitive and hard to master, not to say that the whole idea of combining lots of lifeCycle methods into just one hook is hard to use.
+  - This article further explains what is useEffect and its nature. Overall, a better doc compared to the old one. But after reading the whole article, I feel very confused about what happened to the useEffect, it's so counterintuitive and hard to master, not to say that the whole idea of combining lots of lifeCycle methods into just one hook is hard to use.
   - UseEffect is the number one reason that makes me want to leave the React ecosystem
 - [Writing is hard - Tor Håkon](https://blog.torh.net/2022/06/14/writing-is-hard/)
   - Keep the flow of writing going!
