@@ -21,7 +21,7 @@ const NewPostBanner: Component<NewPostBannerProps> = ({
       <div class="my-auto flex rounded-md bg-sd-yellow px-3 py-1">
         <p class="m-auto font-sans text-sm text-sd-brwhite">new</p>
       </div>
-      <a href={url} class="flex flex-col gap-y-1 font-sans">
+      <a href={url} class="flex flex-col gap-y-1 font-sans" rel="prefetch">
         <p class="text-lg text-sd-brgreen underline dark:text-sd-brblue">
           {title}
         </p>
