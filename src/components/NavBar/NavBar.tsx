@@ -33,6 +33,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
         <div class="flex">
           <a
             href={e.path}
+            rel="prefetch"
             className="link-underline my-auto cursor-pointer align-baseline font-sans text-xl font-semibold text-sd-black dark:text-sd-white"
           >
             {e.title}

@@ -10,11 +10,12 @@ type PostListProps = {
 
 const PostList: Component<PostListProps> = ({ posts, slugPrefix }) => {
   return (
-    <div className="flex flex-col gap-y-4 w-full">
+    <div className="flex w-full flex-col gap-y-4">
       {posts.map((post) => (
         <a
           href={`/${slugPrefix}/${post.frontmatter.slug}`}
           className="group flex cursor-pointer flex-col gap-y-2 font-sans lg:flex-row lg:gap-y-0"
+          rel="prefetch"
         >
           <div className="mr-auto text-base text-sd-black group-hover:underline dark:text-sd-white">
             {post.frontmatter.title}
