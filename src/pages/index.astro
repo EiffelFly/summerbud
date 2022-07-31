@@ -17,17 +17,18 @@ let siteMeta: SiteLayoutProps["meta"] = {
 };
 
 const newPostMeta = {
-  title: "202206 - The articles I read #1",
-  url: "/thoughts/202206-the-articles-I-read",
-  updateDate: "2022-07-06",
-  position: "mx-auto"
-}
-
+  title: "202207 - When will you write",
+  url: "/thoughts/202207-when-will-you-write",
+  updateDate: "2022-07-30",
+  position: "mx-auto",
+};
 ---
 
 <SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain}>
   <div class="flex flex-col m-auto">
-    <p class="font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center mx-auto mb-16">
+    <p
+      class="font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center mx-auto mb-16"
+    >
       這個部落格的內容大多關於文學、程式設計及創業。希望每個讀者離開時都能帶走一些值得收藏的事物，秉持這種精神，這裡的每篇文章都盡可能簡潔，且包含了可以實作的內容。
     </p>
     <NewPostBanner {...newPostMeta} />
