@@ -32,6 +32,10 @@ export function remarkTwitter(options = {}) {
           file.fail("Missing twitter block url", node);
         }
 
+        if (url.includes("?")) {
+          file.fail("Please remove additional query param", node);
+        }
+
         const embedOptions = {
           url: url,
 
