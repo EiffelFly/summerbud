@@ -44,6 +44,8 @@ Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜
 
 最近在看 Twitter 時看到一篇文章非常有趣，是由 Roam research 的創辦人 Conor White-Sullivan 寫出來的。
 
+::twitter{url=https://twitter.com/Conaw/status/1319062548260421638}
+
 當然這只是一切狀況的冰山一角，但由於這個功能實在太有趣，導致我想要特別將它提出來。
 
 資訊過載並不是現在才有的問題，它一直都是進行式，每個時代都有自己資訊過載的特性以及他們對抗它的方法，例如妖魔化印刷術、妖魔化電視等等都是一些極端的反抗方式。
