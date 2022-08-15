@@ -4,7 +4,7 @@ import { ArticleFrontMatter } from "../../types/general";
 import SiteLayout, {
   Props as SiteLayoutProps,
 } from "../../layouts/SiteLayout.astro";
-import { SITE } from '../../site-config';
+import { SITE } from "../../site-config";
 
 let allPosts = await Astro.glob<ArticleFrontMatter>(
   "../../../_data/dev-notes/*.md"
