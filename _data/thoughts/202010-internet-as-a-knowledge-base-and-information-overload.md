@@ -1,10 +1,10 @@
 ---
-title: "[HOLOLINK] Internet as a knowledge-base 及 Information overload"
+title: "Hololink - Internet as a knowledge-base 及 Information overload"
 slug: "202008-internet-as-a-knowledge-base-and-information-overload"
 tags: ["Essays"]
-publishedAt: "2020-08-29T18:00:00"
-lastModified: "2020-08-29T18:00:00"
-description: "In this article I will share the articles I had read during June 2022"
+publishedAt: "2020-10-29T18:00:00"
+lastModified: "2020-10-29T18:00:00"
+description: "Hololink 關於 Internet as a knowledge-base 及 Information overload 的洞見"
 featureImg: "/multi-axis-gimble-rig.jpg"
 featureImgAlt: "MASTIF - Multiple Axis Space Test Inertia Facility - NASA"
 featureImgSource: "https://www.flickr.com/photos/nasacommons/9457837753/in/photolist-fpKTEa-BDHW1z-r6gzQG-oV3TPs-Pk5z4t-LNYqzy-M1Po7G-LNYqRf-QmMbtK-fq19qN-2ifnodz-cAyiCm-N5LMt8-2fQjzBw-pfm6ec-cGwxVC-25gA8zE-fpKUYH-CArfXu-2j1j7vi-8PHqJi-fpHUcR-cubwGU-PnLwjh-2it97X7-d1zLvY-qK3MyS-d74CaC-fpY3hW-qR19hL-czu465-cZWtD1-pznCk1-fp1pnV-fqmRep-fpLLn6-fqChc1-fqAtPb-27UMjVr-cZZr1U-qRRJfs-fqAsj7-d1sZx1-fq1b37-93mnhZ-EDXS9S-fpNh78-X6KC8b-qQXejT-fpLLur"
@@ -107,7 +107,7 @@ Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜
 
 （內容名）（作者）（URL）｜（分析的結果：載體、對外連結、關鍵字、字數...）
 
-到這裡為止我們做的事情會跟書目管理工具，諸如 Endnote 或是 Evernote 相近。然而接下來我們要做的就截然不同了，請接著閱讀：[Hololink 的方法論](https://www.notion.so/Hololink-c4cf08bae6a94a74b40a7d7151b7bfda) 。
+到這裡為止我們做的事情會跟書目管理工具，諸如 Endnote 或是 Evernote 相近。然而接下來我們要做的就截然不同了，請接著閱讀：[Hololink 的方法論](/thoughts/202010-the-methodology-of-hololink) 。
 
 
 [^1]: 利用這件事情來增加廣告點閱率在各大聚合者的平台逐漸出現，諸如「與你訂閱相同內容的人也喜歡這個。」但是數量仍然稀少。我們可以從兩個層面來看待這件事，第一是聚合者發覺人們開始注意演算法的力量與施力的方向，第二個則是聚合者們意識到如此一來內容與內容的轉換率更高，單一廣告的觸及可以更有效率，我個人悲觀地認為其中的原因後者占大多數。我們認為這一件事情會被更廣泛的大眾所認知：我們必須擁有一種演算法，它幫助到我們的同時必須告訴我們為什麼它會得出這種結果。且該軟體的介面必須擔負起解釋清楚的責任。我將這種責任稱為 Explainable Algorithm，他必須被妥當得解釋，如此一來人們才會知道為什麼要在這種演算法的幫助下做決定，並且該怎麼做才好。Hololink 的推薦系統將完全在這種邏輯下運作，之後會有更深度的解釋。

@@ -1,10 +1,10 @@
 ---
-title: "[HOLOLINK] 啟程：我們該如何快速地總結自己的知識"
+title: "Hololink - 啟程：我們該如何快速地總結自己的知識"
 slug: "202008-the-start-of-hololink"
 tags: ["Essays"]
-publishedAt: "2020-08-28T18:00:00"
-lastModified: "2020-08-28T18:00:00"
-description: "In this article I will share the articles I had read during June 2022"
+publishedAt: "2020-10-16T18:00:00"
+lastModified: "2020-10-16T18:00:00"
+description: "Hololink 的起點，關於我們該如何快速總結自己的知識的詰問。"
 featureImg: "/hololink-overview.png"
 featureImgAlt: "Hololink's overview"
 featureImgSource: "https://github.com/EiffelFly/hololink-main-frame"
@@ -32,7 +32,7 @@ Stellar 則是描述性、解釋性的名詞，用以形容 Basestone。
 
 以這套系統，我可以將所有的文章拆分成同樣的基礎結構，這樣的好處在於我可以把所有的文章都連結到這一個底層結構上，在人們看不到的地方去分析其中的脈絡，並且將其中的洞見分享給所有人。同時位處同一個系統下的人們可以更有效率地交換彼此的資料，他們將擁有共同的語言。分享給他人的知識結構可以直接匯入那個人的結構之中。
 
-或許你會覺得 Google 不就在做著同樣的事，他們甚至已經有公開的 Google knowledge graph，然而我可以保證這兩者有決定性的差別：用途不同衍伸出來的差異。Google 的用途是為了讓人們更方便找到資料，Hololink 的目的則是協助個人整理資料。Google 只做到第一步，將資料統整在你面前，並且嘗試說服你這就是你的第二個大腦，遇到不知道的東西只要上來查就可以了。 [Internet as a knowledge-base 及 Information overload]() 
+或許你會覺得 Google 不就在做著同樣的事，他們甚至已經有公開的 Google knowledge graph，然而我可以保證這兩者有決定性的差別：用途不同衍伸出來的差異。Google 的用途是為了讓人們更方便找到資料，Hololink 的目的則是協助個人整理資料。Google 只做到第一步，將資料統整在你面前，並且嘗試說服你這就是你的第二個大腦，遇到不知道的東西只要上來查就可以了。 [Internet as a knowledge-base 及 Information overload](/thoughts/202010-internet-as-a-knowledge-base-and-information-overload) 
 
 然而我認為這樣是不足夠的，我相信也有許多人與我懷著同樣的信念：Google 幫我們做了那麼多之後，我們下一階段的進化是什麼？資訊已經史無前例地，以如此完整的姿態攤在我們每個人面前，我們該如何更有效率，更全面地運用他們？
 
