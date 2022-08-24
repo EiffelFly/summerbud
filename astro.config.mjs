@@ -8,6 +8,7 @@ import remarkDirective from "remark-directive";
 import { remarkYoutube } from "./src/lib/markdown/remark-youtube.mjs";
 import { remarkTwitter } from "./src/lib/markdown/remark-twitter.mjs";
 import remarkRehype from "remark-rehype";
+import remarkGfm from "remark-gfm";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +26,7 @@ export default defineConfig({
   markdown: {
     //syntaxHighlight: "prism",
     remarkPlugins: [
+      remarkGfm,
       remarkDirective,
       [remarkYoutube, { validateYoutubeLink: true }],
       remarkTwitter,
