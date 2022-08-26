@@ -9,8 +9,6 @@ import { remarkTwitter } from "./src/lib/markdown/remark-twitter.mjs";
 import remarkRehype from "remark-rehype";
 import remarkGfm from "remark-gfm";
 
-import image from "@astrojs/image";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.summerbud.org",
@@ -18,7 +16,7 @@ export default defineConfig({
     config: {
       path: "./tailwind.config.cjs"
     }
-  }), sitemap(), prefetch(), image()],
+  }), sitemap(), prefetch()],
   markdown: {
     //syntaxHighlight: "prism",
     remarkPlugins: [remarkGfm, remarkDirective, [remarkYoutube, {
