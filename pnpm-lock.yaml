@@ -7,7 +7,7 @@ specifiers:
   '@astrojs/tailwind': ^0.2.0
   '@babel/core': ^7.18.10
   '@tailwindcss/typography': ^0.5.2
-  astro: ^1.0.5
+  astro: ^1.0.9
   axios: ^0.27.2
   clsx: ^1.1.1
   prettier: ^2.6.2
@@ -31,7 +31,7 @@ devDependencies:
   '@astrojs/tailwind': 0.2.5
   '@babel/core': 7.18.10
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.8
-  astro: 1.0.5
+  astro: 1.0.9
   prettier: 2.7.1
   prettier-plugin-astro: 0.0.12
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
@@ -52,8 +52,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.15
     dev: true
 
-  /@astrojs/compiler/0.23.3:
-    resolution: {integrity: sha512-eBWo0d3DoRDeg2Di1/5YJtOXh5eGFSjJMp1wVoVfoITHR4egdUGgsrDHZTzj0a25M/S9W5S6SpXCyNWcqi8jOA==}
+  /@astrojs/compiler/0.23.4:
+    resolution: {integrity: sha512-vNZIa5Tf5nOqBEGJvM6xyYBnGcz4MAp+bBPnyVI0UYRjsIWlP7RgMdCpRV0OOh5kgh00BoAypGv27kcoJCMVfA==}
     dev: true
 
   /@astrojs/language-server/0.20.3:
@@ -724,12 +724,12 @@ packages:
       tslib: 2.4.0
     dev: true
 
-  /astro/1.0.5:
-    resolution: {integrity: sha512-+L45/SJfJ4yxQuRaaxXeIxf3BXGj80m7BIc9/7Cq5zFMxdvFLJ+4u6srntWY+4KlcrUcVBC/1mnhGbD80vYJQQ==}
+  /astro/1.0.9:
+    resolution: {integrity: sha512-Pa/7wLIuXFs+sgdVxUTT0QHe+9yKQVE21jxZU/p2ZzcUrAB+8JN32fHEG28QTwEx+NuwTqvC5xTvDBXLZJGtqw==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 0.23.3
+      '@astrojs/compiler': 0.23.4
       '@astrojs/language-server': 0.20.3
       '@astrojs/markdown-remark': 1.0.0
       '@astrojs/telemetry': 1.0.0
@@ -770,7 +770,7 @@ packages:
       recast: 0.20.5
       rehype: 12.0.1
       resolve: 1.22.1
-      rollup: 2.78.0
+      rollup: 2.77.3
       semver: 7.3.7
       shiki: 0.10.1
       sirv: 2.0.2
@@ -781,7 +781,7 @@ packages:
       tsconfig-resolver: 3.0.1
       unist-util-visit: 4.1.0
       vfile: 5.3.4
-      vite: 3.0.5
+      vite: 3.0.9
       yargs-parser: 21.1.1
       zod: 3.18.0
     transitivePeerDependencies:
@@ -2984,8 +2984,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup/2.78.0:
-    resolution: {integrity: sha512-4+YfbQC9QEVvKTanHhIAFVUFSRsezvQF8vFOJwtGfb9Bb+r014S+qryr9PSmw8x6sMnPkmFBGAvIFVQxvJxjtg==}
+  /rollup/2.77.3:
+    resolution: {integrity: sha512-/qxNTG7FbmefJWoeeYJFbHehJ2HNWnjkAFRKzWN/45eNBBF/r8lo992CwcJXEzyVxs5FmfId+vTSTQDb+bxA+g==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3454,8 +3454,8 @@ packages:
       vfile-message: 3.1.2
     dev: true
 
-  /vite/3.0.5:
-    resolution: {integrity: sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==}
+  /vite/3.0.9:
+    resolution: {integrity: sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -3476,7 +3476,7 @@ packages:
       esbuild: 0.14.54
       postcss: 8.4.16
       resolve: 1.22.1
-      rollup: 2.78.0
+      rollup: 2.77.3
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

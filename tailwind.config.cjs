@@ -74,6 +74,7 @@ module.exports = {
             a: {
               color: theme("colors.indigo.800"),
               fontWeight: 600,
+              wordBreak: "break-all",
             },
             pre: {
               // backgroundColor: theme("colors.sd-black"),

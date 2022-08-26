@@ -57,12 +57,13 @@ const siteMeta: SiteLayoutProps["meta"] = {
   canonicalURL={`${SITE.domain}/dev-notes/${slug}`}
 >
   <Image
-    width="w-full"
+    width=""
     height="h-[400px] md:h-[600px]"
-    src={siteMeta.image.src}
-    alt={siteMeta.image.alt}
-    source={featureImgSource}
+    src={post.frontmatter.featureImg}
+    alt={post.frontmatter.featureImgAlt}
+    source={post.frontmatter.featureImgSource}
     marginBottom="mb-20"
+    position="mx-auto"
   />
   <article class="mx-auto w-full prose lg:prose-lg dark:prose-dark mb-20">
     <h1>{post.frontmatter.title}</h1>

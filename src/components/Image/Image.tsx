@@ -9,6 +9,7 @@ export type ImageProps = {
   alt: Nullable<string>;
   marginBottom: Nullable<string>;
   source: Nullable<string>;
+  position: Nullable<string>
 };
 
 const Image: Component<ImageProps> = ({
@@ -18,17 +19,18 @@ const Image: Component<ImageProps> = ({
   alt,
   source,
   marginBottom,
+  position
 }) => {
   if (!src) return null;
   return (
-    <div class={cn("flex flex-col gap-y-2.5", marginBottom)}>
+    <div class={cn("flex flex-col gap-y-2.5", marginBottom, position)}>
       <img
         src={src}
-        class={cn(width, height, "object-cover")}
+        class={cn(width, height, " object-contain")}
         alt={alt ? alt : undefined}
       />
       {source ? (
-        <a class="ml-auto pr-10 text-sd-black dark:text-sd-brcyan underline" href={source} target="_blank" rel="noopener">
+        <a class="ml-auto text-sd-black dark:text-sd-brcyan underline" href={source} target="_blank" rel="noopener">
           {alt}
         </a>
       ) : null}
