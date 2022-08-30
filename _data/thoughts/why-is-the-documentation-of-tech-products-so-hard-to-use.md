@@ -14,14 +14,14 @@ setup: |
 
 Nowadays, our documentation of developer tools is hard to use and we tend to find the solution on some other sources such as Youtube, GitHub issues or blog posts. Its content may easily fall behind or the key point has not been mentioned at all. I consider this issue an emergent problem that we should toggle as soon as possible, and I think there are two major problems that need to be solved first. (In the user’s point of view)
 
-- Documentation is too hard to contribute
-  - Documentation easily becomes out of date. People tend to write a blog post instead of contributing to the documentation, due to it taking extra effort to contribute and lack of incentives.
+- Documentation is too hard to contribute to
+  - Documentation easily becomes out of date. People tend to write a blog post rather than contribute to a document because it requires a lot of extra effort without the corresponding incentives.
 - The context is clustered
-  - Documentation itself hardly connects to other resources, the context that makes good documentation is clustered.
+  - Documentation itself hardly connects to other resources. The context that makes good documentation is clustered.
 
-In this article, I would like to introduce two concepts around documentation that I think are problematic then further expand it to 3 thinking points toward solving these two issues.
+In this article, I would like to introduce two concepts around documentation that I think are problematic and then further expand it to 3 thinking points toward solving these two issues.
 
-First of all, please recall some documentation you had visited recently and join me with the explanation below. I would like to take Next.js for example which is currently my most visited documentation. Let's start with the "Getting Started" page.
+First of all, please recall some documentation you have visited recently and join me with the explanation below. I would like to take Next.js for example which is currently my most visited documentation. Let's start with the "Getting Started" page.
 
 https://nextjs.org/docs/getting-started
 
@@ -55,7 +55,7 @@ Imagine a dynamic structure, like a force-directed graph (Something like Obsidia
 
 In combination, the mindset and the structure lead to the problem I think is problematic, listed below.
 
-## Documentation is too hard to contribute
+## Documentation is too hard to contribute to
 In combination with the arbitrary mindset of "Owner bullet's point" and the "Isolated listing structure", what we have is that current documentation can only be properly maintained by the owner, there is no other easy way to contribute to the documentation. The problem is twofold.
 
 First, based on the "Owner's bullet point" mindset, the author doesn't want some inexperienced person to mess up your documentation and it's quite hard to match the tone of documentation if you don't spend much time staying aligned with your maintainers. 
@@ -71,7 +71,7 @@ The material of good documentation is not just the documentation itself, but the
 
 Until recently we tended to store these contexts distributedly. A regular open-source project stores their discussion in GitHub discussion or a discourse forum, their use cases in product websites, issues right in the GitHub issues and have a self-hosting documentation website elsewhere. Beside that, there is a lot of community-generated content on YouTube and personal blog posts.
 
-In reality, the context of a product becomes clustered. They won't have inter-connection with each other. There may be a discussion about the solution to the specific bug, but there is no reverse link on the documentation section that had mentioned this solution. Sadly we have to deal with the reality that the bi-directional link is not what the current internet is capable of.
+In reality, the context of a product becomes clustered. They won't have inter-connection with each other. There may be a discussion about the solution to the specific bug, but there is no reverse link on the documentation section that have mentioned this solution. Sadly we have to deal with the reality that the bi-directional link is not what the current internet is capable of.
 
 ### Clustered context is volatile
 Imagine a situation where you drop in the product's documentation and quickly find out that the documentation doesn't provide a solution, later the day you find a workable solution on someone else's blog post. 
@@ -93,7 +93,7 @@ It may seem overwhelming to come up with a new kind of structure to overcome the
 - How to gather context together for a better search experience that does not rely on exterior search solutions and bring up inter-connectivity of every context along the way?
 - How to experiment with a new structure that may benefit user experience and iterate it over time, or even let users choose it freely?
 
-I want to progressly toggle these issues. If you are interested in or come up with something interesting about this topic, I'd like to hear about it. I would answer any email (summerbud.chiu@gmail.com) about this topic, you could also find me on twitter (https://twitter.com/EiffelFly).
+I want to progressly tackle these issues. If you are interested in or come up with something interesting about this topic, I'd like to hear about it. I would answer any email (summerbud.chiu@gmail.com) about this topic, you could also find me on twitter (https://twitter.com/EiffelFly).
 
 ## Thanks
 
