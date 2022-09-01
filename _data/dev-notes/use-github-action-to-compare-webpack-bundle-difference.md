@@ -4,7 +4,7 @@ slug: "use-github-action-to-compare-webpack-bundle-difference"
 tags: ["how-to", "webpack", "github-action", "ci"]
 publishedAt: "2021-10-03T12:00:00"
 lastModified: "2021-10-03T12:00:00"
-description: "前端開發中，在佈建 production 環境之前有許多測試需要做。這篇文章分享了如何使用 github action 自動比較功能分支與 production bundle 大小的差異。"\
+description: "前端開發中，在佈建 production 環境之前有許多測試需要做。這篇文章分享了如何使用 github action 自動比較功能分支與 production bundle 大小的差異。"
 locale: "zh-TW"
 ---
 
