@@ -128,29 +128,26 @@ To solve the blinking issue, we have to update the theme before the first painti
 Thankfully, Astro.js have already looked after our back, in their API you could make a script sent to the client with HTML and CSS as-is with the special attribute `is:inline`[^3]. Astro won't hydrate this script and practice any kind of optimization. To seriously put, this is not welcome under the philosophy of Astro but it is necessary for our application. Besides that, Astro.js's official document has also adopted this approach.[^4]
 
 ```js
-// With this code, we can update the page's theme 
-// before the finish of the first-time painting.
+// With this code, we can update the page's theme before the first-time painting.
+// You should put the code into <script is:inline>
 
-<script is:inline>
-  const html = document.querySelector("html");
-  const theme = (() => {
-    if (
-      typeof localStorage !== "undefined" && localStorage.getItem("theme")
-    ) {
-      return localStorage.getItem("theme");
-    }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-      return "light";
-    })();
+const html = document.querySelector("html");
+const theme = (() => {
+  if (
+    typeof localStorage !== "undefined" && localStorage.getItem("theme")
+  ) {
+    return localStorage.getItem("theme");
+  }
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+    return "light";
+  })();
 
   if (theme === "light") {
     html.classList.remove("dark");
   } else {
-	html.classList.add("dark");
-  }
-</script>
+  html.classList.add("dark");
 ```
 
 ---
