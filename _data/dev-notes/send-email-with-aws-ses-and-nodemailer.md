@@ -5,7 +5,7 @@ tags: ["how-to", "nodemailer", "AWS-SES", "email"]
 publishedAt: "2021-09-10T12:00:00"
 lastModified: "2021-09-10T12:00:00"
 description: "説 email 是現在人最常使用的協定之一一點都不為過，然而實際施作 email 的寄發卻需要跨越多道關卡，這篇文章嘗試指出其中可以使用的工具與方法，讓你也可以輕鬆寄出自己的 email"
-locale: "zh-tw"
+locale: "zh-TW"
 ---
 
 ## Intro

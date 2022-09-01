@@ -5,7 +5,7 @@ tags: ["lessen_learned", "blog", "nextjs", "markdown"]
 publishedAt: "2021-07-30T07:38:00"
 lastModified: "2021-07-30T07:38:00"
 description: "這篇文章將教你如何使用 mdx-bundler, remark-footnotes 插件以及 tailwind css 來施作註記"
-locale: "zh-tw"
+locale: "zh-TW"
 ---
 
 ### 大綱

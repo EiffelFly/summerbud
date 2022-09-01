@@ -8,7 +8,7 @@ description: "In this article I will share the articles I had read during July 2
 featureImg: "/1757-giovanni-paolo-panini-ancient-rome.jpeg"
 featureImgAlt: "Ancient Rome, 1757, Giovanni Paolo Panini"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/437244"
-locale: "en-us"
+locale: "en-US"
 ---
 
 This month I still read a lot of essays, and the anxiety of missing something important was haunting me too. 

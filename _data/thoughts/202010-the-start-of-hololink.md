@@ -8,7 +8,7 @@ description: "Hololink 的起點，關於我們該如何快速總結自己的知
 featureImg: "/hololink-overview.png"
 featureImgAlt: "Hololink's overview"
 featureImgSource: "https://github.com/EiffelFly/hololink-main-frame"
-locale: "zh-tw"
+locale: "zh-TW"
 ---
 
 大概是 2018 年左右，我開始密切思考「個人的知識結構」這件事。那時我仍在澎湖消防分隊償還國家義務。於冬季的下午，幾乎不需要出勤，無線電沉寂的時候有許多的時間可以思考各式各樣的事。 Hololink 的種子以「我該如何更快速地總結自己的知識」這個自問種了下來。

@@ -5,7 +5,7 @@ tags: ["程式設計", "Totuslink", "Startup"]
 publishedAt: "2021-08-29T12:00:00"
 lastModified: "2021-08-29T12:00:00"
 description: "Hololink 的理想為，協助個人建立知識圖譜，並且視覺化知識的邊界。這篇文章將講述到我當初是怎麼想到這個名稱的"
-locale: "zh-tw"
+locale: "zh-TW"
 ---
 
 Hololink 的理想為：

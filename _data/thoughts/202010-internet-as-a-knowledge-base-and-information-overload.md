@@ -8,7 +8,7 @@ description: "Hololink 關於 Internet as a knowledge-base 及 Information overl
 featureImg: "/multi-axis-gimble-rig.jpg"
 featureImgAlt: "MASTIF - Multiple Axis Space Test Inertia Facility - NASA"
 featureImgSource: "https://www.flickr.com/photos/nasacommons/9457837753/in/photolist-fpKTEa-BDHW1z-r6gzQG-oV3TPs-Pk5z4t-LNYqzy-M1Po7G-LNYqRf-QmMbtK-fq19qN-2ifnodz-cAyiCm-N5LMt8-2fQjzBw-pfm6ec-cGwxVC-25gA8zE-fpKUYH-CArfXu-2j1j7vi-8PHqJi-fpHUcR-cubwGU-PnLwjh-2it97X7-d1zLvY-qK3MyS-d74CaC-fpY3hW-qR19hL-czu465-cZWtD1-pznCk1-fp1pnV-fqmRep-fpLLn6-fqChc1-fqAtPb-27UMjVr-cZZr1U-qRRJfs-fqAsj7-d1sZx1-fq1b37-93mnhZ-EDXS9S-fpNh78-X6KC8b-qQXejT-fpLLur"
-locale: "en-us"
+locale: "en-US"
 setup: |
   import Image from "../../src/components/Image"
 ---

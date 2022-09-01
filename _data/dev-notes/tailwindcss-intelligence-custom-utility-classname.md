@@ -8,7 +8,7 @@ description: "In this article you will learn how to let TailwindCSS intelligence
 featureImg: "/1565-pieter-bruegel-the-elder-the-harvester.jpeg"
 featureImgAlt: "The Harvester, 1565, Pieter Bruegel the Elder"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/435809?searchField=All&amp;sortBy=Relevance&amp;what=Oil+paint&amp;high=on&amp;ao=on&amp;ft=*&amp;offset=40&amp;rpp=40&amp;pos=73"
-locale: "en-us"
+locale: "en-US"
 ---
 
 Recently, I finally solved a big issue with the TailwindCSS that bother me for a long period of time. That is TailwindCSS intelligence won't pick up the custom utility classnames using the @layer directive.

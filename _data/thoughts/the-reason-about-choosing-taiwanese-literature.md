@@ -5,7 +5,7 @@ tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-06-09T12:00:00"
 lastModified: "2018-06-09T12:00:00"
 description: "為什麼你要去讀台文所，我身邊的朋友總是這樣問。關於我，他們所不了解的事情不多，但人與人之間，有一道隔閡即使是時間也無法跨越"
-locale: "zh-tw"
+locale: "zh-TW"
 ---
 
 > 你為什麼要去讀台文所?

@@ -8,7 +8,7 @@ description: "I want to address the 2 major issues of documentation of tech prod
 featureImg: "/early-20-centry-books-and-scholars-possessions.jpg"
 featureImgAlt: "Books and Scholars' Possessions, early 20th century, Unidentified artist"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/73134"
-locale: "en-us"
+locale: "en-US"
 setup: |
   import Image from "../../src/components/Image"
 ---
