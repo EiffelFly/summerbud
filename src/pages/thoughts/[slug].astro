@@ -42,12 +42,14 @@ const publishedTime = getFormattedTime(post.frontmatter.publishedAt);
 
 const siteMeta: SiteLayoutProps["meta"] = {
   title: post.frontmatter.title,
-  ogLocale: "zh-TW",
+  locale: "zh-TW",
   description: post.frontmatter.description,
   image: {
     src: post.frontmatter.featureImg,
     alt: post.frontmatter.featureImgAlt,
   },
+  publishedAt: post.frontmatter.publishedAt,
+  tags: post.frontmatter.tags
 };
 ---
 
@@ -55,6 +57,7 @@ const siteMeta: SiteLayoutProps["meta"] = {
   fullWidth={true}
   meta={siteMeta}
   canonicalURL={`${SITE.domain}/thoughts/${slug}`}
+  text={post.rawContent()}
 >
   <Image
     width=""

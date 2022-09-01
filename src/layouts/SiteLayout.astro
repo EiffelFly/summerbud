@@ -17,7 +17,7 @@ const props = Astro.props as Props;
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="utf-8" />
     <link href="/prism-atom-dark.css" rel="stylesheet" />
-    <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} />
+    <HeadSeo meta={props.meta} canonicalURL={props.canonicalURL} text={props.text} />
     <script is:inline>
       // credit: https://github.com/withastro/docs/blob/main/src/layouts/MainLayout.astro
       const html = document.querySelector("html");
