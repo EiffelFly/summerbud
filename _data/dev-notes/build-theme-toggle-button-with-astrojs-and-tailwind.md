@@ -8,6 +8,7 @@ description: "In this article you will learn how to toggle your blog's theme wit
 featureImg: "/1917-christopher-richard-wynne-nevinson-dawn-at-southwark.jpg"
 featureImgAlt: "Dawn At Southwark, 1917, Christopher Richard Wynne Nevinson"
 featureImgSource: "https://www.britishmuseum.org/collection/object/P_1949-0411-2141"
+locale: "en-us"
 ---
 
 What Astro had brought to us is a world without Javascript as default. They use this philosophy to reduce bundle size and speed up the first paint of the browser, but it also brings lots of new challenges to the developer, such as toggling the dark theme button on the blog.

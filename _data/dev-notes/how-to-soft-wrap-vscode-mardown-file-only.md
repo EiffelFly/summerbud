@@ -5,6 +5,7 @@ tags: ["lesson_learned", "softwrap", "mdx", "markdown"]
 publishedAt: "2021-07-29T18:00:00"
 lastModified: "2021-07-29T18:00:00"
 description: "這篇文章將教你如何讓 Vscode 中的 Markdown 文件自動斷行，且不s影響其他文件"
+locale: "zh-tw"
 ---
 
 

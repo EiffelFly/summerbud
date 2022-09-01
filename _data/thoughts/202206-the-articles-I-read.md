@@ -8,6 +8,7 @@ description: "In this article I will share the articles I had read during June 2
 featureImg: "/1757-giovanni-paolo-panini-ancient-rome.jpeg"
 featureImgAlt: "Ancient Rome, 1757, Giovanni Paolo Panini"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/437244"
+locale: "en-us"
 ---
 
 This will be a long list. I will separate them into two categories, the first one is the articles that I found to be very interesting and insightful, the second part will be that the articles are generally interesting but I have arguments with them.

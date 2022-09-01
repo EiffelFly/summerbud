@@ -8,6 +8,7 @@ description: "I wonder, when will you write?"
 featureImg: "/1997-the-library-of-babel-erik-desmazières.jpeg"
 featureImgAlt: "The library of babel, 1997, Erik Desmazières"
 featureImgSource: "https://www.warnockfinearts.com/erik-desmazires-library-of-babel"
+locale: "en-us"
 ---
 
 This is a funny question, When will you write? Most of the time the answer will be: When I need to. Yes, writing is as simple as a tool, to express and share, document and expand, clarify and educate. 

@@ -5,6 +5,7 @@ tags: ["lesson_learned", "nextjs", "status_code"]
 publishedAt: "2021-08-17T12:00:00"
 lastModified: "2021-08-17T12:00:00"
 description: "在 next.js 的開發中我們習慣用 next.config.js 來指定轉址，這樣不管在 develop 還是 production 環境中都可以導引到我們期待的網址，然而這卻會因為我們的 cache 而產生衝突，進而引發一些讓人困惑的轉址錯誤"
+locale: "zh-tw"
 ---
 
 ### 大綱

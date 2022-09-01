@@ -5,6 +5,7 @@ tags: ["thought", "instill-ai", "hamming", "mind-frame"]
 publishedAt: "2021-11-03T12:00:00"
 lastModified: "2021-11-03T12:00:00"
 description: "Hamming question 和 framer variant with Feynman technique 是我近期最重要的思想錨點。這篇文章希望能介紹這些方法論給你，並且簡略介紹目前我正在打造什麼。"
+locale: "zh-tw"
 ---
 
 這篇文章想跟大家分享這個月的近況，以及近期影響我最大的兩個概念，分別是 Hamming question 以及 Framer variant - Feynman technique。前者是由 Richard Hamming 於 1986 年的演講提出的論點[^1]，鏗鏘有力，直指一個研究者或是實作者在生命之中應該持續詰問的問題。而後者則是我最近閱讀完《造局者》之後結合自身經驗構建而成的方法論。這兩個論點以超越我預想的方式影響了我，使得我的思考更加清澈，能更快速地吸收概念，並整合進自己的思考體系內。

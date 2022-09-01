@@ -8,6 +8,7 @@ description: "The Path of exile 3.19 release is such a drama. It has the worst p
 featureImg: "/path-of-exile-3-19.jpeg"
 featureImgAlt: "The main theme of poe 3.19 release"
 featureImgSource: "https://www.pathofexile.com/"
+locale: "en-us"
 ---
 
 Path of exile has become the iconic game in the ARPG genre, even exceeding its spiritual successor "Diablo2". But during the launch of 3.19 - Lake of Kalandra various changes had been conducted under the eye of the player and not mentioned in the patch note. This act brought up the widespread anxiety and depression of players. Lots of players had dropped out of the game.

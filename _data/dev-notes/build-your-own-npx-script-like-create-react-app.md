@@ -5,6 +5,7 @@ tags: ["how-to", "npx", "boilerplate"]
 publishedAt: "2021-09-19T12:00:00"
 lastModified: "2021-09-19T12:00:00"
 description: "Npx Script 將大幅提升我們開發、部署的速度，透過 create-threejs-starter-pack 為例，這篇文章解釋了你如何創建自已的 npx script"
+locale: "zh-tw"
 ---
 
 上一篇文章 [How to - 打造自己的 Three.js boilerplate](https://www.summerbud.org/zh-tw/how-to/build-your-own-threejs-boilerplate) 講述了如何從零開始用 Webpack 打造自己的 Three.js boilerplate。雖然可以用 git clone 把資料放下來，但那樣還是需要重新安裝套件，重新設定 package.json 和 git，縱使只需十分鐘左右，卻仍不夠自動化。

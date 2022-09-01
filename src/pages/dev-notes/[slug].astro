@@ -42,7 +42,7 @@ const featureImgSource = post.frontmatter.featureImgSource;
 
 const siteMeta: SiteLayoutProps["meta"] = {
   title: post.frontmatter.title,
-  ogLocale: "zh-TW",
+  ogLocale: post.frontmatter.ogLocale || null,
   description: post.frontmatter.description,
   image: {
     src: post.frontmatter.featureImg,
