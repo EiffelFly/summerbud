@@ -5,6 +5,7 @@ tags: ["how-to", "webpack", "github-action", "ci"]
 publishedAt: "2021-10-03T12:00:00"
 lastModified: "2021-10-03T12:00:00"
 description: "前端開發中，在佈建 production 環境之前有許多測試需要做。這篇文章分享了如何使用 github action 自動比較功能分支與 production bundle 大小的差異。"
+locale: "zh-TW"
 ---
 
 前端開發中有許多在實際佈建前需要確認的事，諸如與 API 端口的連接狀況、小物件的穩定測試、串接 Lighthouse 測試 SEO 分數、甚至是使用 cypress 進行使用者體驗的測試等等。為了方便我們都會將它整合在 CI/CD 的流程裡。

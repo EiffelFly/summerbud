@@ -22,12 +22,14 @@ allPosts = allPosts.sort((a, b) => {
 
 const pageMeta: SiteLayoutProps["meta"] = {
   title: "dev-notes",
-  ogLocale: "zh-TW",
+  locale: "zh-TW",
   description: "This is Summerbud's dev-notes archive",
   image: {
     src: null,
     alt: null,
   },
+  publishedAt: null,
+  tags: null
 };
 ---
 
@@ -35,6 +37,7 @@ const pageMeta: SiteLayoutProps["meta"] = {
   fullWidth={false}
   meta={pageMeta}
   canonicalURL={`${SITE.domain}/dev-notes`}
+  text={null}
 >
   <PostList slugPrefix="dev-notes" posts={allPosts} />
 </SiteLayout>

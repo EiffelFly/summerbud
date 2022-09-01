@@ -5,6 +5,7 @@ tags: ["thought", "writing", "essay"]
 publishedAt: "2019-05-14T12:00:00"
 lastModified: "2019-05-14T12:00:00"
 description: "對我來說短篇一直是一種很難處理的文體，一不小心就寫得太長，一不小心又寫得太密"
+locale: "zh-TW"
 ---
 
 對我來說短篇一直是一種很難處理的文體，一不小心就寫得太長，一不小心又寫得太密。

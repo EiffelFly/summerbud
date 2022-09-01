@@ -8,6 +8,7 @@ description: "Hololink 計畫所看到的問題，以及我們的解答。"
 featureImg: "/hololink-overview.png"
 featureImgAlt: "Hololink's overview"
 featureImgSource: "https://github.com/EiffelFly/hololink-main-frame"
+locale: "zh-TW"
 ---
 
 以下將針對眾多問題做一體性的考量，首先我們將論述一些我們看到的問題，以及看待這些問題的觀點。隨後講述 Hololink 實作的方向、我們的單一基礎結構，以及這結構擴展出的各類針對不同問題的解決方案。

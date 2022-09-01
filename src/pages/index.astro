@@ -5,15 +5,16 @@ import SiteLayout, {
 } from "../layouts/SiteLayout.astro";
 import { SITE } from "../site-config";
 
-let content = "";
 let siteMeta: SiteLayoutProps["meta"] = {
   title: null,
-  ogLocale: "zh-TW",
+  locale: "zh-TW",
   description: null,
   image: {
     src: null,
     alt: null,
   },
+  publishedAt: null,
+  tags: null
 };
 
 const newPostMeta = {
@@ -24,7 +25,7 @@ const newPostMeta = {
 };
 ---
 
-<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain}>
+<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain} text={null}>
   <div class="flex flex-col m-auto">
     <p
       class="font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center mx-auto mb-16"

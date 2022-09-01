@@ -5,6 +5,7 @@ tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-05-12T12:00:00"
 lastModified: "2018-05-12T12:00:00"
 description: "顛倒世界的結束並沒有帶來太多的遺憾，我跟他們約好，小兵過世時，要回去看牠"
+locale: "zh-TW"
 ---
 
 善泳者易溺。

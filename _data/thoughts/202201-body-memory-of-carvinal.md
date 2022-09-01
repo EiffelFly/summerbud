@@ -1,11 +1,12 @@
 ---
-lang: zh-tw
+lang: zh-TW
 title: "2022年1月 - 嘉年華會的身體記憶"
 slug: "202201-body-memory-of-carvinal"
 tags: ["thought", "software", "path-of-exile", "gaming", "mind-frame"]
 publishedAt: "2022-02-07T12:00:00"
 lastModified: "2022-02-07T12:00:00"
 description: "這篇文章嘗試探討嘉年華會的影響力，其形塑出身體記憶的方法，以及我們該如何將這類方法論運用在軟體的社群經營上"
+locale: "zh-TW"
 ---
 
 > 這篇文章嘗試探討嘉年華會的影響力，其形塑出身體記憶的方法，以及我們該如何將這類方法論運用在軟體的社群經營上。

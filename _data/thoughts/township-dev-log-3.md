@@ -5,6 +5,7 @@ tags: ["township", "dev-log", "community"]
 publishedAt: "2021-08-22T12:00:00"
 lastModified: "2021-08-22T12:00:00"
 description: "這篇開發日記中，紀錄了我們近期藉由訪問了七名讀書會主持人所做出的轉折，以及關於自製色版、township 前期開發等大小事"
+locale: "zh-TW"
 setup: |
   import Image from "../../src/components/Image"
 ---

@@ -8,6 +8,7 @@ description: "Hololink 運用 Basestone 和 Stellar 來處理資訊爆炸的問�
 featureImg: "/hololink-basestone-stellar.jpeg"
 featureImgAlt: "Hololink's basestone and stellar keywork"
 featureImgSource: "https://github.com/EiffelFly/hololink-main-frame"
+locale: "zh-TW"
 ---
 
 # Basestone 和 Stellar

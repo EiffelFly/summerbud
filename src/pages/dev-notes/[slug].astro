@@ -38,16 +38,16 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 const publishedTime = getFormattedTime(post.frontmatter.publishedAt);
-const featureImgSource = post.frontmatter.featureImgSource;
-
 const siteMeta: SiteLayoutProps["meta"] = {
   title: post.frontmatter.title,
-  ogLocale: "zh-TW",
+  locale: post.frontmatter.locale || null,
   description: post.frontmatter.description,
   image: {
     src: post.frontmatter.featureImg,
     alt: post.frontmatter.featureImgAlt,
   },
+  publishedAt: post.frontmatter.publishedAt,
+  tags: post.frontmatter.tags
 };
 ---
 
@@ -55,6 +55,7 @@ const siteMeta: SiteLayoutProps["meta"] = {
   fullWidth={true}
   meta={siteMeta}
   canonicalURL={`${SITE.domain}/dev-notes/${slug}`}
+  text={post.rawContent()}
 >
   <Image
     width=""
