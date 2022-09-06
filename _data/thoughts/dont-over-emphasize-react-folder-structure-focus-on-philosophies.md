@@ -1,3 +1,16 @@
+---
+title: "Don’t over emphasize the importance of the react folder structure, focus on the philosophies beyond the folder structure"
+slug: "dont-over-emphasize-react-folder-structure-focus-on-philosophies"
+tags: ["Thoughts", "React", "folder-structure", "programming", "javascript", "frontend"]
+publishedAt: "2022-09-06T18:00:00"
+lastModified: "2022-09-06T18:00:00"
+description: "This article talk about the journey I have about react folder structure and the philosophies I think is important"
+featureImg: "/1903-stowing-sail-winslow-homer.jpg"
+featureImgAlt: "Stowing Sail, 1903, Winslow Homer"
+featureImgSource: "https://www.artic.edu/artworks/16831/stowing-sail"
+locale: "en-US"
+---
+
 Managing proper react component folder structure is hard, it needs to be flexible, extendable, and most important of all, it needs to make naming a component as easy as possible.
 
 I adapted several react folder structures across 3 different repo this year, what I discovered is not a steady structure but some philosophies behind the structure. 
