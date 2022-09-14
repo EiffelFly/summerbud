@@ -20,11 +20,11 @@ allPosts = allPosts
       return 1;
     }
   })
-  .filter((e) => e.frontmatter.locale === "en-US");
+  .filter((e) => e.frontmatter.locale === "zh-TW");
 
 const pageMeta: SiteLayoutProps["meta"] = {
-  title: "Thoughts",
-  locale: "en-US",
+  title: "思考",
+  locale: "zh-TW",
   description: "This is Summerbud's posts archive",
   image: {
     src: null,
@@ -38,7 +38,7 @@ const pageMeta: SiteLayoutProps["meta"] = {
 <SiteLayout
   fullWidth={false}
   meta={pageMeta}
-  canonicalURL={`${SITE.domain}/thoughts`}
+  canonicalURL={`${SITE.domain}/si-kao`}
   text={null}
 >
   <PostList slugPrefix="thoughts" posts={allPosts} />

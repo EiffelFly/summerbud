@@ -13,10 +13,10 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
   const [open, setOpen] = createSignal(false);
 
   const navigations = [
-    // {
-    //   title: "About",
-    //   path: "/about",
-    // },
+    {
+      title: "思考",
+      path: "/su-kao",
+    },
     {
       title: "Thoughts",
       path: "/thoughts",
@@ -34,7 +34,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
           <a
             href={e.path}
             rel="prefetch"
-            className="link-underline my-auto cursor-pointer align-baseline font-sans text-xl font-semibold text-sd-black dark:text-sd-white"
+            class="link-underline my-auto cursor-pointer align-baseline font-sans text-xl font-semibold text-sd-black dark:text-sd-white"
           >
             {e.title}
           </a>
@@ -45,18 +45,18 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
 
   return (
     <header
-      className={cn(
+      class={cn(
         "mx-auto flex w-full max-w-4xl flex-col py-8 md:flex-row lg:max-w-5xl",
         marginBottom
       )}
     >
-      <div className="flex flex-grow flex-row">
-        <a href="/" className="mr-auto flex flex-row gap-x-6">
+      <div class="flex flex-grow flex-row">
+        <a href="/" class="mr-auto flex flex-row gap-x-6">
           <SummerbudAvatars styleName="w-10 h-10" />
-          <div className="my-auto font-sans text-lg font-semibold text-sd-brgreen dark:text-sd-brcyan sm:text-xl">{`{summerbud}`}</div>
+          <div class="my-auto font-sans text-lg font-semibold text-sd-brgreen dark:text-sd-brcyan sm:text-xl">{`{summerbud}`}</div>
         </a>
         <button
-          className="my-auto flex h-8 w-8 rounded-lg border border-sd-brcyan dark:border-sd-brgreen md:hidden"
+          class="my-auto flex h-8 w-8 rounded-lg border border-sd-brcyan dark:border-sd-brgreen md:hidden"
           onClick={() => setOpen(!open())}
         >
           {open() ? (
@@ -67,7 +67,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
         </button>
       </div>
 
-      <div className="ml-auto hidden items-center gap-x-8 md:flex md:flex-row">
+      <div class="ml-auto hidden items-center gap-x-8 md:flex md:flex-row">
         {navigationSet}
         <div>
           <ThemeToggle styleName="my-auto" />
@@ -75,7 +75,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
       </div>
 
       {open() ? (
-        <div className="mt-8 flex flex-col gap-y-4 md:hidden">
+        <div class="mt-8 flex flex-col gap-y-4 md:hidden">
           {navigationSet}
           <div>
             <ThemeToggle />
