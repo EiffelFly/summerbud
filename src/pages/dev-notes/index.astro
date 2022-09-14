@@ -1,5 +1,5 @@
 ---
-import PostList from "../../components/PostList";
+import { PostList } from "@/components/index";
 import { ArticleFrontMatter } from "../../types/general";
 import SiteLayout, {
   Props as SiteLayoutProps,
@@ -29,7 +29,7 @@ const pageMeta: SiteLayoutProps["meta"] = {
     alt: null,
   },
   publishedAt: null,
-  tags: null
+  tags: null,
 };
 ---
 

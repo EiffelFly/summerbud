@@ -1,6 +1,5 @@
 import { Component, createSignal } from "solid-js";
-import { SummerbudAvatars } from "../Avatars";
-import { ThemeToggle } from "../Buttons";
+import { SummerbudAvatar, ThemeToggle } from "@/components/index";
 import { ListIcon, SlashIcon } from "../Icons";
 import "./Navbar.css";
 import cn from "clsx";
@@ -52,7 +51,7 @@ const NavBar: Component<NavBarProps> = ({ marginBottom }) => {
     >
       <div class="flex flex-grow flex-row">
         <a href="/" class="mr-auto flex flex-row gap-x-6">
-          <SummerbudAvatars styleName="w-10 h-10" />
+          <SummerbudAvatar styleName="w-10 h-10" />
           <div class="my-auto font-sans text-lg font-semibold text-sd-brgreen dark:text-sd-brcyan sm:text-xl">{`{summerbud}`}</div>
         </a>
         <button

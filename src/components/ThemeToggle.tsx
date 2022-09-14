@@ -75,7 +75,7 @@ const ThemeToggle: Component<ThemeToggleProps> = ({ styleName }) => {
 
   return (
     <button
-      className={cn("flex gap-x-3 p-2", styleName)}
+      class={cn("flex gap-x-3 p-2", styleName)}
       onClick={() => toggleTheme()}
     >
       <svg

@@ -7,7 +7,7 @@ lastModified: "2021-08-22T12:00:00"
 description: "這篇開發日記中，紀錄了我們近期藉由訪問了七名讀書會主持人所做出的轉折，以及關於自製色版、township 前期開發等大小事"
 locale: "zh-TW"
 setup: |
-  import Image from "../../src/components/Image"
+  import { Image } from "@/components/index"
 ---
 
 2021 年第 34 週總共訪談了七個對象，全部都是參與或經營過讀書會的人，年紀分佈為 40 歲以下。訪談這些對象之後，township 的核心功能與目標逐漸裸露出來。在這一系列的轉向中，這週看似小巧，實則充滿掙扎。

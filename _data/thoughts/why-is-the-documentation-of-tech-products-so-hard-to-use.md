@@ -10,7 +10,7 @@ featureImgAlt: "Books and Scholars' Possessions, early 20th century, Unidentifie
 featureImgSource: "https://www.metmuseum.org/art/collection/search/73134"
 locale: "en-US"
 setup: |
-  import Image from "../../src/components/Image"
+  import { Image } from "@/components/index"
 ---
 
 Nowadays, our documentation of developer tools is hard to use and we tend to find the solution on other sources such as Youtube, GitHub issues, or blog posts. Its content may easily fall behind or the key point has not been mentioned at all. I consider this issue an emergent problem that we should toggle as soon as possible, and I think two major problems needed to be solved first. (In the user’s point of view)
