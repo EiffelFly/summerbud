@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["src/components/*"],
-      "@/types/*": ["src/types/*"]
+      "@/types/*": ["src/types/*"],
+      "@/layouts/*": ["src/layouts/*"]
     },
     "moduleResolution": "node",
     "jsx": "preserve",
