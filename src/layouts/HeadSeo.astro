@@ -1,7 +1,7 @@
 ---
 import { SITE, OPEN_GRAPH } from "../site-config";
-import { Nullable } from "../types/general";
-import { BlogPosting, WithContext, WebPage } from "schema-dts"
+import { Nullable } from "@/types/general";
+import { BlogPosting, WithContext, WebPage } from "schema-dts";
 
 export interface Props {
   meta: {
@@ -10,13 +10,13 @@ export interface Props {
     description: Nullable<string>;
     image: {
       src: Nullable<string>;
-      alt:Nullable<string>;
+      alt: Nullable<string>;
     };
     publishedAt: Nullable<string>;
     tags: Nullable<string>;
   };
   canonicalURL: string;
-  text: Nullable<string>
+  text: Nullable<string>;
 }
 
 const { meta, canonicalURL, text } = Astro.props as Props;
@@ -31,46 +31,45 @@ const imageAlt = meta.image.alt ?? OPEN_GRAPH.image.alt;
 
 const blogPosting: BlogPosting = {
   "@type": "BlogPosting",
-  "image": imageSrc,
-  "url": canonicalURL,
-  "headline": meta.title || undefined,
-  "dateCreated": meta.publishedAt || undefined,
-  "datePublished": meta.publishedAt || undefined,
-  "inLanguage": meta.locale || SITE.defaultLanguage,
-  "isFamilyFriendly": "True",
-  "accountablePerson": {
+  image: imageSrc,
+  url: canonicalURL,
+  headline: meta.title || undefined,
+  dateCreated: meta.publishedAt || undefined,
+  datePublished: meta.publishedAt || undefined,
+  inLanguage: meta.locale || SITE.defaultLanguage,
+  isFamilyFriendly: "True",
+  accountablePerson: {
     "@type": "Person",
-    "name": "Po-Chun, Chiu",
-    "url": SITE.domain
+    name: "Po-Chun, Chiu",
+    url: SITE.domain,
   },
-  "author": {
+  author: {
     "@type": "Person",
-    "name": "Po-Chun, Chiu",
-    "url": SITE.domain
+    name: "Po-Chun, Chiu",
+    url: SITE.domain,
   },
-  "creator": {
+  creator: {
     "@type": "Person",
-    "name": "Po-Chun, Chiu",
-    "url": SITE.domain
+    name: "Po-Chun, Chiu",
+    url: SITE.domain,
   },
-  "publisher": {
+  publisher: {
     "@type": "Person",
-    "name": "Po-Chun, Chiu",
-    "url": SITE.domain
+    name: "Po-Chun, Chiu",
+    url: SITE.domain,
   },
-  "keywords": meta.tags || undefined,
-  "text": text || undefined,
-  "articleBody": text || undefined,
-}
+  keywords: meta.tags || undefined,
+  text: text || undefined,
+  articleBody: text || undefined,
+};
 
 const jsonld: WithContext<WebPage> = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": meta.title || undefined,
-  "description": meta.description || undefined,
-  "mainEntity": blogPosting
-}
-
+  name: meta.title || undefined,
+  description: meta.description || undefined,
+  mainEntity: blogPosting,
+};
 ---
 
 <link rel="canonical" href={canonicalURL} />
@@ -100,7 +99,10 @@ const jsonld: WithContext<WebPage> = {
 />
 <meta name="twitter:image" content={canonicalImageSrc} />
 <meta name="twitter:image:alt" content={imageAlt} />
-<script defer data-domain="summerbud.org" src="https://plausible.io/js/plausible.js"></script>
+<script
+  defer
+  data-domain="summerbud.org"
+  src="https://plausible.io/js/plausible.js"></script>
 
 <!--
   TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?

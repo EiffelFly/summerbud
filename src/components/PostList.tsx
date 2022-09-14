@@ -1,6 +1,6 @@
 import { MarkdownInstance } from "astro";
 import { Component } from "solid-js";
-import type { ArticleFrontMatter } from "../types/general";
+import type { ArticleFrontMatter } from "@/types/general";
 import { getFormattedTime } from "../utils";
 
 export type PostListProps = {

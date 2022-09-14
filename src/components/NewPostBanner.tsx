@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
-import { Nullable } from "../types/general";
 import cn from "clsx";
+import { Nullable } from "@/types/general";
 import { getFormattedTime } from "../utils";
 
 export type NewPostBannerProps = {
