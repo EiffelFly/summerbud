@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
 import cn from "clsx";
-import { Nullable } from "../../types/general";
+import { Nullable } from "@/types/general";
 
 export type ImageProps = {
   src: Nullable<string>;
@@ -9,7 +9,7 @@ export type ImageProps = {
   alt: Nullable<string>;
   marginBottom: Nullable<string>;
   source: Nullable<string>;
-  position: Nullable<string>
+  position: Nullable<string>;
 };
 
 const Image: Component<ImageProps> = ({
@@ -19,7 +19,7 @@ const Image: Component<ImageProps> = ({
   alt,
   source,
   marginBottom,
-  position
+  position,
 }) => {
   if (!src) return null;
   return (
@@ -30,7 +30,12 @@ const Image: Component<ImageProps> = ({
         alt={alt ? alt : undefined}
       />
       {source ? (
-        <a class="ml-auto text-sd-black dark:text-sd-brcyan underline" href={source} target="_blank" rel="noopener">
+        <a
+          class="ml-auto text-sd-black dark:text-sd-brcyan underline"
+          href={source}
+          target="_blank"
+          rel="noopener"
+        >
           {alt}
         </a>
       ) : null}

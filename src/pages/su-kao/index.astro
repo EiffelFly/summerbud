@@ -1,9 +1,9 @@
 ---
-import PostList from "../../components/PostList";
-import { ArticleFrontMatter } from "../../types/general";
+import { PostList } from "@/components/index";
+import { ArticleFrontMatter } from "@/types/general";
 import SiteLayout, {
   Props as SiteLayoutProps,
-} from "../../layouts/SiteLayout.astro";
+} from "@/layouts/SiteLayout.astro";
 import { SITE } from "../../site-config";
 
 let allPosts = await Astro.glob<ArticleFrontMatter>(

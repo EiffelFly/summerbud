@@ -1,12 +1,11 @@
 ---
-import Giscus from "../../components/Giscus";
-import { getFormattedTime } from "../../utils";
+import { getFormattedTime } from "@/utils/index";
 import SiteLayout, {
   Props as SiteLayoutProps,
-} from "../../layouts/SiteLayout.astro";
-import { ArticleFrontMatter } from "../../types/general";
+} from "@/layouts/SiteLayout.astro";
+import { ArticleFrontMatter } from "@/types/general";
 import { SITE } from "../../site-config";
-import Image from "../../components/Image";
+import { Image, Giscus } from "@/components/index";
 
 export async function getStaticPaths() {
   let posts = await Astro.glob<ArticleFrontMatter>(
@@ -47,7 +46,7 @@ const siteMeta: SiteLayoutProps["meta"] = {
     alt: post.frontmatter.featureImgAlt,
   },
   publishedAt: post.frontmatter.publishedAt,
-  tags: post.frontmatter.tags
+  tags: post.frontmatter.tags,
 };
 ---
 

@@ -1,12 +1,12 @@
 import { Component } from "solid-js";
 import cn from "clsx";
 
-export type SummberbudAvatarProps = {
+export type SummerbudAvatarProps = {
   styleName: string;
 };
 
-const SummberbudAvatar: Component<SummberbudAvatarProps> = ({ styleName }) => {
+const SummerbudAvatar: Component<SummerbudAvatarProps> = ({ styleName }) => {
   return <img src="/me.jpeg" class={cn("rounded-full my-auto", styleName)} />;
 };
 
-export default SummberbudAvatar;
+export default SummerbudAvatar;

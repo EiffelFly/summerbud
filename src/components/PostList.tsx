@@ -1,9 +1,9 @@
 import { MarkdownInstance } from "astro";
 import { Component } from "solid-js";
-import type { ArticleFrontMatter } from "../../types/general";
-import { getFormattedTime } from "../../utils";
+import type { ArticleFrontMatter } from "@/types/general";
+import { getFormattedTime } from "@/utils/index";
 
-type PostListProps = {
+export type PostListProps = {
   posts: MarkdownInstance<ArticleFrontMatter>[];
   slugPrefix: string;
 };

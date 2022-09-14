@@ -1,8 +1,8 @@
 ---
-import NewPostBanner from "../components/NewPostBanner/NewPostBanner";
+import { NewPostBanner } from "@/components/index";
 import SiteLayout, {
   Props as SiteLayoutProps,
-} from "../layouts/SiteLayout.astro";
+} from "@/layouts/SiteLayout.astro";
 import { SITE } from "../site-config";
 
 let siteMeta: SiteLayoutProps["meta"] = {
@@ -14,18 +14,24 @@ let siteMeta: SiteLayoutProps["meta"] = {
     alt: null,
   },
   publishedAt: null,
-  tags: null
+  tags: null,
 };
 
 const newPostMeta = {
-  title: "Don’t over emphasize the importance of the react folder structure, focus on the philosophies beyond the folder structure",
+  title:
+    "Don’t over emphasize the importance of the react folder structure, focus on the philosophies beyond the folder structure",
   url: "/thoughts/dont-over-emphasize-react-folder-structure-focus-on-philosophies",
   updateDate: "2022-09-06",
   position: "mx-auto",
 };
 ---
 
-<SiteLayout meta={siteMeta} fullWidth={false} canonicalURL={SITE.domain} text={null}>
+<SiteLayout
+  meta={siteMeta}
+  fullWidth={false}
+  canonicalURL={SITE.domain}
+  text={null}
+>
   <div class="flex flex-col m-auto">
     <p
       class="font-sans text-lg font-normal text-sd-brgreen dark:text-sd-brcyan md:w-7/12 text-center mx-auto mb-16"
