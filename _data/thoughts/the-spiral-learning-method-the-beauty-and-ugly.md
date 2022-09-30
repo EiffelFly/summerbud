@@ -137,4 +137,8 @@ The Spiral is like a self-generated/motivated wheel. Once you finish a goal and 
 
 This method greatly changes my life and makes me a better learner toward this fast-paced world. I hope you can find some point that you can utilize and practice in your daily life. May the force be with you.
 
+## Thanks
+
+Thanks for 晏如, 靜智 reading the draft of this article.
+
 [^1]: [Developer Roadmap](https://roadmap.sh/)
