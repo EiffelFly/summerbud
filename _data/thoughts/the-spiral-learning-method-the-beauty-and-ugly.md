@@ -89,6 +89,12 @@ Once you pick up your goal we can start the journey.
 
 To learn efficiently, you need to have some rough feeling about the direction. In other words, you need to have a map on hand. It's like a Minecraft map with minimum exploration which indicates where you are. Remember the way we learn how to build a blog? We go to Youtube and find some useful tutorials. At this point, you need to find something like it that explains the big picture of your ongoing journey. Some sort of full tutorial will greatly help you. (If your goal is too big you need to cut it into small pieces.) 
 
+<Image
+  src="/minecraft-map.jpeg"
+  alt="First Look At The Map"
+/>
+<sup>First Look At The Map <https://imgur.com/hz2R0> </sup>
+
 But sometimes they don't have this kind of tutorials. In this case you may need to find them in some articles, someone else's GitHub repository or from a book. Anything that can help you grasp the full picture will drastically push your progression.
 
 After you grasp the full picture. You could begin to dive deeper. Build much more complicated stuff and learn more.
