@@ -1,5 +1,5 @@
 import cn from "clsx";
-import { Heading } from "@/types/general";
+import { Heading, Nullable } from "@/types/general";
 import { createEffect, createSignal, onCleanup } from "solid-js";
 
 export type TableOfContentProps = {
@@ -7,9 +7,7 @@ export type TableOfContentProps = {
 };
 
 const TableOfContent = (props: TableOfContentProps) => {
-  const [currentSlug, setCurrentSlug] = createSignal<string>(
-    props.headings[0].slug
-  );
+  const [currentSlug, setCurrentSlug] = createSignal<Nullable<string>>(null);
 
   const onHashChanged = (event: HashChangeEvent) => {
     const newUrl = new URL(event.newURL);
@@ -17,6 +15,7 @@ const TableOfContent = (props: TableOfContentProps) => {
   };
 
   createEffect(() => {
+    setCurrentSlug(props.headings ? props.headings[0].slug : null);
     window.addEventListener("hashchange", onHashChanged);
   });
 
