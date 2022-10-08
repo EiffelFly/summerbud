@@ -2,8 +2,8 @@ import NavBar from "./NavBar";
 import type { NavBarProps } from "./NavBar/NavBar";
 import Footer from "./Footer";
 import Giscus from "./Giscus";
-import Image from "./Image";
-import type { ImageProps } from "./Image";
+import FeatureImage from "./FeatureImage";
+import type { FeatureImageProps } from "./FeatureImage";
 import NewPostBanner from "./NewPostBanner";
 import type { NewPostBannerProps } from "./NewPostBanner";
 import PostList from "./PostList";
@@ -19,7 +19,7 @@ export {
   NavBar,
   Footer,
   Giscus,
-  Image,
+  FeatureImage,
   NewPostBanner,
   PostList,
   SummerbudAvatar,
@@ -27,7 +27,7 @@ export {
 };
 export type {
   NavBarProps,
-  ImageProps,
+  FeatureImageProps,
   NewPostBannerProps,
   PostListProps,
   SummerbudAvatarProps,

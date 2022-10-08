@@ -2,7 +2,7 @@ import { Component } from "solid-js";
 import cn from "clsx";
 import { Nullable } from "@/types/general";
 
-export type ImageProps = {
+export type FeatureImageProps = {
   src: Nullable<string>;
   width: string;
   height: string;
@@ -12,7 +12,7 @@ export type ImageProps = {
   position: Nullable<string>;
 };
 
-const Image: Component<ImageProps> = ({
+const FeatureImage: Component<FeatureImageProps> = ({
   src,
   width,
   height,
@@ -43,4 +43,4 @@ const Image: Component<ImageProps> = ({
   );
 };
 
-export default Image;
+export default FeatureImage;
