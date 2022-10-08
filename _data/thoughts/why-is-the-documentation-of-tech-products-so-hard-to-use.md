@@ -9,8 +9,6 @@ featureImg: "/early-20-centry-books-and-scholars-possessions.jpg"
 featureImgAlt: "Books and Scholars' Possessions, early 20th century, Unidentified artist"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/73134"
 locale: "en-US"
-setup: |
-  import { Image } from "@/components/index"
 ---
 
 Nowadays, our documentation of developer tools is hard to use and we tend to find the solution on other sources such as Youtube, GitHub issues, or blog posts. Its content may easily fall behind or the key point has not been mentioned at all. I consider this issue an emergent problem that we should toggle as soon as possible, and I think two major problems needed to be solved first. (In the user’s point of view)
@@ -46,7 +44,7 @@ The isolated listing structure is a double-edged sword: To be clear, I am not fu
 
 But on the other hand, it's a fixed structure, it is hard for the structure to evolve and every time the maintainer wants to add something else, it's hard to find an appropriate place if the owner didn't think it well from the beginning. Besides that, users have no other choice but to explore your documentation. They have only one route and it's not enough.
 
-<Image
+<img
   src="/force-directed-graph.png"
   alt="Force firected graph"
 />

@@ -6,8 +6,6 @@ publishedAt: "2021-08-22T12:00:00"
 lastModified: "2021-08-22T12:00:00"
 description: "這篇開發日記中，紀錄了我們近期藉由訪問了七名讀書會主持人所做出的轉折，以及關於自製色版、township 前期開發等大小事"
 locale: "zh-TW"
-setup: |
-  import { Image } from "@/components/index"
 ---
 
 2021 年第 34 週總共訪談了七個對象，全部都是參與或經營過讀書會的人，年紀分佈為 40 歲以下。訪談這些對象之後，township 的核心功能與目標逐漸裸露出來。在這一系列的轉向中，這週看似小巧，實則充滿掙扎。
@@ -56,12 +54,9 @@ setup: |
 
 這週也大概能掌握未來 township MVP 的模樣，因此開始做了一些較小的練習，仿 Calendly 的版面做了一個沒有功能的行事曆，這裡也可以同步參考開源專案 Calendso，它使用了 Nextjs、Prisma、Tailwind，程式碼寫得很易懂。
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/meet-summerbud-calendar.png"
   alt="meet summerbud calendar"
-  source={null}
 />
 
 除此之外還使用了 Google book api 做了一個簡易的書架功能，找到了 https://www.recommendmeabook.com 網站，萌生出了一系列關於書本封面如何優化的思考，或許之後可以來做做看。

@@ -9,8 +9,6 @@ featureImg: "/multi-axis-gimble-rig.jpg"
 featureImgAlt: "MASTIF - Multiple Axis Space Test Inertia Facility - NASA"
 featureImgSource: "https://www.flickr.com/photos/nasacommons/9457837753/in/photolist-fpKTEa-BDHW1z-r6gzQG-oV3TPs-Pk5z4t-LNYqzy-M1Po7G-LNYqRf-QmMbtK-fq19qN-2ifnodz-cAyiCm-N5LMt8-2fQjzBw-pfm6ec-cGwxVC-25gA8zE-fpKUYH-CArfXu-2j1j7vi-8PHqJi-fpHUcR-cubwGU-PnLwjh-2it97X7-d1zLvY-qK3MyS-d74CaC-fpY3hW-qR19hL-czu465-cZWtD1-pznCk1-fp1pnV-fqmRep-fpLLn6-fqChc1-fqAtPb-27UMjVr-cZZr1U-qRRJfs-fqAsj7-d1sZx1-fq1b37-93mnhZ-EDXS9S-fpNh78-X6KC8b-qQXejT-fpLLur"
 locale: "zh-TW"
-setup: |
-  import { Image } from "@/components/index"
 ---
 
 # 定義
@@ -27,12 +25,9 @@ setup: |
 
 現存的網際網路，逐漸成為我們每個人的 knowledge-base，每個人記憶的節點從文章本身的內容，演化為以「關鍵字」構成的連結。我們傳遞知識的方式也有了劇烈的改變，為了應付巨量的資訊，比起過往，更多協助個人理解複雜資訊的個體出現，他們將知識的分野切得更細緻、更微觀。這樣的角色原先由具有社經地位的人所壟斷，現在則是每個人都有所機會。
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/information-funnel.jpeg"
   alt="Information funnel that talk about how information got processed"
-  source={null}
 />
 
 我們可以在這裡將資訊分成三個階層來看待，第一個階層是資訊本身，第二個階層是消化這些資訊並產生資訊聚合物的個體，第三個階層則是吸收這些資訊的個體。我們這個世代的資訊複雜化不僅是資訊本身，第一個階層的總量以指數提升，而第二個階層更進行著劇烈的演化，他們的數量不斷增加，網站的架設更加方便，諸如 Wordpress 和 wix 等服務供應商蜂擁出現，而系統也不斷在思考如何提供這些人更多的資源。如 patreon、Linkcoin、Matter、Medium、以及任何使用 paywall 的文字載體，都在強化這件事。
@@ -64,12 +59,9 @@ Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜
 同時我們將從這一個基本任務中延伸出各式各樣的應用，來幫助人們消化資訊、連結知識。然而實際上該怎麼做呢，必須從這一張圖開始說起。
 
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/public-and-private-knowledge-bubble.jpeg"
   alt="The public and private bubble will interact with each other and form the boundary of your knowledge."
-  source={null}
 />
 
 首先要來定義資訊與知識：知識是與自身體系鏈結的資訊。也就是說，我們平常在網路上接觸到的事物，諸如他者言論、新聞、任何論述，在與自身體系產生連結之前，都只是單純的資訊。這些資訊若只是穿過我們的身體，沒有被任何泡泡包裹住，它就是雜訊。如果它被某些泡泡包裹住，納入自身體系之內，卻沒有與本有的知識進行連結，它也是雜訊。
