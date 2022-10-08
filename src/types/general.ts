@@ -15,3 +15,9 @@ export type FeatureImg = {
   alt: string;
   source: string;
 };
+
+export type Heading = {
+  depth: number;
+  slug: string;
+  text: string;
+};
