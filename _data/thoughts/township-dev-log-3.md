@@ -40,12 +40,9 @@ locale: "zh-TW"
 
 這次參考了 Dark Mode UI: the definitive guide 這篇文章提到的色彩。利用不同於一般灰階的底色，而是稍微亮一點，帶點墨色、綠色的基調，讓整體看來比較專業。在輔助色上的選擇，這次想呈現出來的感覺是「優雅且舒服」。每個輔助色都可以跳脫出底色的束縛，在較深的底色上甚至有種高貴感。以這點出發我分別選了，Scarlet、Steel Blue、Persian Green 和 Bronze。尤其是最後這個青銅色，我嘗試讓它與一般的金色有所區隔，沒有金色的俗氣，更內蘊且不失橙黃的質感。
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/summerbud-shiny-dark-mode-palette.png"
   alt="summerbud shiny dark mode palette"
-  source={null}
 />
 
 這次自製色版真的是很開心的體驗，卻也感受到一些沒有被服務的需求。例如專門製作 Dark mode 的工具：可以馬上在 Component 上切換深色亮色，雖然 Figma 可以做到這件事，但在使用上卻仍需要大量時間。除此之外還有很簡易的色版分享功能，目前網路上大多是五色、六色、七色並排的分享，例如 Adobe Color 和 Coolors，如果能有個呈現如我的照片那樣的版面的網站，應該會更好使用。

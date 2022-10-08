@@ -26,12 +26,9 @@ locale: "zh-TW"
 確立好 Hololink 的基礎是名詞後我們將名詞做了兩組分類：Basestone 和 Stellar。
 
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/hololink-basestone-stellar.jpeg"
   alt="The image of displaying how basestone and stellar work"
-  source={null}
 />
 
 Basestone 是專有名詞：團體、設施、組織、地理、地點、商品、事件、藝術品、法律、語言、日期、時間、比例、錢、數量。以及特定領域專有名詞（這個將會隨著時間累積）
@@ -48,12 +45,9 @@ Hololink 嘗試先以這種方式建立基礎，幫助使用者建立文章與�
 
 ### 類似的 Basestone 但不同的 Stellar
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/hololink-basestone-stellar-collection.jpeg"
   alt="The image of displaying how basestone and stellar collection work"
-  source={null}
 />
 
 代表複數篇文章可能以不同的方式闡述同一件事件、事物、組織。當你閱讀這一篇文章時，Hololink 會自動呈現具有這類特質的文章，讓讀者可以輕易索引到不同面向、聲音、價值觀的文章。
@@ -68,12 +62,9 @@ Hololink 將從這一個方向出發，找到方法突破 [filter bubble](https:
 
 ### 以特定專業場域區分 Basestone 深度與廣度
 
-<Image 
-  width="w-full"
-  height=""
+<img 
   src="/hololink-knowledge-boundary.jpeg"
   alt="The image of displaying the boundary of knowledge"
-  source={null}
 />
 
 Hololink 的終極目標為：協助個人辨識出知識的疆界，並且找到突破口。以 Basestone 為主的系統將會幫助我們達到這個目標，每個特定的專有名詞，諸如電腦科學中的：Hypertext Transfer Protocol、Object-Oriented Programming、Artificial Intelligence、Machine learning等等都會被標上「電腦科學」這類標籤。
