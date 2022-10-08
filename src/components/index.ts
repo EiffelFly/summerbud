@@ -2,8 +2,8 @@ import NavBar from "./NavBar";
 import type { NavBarProps } from "./NavBar/NavBar";
 import Footer from "./Footer";
 import Giscus from "./Giscus";
-import Image from "./Image";
-import type { ImageProps } from "./Image";
+import FeatureImage from "./FeatureImage";
+import type { FeatureImageProps } from "./FeatureImage";
 import NewPostBanner from "./NewPostBanner";
 import type { NewPostBannerProps } from "./NewPostBanner";
 import PostList from "./PostList";
@@ -12,6 +12,8 @@ import SummerbudAvatar from "./SummerbudAvatar";
 import type { SummerbudAvatarProps } from "./SummerbudAvatar";
 import ThemeToggle from "./ThemeToggle";
 import type { ThemeToggleProps } from "./ThemeToggle";
+import TableOfContent from "./TableOfContent";
+import type { TableOfContentProps } from "./TableOfContent";
 
 export * from "./Icons";
 
@@ -19,17 +21,19 @@ export {
   NavBar,
   Footer,
   Giscus,
-  Image,
+  FeatureImage,
   NewPostBanner,
   PostList,
   SummerbudAvatar,
   ThemeToggle,
+  TableOfContent,
 };
 export type {
   NavBarProps,
-  ImageProps,
+  FeatureImageProps,
   NewPostBannerProps,
   PostListProps,
   SummerbudAvatarProps,
   ThemeToggleProps,
+  TableOfContentProps,
 };
