@@ -12,6 +12,8 @@ import SummerbudAvatar from "./SummerbudAvatar";
 import type { SummerbudAvatarProps } from "./SummerbudAvatar";
 import ThemeToggle from "./ThemeToggle";
 import type { ThemeToggleProps } from "./ThemeToggle";
+import TableOfContent from "./TableOfContent";
+import type { TableOfContentProps } from "./TableOfContent";
 
 export * from "./Icons";
 
@@ -24,6 +26,7 @@ export {
   PostList,
   SummerbudAvatar,
   ThemeToggle,
+  TableOfContent,
 };
 export type {
   NavBarProps,
@@ -32,4 +35,5 @@ export type {
   PostListProps,
   SummerbudAvatarProps,
   ThemeToggleProps,
+  TableOfContentProps,
 };

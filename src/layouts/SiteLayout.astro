@@ -1,7 +1,7 @@
 ---
 import HeadSeo from "./HeadSeo.astro";
 import { Props as HeadSeoProps } from "./HeadSeo.astro";
-import { FeatureImage, Footer, NavBar } from "@/components/index";
+import { FeatureImage, Footer, NavBar, TableOfContent } from "@/components/index";
 import cn from "clsx";
 import { FeatureImg, Heading, Nullable } from "@/types/general";
 
@@ -12,6 +12,7 @@ export interface Props extends HeadSeoProps {
 }
 
 const props = Astro.props as Props;
+console.log(props.headings)
 ---
 
 <html class="dark">
@@ -56,7 +57,7 @@ const props = Astro.props as Props;
         "flex flex-col min-h-screen w-screen px-6 sm:px-8 lg:px-0 bg-sd-brwhite dark:bg-sd-brblack"
       )}
     >
-      <div class={cn("flex flex-col w-full flex-1")}>
+      <div class={cn("flex flex-col w-full flex-1 xl:px-10")}>
         <NavBar marginBottom="mb-20" client:load />
         {props.featureImg ? 
           <FeatureImage
@@ -72,7 +73,9 @@ const props = Astro.props as Props;
         <div class="flex flex-col xl:flex-row flex-1 mb-20">
           <div class="hidden xl:flex xl:w-2/12"></div>
           <div class="w-full flex flex-col xl:w-8/12"><slot /></div>
-          <div class="hidden xl:flex xl:w-2/12"></div>
+          <div class="hidden xl:flex xl:w-2/12 h-full sticky top-20">
+            {props.headings ? <TableOfContent headings={props.headings} client:load /> : null}
+          </div>
         </div>
         <Footer />
       </div>
