@@ -10,6 +10,7 @@ specifiers:
   astro: ^1.4.6
   axios: ^0.27.2
   clsx: ^1.2.1
+  github-slugger: ^1.4.0
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.0.12
   prettier-plugin-tailwindcss: ^0.1.13
@@ -25,6 +26,7 @@ specifiers:
 dependencies:
   axios: 0.27.2
   clsx: 1.2.1
+  github-slugger: 1.4.0
   schema-dts: 1.1.0_typescript@4.8.4
 
 devDependencies:
@@ -1889,7 +1891,6 @@ packages:
 
   /github-slugger/1.4.0:
     resolution: {integrity: sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==}
-    dev: true
 
   /glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
