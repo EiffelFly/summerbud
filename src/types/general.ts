@@ -9,3 +9,9 @@ export type ArticleFrontMatter = {
 };
 
 export type Nullable<T> = T | null;
+
+export type FeatureImg = {
+  path: string;
+  alt: string;
+  source: string;
+};
