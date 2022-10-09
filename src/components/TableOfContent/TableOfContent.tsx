@@ -52,7 +52,7 @@ const TableOfContent = (props: TableOfContentProps) => {
                   viewBox="0 0 16 16"
                 >
                   <circle
-                    class=" stroke-sd-brgreen fill-sd-brblack stroke-1"
+                    class=" stroke-sd-brgreen fill-sd-brwhite dark:fill-sd-brblack stroke-1"
                     cx="8"
                     cy="8"
                     r="6.5"
