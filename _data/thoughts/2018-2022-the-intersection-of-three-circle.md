@@ -2,8 +2,8 @@
 title: "2018-2022 短記 - 電話的另一端、早餐一顆水煮蛋、三個圓的疊合"
 slug: "2018-2022-the-intersection-of-three-circle"
 tags: ["Essays", "life-experience", "breakfast-shop", "phone-salesman", "programming", "pursuit"]
-publishedAt: "2022-10-21T8:00:00"
-lastModified: "2022-10-21T8:00:00"
+publishedAt: "2022-10-21T08:00:00"
+lastModified: "2022-10-21T08:00:00"
 description: "對我而言，所謂志業是三個圓形的交疊，你擅長的、有熱情的以及是否能帶來超越自身體系外的價值。我花了整整八年才找到我的志業，這篇文章敘述了後四年發生的事。"
 featureImg: "/1872-john-frederick-kensett-sunset.jpeg"
 featureImgAlt: "Sunset, 1872, John Frederick Kensett"
