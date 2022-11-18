@@ -87,7 +87,7 @@ module.exports = {
             pre: {
               // backgroundColor: theme("colors.sd-black"),
               code: {
-                fontSize: theme("fontSize.base"),
+                fontSize: "18px",
                 fontWeight: 300,
                 color: theme("colors.sd-white"),
                 // backgroundColor: theme("colors.sd-black"),
@@ -154,7 +154,7 @@ module.exports = {
               color: theme("colors.sd-brcyan"),
             },
             code: {
-              fontSize: theme("fontSize.sm"),
+              fontSize: "18px",
               fontWeight: 300,
               color: theme("colors.red.600"),
               backgroundColor: theme("colors.sd-black"),
