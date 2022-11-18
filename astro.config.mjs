@@ -10,33 +10,21 @@ import remarkRehype from "remark-rehype";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 
+import image from "@astrojs/image";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.summerbud.org",
-  integrations: [
-    solid(),
-    tailwind({
-      config: {
-        path: "./tailwind.config.cjs",
-      },
-    }),
-    sitemap(),
-    prefetch(),
-  ],
+  integrations: [solid(), tailwind({
+    config: {
+      path: "./tailwind.config.cjs"
+    }
+  }), sitemap(), prefetch(), image()],
   markdown: {
     //syntaxHighlight: "prism",
-    remarkPlugins: [
-      remarkGfm,
-      remarkDirective,
-      [
-        remarkYoutube,
-        {
-          validateYoutubeLink: true,
-        },
-      ],
-      remarkTwitter,
-      remarkRehype,
-    ],
-    rehypePlugins: [rehypeSlug],
-  },
+    remarkPlugins: [remarkGfm, remarkDirective, [remarkYoutube, {
+      validateYoutubeLink: true
+    }], remarkTwitter, remarkRehype],
+    rehypePlugins: [rehypeSlug]
+  }
 });
