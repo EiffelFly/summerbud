@@ -27,32 +27,40 @@ module.exports = {
             color: theme("colors.sd-black"),
             h1: {
               fontWeight: "800",
-              fontSize: theme("fontSize.4xl"),
+              fontSize: "48px",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
               lineHeight: theme("lineHeight.normal"),
             },
             h2: {
               fontWeight: "700",
+              fontSize: "40px",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
             },
             h3: {
               fontWeight: "700",
+              fontSize: "32px",
               color: theme("colors.sd-brblack"),
             },
             "h4, h5, h6": {
               fontWeight: "500",
+              fontSize: "28px",
               color: theme("colors.sd-brblack"),
+            },
+            p: {
+              fontSize: "24px",
             },
             ol: {
               li: {
                 "&:before": { color: theme("colors.sd-black") },
+                fontSize: "24px",
               },
             },
             ul: {
               li: {
                 "&:before": { backgroundColor: theme("colors.sd-black") },
+                fontSize: "24px",
               },
             },
             strong: {
@@ -106,37 +114,44 @@ module.exports = {
             color: theme("colors.sd-white"),
             h1: {
               fontWeight: "800",
-              fontSize: theme("fontSize.4xl"),
+              fontSize: "48px",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-white"),
               lineHeight: theme("lineHeight.normal"),
             },
             h2: {
               fontWeight: "700",
+              fontSize: "40px",
               letterSpacing: theme("letterSpacing.wide"),
-              color: theme("colors.sd-brwhite"),
+              color: theme("colors.sd-white"),
             },
             h3: {
               fontWeight: "700",
-              color: theme("colors.sd-brwhite"),
+              fontSize: "32px",
+              color: theme("colors.sd-white"),
             },
             "h4, h5, h6": {
               fontWeight: "500",
-              color: theme("colors.sd-brwhite"),
+              fontSize: "28px",
+              color: theme("colors.sd-white"),
             },
             ol: {
               li: {
-                "&:before": { color: theme("colors.sd-white") },
+                "&:before": { color: theme("colors.sd-brcyan") },
+                color: theme("colors.sd-brcyan"),
+                fontSize: "24px",
               },
             },
             ul: {
               li: {
-                "&:before": { backgroundColor: theme("colors.sd-white") },
+                "&:before": { backgroundColor: theme("colors.sd-brcyan") },
+                color: theme("colors.sd-brcyan"),
+                fontSize: "24px",
               },
             },
             strong: {
               fontWeight: 800,
-              color: theme("colors.sd-brwhite"),
+              color: theme("colors.sd-brcyan"),
             },
             code: {
               fontSize: theme("fontSize.sm"),
@@ -149,6 +164,10 @@ module.exports = {
               paddingTop: "0.125rem",
               paddingBottom: "0.125rem",
               wordBreak: "break-word",
+            },
+            p: {
+              color: theme("colors.sd-brcyan"),
+              fontSize: "24px",
             },
             a: {
               color: theme("colors.indigo.400"),
@@ -168,8 +187,8 @@ module.exports = {
               },
             },
             blockquote: {
-              color: theme("colors.sd-brwhite"),
-              borderLeftColor: theme("colors.sd-brwhite"),
+              color: theme("colors.sd-brcyan"),
+              borderLeftColor: theme("colors.sd-brcyan"),
               backgroundColor: theme("colors.sd-black"),
             },
             hr: {
@@ -181,10 +200,26 @@ module.exports = {
           css: {
             h1: {
               fontWeight: "800",
-              fontSize: theme("fontSize.4xl"),
+              fontSize: "48px",
               letterSpacing: theme("letterSpacing.wide"),
               color: theme("colors.sd-brblack"),
               lineHeight: theme("lineHeight.normal"),
+            },
+            h2: {
+              fontWeight: "700",
+              fontSize: "40px",
+              letterSpacing: theme("letterSpacing.wide"),
+              color: theme("colors.sd-brblack"),
+            },
+            h3: {
+              fontWeight: "700",
+              fontSize: "32px",
+              color: theme("colors.sd-brblack"),
+            },
+            "h4, h5, h6": {
+              fontWeight: "500",
+              fontSize: "28px",
+              color: theme("colors.sd-brblack"),
             },
           },
         },
