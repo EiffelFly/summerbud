@@ -1,6 +1,6 @@
 ---
 title: "On a way to solve clustered context, my thinking process"
-slug: "solve-clustered-context-my-thinking-process"
+slug: "my-thinking-process-of-solving-clustered-context"
 tags: ["Essays", "context", "clustered-context", "search-engine", "data", "visualization", "solution", "experiment"]
 publishedAt: "2022-12-01T18:00:00"
 lastModified: "2022-12-01T18:00:00"
@@ -45,7 +45,7 @@ The fundamental reason that we can comfortably argue that everything seems fine 
 
 #### Too big to fall
 
-The clustered Context make search engine essential. There has no way to live without them. The whole system of our society heavily relies on the search engine to a level that we can even call it "the infrastructure of society". In some countries, search engine is even under the control of the government and become notoriously dangerous. [^4]
+The clustered Context make search engine essential. There has no way to live without them. The whole system of our society heavily relies on the search engine to a level that we can even call it "the infrastructure of society". In some countries, search engine is even under the control of the government and become notoriously dangerous. [^2]
 
 It is not healthy that we solely rely on a single structure to support our internet. 
 
@@ -63,7 +63,7 @@ To rank on the first page, we have to compete with each other under the rule of 
 
 On the other side, people ignore the rule of search engines no matter consciously or unconsciously. They will suffer from noticeably low traffic even if they have very good content.
 
-The completeness of the search engine result makes our creativity fragile. We are hard to find interesting websites or content on the search result but lean back to the word of mouth, especially on social media. ~~Some people form a self-maintained web to cope with this issue, each website will share a hyperlink at the footer or navigation bar which links to an index page [^5]. This page gathered lots of interesting websites together to let the viewer experience the old-time browsing feeling.~~
+The completeness of the search engine result makes our creativity fragile. We are hard to find interesting websites or content on the search result but lean back to the word of mouth, especially on social media.
 
 #### Keyword anchor effect
 
@@ -71,7 +71,7 @@ We heavily rely on the keyword to find a good source of information. Without a g
 
 But the keyword is very limited. Let's just compare the experience of using keywords to search and read the Wiki page. Although they are in different categories, they still have something in common, so bear with me for a while.
 
-When we search for a topic we only have two or three proper words in mind. It's quite easy to put these words as a set of keywords and search for them. The answer is very useful, under normal circumstances we can usually find the thing we want within minutes and we stick to it, almost believing the first result Google gives us will be the best. The strong bond between keyword - results and how easy and quick it is strengthens this feeling.[^6]
+When we search for a topic we only have two or three proper words in mind. It's quite easy to put these words as a set of keywords and search for them. The answer is very useful, under normal circumstances we can usually find the thing we want within minutes and we stick to it, almost believing the first result Google gives us will be the best. The strong bond between keyword - results and how easy and quick it is strengthens this feeling.[^3]
 
 When we browse through Wiki. We will observe the tremendous information in the first place, not just the sentence but also the small, blue, shiny link sprinkled around the page. We understand that each blue link represents another set of knowledge and they lead to more.
 
@@ -91,7 +91,7 @@ In this section, I would like to focus more on the company level, especially on 
 
 The content we have right now has a rule. Those who store the data have the right to design the interface accessing the data. This is a double-edged sword. On the one side, you could argue that usually, the people who manage the data know the data better than others and they can design the best interface toward the data. On the other side, the interface is so limited that you are hard to customize it to your personal or organizational level needs.
 
-Indeed they usually provide API but with a rate limit [^7]. The amount of data you can retrieve and leverage is limited. Besides that, the connection we can build is limited in the specific platform, other than that the only tool we can use is the hyperlink and it is hard to track backwardly.
+Indeed they usually provide API but with a rate limit [^4]. The amount of data you can retrieve and leverage is limited. Besides that, the connection we can build is limited in the specific platform, other than that the only tool we can use is the hyperlink and it is hard to track backwardly.
 
 #### Lack of flexibility leads to lack of experiment
 
@@ -124,23 +124,23 @@ Recently there is a trend about rebuilding the web. They list lots of disadvanta
 
 These are not their concern. Rebuilding a web is the biggest moat they can find for their business and it can attract lots of attention and even bring in VC's money. We need to stand aside from this trend and re-think what we need.
 
-To think of the web as a whole as a replaceable component is very attractive. It gives people a power fantasy that they are the ones who see through the mist. But to think about the web like this is not even partially true. The web is more like an organism that will change according to how you interact with it. It's too hard and too risky to pull all the thing you don't like at once and push into lots of things that you think is helpful. Besides that, no one has this kind of power.[^6]
+To think of the web as a whole as a replaceable component is very attractive. It gives people a power fantasy that they are the ones who see through the mist. But to think about the web like this is not even partially true. The web is more like an organism that will change according to how you interact with it. It's too hard and too risky to pull all the thing you don't like at once and push into lots of things that you think is helpful. Besides that, no one has this kind of power.[^5]
 
-What I approach these issues is not considering solving the issues all at once with the belief in singular technology. But find the very specific problem I want to focus on and build a set of limited functions that can push the progression. [^7]
+What I approach these issues is not considering solving the issues all at once with the belief in singular technology. But find the very specific problem I want to focus on and build a set of limited functions that can push the progression. [^6]
 
 ### Gather redundantly but display wisely
 
 People need insight, not data. If software can only gather but can't cultivate insight automatically, it will fall in this market and it won't benefit well for the people. 
 
-The system will aggressively digest data and store them as much as possible. This act will greatly benefit from the emergence of API from companies. Five years ago, there didn't have a lot of fast, well-maintained/documented APIs for people to access. But because the maturity of micro-services and cloud-native language [^8] makes the cost of building and maintaining an API decrease, the trend that people want their data back and the rise of various automation toolsets all result in an environment the company considers API as an advantage for their services. 
+The system will aggressively digest data and store them as much as possible. This act will greatly benefit from the emergence of API from companies. Five years ago, there didn't have a lot of fast, well-maintained/documented APIs for people to access. But because the maturity of micro-services and cloud-native language [^7] makes the cost of building and maintaining an API decrease, the trend that people want their data back and the rise of various automation toolsets all result in an environment the company considers API as an advantage for their services. 
 
 This is a great environment for us to re-connect the clustered material. We can access these data from the company's API (Like Discord, Slack, and GitHub...) and store them elsewhere where we can calculate our insight and display them with another set of UI.
 
-The thinking process here is we should gather redundantly from API or crawler but we should consider carefully what we should display. Besides that, it should have a good search algorithm that can achieve similar efficiency as a major search engine or even beyond. [^9]
+The thinking process here is we should gather redundantly from API or crawler but we should consider carefully what we should display. Besides that, it should have a good search algorithm that can achieve similar efficiency as a major search engine or even beyond. [^8]
 
 ### Think like AST (abstract syntax trees)
 
-The above point is about to collect -> display and the missing part is how we achieve maximum flexibility, especially for plain-text content like blog posts, discussions...etc. The solution is leveraging what remarkjs [^10] had offered. It constructs a markdown file to an AST-like structure. You could easily loop through the structure and get the data you want. 
+The above point is about to collect -> display and the missing part is how we achieve maximum flexibility, especially for plain-text content like blog posts, discussions...etc. The solution is leveraging what remarkjs [^9] had offered. It constructs a markdown file to an AST-like structure. You could easily loop through the structure and get the data you want. 
 
 ```
 # I am a header 1
@@ -176,7 +176,7 @@ The spirit of all the attempts is a set of experiments. The structure should be 
 
 ### Export at any time you need
 
-The data should be portable and users should have a reliable way to clone it or transfer it to another container. But it's not enough. Portability is not only the data but also how data is processed. Nowadays, software companies only let user export data with complicated structures [^11] and call it the day. What I imagined is a product that can not only export the data but also export a standalone, simple version of the software itself. This standalone server can run on any computer without further building or compiling.
+The data should be portable and users should have a reliable way to clone it or transfer it to another container. But it's not enough. Portability is not only the data but also how data is processed. Nowadays, software companies only let user export data with complicated structures [^10] and call it the day. What I imagined is a product that can not only export the data but also export a standalone, simple version of the software itself. This standalone server can run on any computer without further building or compiling.
 
 ## It just gets started
 
@@ -186,12 +186,11 @@ I am looking forward to having any conversation related to this topic, you could
 
 [^1]: [Goodwin, Charles; Duranti, Alessandro, eds. (1992). "Rethinking context: an introduction" (PDF). Rethinking context: Language as an interactive phenomenon](http://www.sscnet.ucla.edu/anthro/faculty/duranti/reprints/rethco.pdf)
 [^2]: For example, China. It becomes a fortification for the group that holds the power.
-[^3]: [Webring](https://github.com/XXIIVV/webring) This forms a set of links, that connect hundreds of websites.
-[^4]: And the bullet point-like UI strengthens the feeling too. People can only judge by single order so they tend to trust the first result. 
-[^5]: Each company has its policy. But usually, you have no hope to retrieve all your data on your hand.
-[^6]: If you live in a country that is autocratic and has the power and wealth to reshape how the internet interacts with people. That is another story. I hope in a democratic society, the internet can slowly but steadily march to a more independent position.
-[^7]: I am mostly focusing on "Tech Documentation" and "The Context gathering/connection" right now. And I believe what we need to do for these issues is not rebuild something but re-connection materials. 
-[^8]: New cloud-native languages like Go keep gaining popularity and building an ecosystem around them. The result is building a well-design API is not as hard as it used to be and it's much more reliable and cost-effective for a small company to release its API too.
-[^9]: The major insight of Google is they don't rely on people's input but observe how people interact with that specific web page. But in the end, their data won't be as valuable as people directly point out where to find the information. 
-[^10]: Remark.js and Rehype.js are very powerful toolsets. They not only make markdown parsing much easier but also open up a new world for us to explore. Imagine you have multiple entry points to diagnose the article not just the start of the article. [remarkjs/remark](https://github.com/remarkjs/remark)
-[^11]: You could look into the way notion exported their data. It's a mess and very hard to process.
+[^3]: And the bullet point-like UI strengthens the feeling too. People can only judge by single order so they tend to trust the first result. 
+[^4]: Each company has its policy. But usually, you have no hope to retrieve all your data on your hand.
+[^5]: If you live in a country that is autocratic and has the power and wealth to reshape how the internet interacts with people. That is another story. I hope in a democratic society, the internet can slowly but steadily march to a more independent position.
+[^6]: I am mostly focusing on "Tech Documentation" and "The Context gathering/connection" right now. And I believe what we need to do for these issues is not rebuild something but re-connection materials. 
+[^7]: New cloud-native languages like Go keep gaining popularity and building an ecosystem around them. The result is building a well-design API is not as hard as it used to be and it's much more reliable and cost-effective for a small company to release its API too.
+[^8]: The major insight of Google is they don't rely on people's input but observe how people interact with that specific web page. But in the end, their data won't be as valuable as people directly point out where to find the information. 
+[^9]: Remark.js and Rehype.js are very powerful toolsets. They not only make markdown parsing much easier but also open up a new world for us to explore. Imagine you have multiple entry points to diagnose the article not just the start of the article. [remarkjs/remark](https://github.com/remarkjs/remark)
+[^10]: You could look into the way notion exported their data. It's a mess and very hard to process.
