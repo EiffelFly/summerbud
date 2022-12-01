@@ -52,7 +52,7 @@ const props = Astro.props as Props;
   <body>
     <div
       class={cn(
-        "flex flex-col min-h-screen w-screen px-4 sm:px-6 lg:px-10 xl:px-0 bg-sd-brwhite dark:bg-sd-brblack"
+        "flex flex-col w-full min-h-screen px-4 sm:px-6 lg:px-10 xl:px-0 bg-sd-brwhite dark:bg-sd-brblack"
       )}
     >
       <div class={cn("flex flex-col h-full w-full flex-1")}>
@@ -71,7 +71,7 @@ const props = Astro.props as Props;
         <div class="h-full flex flex-col xl:flex-row flex-1 mb-20">
           <div class="hidden xl:flex xl:w-2/12"></div>
           <div class={cn("flex flex-col w-full mx-auto max-w-4xl xl:max-w-5xl")}><slot /></div>
-          <div class="hidden xl:flex xl:w-2/12 sticky top-20">
+          <div class="hidden xl:block h-full xl:w-2/12 pr-5 sticky top-20">
             {props.headings ? <TableOfContent headings={props.headings} client:load /> : null}
           </div>
         </div>
