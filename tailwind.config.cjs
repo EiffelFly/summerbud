@@ -49,7 +49,7 @@ module.exports = {
               color: theme("colors.sd-brblack"),
             },
             p: {
-              fontSize: "24px",
+              fontSize: "20px",
             },
             ol: {
               li: {
@@ -167,7 +167,7 @@ module.exports = {
             },
             p: {
               color: theme("colors.sd-brcyan"),
-              fontSize: "24px",
+              fontSize: "20px",
             },
             a: {
               color: theme("colors.indigo.400"),
