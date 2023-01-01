@@ -1,0 +1,26 @@
+---
+import SiteLayout, {
+  Props as SiteLayoutProps,
+} from "@/layouts/SiteLayout.astro";
+import { SITE } from "../../site-config";
+
+const pageMeta: SiteLayoutProps["meta"] = {
+  title: "projects",
+  locale: "zh-TW",
+  description: "This is Summerbud's projects archive",
+  image: {
+    src: null,
+    alt: null,
+  },
+  publishedAt: null,
+  tags: null,
+};
+---
+
+<SiteLayout
+  meta={pageMeta}
+  canonicalURL={`${SITE.domain}/projects`}
+  text={null}
+  featureImg={null}
+  headings={null}
+/>
