@@ -54,13 +54,13 @@ module.exports = {
             ol: {
               li: {
                 "&:before": { color: theme("colors.sd-black") },
-                fontSize: "24px",
+                fontSize: "20px",
               },
             },
             ul: {
               li: {
                 "&:before": { backgroundColor: theme("colors.sd-black") },
-                fontSize: "24px",
+                fontSize: "20px",
               },
             },
             strong: {
@@ -139,14 +139,14 @@ module.exports = {
               li: {
                 "&:before": { color: theme("colors.sd-brcyan") },
                 color: theme("colors.sd-brcyan"),
-                fontSize: "24px",
+                fontSize: "20px",
               },
             },
             ul: {
               li: {
                 "&:before": { backgroundColor: theme("colors.sd-brcyan") },
                 color: theme("colors.sd-brcyan"),
-                fontSize: "24px",
+                fontSize: "20px",
               },
             },
             strong: {
