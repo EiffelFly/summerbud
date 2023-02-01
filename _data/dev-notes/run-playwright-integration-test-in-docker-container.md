@@ -5,8 +5,8 @@ tags: ["dev", "Playwright", "test", "integration-test", "docker"]
 publishedAt: "2023-02-01T18:00:00"
 lastModified: "2023-02-01T18:00:00"
 description: "In order to eliminate the control variants of test when deal with flakiness or corporate with other engineers, put the test into a container is a great solution. But it comes after some caveats to set it up and maintain it. This article will share with you how to accomplish this task flawlessly."
-featureImg: "/1984-the-roman-campagna.jpg"
-featureImgAlt: "The Roman Campagna, 1984, John Gadsby Chapman"
+featureImg: "/1864-the-roman-campagna.jpg"
+featureImgAlt: "The Roman Campagna, 1864, John Gadsby Chapman"
 featureImgSource: "https://www.metmuseum.org/art/collection/search/10435"
 locale: "en-US"
 ---
