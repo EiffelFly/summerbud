@@ -337,6 +337,7 @@ I think there are three rings that rule them all.
 - Use `Promise.all` to avoid race conditions.
 - Disable your field when you haven't finished fetching data.
 - Use the locator!
+- If you still encounter some sort of flakiness, please try to put your test into a container, you could find the tutorial [here](/dev-notes/run-playwright-integration-test-in-docker-container).
 
 Alright, that is enough for today. Playwright is a very good tool. Hope you find the power of it.
 
