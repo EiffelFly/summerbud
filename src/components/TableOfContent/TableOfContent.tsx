@@ -20,9 +20,7 @@ const TableOfContent = (props: TableOfContentProps) => {
   });
 
   onCleanup(() => {
-    if (window) {
-      window.removeEventListener("hashchange", onHashChanged);
-    }
+    window.removeEventListener("hashchange", onHashChanged);
   });
 
   return (
