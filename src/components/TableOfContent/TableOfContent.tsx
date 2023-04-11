@@ -19,7 +19,11 @@ const TableOfContent = (props: TableOfContentProps) => {
     window.addEventListener("hashchange", onHashChanged);
   });
 
-  onCleanup(() => window.removeEventListener("hashchange", onHashChanged));
+  onCleanup(() => {
+    if (window) {
+      window.removeEventListener("hashchange", onHashChanged);
+    }
+  });
 
   return (
     <div class="flex w-full">
