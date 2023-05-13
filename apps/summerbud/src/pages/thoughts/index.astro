@@ -1,0 +1,27 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import { getCollection } from "astro:content";
+import { ByYearPostList } from "../../components";
+import { getByYearPosts } from "../../utils";
+import type { SEO } from "../../type";
+import { SITE } from "../../site-config";
+
+const thoughtPosts = await getCollection("thoughts");
+
+const byYearPosts = getByYearPosts(thoughtPosts.filter((e) => e.data.locale === "en-US"));
+
+const pageMeta: SEO = {
+	title: "Thoughts",
+	locale: "zh-TW",
+	description: "This is Summerbud's su-kao archive",
+	image: null,
+	publishedAt: "",
+	tags: "archive",
+	canonicalURL: `${SITE.domain}/dev-notes`,
+	text: "This is Summerbud's su-kao archive",
+};
+---
+
+<MainLayout {...pageMeta}>
+	<ByYearPostList byYearPosts={byYearPosts} />
+</MainLayout>

@@ -1,42 +1,26 @@
 {
-  "name": "@example/starter",
-  "version": "0.0.1",
+  "name": "summerbud",
+  "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "astro dev --port 3010",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test"
   },
   "devDependencies": {
-    "@astrojs/prefetch": "^0.0.5",
-    "@astrojs/sitemap": "^0.1.2",
-    "@astrojs/solid-js": "^0.1.4",
-    "@astrojs/tailwind": "^0.2.5",
-    "@babel/core": "^7.20.2",
-    "@tailwindcss/typography": "^0.5.8",
-    "astro": "^1.6.10",
-    "github-slugger": "^1.5.0",
-    "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.0.12",
-    "prettier-plugin-tailwindcss": "^0.1.13",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-slug": "^5.1.0",
-    "remark": "^14.0.2",
-    "remark-directive": "^2.0.1",
-    "remark-frontmatter": "^4.0.1",
-    "remark-gfm": "^3.0.1",
-    "remark-rehype": "^10.1.0",
-    "solid-js": "^1.6.2",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3",
-    "unist-util-visit": "^4.1.1"
+    "eslint-config-custom": "workspace:*",
+    "prettier": "latest",
+    "prettier-plugin-astro": "^0.8.1",
+    "turbo": "latest"
   },
-  "dependencies": {
-    "@astrojs/image": "^0.11.6",
-    "axios": "^0.27.2",
-    "clsx": "^1.2.1",
-    "schema-dts": "^1.1.0",
-    "sharp": "^0.31.2"
-  }
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@8.1.1"
 }

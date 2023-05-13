@@ -1,0 +1,51 @@
+---
+import cn from "clsx";
+import { SummerbudLogo } from "../components";
+import { Footer, Link } from "../components";
+import type { Props as HeadSeoProps } from "./HeadSeo.astro";
+import FeatureImage from "../components/FeatureImage.astro";
+import HeadSeo from "./HeadSeo.astro";
+
+export interface Props extends HeadSeoProps {
+	bgColor?: string;
+}
+
+const { bgColor, ...meta } = Astro.props as Props;
+---
+
+<html lang="en">
+	<head>
+		<HeadSeo {...meta} />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{meta.title}</title>
+	</head>
+	<body>
+		<div class={cn("flex flex-col min-h-screen p-0", bgColor ? bgColor : "bg-gray-900")}>
+			<div class="w-full flex-1 max-w-[800px] mx-auto py-40 px-10 lg:px-0">
+				{
+					meta.image ? (
+						<FeatureImage
+							src={meta.image.path}
+							alt={meta.image.alt}
+							source={meta.image.source}
+							marginBottom="mb-20"
+							position="mx-auto"
+						/>
+					) : null
+				}
+				<slot />
+			</div>
+			<div class="flex flex-col p-10 border-t border-gray-800">
+				<Footer />
+			</div>
+			<div class="absolute w-full top-0 h-10 flex flex-row p-10">
+				<div class="mr-auto">
+					<SummerbudLogo />
+				</div>
+				<Link dest="/archive" className="my-auto">archive</Link>
+			</div>
+		</div>
+	</body>
+</html>

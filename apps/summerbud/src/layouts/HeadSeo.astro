@@ -1,0 +1,92 @@
+---
+import { SITE, OPEN_GRAPH } from "../site-config";
+import type { SEO } from "../type";
+import type { BlogPosting, WithContext, WebPage } from "schema-dts";
+
+export type Props = SEO;
+
+const { canonicalURL, text, ...meta } = Astro.props as Props;
+const formattedContentTitle = meta.title ? `${meta.title} | ${SITE.title}` : SITE.title;
+const image = meta.image ? meta.image : OPEN_GRAPH.image;
+const canonicalImageSrc = new URL(image.path, Astro.site);
+
+// TODO: add backstory
+
+const blogPosting: BlogPosting = {
+	"@type": "BlogPosting",
+	image: image.path,
+	url: canonicalURL,
+	headline: meta.title,
+	dateCreated: meta.publishedAt,
+	datePublished: meta.publishedAt,
+	inLanguage: meta.locale || SITE.defaultLanguage,
+	isFamilyFriendly: "True",
+	accountablePerson: {
+		"@type": "Person",
+		name: "Po-Chun, Chiu",
+		url: SITE.domain,
+	},
+	author: {
+		"@type": "Person",
+		name: "Po-Chun, Chiu",
+		url: SITE.domain,
+	},
+	creator: {
+		"@type": "Person",
+		name: "Po-Chun, Chiu",
+		url: SITE.domain,
+	},
+	publisher: {
+		"@type": "Person",
+		name: "Po-Chun, Chiu",
+		url: SITE.domain,
+	},
+	keywords: meta.tags,
+	text: text,
+	articleBody: text,
+};
+
+const jsonld: WithContext<WebPage> = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	name: meta.title,
+	description: meta.description,
+	mainEntity: blogPosting,
+};
+---
+
+<link rel="canonical" href={canonicalURL} />
+<title>{formattedContentTitle}</title>
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content={formattedContentTitle} />
+<meta property="og:type" content="article" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:locale" content={meta.locale ?? SITE.defaultLanguage} />
+<meta property="og:image" content={canonicalImageSrc} />
+<meta property="og:image:alt" content={image.alt} />
+<meta
+	name="description"
+	property="og:description"
+	content={meta.description ? meta.description : SITE.description}
+/>
+<meta property="og:site_name" content={SITE.title} />
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content={OPEN_GRAPH.twitter} />
+<meta name="twitter:title" content={formattedContentTitle} />
+<meta name="twitter:description" content={meta.description ? meta.description : SITE.description} />
+<meta name="twitter:image" content={canonicalImageSrc} />
+<meta name="twitter:image:alt" content={image.alt} />
+<script defer data-domain="summerbud.org" src="https://plausible.io/js/plausible.js"></script>
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+<!-- This need to be very careful, if your codeblock have <scrip> tag, it will cause error -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonld)}></script>
