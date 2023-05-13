@@ -16,11 +16,11 @@
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
+    "prettier-plugin-astro": "^0.8.1",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@8.1.1"
 }
