@@ -1,5 +1,6 @@
 ---
 import { getRandomInt } from "../utils";
+import { SummerbudLogo } from "../components";
 const time = new Date().toLocaleTimeString(undefined, {
 	hour12: false,
 	hour: "numeric",
@@ -18,14 +19,14 @@ const surfaceScale = getRandomInt(1, 100);
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
+		<title>Summerbud</title>
 	</head>
 
 	<body>
 		<div class="flex min-h-screen p-0 bg-black">
 			<div class="m-auto flex flex-col gap-y-4">
 				<svg
-					class="w-[240px] h-[126px] lg:w-[600px] lg:h-[315px] m-0"
+					class="w-[240px] h-[126px] lg:w-[800px] lg:h-[420px] m-0"
 					xmlns="http://www.w3.org/2000/svg"
 					version="1.1"
 					viewBox="0 0 1200 630"
@@ -93,22 +94,27 @@ const surfaceScale = getRandomInt(1, 100);
 				</svg>
 				<a
 					rel="prefetch"
+					href="/archive"
 					class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline ml-auto"
 				>
 					Enter
 				</a>
 			</div>
-			<div class="absolute bottom-10 left-10">
-				<p class="font-sans text-sm font-normal text-gray-300">&copy; 2023 summerbud</p>
+			<div class="absolute flex bottom-10 left-10 h-10">
+				<p class="my-auto font-sans text-sm font-normal text-gray-300">&copy; 2023 summerbud</p>
 			</div>
-			<div class="absolute top-10 right-10">
-				<p class="font-sans text-sm font-normal text-gray-300 text-right">40/14 = chi/eng</p>
+			<div class="absolute flex h-10 top-10 right-10">
+				<p class="my-auto font-sans text-sm font-normal text-gray-300 text-right">
+					40/14 = chi/eng
+				</p>
 			</div>
-			<div class="absolute bottom-10 right-10">
-				<p class="font-sans text-sm font-normal text-gray-300 text-right">{time}</p>
+			<div class="absolute flex h-10 bottom-10 right-10">
+				<p class="my-auto first-letter:font-sans text-sm font-normal text-gray-300 text-right">
+					{time}
+				</p>
 			</div>
-			<div class="absolute flex top-10 left-10 w-12 h-12 border border-dashed border-gray-600 p-1">
-				<p class="font-sans text-sm font-normal text-gray-300 text-right mt-auto ml-auto">bud</p>
+			<div class="absolute top-10 left-10">
+				<SummerbudLogo />
 			</div>
 		</div>
 	</body>
