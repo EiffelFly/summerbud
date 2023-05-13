@@ -24,11 +24,11 @@ export type Props = {
 			<div class="flex flex-col p-10 border-t border-gray-800">
 				<Footer />
 			</div>
-			<div class="absolute top-10 left-10">
-				<SummerbudLogo />
-			</div>
-			<div class="absolute flex top-10 right-10 h-10">
-				<Link dest="/archive">archive</Link>
+			<div class="absolute w-full top-0 h-10 flex flex-row p-10">
+				<div class="mr-auto">
+					<SummerbudLogo />
+				</div>
+				<Link dest="/archive" className="my-auto">archive</Link>
 			</div>
 		</div>
 	</body>
