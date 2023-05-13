@@ -1,0 +1,13 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import { getCollection } from "astro:content";
+import { ByYearPostList } from "../../components";
+import { getByYearPosts } from "../../utils";
+
+const thoughtPosts = await getCollection("thoughts");
+const byYearPosts = getByYearPosts(thoughtPosts);
+---
+
+<MainLayout title="Archive">
+	<ByYearPostList byYearPosts={byYearPosts} />
+</MainLayout>

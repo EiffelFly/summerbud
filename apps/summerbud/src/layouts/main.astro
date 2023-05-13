@@ -1,7 +1,6 @@
 ---
 import { SummerbudLogo } from "../components";
-import { Footer } from "../components/Footer";
-import { Link } from "../components/Link";
+import { Footer, Link } from "../components";
 const props = Astro.props as Props;
 
 export type Props = {
@@ -18,7 +17,7 @@ export type Props = {
 	</head>
 	<body>
 		<div class="flex flex-col min-h-screen p-0 bg-black">
-			<div class="w-full flex-1 max-w-[800px] mx-auto">
+			<div class="w-full flex-1 max-w-[800px] mx-auto py-40 px-10 lg:px-0">
 				<slot />
 			</div>
 			<div class="flex flex-col p-10 border-t border-gray-800">
