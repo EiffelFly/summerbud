@@ -18,7 +18,7 @@ const { bgColor, ...meta } = Astro.props as Props;
 		<HeadSeo {...meta} />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{meta.title}</title>
 	</head>
 	<body>
@@ -40,7 +40,7 @@ const { bgColor, ...meta } = Astro.props as Props;
 			<div class="flex flex-col p-10 border-t border-gray-800">
 				<Footer />
 			</div>
-			<div class="absolute w-full top-0 h-10 flex flex-row p-10">
+			<div class="absolute w-full top-0 flex flex-row p-10">
 				<div class="mr-auto">
 					<SummerbudLogo />
 				</div>
