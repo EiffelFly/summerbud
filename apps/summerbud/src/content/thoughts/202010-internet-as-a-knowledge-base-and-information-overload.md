@@ -11,11 +11,11 @@ featureImgSource: "https://www.flickr.com/photos/nasacommons/9457837753/in/photo
 locale: "zh-TW"
 ---
 
-# 定義
+## 定義
 
 根據維基百科的定義 Knowledge base 的概念一開始主要是指稱電腦用以儲存複雜的「結構性資料」或「非結構性資料」的方式，隨後被 database 一詞概括。後來套用在個人身上，以Personal knowledge base指稱人處理「結構性資料」或「非結構性資料」的方式。與電腦系統的 knowledge-base 不同，Personal knowledge base 存有建立者的主觀資訊，其定義更富有彈性。只要以系統化建構而成的系統都可以稱為 Personal knowledge base，例如筆記本、你現在閱讀的 Notion 頁面等等。而把 knowledge-base 可視化後即成為 knowledge graph。
 
-# Internet as a knowledge-base 及其困難
+## Internet as a knowledge-base 及其困難
 
 隨網際網路盛行，單元與單元間的連結速度提升，由於資料產出的速度過於快速與龐大，個人、企業、群體電腦系統的記憶體沒有辦法以單一的 database 儲存下這些資訊，因此轉由 Internet 作為獨立的載體，藉由超連結、文件、多媒體組成一複雜的群落，人們取得並儲存資訊的習慣改變，從過往記憶資訊本體的形式轉由現今記憶「載體在何處」的形式，Internet as a knowledge-base 的概念逐漸浮現。。
 
@@ -36,7 +36,7 @@ locale: "zh-TW"
 
 Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜，同時整個系統的效益也不斷增加。然而對個人而言問題就在這個時刻出現了：資訊過載。
 
-# 資訊過載
+## 資訊過載
 
 最近在看 Twitter 時看到一篇文章非常有趣，是由 Roam research 的創辦人 Conor White-Sullivan 寫出來的。
 
@@ -52,7 +52,7 @@ Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜
 
 除此之外還有眾多辦法，但多建立在逃避或是拒絕之上，並沒有真正面對**「資訊爆炸」的核心問題：如何協助個人判斷哪些資訊進入私領域是有益的？**
 
-# Hololink
+## Hololink
 
 > Hololink 最重要的終極目標就是：「協助人們建構個人知識圖譜，並且可視化它。」
 
@@ -72,7 +72,7 @@ Internet as a knowledge-base 這個概念因為總數的提升而越來越複雜
 
 > Hololink 想協助人們建立這個泡泡，樹立嶄新的內在指標讓個人有判斷依據，並有效擴展知識的疆界。
 
-# 難題：抽象且複雜的世界
+## 難題：抽象且複雜的世界
 
 然而為了執行這件事有非常多的難題：
 
