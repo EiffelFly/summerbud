@@ -6,7 +6,7 @@ import { getByYearPosts } from "../../utils";
 
 const thoughtPosts = await getCollection("thoughts");
 
-const byYearPosts = getByYearPosts(thoughtPosts.filter((e) => e.data.locale === "en-US"));
+const byYearPosts = getByYearPosts(thoughtPosts.filter((e) => e.data.locale === "zh-TW"));
 ---
 
 <MainLayout title="Archive">
