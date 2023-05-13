@@ -9,6 +9,15 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [mdx(), tailwind(), prefetch(), solidJs(), sitemap(), image()],
+	integrations: [
+		mdx(),
+		tailwind(),
+		prefetch(),
+		solidJs(),
+		sitemap(),
+		image({
+			serviceEntryPoint: "@astrojs/image/sharp",
+		}),
+	],
 	site: "https://www.summerbud.org",
 });
