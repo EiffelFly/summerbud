@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-09T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "退伍的前夕，我做了一件平常不會做的事"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-24T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "與其瀟灑的說我們都將死去，不如說，我們都將一點一點地被消磨殆盡。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

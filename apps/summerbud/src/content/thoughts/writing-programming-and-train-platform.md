@@ -5,6 +5,9 @@ tags: ["文學", "創作", "程式設計", "火車月台"]
 publishedAt: "2021-07-05T12:00:00"
 lastModified: "2021-07-05T12:00:00"
 description: "創作文學與程式設計對我產生了非常有趣的化學效應，結合創作的「火車月台」的概念，這篇文章嘗試指出我們可以從這兩者的互動中學到什麼。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

@@ -5,6 +5,9 @@ tags: ["thought", "instill-ai", "hamming", "mind-frame"]
 publishedAt: "2021-11-03T12:00:00"
 lastModified: "2021-11-03T12:00:00"
 description: "Hamming question 和 framer variant with Feynman technique 是我近期最重要的思想錨點。這篇文章希望能介紹這些方法論給你，並且簡略介紹目前我正在打造什麼。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

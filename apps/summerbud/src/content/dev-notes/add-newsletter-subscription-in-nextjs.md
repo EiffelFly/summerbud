@@ -6,6 +6,9 @@ publishedAt: "2021-07-28T18:00:00"
 lastModified: "2021-07-28T18:00:00"
 description: "這篇文章將教你如何使用 Mailchimp API 和 Next.js API route 來建構自己的電子信訂閱功能"
 locale: "zh-TW"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 ---
 
 ## 大綱

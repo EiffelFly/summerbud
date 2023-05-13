@@ -5,6 +5,9 @@ tags: ["react-select", "react", "typescript", "how-to"]
 publishedAt: "2022-10-18T18:00:00"
 lastModified: "2022-10-18T18:00:00"
 description: "React select is a easy to use library, but when working with typescript it has some issue to correctly inherit the type. This article will try to light up the path of how to solve it."
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "en-US"
 ---
 

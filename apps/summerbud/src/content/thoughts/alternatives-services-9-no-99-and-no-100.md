@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-17T18:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "那麼漫長的故事的起點竟然是一個到最後連一隻老鼠都沒有捕到的捕鼠籠"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

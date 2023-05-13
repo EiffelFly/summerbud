@@ -5,6 +5,9 @@ tags: ["township", "dev-log", "community"]
 publishedAt: "2021-09-05T12:00:00"
 lastModified: "2021-09-05T12:00:00"
 description: "這篇開發日記記錄了這個月使用者訪談的總結，並且詳細頗析了使我們方向轉折的各個因素，希望讀者能從這篇文章窺看新創的痛苦與甜蜜。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

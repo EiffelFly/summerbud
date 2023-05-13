@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-10T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "安平港，蒜味豬肉炒飯、八寶冰、迷客夏大杯珍珠紅茶拿鐵半糖少冰"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

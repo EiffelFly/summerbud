@@ -5,6 +5,9 @@ tags: ["township", "dev-log", "community"]
 publishedAt: "2021-08-15T12:00:00"
 lastModified: "2021-08-15T12:00:00"
 description: "在這篇 township 開發日記中我提到了這個禮拜密集訪談下學到的事物，包括我們經歷了一次重大的轉折，雖然讓人煩惱且耗費時間，但我認爲這些都是值得的。在新創的初期，不只是客戶挑選我們，我們也挑選客戶，在最初要找到你願意一起合作的顧客，與他們一同成長。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

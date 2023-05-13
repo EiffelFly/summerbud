@@ -5,6 +5,9 @@ tags: ["how-to", "threejs", "webpack", "boilerplate"]
 publishedAt: "2021-09-15T12:00:00"
 lastModified: "2021-09-15T12:00:00"
 description: "近期 3D 的趨勢越來越明顯，我決定從 Three.js 開始學習關於 3D 的事。然而，找了許久都沒有發現適合自己的 boilerplate，我決定自己來做一個！"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

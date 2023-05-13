@@ -5,6 +5,9 @@ tags: ["電話的另一端", "教育", "台灣", "補教業"]
 publishedAt: "2018-06-15T12:00:00"
 lastModified: "2018-06-15T12:00:00"
 description: "這篇文章描述了高中三年一幕我印象深刻的景色，一群人，擠在狹小的客運下層行李室，被水平地從文華高中載運到水利大樓，在那裡，我們期望著垂直的提升。然而真的是如此嗎？我們究竟被打包去了何方"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

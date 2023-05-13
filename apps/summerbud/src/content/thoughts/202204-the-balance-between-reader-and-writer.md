@@ -5,6 +5,9 @@ tags: ["thought", "writing"]
 publishedAt: "2022-04-27T12:00:00"
 lastModified: "2022-04-27T12:00:00"
 description: "這篇文章講述了近期對於寫作的思索，關於讀者與作者的平衡"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

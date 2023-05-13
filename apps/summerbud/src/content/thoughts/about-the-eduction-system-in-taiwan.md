@@ -5,6 +5,9 @@ tags: ["電話的另一端", "教育", "台灣", "就業"]
 publishedAt: "2018-06-12T12:00:00"
 lastModified: "2018-06-12T12:00:00"
 description: "這篇文章描述了我是如何進入一間推銷數位教材的業務公司，厭惡升學考試的我，對此感到極大的衝突感"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

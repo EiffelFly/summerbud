@@ -5,6 +5,9 @@ tags: ["township", "dev-log", "community"]
 publishedAt: "2021-08-29T12:00:00"
 lastModified: "2021-08-29T12:00:00"
 description: "這篇開發日記中，紀錄了這一週新的轉折，我們放棄了小而精緻的社群，並且重新定義了 township 作為一種工具具備的功能。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

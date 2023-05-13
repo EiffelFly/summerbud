@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-08-13T12:00:00"
 lastModified: "2018-08-13T12:00:00"
 description: "寫自己的故事寫久了會被肅穆感給俘虜，那個時候再怎麼寫也寫不下去了，因此夾帶一些寫其他角色的故事，可以找到不同的著力點。在這篇文章裡我想要分享的是，關於塔的子民的故事"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

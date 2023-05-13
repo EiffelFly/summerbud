@@ -5,6 +5,9 @@ tags: ["電話的另一端", "教育", "台灣", "補教業"]
 publishedAt: "2018-07-09T12:00:00"
 lastModified: "2018-07-09T12:00:00"
 description: "這篇文章講述了工作一個月後的短想，從一中街這個場域的殘酷切入，思考到底是什麼導致了這件事，又是什麼蘊釀出了「升學」本身的殘酷氛圍。於最終回歸自身，思考我到底在追尋什麼"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

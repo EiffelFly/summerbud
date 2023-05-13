@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-13T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "兩個消防隊員配上一個替代役男，2+1 是這裡的規則"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

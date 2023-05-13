@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2016-10-15T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "是要讓二十一個人罰勤，還是拿到那十二分的細項，你們自己決定吧"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

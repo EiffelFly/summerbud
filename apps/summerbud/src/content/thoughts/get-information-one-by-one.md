@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-08-05T12:00:00"
 lastModified: "2018-08-05T12:00:00"
 description: "從電訪的工作開始思考，我發覺在這個場域我感受到強烈的衝突感，在心情的矛盾中我理解到，所謂的「升學」只不過是偽裝成爬升的虛假概念"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

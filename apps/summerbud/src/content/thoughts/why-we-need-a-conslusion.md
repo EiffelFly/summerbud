@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-10-08T12:00:00"
 lastModified: "2018-10-08T12:00:00"
 description: "從我小時候的經驗開始爬梳，我嘗試了解過去的自己是如何了解「升學這件事」。我發現這一切都與「比較」有關"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

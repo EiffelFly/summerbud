@@ -5,6 +5,9 @@ tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-05-02T12:00:00"
 lastModified: "2018-05-02T12:00:00"
 description: "在澎湖書寫、讀書的日子，以及名為小兵的狗被噴了一口煙的奇異表情，歲月靜好"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

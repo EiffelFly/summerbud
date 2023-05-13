@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-20T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "待在澎湖白沙分隊的一年裡，我聽了很多音樂。Damien Rice, Balmorhea, Iron&Wine, Wilsen"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

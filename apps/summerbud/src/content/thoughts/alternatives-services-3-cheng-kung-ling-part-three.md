@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2016-10-16T18:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "行走黑暗不是良居穴巢，而是為了窺探光明。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

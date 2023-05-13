@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-08-28T12:00:00"
 lastModified: "2018-08-28T12:00:00"
 description: "這篇文章以名為阿瓦隆的桌遊為例，全是謊言在生命中的意義，以及它如何被其他事物所抵消，最後連結回詰問電訪的場域，人們到底在做什麼"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

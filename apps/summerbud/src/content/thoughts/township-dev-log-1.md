@@ -5,6 +5,9 @@ tags: ["township", "dev-log", "podcast"]
 publishedAt: "2021-08-08T12:00:00"
 lastModified: "2021-08-08T12:00:00"
 description: "這是 township 的第一篇開發日記，提到了我使用的幾種心智模型，市場調查類的訪談是如何進行，以及我們期待 township 完成的任務。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

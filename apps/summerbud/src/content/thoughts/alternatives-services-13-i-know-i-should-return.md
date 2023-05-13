@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-27T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "在澎湖白沙分隊最後的日子裡，我喜歡和一隻名叫小兵的狗一起跑步"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

@@ -5,6 +5,9 @@ tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-04-09T12:00:00"
 lastModified: "2018-04-09T12:00:00"
 description: "消防分隊之中，每個月總有一兩天的下午，無線電死寂，沒有任何一通救護請求，在那一天我想到，或許可以考考看台文所"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

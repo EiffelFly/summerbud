@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-08-02T12:00:00"
 lastModified: "2018-08-02T12:00:00"
 description: "這篇文章講述了我在電訪工作上遭遇的挫折，並逐步分析那個時間點我心理上的壓力，最後擴及對「電訪」這件事的思考"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

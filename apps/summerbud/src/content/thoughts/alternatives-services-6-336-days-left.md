@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-12T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "澎湖消防隊馬公分隊，還剩下336天"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

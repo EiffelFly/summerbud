@@ -5,6 +5,9 @@ tags: ["lessen_learned", "git", "emoji"]
 publishedAt: "2021-08-21T12:00:00"
 lastModified: "2021-07-21T12:00:00"
 description: "Git commit 是一件雖然細小，卻有可能會影響你的程式碼質量的事，這篇文章分享了我使用 git commit 的方法論，並分享了 Vscode keyboard shortcuts 設定檔，歡迎修改成適合你的樣子"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

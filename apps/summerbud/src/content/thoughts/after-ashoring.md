@@ -5,6 +5,9 @@ tags: ["電話的另一端", "電訪"]
 publishedAt: "2018-10-07T12:00:00"
 lastModified: "2018-10-07T12:00:00"
 description: "相隔了兩個月，再次回望這次參與電訪工作的經驗，我嘗試尋找那個時候逼迫我離開的主因是什麼"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2017-09-19T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "分隊長是一個很有趣同時也很嚴厲的人，在接近役男受訓尾聲的時候，他的臥室時常傳來唸佛經的聲音。"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

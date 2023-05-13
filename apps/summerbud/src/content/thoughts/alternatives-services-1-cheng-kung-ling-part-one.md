@@ -5,6 +5,9 @@ tags: ["替代役", "成功嶺", "短想"]
 publishedAt: "2016-10-14T12:00:00"
 lastModified: "2023-04-11T12:00:00"
 description: "成功嶺的晚上讓人無法入眠，再過早就寢的夜晚，走廊上忽然傳來了天空之城的音樂"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

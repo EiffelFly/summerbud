@@ -5,6 +5,9 @@ tags: ["thought", "writing", "taiwan-literature"]
 publishedAt: "2018-05-08T12:00:00"
 lastModified: "2018-05-08T12:00:00"
 description: "在那段匍匐於考試的日子裡，我養成了吞字的習慣，我開始懷疑這一個又一個的門檻，人生、愛情、名聲，意義究竟何在"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 

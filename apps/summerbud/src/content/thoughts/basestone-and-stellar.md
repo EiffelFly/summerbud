@@ -5,6 +5,9 @@ tags: ["程式設計", "Totuslink", "Startup"]
 publishedAt: "2021-07-11T12:00:00"
 lastModified: "2021-07-11T12:00:00"
 description: "資料本身，其價值、意義大多是比較出來的。在資訊的世代，我們面對的是一群本質上或許根本沒有意義的虛無物體，透過與他者連結，與眾多看似有意義的事物連結來產生意義"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
 locale: "zh-TW"
 ---
 
