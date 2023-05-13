@@ -1,6 +1,8 @@
 ---
 import { getRandomInt } from "../utils";
 import { SummerbudLogo } from "../components";
+import { getCollection } from "astro:content";
+
 const time = new Date().toLocaleTimeString(undefined, {
 	hour12: false,
 	hour: "numeric",
@@ -11,6 +13,13 @@ const time = new Date().toLocaleTimeString(undefined, {
 });
 
 const surfaceScale = getRandomInt(1, 100);
+
+const devNotePosts = await getCollection("dev-notes");
+const thoughtPosts = await getCollection("thoughts");
+const posts = [...devNotePosts, ...thoughtPosts];
+
+const esPosts = posts.filter((e) => e.data.locale === "en-US");
+const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 ---
 
 <html lang="en">
@@ -105,7 +114,7 @@ const surfaceScale = getRandomInt(1, 100);
 			</div>
 			<div class="absolute flex h-10 top-10 right-10">
 				<p class="my-auto font-sans text-sm font-normal text-gray-300 text-right">
-					40/14 = chi/eng
+					{`${zhPosts.length}/${esPosts.length} = zh/es`}
 				</p>
 			</div>
 			<div class="absolute flex h-10 bottom-10 right-10">
