@@ -1,0 +1,115 @@
+---
+import { getRandomInt } from "../utils";
+const time = new Date().toLocaleTimeString(undefined, {
+	hour12: false,
+	hour: "numeric",
+	minute: "numeric",
+	day: "numeric",
+	month: "numeric",
+	year: "numeric",
+});
+
+const surfaceScale = getRandomInt(1, 100);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro + TailwindCSS</title>
+	</head>
+
+	<body>
+		<div class="flex min-h-screen p-0 bg-black">
+			<div class="m-auto flex flex-col gap-y-4">
+				<svg
+					class="w-[240px] h-[126px] lg:w-[600px] lg:h-[315px] m-0"
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.1"
+					viewBox="0 0 1200 630"
+				>
+					<defs>
+						<filter
+							id="nnnoise-filter"
+							x="-20%"
+							y="-20%"
+							width="140%"
+							height="140%"
+							filterUnits="objectBoundingBox"
+							primitiveUnits="userSpaceOnUse"
+							color-interpolation-filters="linearRGB"
+						>
+							<feTurbulence
+								type="fractalNoise"
+								baseFrequency="0.05"
+								numOctaves="4"
+								seed="15"
+								stitchTiles="stitch"
+								x="0%"
+								y="0%"
+								width="100%"
+								height="100%"
+								result="turbulence"></feTurbulence>
+							<feSpecularLighting
+								surfaceScale={surfaceScale}
+								specularConstant="2.5"
+								specularExponent="20"
+								lighting-color="#7957A8"
+								x="0%"
+								y="0%"
+								width="100%"
+								height="100%"
+								in="turbulence"
+								result="specularLighting"
+							>
+								<feDistantLight azimuth="25" elevation="1">
+									<animate
+										attributeName="azimuth"
+										values="25;180;25"
+										dur="20s"
+										repeatCount="indefinite"
+									>
+									</animate>
+									<animate
+										attributeName="elevation"
+										values="1;200;1"
+										dur="20s"
+										repeatCount="indefinite"
+									>
+									</animate>
+								</feDistantLight>
+							</feSpecularLighting>
+						</filter>
+					</defs>
+					<rect width="1200" height="630" fill="#002b36"></rect>
+					<rect
+						class="noise-hero"
+						width="1200"
+						height="630"
+						fill="#7957a8"
+						filter="url(#nnnoise-filter)"></rect>
+				</svg>
+				<a
+					rel="prefetch"
+					class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline ml-auto"
+				>
+					Enter
+				</a>
+			</div>
+			<div class="absolute bottom-10 left-10">
+				<p class="font-sans text-sm font-normal text-gray-300">&copy; 2023 summerbud</p>
+			</div>
+			<div class="absolute top-10 right-10">
+				<p class="font-sans text-sm font-normal text-gray-300 text-right">40/14 = chi/eng</p>
+			</div>
+			<div class="absolute bottom-10 right-10">
+				<p class="font-sans text-sm font-normal text-gray-300 text-right">{time}</p>
+			</div>
+			<div class="absolute flex top-10 left-10 w-12 h-12 border border-dashed border-gray-600 p-1">
+				<p class="font-sans text-sm font-normal text-gray-300 text-right mt-auto ml-auto">bud</p>
+			</div>
+		</div>
+	</body>
+</html>
