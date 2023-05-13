@@ -2,35 +2,34 @@
 import cn from "clsx";
 import { SummerbudLogo } from "../components";
 import { Footer, Link } from "../components";
+import type { Props as HeadSeoProps } from "./HeadSeo.astro";
 import FeatureImage from "../components/FeatureImage.astro";
-import type { FeatureImg, Nullable } from "../type";
-const props = Astro.props as Props;
+import HeadSeo from "./HeadSeo.astro";
 
-export type Props = {
-	title: string;
-	featureImg: Nullable<FeatureImg>;
+export interface Props extends HeadSeoProps {
 	bgColor?: string;
-};
+}
+
+const { bgColor, ...meta } = Astro.props as Props;
 ---
 
 <html lang="en">
 	<head>
+		<HeadSeo {...meta} />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{props.title}</title>
+		<title>{meta.title}</title>
 	</head>
 	<body>
-		<div
-			class={cn("flex flex-col min-h-screen p-0", props.bgColor ? props.bgColor : "bg-gray-900")}
-		>
+		<div class={cn("flex flex-col min-h-screen p-0", bgColor ? bgColor : "bg-gray-900")}>
 			<div class="w-full flex-1 max-w-[800px] mx-auto py-40 px-10 lg:px-0">
 				{
-					props.featureImg ? (
+					meta.image ? (
 						<FeatureImage
-							src={props.featureImg.path}
-							alt={props.featureImg.alt}
-							source={props.featureImg.source}
+							src={meta.image.path}
+							alt={meta.image.alt}
+							source={meta.image.source}
 							marginBottom="mb-20"
 							position="mx-auto"
 						/>

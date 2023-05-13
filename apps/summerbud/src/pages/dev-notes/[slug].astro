@@ -2,6 +2,8 @@
 import MainLayout from "../../layouts/main.astro";
 import { CollectionEntry, getCollection, getEntryBySlug } from "astro:content";
 import { getFormattedTime } from "../../utils";
+import { SITE } from "../../site-config";
+import type { SEO } from "../../type";
 
 export async function getStaticPaths() {
 	const devNotePosts = await getCollection("dev-notes");
@@ -22,9 +24,9 @@ const { slug } = Astro.params;
 
 const { post } = Astro.props as { post: CollectionEntry<"dev-notes"> };
 
-const postMeta = {
+const postMeta: SEO = {
 	title: post.data.title,
-	locale: post.data.locale || null,
+	locale: post.data.locale,
 	description: post.data.description,
 	image: {
 		path: post.data.featureImg,
@@ -32,7 +34,9 @@ const postMeta = {
 		source: post.data.featureImgSource,
 	},
 	publishedAt: post.data.publishedAt,
-	tags: post.data.tags,
+	tags: post.data.tags.toString(),
+	canonicalURL: `${SITE.domain}/dev-notes/${slug}`,
+	text: post.body,
 };
 
 if (!slug) {
@@ -48,7 +52,7 @@ if (!entry) {
 const { Content } = await entry.render();
 ---
 
-<MainLayout title={postMeta.title} featureImg={postMeta.image}>
+<MainLayout {...postMeta}>
 	<article class="mx-auto w-full prose lg:prose-lg">
 		<h1 class="font-sans font-semibold text-4xl text-gray-300 mb-5">{post.data.title}</h1>
 		<p class="font-sans font-semibold text-lg text-gray-500 mb-10">

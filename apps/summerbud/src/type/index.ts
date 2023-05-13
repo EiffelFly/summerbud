@@ -14,3 +14,14 @@ export type FeatureImg = {
 	alt: string;
 	source: string;
 };
+
+export type SEO = {
+	title: string;
+	locale: string;
+	description: string;
+	image: Nullable<FeatureImg>;
+	publishedAt: string;
+	tags: string;
+	canonicalURL: string;
+	text: string;
+};
