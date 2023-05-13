@@ -1,0 +1,60 @@
+---
+import MainLayout from "../layouts/main.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import { getFormattedTime } from "../utils";
+
+const devNotePosts = await getCollection("dev-notes");
+const thoughtPosts = await getCollection("thoughts");
+
+const posts = [...devNotePosts, ...thoughtPosts];
+
+const postsGroupedByYear: {
+	year: number;
+	articles: (CollectionEntry<"dev-notes"> | CollectionEntry<"thoughts">)[];
+}[] = [];
+
+const sortedPosts = posts.sort((a, b) => {
+	return new Date(b.data.publishedAt).getTime() - new Date(a.data.publishedAt).getTime();
+});
+
+sortedPosts.forEach((post) => {
+	const year = new Date(post.data.publishedAt).getFullYear();
+	const existingGroup = postsGroupedByYear.find((group) => group.year === year);
+	if (existingGroup) {
+		existingGroup.articles.push(post);
+	} else {
+		postsGroupedByYear.push({ year, articles: [post] });
+	}
+});
+
+postsGroupedByYear.sort((a, b) => b.year - a.year);
+---
+
+<MainLayout title="Archive">
+	<div class="flex flex-col py-40 px-10 lg:px-0">
+		{
+			postsGroupedByYear.map((e) => (
+				<div class="flex flex-col border-t border-gray-700 py-10">
+					<h3 class="mb-5 font-sans text-lg font-normal text-gray-300">{e.year}</h3>
+
+					<div class="flex flex-col gap-y-5">
+						{e.articles.map((post) => (
+							<a
+								href={
+									post.collection === "dev-notes"
+										? `/dev-notes/${post.slug}`
+										: `/thoughts/${post.slug}`
+								}
+								rel="prefetch"
+								class="flex flex-col gap-y-1 font-sans text-sm font-normal"
+							>
+								<span class="text-gray-500">{getFormattedTime(post.data.publishedAt)}</span>
+								<span class="hover:underline text-gray-300">{post.data.title}</span>
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</div>
+</MainLayout>
