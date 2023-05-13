@@ -21,6 +21,7 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
     "eslint-config-custom": "workspace:*"
   }
 }
