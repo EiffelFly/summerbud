@@ -107,7 +107,7 @@ let's do our test. `pnpm dev` then run `pnpm integration-test`. The test should 
 
 This is the full dockerfile we are going to use. I add the comment above each line to explain the reason for each line of code.
 
-```Dockerfile.playwright
+```Dockerfile
 
 # pull playwright docker image
 # Because playwright's image has version, please pull the image that has the same version as your working playwright
