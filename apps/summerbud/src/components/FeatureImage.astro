@@ -1,0 +1,41 @@
+---
+import cn from "clsx";
+import { Picture } from "@astrojs/image/components";
+import type { Nullable } from "../type";
+
+export type Props = {
+	src: Nullable<string>;
+	alt: Nullable<string>;
+	marginBottom: Nullable<string>;
+	source: Nullable<string>;
+	position: Nullable<string>;
+};
+
+const props = Astro.props as Props;
+---
+
+{
+	props.src ? (
+		<div class={cn("flex flex-col gap-y-2.5", props.marginBottom, props.position)}>
+			<Picture
+				widths={[200, 400, 800]}
+				sizes="(max-width: 800px) 100vw, 800px"
+				aspectRatio="16:9"
+				src={props.src}
+				fit="outside"
+				alt={props.alt ? props.alt : ""}
+				class="mx-auto"
+			/>
+			{props.source ? (
+				<a
+					class="ml-auto font-sans text-gray-500 underline"
+					href={props.source}
+					target="_blank"
+					rel="noopener"
+				>
+					{props.alt}
+				</a>
+			) : null}
+		</div>
+	) : null
+}

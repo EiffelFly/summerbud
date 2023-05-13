@@ -9,6 +9,6 @@ const thoughtPosts = await getCollection("thoughts");
 const byYearPosts = getByYearPosts(thoughtPosts.filter((e) => e.data.locale === "zh-TW"));
 ---
 
-<MainLayout title="Archive">
+<MainLayout title="Archive" featureImg={null}>
 	<ByYearPostList byYearPosts={byYearPosts} />
 </MainLayout>

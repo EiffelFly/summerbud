@@ -4,10 +4,10 @@ import { getCollection } from "astro:content";
 import { ByYearPostList } from "../../components";
 import { getByYearPosts } from "../../utils";
 
-const thoughtPosts = await getCollection("dev-notes");
-const byYearPosts = getByYearPosts(thoughtPosts);
+const devNotePosts = await getCollection("dev-notes");
+const byYearPosts = getByYearPosts(devNotePosts);
 ---
 
-<MainLayout title="Archive">
+<MainLayout title="Archive" featureImg={null}>
 	<ByYearPostList byYearPosts={byYearPosts} />
 </MainLayout>

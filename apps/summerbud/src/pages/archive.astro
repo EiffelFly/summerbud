@@ -10,6 +10,6 @@ const posts = [...devNotePosts, ...thoughtPosts];
 const byYearPosts = getByYearPosts(posts);
 ---
 
-<MainLayout title="Archive">
+<MainLayout title="Archive" featureImg={null}>
 	<ByYearPostList byYearPosts={byYearPosts} />
 </MainLayout>

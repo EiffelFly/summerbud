@@ -6,3 +6,11 @@ export type ByYearPost = {
 	year: number;
 	posts: BudPost[];
 };
+
+export type Nullable<T> = T | null;
+
+export type FeatureImg = {
+	path: string;
+	alt: string;
+	source: string;
+};
