@@ -1,0 +1,60 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import { CollectionEntry, getCollection, getEntryBySlug } from "astro:content";
+import { getFormattedTime } from "../../utils";
+
+export async function getStaticPaths() {
+	const devNotePosts = await getCollection("thoughts");
+
+	return devNotePosts.map((post) => {
+		return {
+			params: {
+				slug: post.slug,
+			},
+			props: {
+				post,
+			},
+		};
+	});
+}
+
+const { slug } = Astro.params;
+
+const { post } = Astro.props as { post: CollectionEntry<"thoughts"> };
+
+const postMeta = {
+	title: post.data.title,
+	locale: post.data.locale || null,
+	description: post.data.description,
+	image: {
+		path: post.data.featureImg,
+		alt: post.data.featureImgAlt,
+		source: post.data.featureImgSource,
+	},
+	publishedAt: post.data.publishedAt,
+	tags: post.data.tags,
+};
+
+if (!slug) {
+	return Astro.redirect("/404");
+}
+
+const entry = await getEntryBySlug("thoughts", slug);
+
+if (!entry) {
+	return Astro.redirect("/404");
+}
+
+const { Content } = await entry.render();
+---
+
+<MainLayout title={postMeta.title} featureImg={postMeta.image}>
+	<article class="mx-auto w-full prose lg:prose-lg">
+		<h1 class="font-sans font-semibold text-4xl text-gray-300 mb-5">{post.data.title}</h1>
+		<p class="font-sans font-semibold text-lg text-gray-500 mb-10">
+			{getFormattedTime(post.data.publishedAt)}
+		</p>
+		<div class="w-full border border-gray-500 mb-20"></div>
+		<Content />
+	</article>
+</MainLayout>
