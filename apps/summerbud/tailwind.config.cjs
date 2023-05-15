@@ -12,22 +12,26 @@ module.exports = {
 							letterSpacing: theme("letterSpacing.wide"),
 							color: theme("colors.gray.100"),
 							lineHeight: theme("lineHeight.normal"),
+							wordBreak: "break-word",
 						},
 						h2: {
 							fontWeight: "700",
 							fontSize: "40px",
 							letterSpacing: theme("letterSpacing.wide"),
 							color: theme("colors.gray.200"),
+							wordBreak: "break-word",
 						},
 						h3: {
 							fontWeight: "700",
 							fontSize: "32px",
 							color: theme("colors.gray.300"),
+							wordBreak: "break-word",
 						},
 						"h4, h5, h6": {
 							fontWeight: "500",
 							fontSize: "28px",
 							color: theme("colors.gray.300"),
+							wordBreak: "break-word",
 						},
 						ol: {
 							li: {
