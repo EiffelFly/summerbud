@@ -1,11 +1,11 @@
 input[type="range"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background: none;
   outline: none; 
   cursor: pointer;
   width: 15rem;
-  overflow: hidden;
   border-radius: 9999px;
   transition: transform 0.6s ease-in-out;
 
@@ -14,7 +14,7 @@ input[type="range"] {
     different animation between mouseenter and mouseleave
   */
   &:hover {
-    transform: scaleY(1.5);
+    transform: scaleY(1.75);
     transition: transform 0.15s ease-out;
   }
 }
