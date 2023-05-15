@@ -15,11 +15,7 @@ export const ByYearPostList = (props: ByYearPostListProps) => {
 					<div class="flex flex-col gap-y-5">
 						{e.posts.map((post) => (
 							<a
-								href={
-									post.collection === "dev-notes"
-										? `/dev-notes/${post.slug}`
-										: `/thoughts/${post.slug}`
-								}
+								href={`/${post.collection}/${post.slug}`}
 								rel="prefetch"
 								class="flex flex-col gap-y-1 font-sans text-base font-normal"
 							>
