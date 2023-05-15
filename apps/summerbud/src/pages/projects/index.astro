@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import { getCollection } from "astro:content";
+import { ByYearPostList } from "../../components";
+import { getByYearPosts } from "../../utils";
+import type { SEO } from "../../type";
+import { SITE } from "../../site-config";
+
+const projectsPosts = await getCollection("projects");
+const byYearPosts = getByYearPosts(projectsPosts);
+
+const pageMeta: SEO = {
+	title: "projects",
+	locale: "zh-TW",
+	description: "This is Summerbud's projects archive",
+	image: null,
+	publishedAt: "",
+	tags: "archive",
+	canonicalURL: `${SITE.domain}/projects`,
+	text: "This is Summerbud's projects archive",
+};
+---
+
+<MainLayout {...pageMeta}>
+	<ByYearPostList byYearPosts={byYearPosts} />
+</MainLayout>
