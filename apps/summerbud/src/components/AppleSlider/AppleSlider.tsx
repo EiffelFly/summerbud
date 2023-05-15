@@ -19,6 +19,8 @@ export const AppleSlider = () => {
 				}}
 				onMouseDown={() => setProgressTrackColor("rgba(255, 255, 255, 1)")}
 				onMouseUp={() => setProgressTrackColor("rgba(255, 255, 255, 0.8)")}
+				onTouchStart={() => setProgressTrackColor("rgba(255, 255, 255, 1)")}
+				onTouchEnd={() => setProgressTrackColor("rgba(255, 255, 255, 0.8)")}
 				value={sliderValue()}
 				style={{
 					"background-image": `linear-gradient(to right, 
