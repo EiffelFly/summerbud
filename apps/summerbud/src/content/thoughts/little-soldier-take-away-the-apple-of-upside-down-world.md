@@ -2,8 +2,8 @@
 title: "關於台文所的考試 #3：小兵叼走了顛倒世界的蘋果"
 slug: "little-soldier-take-away-the-apple-of-upside-down-world"
 tags: ["thought", "writing", "taiwan-literature"]
-publishedAt: "2018-05-02T12:00:00"
-lastModified: "2018-05-02T12:00:00"
+publishedAt: "2018-05-06T12:00:00"
+lastModified: "2018-05-06T12:00:00"
 description: "在澎湖書寫、讀書的日子，以及名為小兵的狗被噴了一口煙的奇異表情，歲月靜好"
 featureImg: ""
 featureImgAlt: ""
