@@ -13,7 +13,7 @@ input[type="range"] {
     We use this to override default transition to accomplish
     different animation between mouseenter and mouseleave
   */
-  &:hover {
+  &:hover, &:active {
     transform: scaleY(1.75);
     transition: transform 0.15s ease-out;
   }
