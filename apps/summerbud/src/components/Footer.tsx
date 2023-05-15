@@ -15,6 +15,9 @@ export const Footer = () => {
 						<Link dest="/dev-notes" className="text-left">
 							dev-notes
 						</Link>
+						<Link dest="/projects" className="text-left">
+							projects
+						</Link>
 					</div>
 				</div>
 				<div class="flex flex-row w-full">

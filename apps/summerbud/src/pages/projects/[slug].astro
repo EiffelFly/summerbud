@@ -6,7 +6,7 @@ import { SITE } from "../../site-config";
 import type { SEO } from "../../type";
 
 export async function getStaticPaths() {
-	const devNotePosts = await getCollection("dev-notes");
+	const devNotePosts = await getCollection("projects");
 
 	return devNotePosts.map((post) => {
 		return {
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 
-const { post } = Astro.props as { post: CollectionEntry<"dev-notes"> };
+const { post } = Astro.props as { post: CollectionEntry<"projects"> };
 
 const postMeta: SEO = {
 	title: post.data.title,
@@ -35,7 +35,7 @@ const postMeta: SEO = {
 	},
 	publishedAt: post.data.publishedAt,
 	tags: post.data.tags.toString(),
-	canonicalURL: `${SITE.domain}/dev-notes/${slug}`,
+	canonicalURL: `${SITE.domain}/projects/${slug}`,
 	text: post.body,
 };
 
@@ -43,7 +43,7 @@ if (!slug) {
 	return Astro.redirect("/404");
 }
 
-const entry = await getEntryBySlug("dev-notes", slug);
+const entry = await getEntryBySlug("projects", slug);
 
 if (!entry) {
 	return Astro.redirect("/404");

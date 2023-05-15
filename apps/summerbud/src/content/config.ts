@@ -18,4 +18,5 @@ const collection = defineCollection({
 export const collections = {
 	thoughts: collection,
 	"dev-notes": collection,
+	projects: collection,
 };

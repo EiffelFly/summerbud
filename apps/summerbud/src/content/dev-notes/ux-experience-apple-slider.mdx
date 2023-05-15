@@ -1,0 +1,133 @@
+---
+title: "UX experience: Customize range input like Apple IOS slider"
+slug: "customize-slider-like-apple"
+tags: ["programming", "CSS", "user-experience", "user-experience-experiment"]
+publishedAt: "2023-05-15T08:00:00"
+lastModified: "2023-05-15T08:00:00"
+description: "I want to build a customize HTML range input like Apple native slider. Here is what I found and built."
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
+locale: "en-US"
+---
+
+import { MdxShowcaseWrapper } from "../../components";
+import { AppleSlider } from "../../components";
+
+## Preface
+
+One day I found out that Apple IOS has a very beautiful slider and it inspired me to build a similar input range slider with HTML. After a few hours of try and errors, I finally built one. Here is the result.
+
+<MdxShowcaseWrapper alt="Customize range input like Apple IOS native slider">
+	<AppleSlider client:only />
+</MdxShowcaseWrapper>
+
+## Termology
+
+- **thumb**: The draggable part of the slider
+- **track**: The bar that the thumb slides along
+- **progress track**: The part of the track that is filled with color
+
+## Lessons learned
+
+### OnMouceUp/OnMouseDown vs OnMouseEnter/OnMouseLeave
+
+Initially, I used `onmouseenter` and `onmouseleave` to control the color of the progressed track, but because the track height is small, once the user's cursor leaves the input, the color will change which results in a flickering effect. So I changed to `onmousedown` and `onmouseup` to control the color of the progressed track.
+
+### Wipe out the default style
+
+Different browsers have different default styles for the input range. To make the slider looks consistent across all browsers, we need to wipe out the default style. [^1]
+
+```css
+/* Remove the basic style */
+input[type="range"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: none;
+	outline: none;
+}
+
+/* Remove the track style */
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 0.3rem;
+	opacity: 60%;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+	height: 0.5rem;
+	opacity: 60%;
+}
+```
+
+But the caveat is that you can't remove the appearance of the thumb or the interaction will break. So we need to set the thumb to transparent.
+
+```css
+/* Chrome, Safari, Opera, and Edge Chromium */
+input[type="range"]::-webkit-slider-thumb {
+	opacity: 0;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+	opacity: 0;
+}
+```
+
+### How to color progress track
+
+There are multiple ways to accomplish this.
+
+- Use `linear-gradient` to create a gradient background
+- Use `box-shadow` to create a shadow from the thumb and hide the overflow box-shadow [^2]
+
+I think the second method is not reliable, especially since we want to achieve a transparent thumb experience. So I used the first method.
+
+```css
+input[type="range"] {
+	background-image: linear-gradient(to right, #ff0000 0%, #ff0000 50%, #ffffff 50%, #ffffff 100%);
+}
+```
+
+The first and the second color is the color of progressed track and the third and the fourth color is the color of the rest of the track. You need to calculate the percentage of the progressed track.
+
+Be careful of the min and max when calculating the percentage.
+
+```ts
+<input
+	type="range"
+	value={sliderValue()}
+	style={{
+		"background-image": `linear-gradient(to right, 
+		${progressTrackColor()} 0%, ${progressTrackColor()} 
+		${((sliderValue() - min) / (max - min)) * 100}%, ${trackColor}
+		${((sliderValue() - min) / (max - min)) * 100}%, ${trackColor} 100%)`,
+	}}
+	min={min}
+	max={max}
+/>
+```
+
+### How to accomplish the hover and mouseleave using different animation
+
+In short, we can set the default transition for non-hover events and override the transition for hover events.
+
+```css
+input[type="range"] {
+	transition: transform 0.6s ease-in-out;
+
+	/* 
+    We use this to override the default transition to accomplish
+    different animation between mouseenter and mouseleave
+  */
+	&:hover {
+		transform: scaleY(1.75);
+		transition: transform 0.15s ease-out;
+	}
+}
+```
+
+[^1]: [Creating A Custom Range Input That Looks Consistent Across All Browsers](https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/)
+[^2]: [How to style HTML5 range input to have different color before and after slider?](https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider)
