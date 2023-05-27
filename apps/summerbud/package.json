@@ -22,6 +22,7 @@
     "autoprefixer": "^10.4.14",
     "canvas-confetti": "^1.6.0",
     "clsx": "^1.2.1",
+    "force-graph": "^1.43.1",
     "postcss": "^8.4.23",
     "schema-dts": "^1.1.2",
     "sharp": "^0.32.1",

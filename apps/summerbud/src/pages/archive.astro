@@ -5,6 +5,7 @@ import { ByYearPostList } from "../components";
 import { getByYearPosts } from "../utils";
 import type { SEO } from "../type";
 import { SITE } from "../site-config";
+import { ForceGraphMagnifier } from "../components/ForceGraphMagnifier";
 
 const devNotePosts = await getCollection("dev-notes");
 const thoughtPosts = await getCollection("thoughts");
@@ -24,5 +25,6 @@ const pageMeta: SEO = {
 ---
 
 <MainLayout {...pageMeta}>
+	<ForceGraphMagnifier client:only />
 	<ByYearPostList byYearPosts={byYearPosts} />
 </MainLayout>
