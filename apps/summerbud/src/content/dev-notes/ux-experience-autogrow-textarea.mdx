@@ -1,0 +1,252 @@
+---
+title: "UX experience: Autosize textarea without complicated calculation"
+slug: "ux-experience-autosize-textarea"
+tags: ["programming", "CSS", "user-experience", "user-experience-experiment"]
+publishedAt: "2023-05-28T08:00:00"
+lastModified: "2023-05-28T08:00:00"
+description: "In this UX experience I dig deeper into autosize textarea, I share four methods to implement autosize textarea and compare their pros and cons."
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
+locale: "en-US"
+---
+
+import { MdxShowcaseWrapper, MdxImage } from "../../components";
+import {
+	AutosizeTextareaKeyValueForm,
+	AutosizeTextareaKeyValueFormWithScrollHeight,
+} from "../../components";
+
+<MdxShowcaseWrapper alt="Textarea that will autosize without any calculation">
+	<AutosizeTextareaKeyValueForm client:only />
+</MdxShowcaseWrapper>
+
+## Preface
+
+Initially, I saw Vercel has a very interesting textarea that will grow automatically when the user types (You can find it at each project's environment variable configuration). I want to write a similar one with the same functionality.
+
+After some investigation, I found that there are three directions to accomplish this functionality.
+
+1. Use `element.scrollHeight` to dynamically set the height of the textarea. [^1]
+2. Calculate the height of the textarea using scrollHeight and line height [^2]
+3. Calculate the rows of the textarea using a hidden textarea [^3]
+4. Use an element that can automatically expand to push the container and set the textarea as absolute and align with the container's border
+
+### scrollHeight
+
+<MdxShowcaseWrapper alt="Autogrow textarea with scroll height tech without set height=0px first">
+	<AutosizeTextareaKeyValueFormWithScrollHeight initHeight={false} client:only />
+</MdxShowcaseWrapper>
+
+I would consider this as a naive solution. When I first implemented this solution I encounter a weird issue when the user try to delete the content in the textarea. But in StackOverflow, the textarea seems to work correctly with pure Javascript.
+
+The essence is that you need to somehow re-init the height to 0px first then set the height to the scrollHeight to avoid this issue.
+
+```ts
+textarea.style.height = "0px";
+textarea.style.height = `${textarea.scrollHeight}px`;
+```
+
+<MdxShowcaseWrapper alt="Autogrow textarea with scroll height tech with set height=0px first">
+	<AutosizeTextareaKeyValueFormWithScrollHeight initHeight={true} client:only />
+</MdxShowcaseWrapper>
+
+I can't fully reason through we need to add `textarea.style.height = "0px"` first, so I decide to move on to another solution.
+
+### Calculate the rows of the textarea
+
+In this StackOverflow discussion, there is a function to calculate the height of the textarea using scrollHeight and line height. Because there has a while loop working on every pixel. The function will delay the gap between user input and the calculation of textarea height ends. Which makes the user experience not so good.
+
+```js
+var calculateContentHeight = function (ta, scanAmount) {
+	var origHeight = ta.style.height,
+		height = ta.offsetHeight,
+		scrollHeight = ta.scrollHeight,
+		overflow = ta.style.overflow;
+	/// only bother if the ta is bigger than content
+	if (height >= scrollHeight) {
+		/// check that our browser supports changing dimension
+		/// calculations mid-way through a function call...
+		ta.style.height = height + scanAmount + "px";
+		/// because the scrollbar can cause calculation problems
+		ta.style.overflow = "hidden";
+		/// by checking that scrollHeight has updated
+		if (scrollHeight < ta.scrollHeight) {
+			/// now try and scan the ta's height downwards
+			/// until scrollHeight becomes larger than height
+			while (ta.offsetHeight >= ta.scrollHeight) {
+				ta.style.height = (height -= scanAmount) + "px";
+			}
+			/// be more specific to get the exact height
+			while (ta.offsetHeight < ta.scrollHeight) {
+				ta.style.height = height++ + "px";
+			}
+			/// reset the ta back to it's original height
+			ta.style.height = origHeight;
+			/// put the overflow back
+			ta.style.overflow = overflow;
+			return height;
+		}
+	} else {
+		return scrollHeight;
+	}
+};
+```
+
+### Calculate the rows of the textarea using a hidden textarea
+
+The [react-textarea-autosize](https://github.com/Andarist/react-textarea-autosize) set up a hidden area that has the same style as the target textarea. Then it will calculate the height of the hidden textarea and set the height of the target textarea.
+
+I think this repo provides insight into how to correctly calculate the element's size. For example, it separates the calculation between box-sizing border-box and other to make the calculation more accurate. [^4]
+
+Then it applies the same style to the hidden area with a preset style[^5].
+
+```ts
+const HIDDEN_TEXTAREA_STYLE = {
+	"min-height": "0",
+	"max-height": "none",
+	height: "0",
+	visibility: "hidden",
+	overflow: "hidden",
+	position: "absolute",
+	"z-index": "-1000",
+	top: "0",
+	right: "0",
+};
+```
+
+But in my opinion, it involves the minRow and maxRow concepts making the whole implementation a bit complicated.
+
+### contenteditable div with absolute textarea
+
+This is the implementation I took in the end, I think it's the most performant and elegant solution among all the solutions for three reasons.
+
+1. It has the best performance because it doesn't need to calculate the height of the textarea, the browser will handle this for you.
+2. The implementation is very simple, it only has a contenteditable div and a textarea. The contenteditable div will automatically expand to push the container and set the textarea as absolute and align with the container's border
+3. It has the best user experience because the user can see the content in the textarea immediately without any delay.
+
+## How to implement the contenteditable div with absolute textarea
+
+### Set up the basic CSS style
+
+```ts
+const textareaFontStyle = "font-sans text-lg leading-6 font-normal text-zinc-300";
+const textareaPadding = "py-2 scroll-py-2 px-3";
+const textareaBreakWord = "whitespace-break-spaces break-all";
+
+<div class="relative flex">
+	<div
+		class={cn(
+			"border-none w-full invisible !m-0 box-border",
+			textareaPadding,
+			textareaFontStyle,
+			textareaBreakWord
+		)}
+		style={{
+			"max-height": `${textareaMaxHeight}px`,
+		}}
+		contentEditable={true}
+	>
+		{"initial one line \n" + textAreaValue()}
+	</div>
+	<textarea
+		ref={textarea!}
+		class={cn(
+			"border max-w-full overflow-hidden !m-0 box-border resize-none w-full h-full bg-zinc-950 border-zinc-700 rounded absolute top-0 left-0",
+			textareaPadding,
+			textareaFontStyle,
+			textareaBreakWord
+		)}
+		rows={1}
+		style={{ "scrollbar-gutter": "stable" }}
+	/>
+</div>;
+```
+
+There are several things to notice here.
+
+1. The break word rule needs to be the same between the contenteditable and the textarea (I recommend using `whitespace-break-spaces break-all`)
+2. Try to not use the min-h style but to let the contenteditable div expand itself and decide the height
+3. The fontStyle between the contenteditable div and the textarea needs to be exactly the same
+4. The initial line of the contenteditable is very important `{"initial one line \n" + textAreaValue()}`
+5. Ues `scrollbar-gutter: stable` to make the style consistent across different browser
+
+### Set the textarea overflow style when it exceeds the max height
+
+```ts
+// Solidjs
+let textarea: HTMLTextAreaElement | undefined;
+
+createEffect(
+	on(textAreaValue, () => {
+		if (!textarea) return;
+
+		if (textarea.scrollHeight > textareaMaxHeight) {
+			textarea.style.overflow = "auto";
+		} else {
+			textarea.style.overflow = "hidden";
+		}
+	})
+);
+
+// Reactjs
+const textareaRef = useRef<HTMLTextAreaElement>(null);
+useEffect(() => {
+	if (!textareaRef.current) return;
+
+	if (textarea.current.scrollHeight > textareaMaxHeight) {
+		textarea.current.style.overflow = "auto";
+	} else {
+		textarea.current.style.overflow = "hidden";
+	}
+}, [textAreaValue]);
+```
+
+That is it!
+
+## Caveats
+
+There are several caveats that I encountered when I implement this component. They are very tricky to solve, hope you will find some useful information here.
+
+### Initial new-line in the contenteditable div is important
+
+The reason cause this issue is due to initially there has no newline in the contenteditable div. So when you push the first enter key, the contenteditable finally has its newline in HTML. But ideally, the contenteditable should have two lines right now.
+
+<MdxImage
+	src="/ux-experience-autosize-textarea/first-enter-issue.gif"
+	alt="First enter didn't have any effect on this autogrow textarea"
+/>
+
+This problem will lead to another issue. When you press enter twice, we have two lines right now. But when you enter keyUp at the first line, the cursor seems to move up a bit and down. After some investigation, <u>**I found out that is due to we have more than two lines in the textarea even though we have set the overflow style to hidden.**</u>
+
+<MdxImage
+	src="/ux-experience-autosize-textarea/weird-hidden-overflow.gif"
+	alt="Weird cursor behavior even though we set the overflow style to hidden"
+/>
+
+Not just that, when you paste a text with new line, the calculation of the contenteditable will be wrong too.
+
+<MdxImage
+	src="/ux-experience-autosize-textarea/not-correct-paste.gif"
+	alt="Weird cursor behavior even though we set the overflow style to hidden"
+/>
+
+The solution here is very simple. You only need to add the one-line placeholder with new line in the contenteditable. No matter what you edit the textarea, the placeholder should always exist.
+
+```html
+<div>{"initial one line \n" + textAreaValue()}</div>
+```
+
+### Input and textare has different height when we didn't specify height
+
+Sometimes when you place an input and textarea side by side they will have different heights. There are several ways to fix this.
+
+- Remove all the initial margin and padding on both input and textarea
+- Use box-border to calculate the element size
+- Make sure the line height on both input and textarea is the same
+
+[^1]: [Stackoverflow - Creating a textarea with auto-resize](https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize)
+[^2]: [Stackoverflow - How to get number of rows in textarea using JavaScript?](https://stackoverflow.com/questions/1760629/how-to-get-number-of-rows-in-textarea-using-javascript)
+[^3]: [Andarist/react-textarea-autosize](https://github.com/Andarist/react-textarea-autosize)
+[^4]: [react-textarea-autosize/getHeight](https://github.com/Andarist/react-textarea-autosize/blob/ab4c1ec20b41ea35f7962da13eb086fdc4832a81/src/calculateNodeHeight.ts#L11)
+[^5]: [react-textarea-autosize/forceHiddenStyles](https://github.com/Andarist/react-textarea-autosize/blob/ab4c1ec20b41ea35f7962da13eb086fdc4832a81/src/forceHiddenStyles.ts#L13)
