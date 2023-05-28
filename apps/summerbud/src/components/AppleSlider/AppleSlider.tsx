@@ -10,10 +10,11 @@ export const AppleSlider = () => {
 	const max = 200;
 
 	return (
-		<div>
+		<div class="flex">
 			<input
 				type="range"
-				class="apple-slider"
+				class="apple-slider mx-auto"
+				// We have to use onInput here, because onChange will only fire once the input lose focus
 				onInput={(e) => {
 					setSliderValue(parseInt(e.target.value));
 				}}

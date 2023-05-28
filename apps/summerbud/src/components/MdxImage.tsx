@@ -9,7 +9,7 @@ export const MdxImage = (props: MdxImageProps) => {
 			<div class="p-[1px]">
 				<img src={props.src} alt={props.alt} class="w-full h-auto" />
 			</div>
-			<div class="p-2">
+			<div class="p-2 border-t border-gray-700">
 				<span class="text-sm text-gray-400">{props.alt}</span>
 			</div>
 		</div>
