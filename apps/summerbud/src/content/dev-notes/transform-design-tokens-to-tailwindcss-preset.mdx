@@ -1,0 +1,635 @@
+---
+title: "How to transform Tokens Studio tokens to TailwindCSS configuration preset"
+slug: "design-tokens-with-tailwindcss"
+tags: ["programming", "CSS", "design-tokens", "style", "tokens-studio", "style-dictionary"]
+publishedAt: "2023-06-13T08:00:00"
+lastModified: "2023-06-13T08:00:00"
+description: "This article will share how to transform Tokens Studio tokens to TailwindCSS configuration preset. Using Style Dictionary."
+featureImg: "/1912-umberto-boccioni-states-of-mind-those-who-go.jpg"
+featureImgAlt: "States of Mind: Those Who Go, 1912, Umberto Boccioni"
+featureImgSource: "https://www.metmuseum.org/art/collection/search/485537"
+locale: "en-US"
+---
+
+## Preface
+
+Design tokens are a great way to bridge the silo between the designer and developer and reduce communication costs. I had the experience of working with both systems. I would say they have pros and cons at the different stages of the product.
+
+## Why do you need it?
+
+Let's talk about the non-design-token approach first. It's fast when ever designer changes something you can change that in the corresponding repo with just one PR and the new style will be online. But this kind of fast only exists in the very beginning of the product, it will lose its pace gradually to the point that the style becomes non-maintainable and you need to constantly replace the style string with IDE string search.
+
+Besides that, I think what affects the most is the mindset toward a concrete and precise style system. With the non-design-token approach, there has no common ground on the designer handover, and usually, it will affect the communication between these two groups. The inconsistency will be hard to find.
+
+Let's face it, the management of style in Figma is still a mess right now. When you have to maintain a different set of colors with different opacity, couple it with typography on different devices. Everything becomes a nightmare.
+
+Overall I would say design-tokens is the way to go if you want to rapidly release new features in the long term.
+
+## What is the ingredient
+
+There are several ways to construct design tokens, most of the tools provide this functionality in the form of a Figma plugin. [Design Token](https://www.figma.com/community/plugin/888356646278934516/Design-Tokens) and [Tokens Studio for Figma](https://docs.tokens.studio/) are both great candidates when it comes to implementing a system like this.
+
+I would take Tokens Studio as an example this time (We are using it in Instill AI). The meal will be composed of three ingredients.
+
+- Tokens Studio Figma Plugin
+- Style Dictionary
+- TailwindCSS
+
+## What we want to achieve
+
+- Generate all the necessary styles from single-source-of-truth (Design tokens)
+- Each color token will only have one TailwindCSS utility class, so when we need to implement dark mode, we only need to switch the toggle. (We don't use the TailwindCSS class strategy)
+- We want to be as agnostic as possible, which means the designer can set up their naming rule (The only thing they need to obey is consistency)
+
+## How to do that?
+
+### Tokens Studio's tokens
+
+Tokens Studio is a great tool for the designer to set up a different set of environments. What we are doing is we store all the style tokens in the `global` environment. And we create a `semantic` and `theme` environment to store more sophisticated configurations inherited from the global environment.
+
+When using the tokens, we only use the tokens that come from `semantic` and `theme`. We won't directly use the style from `global`. You can imagine that `global` is a warehouse that stored different materials. And we will compose a complete product using these materials.
+
+```
+├── tokens
+│   ├── $metadata.json
+│   ├── $themes.json
+│   ├── global.json
+│   ├── semantic
+│   │   ├── colour.json
+│   │   ├── comp.json
+│   │   └── typography.json
+│   └── theme
+│       ├── dark.json
+│       └── light.json
+```
+
+### Style Dictionary
+
+To further use your token, you need to transform them into the format you need. Style Dictionary provides an easy-to-use abstraction to help you transform the token. It is also the Tokens Studio recommended way when it comes to transforming.
+
+SD is a very flexible tool. You can write your transformation with a specific matcher to only transform a subset of styles. For example, in this project, we are registering a transformer, especially for transforming the unit. (It's recommended to use non-unit tokens in the Tokens Studio plugin and then transform them to whatever you need [^1])
+
+First of all, we register a transformer. Its name is "sizes/px" and we will use this name as an identifier next.
+
+```ts
+StyleDictionaryPackage.registerTransform({
+	name: "sizes/px",
+	type: "value",
+	matcher: function (prop) {
+		return ["fontSize", "spacing", "borderRadius", "borderWidth", "sizing", "lineHeight"].includes(
+			prop.original.type || ""
+		);
+	},
+	transformer: function (prop) {
+		// It will parse the original value and add px
+		return parseFloat(prop.original.value) + "px";
+	},
+});
+```
+
+Then when we compose the StyleDictionary platform, we can indicate StyleDictionary to use this transformer in the specific platform. (Platform is a user-defined identifier to let SD knows )
+
+```ts
+const StyleDictionary = StyleDictionaryPackage.extend({
+    source: ["..."],
+    format: {
+      ...
+    },
+    platforms: {
+      tailwind: {
+        transforms: ["sizes/px"],
+        buildPath: "...",
+        files: [
+          ...
+        ],
+      },
+    },
+  });
+```
+
+We also use some preset transformers like `attribute/cti` and `name/cti/kebab`.
+
+Then we need to set up the output format. In our scenario, we only want to export the tokens as a javascript object in a typescript file. So we simply stringify them and put them into the result
+
+```ts
+const StyleDictionary = StyleDictionaryPackage.extend({
+	source: ["..."],
+	format: {
+		tailwindFormat: ({ dictionary }) => {
+			return `export const tokens = ${JSON.stringify(dictionary.allTokens)}`;
+		},
+	},
+	platforms: {
+		tailwind: {
+			transforms: ["..."],
+			buildPath: "...",
+			files: [
+				{
+					destination: "...",
+
+					// Register the formatter here
+					format: "tailwindFormat",
+				},
+			],
+		},
+	},
+});
+```
+
+Because the `global.json` in our scenario is only the foundation, we will not use them in production. We will remove them with a filter.
+
+```ts
+const StyleDictionary = StyleDictionaryPackage.extend({
+    source: ["..."],
+    format: {
+      ...
+    },
+    platforms: {
+      tailwind: {
+        transforms: ["..."],
+        buildPath: "...",
+        files: [
+          {
+            destination: "...",
+            format: "...",
+            filter: (token) => token.filePath !== "tokens/global.json",
+          },
+        ],
+      },
+    },
+  });
+```
+
+The full configuration will look like this.
+
+```ts
+const StyleDictionary = StyleDictionaryPackage.extend({
+	source: ["tokens/global.json", "tokens/semantic/*.json"],
+	format: {
+		sd: ({ dictionary }) => {
+			return `export const tokens = ${JSON.stringify(dictionary.allTokens)}`;
+		},
+	},
+	platforms: {
+		tailwind: {
+			transforms: ["attribute/cti", "name/cti/kebab", "sizes/px"],
+			buildPath: "dist/semantic/",
+			files: [
+				{
+					destination: "sd-tokens.ts",
+					format: "sd",
+					filter: (token) => token.filePath !== "tokens/global.json",
+				},
+			],
+		},
+	},
+});
+```
+
+Now we can transform our tokens using a line of code.
+
+```ts
+StyleDictionary.buildAllPlatforms();
+```
+
+Here are the initial Tokens Studio's tokens.
+
+```json
+{
+	"fontFamilies": {
+		"ibm-plex-sans": {
+			"value": "IBM Plex Sans",
+			"type": "fontFamilies"
+		}
+	}
+}
+```
+
+And this is the transformed one. you will notice that it constructs the name to kebab-case. This is due to we are using Style Dictionary pre-defined transforms. `attribute/cti`[^2] will add an attribute object based on the location of the token and `name/cti/kebab` [^3] will create a kebab case name based on the attribute object.
+
+```json
+{
+	"value": "IBM Plex Sans",
+	"type": "fontFamilies",
+	"filePath": "tokens/semantic/typography.json",
+	"isSource": true,
+	"original": { "value": "IBM Plex Sans", "type": "fontFamilies" },
+	"name": "font-families-ibm-plex-sans",
+	"attributes": { "category": "font-families", "type": "ibm-plex-sans" },
+	"path": ["font-families", "ibm-plex-sans"]
+}
+```
+
+### Transform SD tokens to TailwindCSS preset
+
+At this stage, it's time to transform the transformed SD tokens to the TailwindCSS preset. The official way of doing so is to generate a bunch of CSS variables and use TailwindCSS CLI to transpile the variables to CSS. But the result file will be extra large and it's hard to reason through it when it comes to debugging the style.
+
+So I decide to change the system a bit. Using the SD tokens to generate a TailwindCSS preset which we can digest or override in all our frontend projects.
+
+Currently, we didn't aggressively transform all the tokens but a preset of tokens. At first glance, this may seem limited. But in the end, this makes our exported TailwindCSS preset stable. We manually add what we need and won't affect by the designers. At the same time, designers can do whatever suit their need without being afraid to break something on production (For example, they can create a bunch of experimenting token without polluting the TailwindCSS preset)
+
+Here is the list that we are transforming:
+
+- color
+- boxShadow
+- typography
+- borderWidth
+- opacity
+- borderRadius
+- spacing
+- fontFamilies
+
+When it comes to the typography there have several caveats that you need to be noticed.
+
+- Figma store the fontStyle property like Italic in the fontWeight field. And Tokens Studio makes it into the generated tokens. So we need to have logic to convert them to numerous fontWeight and fontStyle
+- Figma stores fontTransform properties like uppercase and lowercase in the textCase field. So does the Tokens Studio generated tokens. We need to transform them into textTransform property.
+- Figma stores textIndent property in the paragraphIndent field. We need to transform it into textIndent property
+- Figma stores an extra paragraphIndent field that didn't do anything to CSS, we need to remove it.
+
+Here is the full code.
+
+```ts
+import { tokens } from "../dist/semantic/sd-tokens";
+import fs from "fs/promises";
+import path from "path";
+import { TypographyValue } from "./type";
+
+async function main() {
+	const semanticColours = tokens.filter(
+		(e) => e.type === "color" && e.filePath === "tokens/semantic/colour.json"
+	);
+	const semanticBoxShadow = tokens.filter(
+		(e) => e.type === "boxShadow" && e.filePath === "tokens/semantic/colour.json"
+	);
+
+	const borderWidth = tokens.filter((e) => e.type === "borderWidth");
+	const borderWitdhString = borderWidth
+		.map((e) => `"${e.name.split("-")[2]}": "${e.value}"`)
+		.join(",\n");
+
+	const opacity = tokens.filter((e) => e.type === "opacity");
+	const opacityString = opacity.map((e) => `"${e.name.split("-")[2]}": "${e.value}"`).join(",\n");
+
+	const spacing = tokens.filter((e) => e.type === "spacing");
+	const spacingString = spacing.map((e) => `"${e.name.split("-")[2]}": "${e.value}"`).join(",\n");
+
+	const borderRadius = tokens.filter((e) => e.type === "borderRadius");
+	const borderRadiusString = borderRadius
+		.map((e) => `"${e.name.split("-")[1]}": "${e.value}"`)
+		.join(",\n");
+
+	// The name of the token will look like font-families-ibm-plex-sans and
+	// we only need ibm-plex-sans
+
+	const fontFamilies = tokens.filter((e) => e.type === "fontFamilies");
+	const fontFamiliesString = fontFamilies
+		.map((e) => `"${e.name.replace("font-families-", "")}": "${e.value}"`)
+		.join(",\n");
+
+	const typography = tokens.filter((e) => e.type === "typography");
+	const typographyUtility = typography.map((e) => {
+		const name = e.name;
+		const value = e.value as TypographyValue;
+		const textCase = value.textCase;
+		const paragraphIndent = value.paragraphIndent;
+
+		if (value.fontWeight === "Italic") {
+			return `".${name}": ${JSON.stringify({
+				...value,
+				fontStyle: "italic",
+				fontWeight: 400,
+				textTransform: textCase,
+				textCase: undefined,
+				textIndent: paragraphIndent,
+				paragraphIndent: undefined,
+				paragraphSpacing: undefined,
+			})}`;
+		}
+
+		if (value.fontWeight === "Medium Italic") {
+			return `".${name}": ${JSON.stringify({
+				...value,
+				fontStyle: "italic",
+				fontWeight: 500,
+				textTransform: textCase,
+				textCase: undefined,
+				textIndent: paragraphIndent,
+				paragraphIndent: undefined,
+				paragraphSpacing: undefined,
+			})}`;
+		}
+
+		if (value.fontWeight === "SemiBold Italic") {
+			return `".${name}": ${JSON.stringify({
+				...value,
+				fontStyle: "italic",
+				fontWeight: 600,
+				textTransform: textCase,
+				textCase: undefined,
+				textIndent: paragraphIndent,
+				paragraphIndent: undefined,
+				paragraphSpacing: undefined,
+			})}`;
+		}
+
+		if (value.fontWeight === "Bold Italic") {
+			return `".${name}": ${JSON.stringify({
+				...value,
+				fontStyle: "italic",
+				fontWeight: 700,
+				textTransform: textCase,
+				textCase: undefined,
+				textIndent: paragraphIndent,
+				paragraphIndent: undefined,
+				paragraphSpacing: undefined,
+			})}`;
+		}
+
+		if (value) {
+			return `".${name}": ${JSON.stringify({
+				...value,
+				textTransform: textCase,
+				textCase: undefined,
+				textIndent: paragraphIndent,
+				paragraphIndent: undefined,
+				paragraphSpacing: undefined,
+			})}`;
+		}
+	});
+
+	const configuration = `module.exports = {
+    theme: {
+      extend: {
+        colors: {
+          ${semanticColours.map((e) => `"${e.name}": "var(--${e.name})"`).join(",\n")}
+        },
+        boxShadow: {
+          ${semanticBoxShadow
+						.map((e) => `"${e.name.split("-")[1]}": "var(--${e.name})"`)
+						.join(",\n")}
+        },
+        fontFamily: {${fontFamiliesString}},
+        borderWidth: {${borderWitdhString}},
+        opacity: {${opacityString}},
+        spacing: {${spacingString}},
+        borderRadius: {${borderRadiusString}}
+      }
+    },
+    plugins: [
+      ({ addUtilities }) => {
+        addUtilities({${typographyUtility.join(",\n")}})
+      },
+    ],
+  }`;
+
+	try {
+		await fs.writeFile(path.resolve("dist/tailwind.config.cjs"), configuration);
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+main();
+```
+
+The TailwindCSS preset will look like the below.(I reduced its size)
+
+```js
+module.exports = {
+	theme: {
+		extend: {
+			colors: {
+				"semantic-bg-primary": "var(--semantic-bg-primary)",
+			},
+			boxShadow: {
+				xxs: "var(--shadow-xxs-shadow)",
+			},
+			fontFamily: { "ibm-plex-sans": "IBM Plex Sans" },
+			borderWidth: {
+				none: "0px",
+			},
+			opacity: {
+				0: "0%",
+			},
+			spacing: {
+				none: "0px",
+			},
+			borderRadius: {
+				none: "0px",
+			},
+		},
+	},
+	plugins: [
+		({ addUtilities }) => {
+			addUtilities({
+				".product-headings-heading-1": {
+					fontFamily: "IBM Plex Sans",
+					fontWeight: 700,
+					lineHeight: "32px",
+					fontSize: "28px",
+					letterSpacing: "0rem",
+					textDecoration: "none",
+					textTransform: "none",
+					textIndent: "0px",
+				},
+			});
+		},
+	],
+};
+```
+
+### Transform Tokens Studio tokens to CSS variables
+
+As you can see, most of the color-related styles like `color` and `boxShadow` are using CSS variables as their value like `--semantic-bg-primary`. Here we will transform additional CSS variables files to enable the light/dark mode style switch. (You can do other things here, instead of light/dark, you could use the same method to set up a switch like desktop/mobile.)
+
+First, we will come back to Tokens Studio tokens and use Style Dictionary directly to transform them into CSS variables files.
+
+```ts
+function generateTheme(themes: { themeName: string; themePath: string }[]) {
+	for (const theme of themes) {
+		const StyleDictionary = StyleDictionaryPackage.extend({
+			source: ["tokens/global.json", theme.themePath],
+			format: {
+				cssVariables: ({ dictionary }) => {
+					const colours = dictionary.allTokens.filter((e) => e.type === "color");
+					const colourCSS = colours.map((e) => `--${e.name}: ${e.value};`).join("\n");
+
+					const boxShadows = dictionary.allTokens.filter((e) => e.type === "boxShadow");
+					const boxShadowCSS = boxShadows
+						.map(
+							(e) =>
+								`--${e.name}: ${e.value.x}px ${e.value.y}px ${e.value.blur}px ${e.value.spread}px ${e.value.color};`
+						)
+						.join("\n");
+
+					return `[data-theme="${theme.themeName}"] {
+            ${colourCSS}
+            ${boxShadowCSS}
+          }`;
+				},
+			},
+			platforms: {
+				tailwind: {
+					transforms: ["attribute/cti", "name/cti/kebab", "sizes/px"],
+					buildPath: "dist/theme/",
+					files: [
+						{
+							destination: `${theme.themeName}.css`,
+							format: "cssVariables",
+							filter: (token) => token.filePath !== "tokens/global.json",
+						},
+					],
+					options: {
+						log: "error",
+					},
+				},
+			},
+		});
+
+		StyleDictionary.buildAllPlatforms();
+	}
+}
+```
+
+Take a close look at the format section, we only pick up color and boxShadow values and transform them into the style of CSS variables. The result will look like this.
+
+```css
+/* /theme/root.css */
+:root {
+	--semantic-bg-primary: #ffffff;
+}
+
+/* /theme/light.css */
+[data-theme="light"] {
+	--semantic-bg-primary: #ffffff;
+}
+
+/* /theme/dark.css */
+[data-theme="dark"] {
+	--semantic-bg-primary: #23272f;
+}
+```
+
+Then we can import these CSS files into the root of our app and use this button to switch the style.
+
+```ts
+<button
+	className="font-sans text-semantic-fg-primary"
+	onClick={() => {
+		const currentTheme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
+
+		if (currentTheme === "dark") {
+			document.documentElement.setAttribute("data-theme", "light");
+			localStorage.setItem("theme", "light");
+		} else {
+			document.documentElement.setAttribute("data-theme", "dark");
+			localStorage.setItem("theme", "dark");
+		}
+	}}
+>
+	Theme switch
+</button>
+```
+
+## Caveats
+
+### Figma's FontWeight is represented as string
+
+Not only that, it stores the FontTransform property in the FontWeight too. We need a transformer to transform the normal to 400.
+
+```ts
+StyleDictionaryPackage.registerTransform({
+	name: "fontWeight",
+	type: "value",
+	matcher: function (prop) {
+		// You can be more specific here if you only want 'em' units for font sizes
+		return ["fontWeights"].includes(prop.original.type || "");
+	},
+	transformer: function (prop) {
+		const fontWeightMap = {
+			thin: 100,
+			extralight: 200,
+			ultralight: 200,
+			extraleicht: 200,
+			light: 300,
+			leicht: 300,
+			normal: 400,
+			regular: 400,
+			buch: 400,
+			medium: 500,
+			kraeftig: 500,
+			kräftig: 500,
+			semibold: 600,
+			demibold: 600,
+			halbfett: 600,
+			bold: 700,
+			dreiviertelfett: 700,
+			extrabold: 800,
+			ultabold: 800,
+			fett: 800,
+			black: 900,
+			heavy: 900,
+			super: 900,
+			extrafett: 900,
+		};
+
+		const value = prop.value as string | undefined | number;
+		if (value === undefined) {
+			return value;
+		}
+
+		const mapped = Object.entries(fontWeightMap).filter(
+			([key]) => key === value.toString().toLocaleLowerCase()
+		);
+
+		if (mapped[0]) {
+			return mapped[0][1];
+		}
+
+		return value;
+	},
+});
+```
+
+### Figma's letter spacing is using %
+
+To make it work, we need to transform letterSpacing from % to rem or pixel.
+
+```ts
+StyleDictionaryPackage.registerTransform({
+	name: "letterSpacing",
+	type: "value",
+	matcher: function (prop) {
+		// You can be more specific here if you only want 'em' units for font sizes
+		return ["letterSpacing"].includes(prop.original.type || "");
+	},
+	transformer: function (prop) {
+		const value = prop.value as string;
+		if (value === undefined) {
+			return value;
+		}
+
+		if (value.includes("%")) {
+			const percentage = parseFloat(value);
+			if (Math.sign(percentage) === -1) {
+				return "-" + (Math.abs(percentage) / 100).toString() + "rem";
+			} else {
+				return (percentage / 100).toString() + "rem";
+			}
+		} else {
+			return value + "px";
+		}
+	},
+});
+```
+
+## Summary
+
+Overall, I think this journey is far more complicated than I initially thought. Transforming Tokens Studio's tokens to CSS files is easy. But to transform it to TailwindCSS compatible preset is not easy. There are lots of discrepancies between Figma and CSS properties. Even though Figma will claim they are platform Agnostic so it will come up with its style name to fit into various platforms. Still, it's hard to work from the browser perspective.
+
+If you want to look into the source code directly, you can find it here[^4].
+
+[^1]: [Tokens Studio - adding units](https://docs.tokens.studio/tokens/using-math)
+[^2]: [Style Dictionary - attribute/cti](https://amzn.github.io/style-dictionary/#/transforms?id=attributecti)
+[^3]: [Style Dictionary - name/cti/kebab](https://amzn.github.io/style-dictionary/#/transforms?id=namectikebab)
+[^4]: [Instill AI - design tokens](https://github.com/instill-ai/design-system/tree/main/packages/design-tokens)
