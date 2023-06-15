@@ -18,6 +18,7 @@ const { bgColor, ...meta } = Astro.props as Props;
 		<HeadSeo {...meta} />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>{meta.title}</title>
 	</head>
