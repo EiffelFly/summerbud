@@ -7,7 +7,7 @@ lastModified: "2023-01-13T08:00:00"
 description: "這篇文章分享了許多我在 2022 年學到的概念、心智框架以及我如何應用實作他們。"
 featureImg: "/1885-sea-and-cliffs.jpeg"
 featureImgAlt: "Sea and Cliffs, 1885, Auguste Renoir"
-featureImgSource: "hhttps://www.metmuseum.org/art/collection/search/459111"
+featureImgSource: "https://www.metmuseum.org/art/collection/search/459111"
 locale: "zh-TW"
 ---
 
