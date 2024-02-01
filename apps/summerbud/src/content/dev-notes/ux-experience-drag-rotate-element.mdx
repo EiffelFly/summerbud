@@ -1,0 +1,143 @@
+---
+title: "UX experience: Drag and rotate handler"
+slug: "ux-experience-drag-and-rotate-handler"
+tags: ["programming", "CSS", "user-experience", "user-experience-experiment"]
+publishedAt: "2024-02-01T08:00:00"
+lastModified: "2024-02-01T08:00:00"
+description: "A UX experience experiment about drag and rotate handler"
+featureImg: ""
+featureImgAlt: ""
+featureImgSource: ""
+locale: "en-US"
+---
+
+import { MdxShowcaseWrapper, DragRotateMK1, DragRotateMK2, DragRotateMK3, DragRotateMK4 } from "../../components";
+
+<MdxShowcaseWrapper alt="A square object with a correct rotate handler">
+	<DragRotateMK4 client:only />
+</MdxShowcaseWrapper>
+
+## Preface
+
+I have been working on my side project for several days. I encountered a problem with the rotate handler. For some reason, I can not make it work on the `reactflow` endless canvas. The problem seemed to be rooted in how I was handling rotation, prompting me to take a step back and revisit the fundamentals, opting to build the experience without relying on any external libraries.
+
+## Termology
+
+- **Rotate handler**: A handler that can rotate the element. You need to click, hold and drag the handler to rotate the element.
+
+## Lessons learned
+
+### Put the right event handler
+
+This is the first version of the implementation, the shape of the function is there. 
+
+- Activate isDragging when mousedown and deactivate it when mouseup
+- Calculate the angle
+    - Only calculate this when the handler isDragging
+    - Get the object rotation origin (It’s the center of the object on this case)
+    - Get the mouse position
+    - Calculate the radian with this function `Math.atan2(mousePos.y - origin.y, mousePos.x - origin.x)`
+    - Calculate the angle with this function `angle = (rad * 180) / Math.PI`
+    - Transform the whole object `transform: rotate(${rotation()}deg)`
+
+<MdxShowcaseWrapper alt="The event listener is wrongly allocated, cause you can never disable isDragging state anymore">
+	<DragRotateMK1 client:only />
+</MdxShowcaseWrapper>
+
+The calculation will get activated on the user first click and drag. But due to the mouseup event is on the rotate handler, every time user’s mouse move into the handler, the calculation kicks in then the handler’s position is updated. So the user can not trigger the mouseup event to disable the isDragging state anymore. It becomes an endless loop. 
+
+Here is the example after I put the mouseup event listener on the window object. But the mousemove event is still on the handler, so you can see that the square will only rotate on the first click and drag.
+
+<MdxShowcaseWrapper alt="With mouseup event on the window object and mousemove event on the handler">
+	<DragRotateMK2 client:only />
+</MdxShowcaseWrapper>
+
+Here is the example after I put the mousemove event listener on the window object. 
+
+<MdxShowcaseWrapper alt="With both mouseup and mousemove event on the window object">
+	<DragRotateMK3 client:only />
+</MdxShowcaseWrapper>
+
+### Calculate the initial angle
+An additional challenge emerged as an odd gap between the mouse and the handler. I found out that is due to I didn’t calculate the initial angle correctly. Since the rotate handler was positioned at the bottom right, the correct initial angle should be -45 degrees.
+
+Here is the final result.
+
+<MdxShowcaseWrapper alt="Working correctly with right event listener and calculation">
+	<DragRotateMK4 client:only />
+</MdxShowcaseWrapper>
+
+## The code
+
+```tsx
+export function DragRotateMK4() {
+	let targetRef: HTMLDivElement | undefined;
+
+	const [isDragging, setIsDragging] = createSignal(false);
+	const [rotation, setRotation] = createSignal(0);
+
+	createEffect(() => {
+		function onMouseUp() {
+			console.log("hehehe");
+			setIsDragging(false);
+		}
+
+		function onMouseMove(e: MouseEvent) {
+			if (!isDragging() || !targetRef) return;
+			const rect = targetRef.getBoundingClientRect();
+
+			const origin = {
+				x: rect.left + rect.width / 2,
+				y: rect.top + rect.height / 2,
+			};
+
+			const mousePos = {
+				x: e.clientX,
+				y: e.clientY,
+			};
+
+			const rad = Math.atan2(mousePos.y - origin.y, mousePos.x - origin.x);
+
+			const angle = (rad * 180) / Math.PI;
+
+			setRotation(angle - 45);
+		}
+
+		addEventListener("mouseup", onMouseUp);
+		addEventListener("mousemove", onMouseMove);
+
+		onCleanup(() => {
+			removeEventListener("mouseup", onMouseUp);
+			removeEventListener("mousemove", onMouseMove);
+		});
+	});
+
+	return (
+		<div
+			style={{
+				transform: `rotate(${rotation()}deg)`,
+			}}
+			ref={targetRef!}
+			class="flex relative w-[200px] h-[200px] border border-slate-500"
+		>
+			<div
+				onMouseDown={() => {
+					setIsDragging(true);
+				}}
+				onMouseUp={() => {
+					setIsDragging(false);
+				}}
+				class="absolute bottom-0 right-0 cursor-alias translate-x-full translate-y-full rounded-full w-3 h-3 bg-slate-600"
+			></div>
+		</div>
+	);
+}
+```
+
+## Future experiment
+
+In Figma, the cursor icon will changes depends on the Quadrant of the mouse. I will try to implement this in the future.
+
+<video loop autoplay client:only>
+  <source src="/ux-experience-figma-drag-rotate.mp4" type="video/mp4" />
+</video>

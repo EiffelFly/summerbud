@@ -6,3 +6,5 @@ export * from "./Link";
 export * from "./MdxImage";
 export * from "./MdxShowcaseWrapper";
 export * from "./SummerbudLogo";
+
+export * from "./drag-rotate";

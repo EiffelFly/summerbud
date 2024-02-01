@@ -9,7 +9,7 @@ export const MdxShowcaseWrapper = (props: MdxShowcaseWrapperProps) => {
 	return (
 		<div class="flex flex-col border border-gray-700">
 			<div class="w-full flex min-h-[360px]">
-				<div class="w-full my-auto">{props.children}</div>
+				<div class="w-full flex items-center justify-center">{props.children}</div>
 			</div>
 			<div class="p-2 border-t border-gray-700">
 				<span class="text-sm text-gray-400">{props.alt}</span>
