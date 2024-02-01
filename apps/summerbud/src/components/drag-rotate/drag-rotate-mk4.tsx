@@ -54,9 +54,6 @@ export function DragRotateMK4() {
 				onMouseDown={() => {
 					setIsDragging(true);
 				}}
-				onMouseUp={() => {
-					setIsDragging(false);
-				}}
 				class="absolute bottom-0 right-0 cursor-alias translate-x-full translate-y-full rounded-full w-3 h-3 bg-slate-600"
 			></div>
 		</div>
