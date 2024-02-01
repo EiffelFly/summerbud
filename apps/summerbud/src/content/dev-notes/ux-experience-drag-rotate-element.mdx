@@ -36,9 +36,9 @@ This is the first version of the implementation, the shape of the function is th
     - Only calculate this when the handler isDragging
     - Get the object rotation origin (It’s the center of the object on this case)
     - Get the mouse position
-    - Calculate the radian with this function `Math.atan2(mousePos.y - origin.y, mousePos.x - origin.x)`
+    - Calculate the radian with this function `rad = Math.atan2(mousePos.y - origin.y, mousePos.x - origin.x)`
     - Calculate the angle with this function `angle = (rad * 180) / Math.PI`
-    - Transform the whole object `transform: rotate(${rotation()}deg)`
+    - Transform the whole object `transform: rotate(${angle}deg)`
 
 <MdxShowcaseWrapper alt="The event listener is wrongly allocated, cause you can never disable isDragging state anymore">
 	<DragRotateMK1 client:only />
@@ -96,8 +96,10 @@ export function DragRotateMK4() {
 				y: e.clientY,
 			};
 
+      // Calculate the rad
 			const rad = Math.atan2(mousePos.y - origin.y, mousePos.x - origin.x);
 
+      // Calculate the angle
 			const angle = (rad * 180) / Math.PI;
 
 			setRotation(angle - 45);
