@@ -12,6 +12,7 @@ const collection = defineCollection({
 		featureImgSource: z.string(),
 		locale: z.string(),
 		tags: z.array(z.string()),
+		draft: z.boolean().optional(),
 	}),
 });
 // 3. Export a single `collections` object to register your collection(s)

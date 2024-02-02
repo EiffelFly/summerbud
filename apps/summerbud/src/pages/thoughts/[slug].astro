@@ -6,7 +6,9 @@ import { SITE } from "../../site-config";
 import type { SEO } from "../../type";
 
 export async function getStaticPaths() {
-	const devNotePosts = await getCollection("thoughts");
+	const devNotePosts = await getCollection("thoughts", ({ data }) => {
+		return data.draft !== false;
+	});
 
 	return devNotePosts.map((post) => {
 		return {

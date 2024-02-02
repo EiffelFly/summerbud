@@ -1,0 +1,23 @@
+---
+import MainLayout from "../layouts/main.astro";
+import { SlackEditableMk2 } from "../components";
+import type { SEO } from "../type";
+import { SITE } from "../site-config";
+
+const pageMeta: SEO = {
+	title: "Playground",
+	locale: "zh-TW",
+	description: "This is Summerbud's Playground",
+	image: null,
+	publishedAt: "",
+	tags: "archive",
+	canonicalURL: `${SITE.domain}/playground`,
+	text: "This is Summerbud's Playground",
+};
+---
+
+<MainLayout {...pageMeta}>
+	<div class="flex w-full items-center justify-center">
+		<SlackEditableMk2 client:only />
+	</div>
+</MainLayout>

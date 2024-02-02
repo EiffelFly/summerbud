@@ -8,3 +8,4 @@ export * from "./MdxShowcaseWrapper";
 export * from "./SummerbudLogo";
 
 export * from "./drag-rotate";
+export * from "./slack-editable";
