@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layouts/main.astro";
-import { SlackEditableMk2 } from "../components";
+import { SlackEditableMk3 } from "../components";
 import type { SEO } from "../type";
 import { SITE } from "../site-config";
 
@@ -18,6 +18,6 @@ const pageMeta: SEO = {
 
 <MainLayout {...pageMeta}>
 	<div class="flex w-full items-center justify-center">
-		<SlackEditableMk2 client:only />
+		<SlackEditableMk3 client:only />
 	</div>
 </MainLayout>

@@ -65,10 +65,10 @@ export function SlackEditableMk1() {
 
 					setText(text);
 				}}
-				class="p-4 text-slate-100 whitespace-pre-wrap w-[400px] min-h-[200px] border border-slate-500"
+				class="p-4 text-slate-100 whitespace-pre-wrap w-[600px] min-h-[200px] border border-slate-500"
 			></div>
 			<p class="text-slate-200 font-medium text-lg">Value</p>
-			<div class="text-slate-300 w-[400px] break-words font-medium text-lg">
+			<div class="text-slate-300 w-[600px] break-words font-medium text-lg">
 				{JSON.stringify(text())}
 			</div>
 			{hinting() ? (
@@ -77,7 +77,7 @@ export function SlackEditableMk1() {
 						top: `${hintPositionInContainer().top}px`,
 						left: `${hintPositionInContainer().left}px`,
 					}}
-					class="flex absolute w-[200px] h-[50px] bg-slate-600"
+					class="flex absolute w-[300px] h-[150px] bg-slate-600"
 				></div>
 			) : null}
 		</div>
