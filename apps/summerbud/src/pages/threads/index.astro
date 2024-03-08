@@ -1,0 +1,32 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import { getCollection } from "astro:content";
+import { ByYearPostList, PostListHeader } from "../../components";
+import { getByYearPosts } from "../../utils";
+import type { SEO } from "../../type";
+import { SITE } from "../../site-config";
+
+const threadsPosts = await getCollection("threads");
+const byYearPosts = getByYearPosts(threadsPosts);
+
+const pageMeta: SEO = {
+	title: "threads",
+	locale: "zh-TW",
+	description: "This is Summerbud's threads archive",
+	image: null,
+	publishedAt: "",
+	tags: "archive",
+	canonicalURL: `${SITE.domain}/threads`,
+	text: "This is Summerbud's threads archive",
+};
+---
+
+<MainLayout {...pageMeta}>
+	<PostListHeader
+		title="threads"
+		description={`I maintain a collection of brief and spontaneous thoughts here, most 
+		of which are under 1000 words. They represent my initial thought processes 
+		and memos that eventually contribute to a broader perspective.`}
+	/>
+	<ByYearPostList byYearPosts={byYearPosts} />
+</MainLayout>

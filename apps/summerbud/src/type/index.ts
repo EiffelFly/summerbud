@@ -3,7 +3,8 @@ import type { CollectionEntry } from "astro:content";
 export type BudPost =
 	| CollectionEntry<"dev-notes">
 	| CollectionEntry<"thoughts">
-	| CollectionEntry<"projects">;
+	| CollectionEntry<"projects">
+	| CollectionEntry<"threads">;
 
 export type ByYearPost = {
 	year: number;

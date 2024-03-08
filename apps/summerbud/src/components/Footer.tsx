@@ -12,6 +12,9 @@ export const Footer = () => {
 						<Link dest="/thoughts" className="text-left">
 							thoughts
 						</Link>
+						<Link dest="/threads" className="text-left">
+							threads
+						</Link>
 						<Link dest="/dev-notes" className="text-left">
 							dev-notes
 						</Link>
