@@ -8,7 +8,8 @@ import { SITE } from "../site-config";
 
 const devNotePosts = await getCollection("dev-notes");
 const thoughtPosts = await getCollection("thoughts");
-const posts = [...devNotePosts, ...thoughtPosts];
+const threadPosts = await getCollection("threads");
+const posts = [...devNotePosts, ...thoughtPosts, ...threadPosts];
 const byYearPosts = getByYearPosts(posts);
 
 const pageMeta: SEO = {

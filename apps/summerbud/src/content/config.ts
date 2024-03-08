@@ -19,4 +19,5 @@ export const collections = {
 	thoughts: collection,
 	"dev-notes": collection,
 	projects: collection,
+	threads: collection,
 };

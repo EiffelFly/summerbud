@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../../layouts/main.astro";
 import { getCollection } from "astro:content";
-import { ByYearPostList } from "../../components";
+import { ByYearPostList, PostListHeader } from "../../components";
 import { getByYearPosts } from "../../utils";
 import type { SEO } from "../../type";
 import { SITE } from "../../site-config";
@@ -23,5 +23,11 @@ const pageMeta: SEO = {
 ---
 
 <MainLayout {...pageMeta}>
+	<PostListHeader
+		title="thoughts"
+		description={`
+			I share my detailed thoughts here, mainly on technology, AI, knowledge management, 
+			and the complexity of the internet. I hope you find something interesting.`}
+	/>
 	<ByYearPostList byYearPosts={byYearPosts} />
 </MainLayout>

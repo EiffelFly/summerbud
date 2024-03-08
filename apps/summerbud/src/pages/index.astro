@@ -61,7 +61,9 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 								y="0%"
 								width="100%"
 								height="100%"
-								result="turbulence"></feTurbulence>
+								result="turbulence"
+							>
+							</feTurbulence>
 							<feSpecularLighting
 								surfaceScale={surfaceScale}
 								specularConstant="2.5"
@@ -78,14 +80,14 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 									<animate
 										attributeName="azimuth"
 										values="25;180;25"
-										dur="20s"
+										dur="10s"
 										repeatCount="indefinite"
 									>
 									</animate>
 									<animate
 										attributeName="elevation"
 										values="1;200;1"
-										dur="20s"
+										dur="10s"
 										repeatCount="indefinite"
 									>
 									</animate>
@@ -103,13 +105,29 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 					>
 					</rect>
 				</svg>
-				<a
-					rel="prefetch"
-					href="/archive"
-					class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline ml-auto"
-				>
-					Enter
-				</a>
+				<div class="justify-end flex flex-row gap-x-4">
+					<a
+						rel="prefetch"
+						href="/thoughts"
+						class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline"
+					>
+						thoughts
+					</a>
+					<a
+						rel="prefetch"
+						href="/threads"
+						class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline"
+					>
+						threads
+					</a>
+					<a
+						rel="prefetch"
+						href="/dev-notes"
+						class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline"
+					>
+						dev-notes
+					</a>
+				</div>
 			</div>
 			<div class="absolute flex bottom-10 left-10 h-10">
 				<p class="my-auto font-sans text-sm font-normal text-gray-300">&copy; 2023 summerbud</p>
