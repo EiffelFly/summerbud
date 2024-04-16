@@ -16,7 +16,8 @@ const surfaceScale = getRandomInt(1, 100);
 
 const devNotePosts = await getCollection("dev-notes");
 const thoughtPosts = await getCollection("thoughts");
-const posts = [...devNotePosts, ...thoughtPosts];
+const threadPosts = await getCollection("threads");
+const posts = [...devNotePosts, ...thoughtPosts, ...threadPosts];
 
 const esPosts = posts.filter((e) => e.data.locale === "en-US");
 const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
@@ -141,7 +142,7 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 			</div>
 			<div class="absolute flex h-10 top-10 right-10">
 				<p class="my-auto font-sans text-sm font-normal text-gray-300 text-right">
-					{`${zhPosts.length}/${esPosts.length} = zh/es`}
+					{`${zhPosts.length}/${esPosts.length} = zh-tw/en`}
 				</p>
 			</div>
 			<div class="absolute flex h-10 bottom-10 right-10">
