@@ -24,7 +24,7 @@ const { bgColor, ...meta } = Astro.props as Props;
 	</head>
 	<body>
 		<div class={cn("flex flex-col min-h-screen p-0", bgColor ? bgColor : "bg-gray-900")}>
-			<div class="w-full flex-1 max-w-[800px] mx-auto py-40 px-10 lg:px-0">
+			<div class="w-full flex-1 max-w-[800px] mx-auto py-40 px-4 sm:px-10 lg:px-0">
 				{
 					meta.image ? (
 						<FeatureImage
