@@ -12,6 +12,7 @@ const collection = defineCollection({
 		featureImgSource: z.string(),
 		locale: z.string(),
 		tags: z.array(z.string()),
+		canonicalURL: z.string().optional(),
 	}),
 });
 // 3. Export a single `collections` object to register your collection(s)
@@ -20,4 +21,5 @@ export const collections = {
 	"dev-notes": collection,
 	projects: collection,
 	threads: collection,
+	"connecting-dots": collection,
 };

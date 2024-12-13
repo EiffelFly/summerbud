@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layouts/main.astro";
+import { getCollection } from "astro:content";
+import { ByYearPostList, PostListHeader } from "../components";
+import { getByYearPosts } from "../utils";
+import type { SEO } from "../type";
+import { SITE } from "../site-config";
+
+const connectingDotsPosts = await getCollection("connecting-dots");
+const byYearPosts = getByYearPosts(connectingDotsPosts);
+
+const pageMeta: SEO = {
+	title: "Connecting Dots",
+	locale: "en-US",
+	description: "This is Summerbud's connecting dots",
+	image: null,
+	publishedAt: "",
+	tags: "archive",
+	canonicalURL: `${SITE.domain}/connecting-dots`,
+	text: "This is Summerbud's connecting dots",
+};
+---
+
+<MainLayout {...pageMeta}>
+	<PostListHeader
+		title="Connecting Dots"
+		description={`Connecting Dots is a monthly newsletter I write for people who are building things they value and genuinely believe can move the needle forward. I aim to be a companion for them.`}
+	/>
+	<ByYearPostList byYearPosts={byYearPosts} />
+</MainLayout>

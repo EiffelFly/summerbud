@@ -15,9 +15,10 @@ export const ByYearPostList = (props: ByYearPostListProps) => {
 					<div class="flex flex-col gap-y-5">
 						{e.posts.map((post) => (
 							<a
-								href={`/${post.collection}/${post.slug}`}
-								rel="prefetch"
+								href={post.data.canonicalURL ?? `/${post.collection}/${post.slug}`}
 								class="flex flex-col gap-y-2 font-sans text-base font-normal"
+								target={post.data.canonicalURL ? "_blank" : undefined}
+								rel={post.data.canonicalURL ? "noopener noreferrer" : "prefetch"}
 							>
 								<div class="flex flex-row gap-x-2">
 									<div class="flex px-4 grow-0 shrink-0 border border-gray-700">
