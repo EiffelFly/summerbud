@@ -4,7 +4,8 @@ export type BudPost =
 	| CollectionEntry<"dev-notes">
 	| CollectionEntry<"thoughts">
 	| CollectionEntry<"projects">
-	| CollectionEntry<"threads">;
+	| CollectionEntry<"threads">
+	| CollectionEntry<"connecting-dots">;
 
 export type ByYearPost = {
 	year: number;
