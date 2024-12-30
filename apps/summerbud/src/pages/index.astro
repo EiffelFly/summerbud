@@ -17,7 +17,8 @@ const surfaceScale = getRandomInt(1, 100);
 const devNotePosts = await getCollection("dev-notes");
 const thoughtPosts = await getCollection("thoughts");
 const threadPosts = await getCollection("threads");
-const posts = [...devNotePosts, ...thoughtPosts, ...threadPosts];
+const connectingDotsPosts = await getCollection("connecting-dots");
+const posts = [...devNotePosts, ...thoughtPosts, ...threadPosts, ...connectingDotsPosts];
 
 const esPosts = posts.filter((e) => e.data.locale === "en-US");
 const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
@@ -106,7 +107,7 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 					>
 					</rect>
 				</svg>
-				<div class="justify-end flex flex-row gap-x-4">
+				<div class="justify-end flex lg:flex-row flex-col gap-4">
 					<a
 						rel="prefetch"
 						href="/connecting-dots"
@@ -141,6 +142,13 @@ const zhPosts = posts.filter((e) => e.data.locale === "zh-TW");
 						class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline"
 					>
 						dev-notes
+					</a>
+					<a
+						rel="prefetch"
+						href="/archive"
+						class="font-sans text-sm font-normal text-gray-300 cursor-pointer underline"
+					>
+						archive
 					</a>
 				</div>
 			</div>
