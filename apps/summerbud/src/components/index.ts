@@ -3,6 +3,7 @@ export * from "./AppleSlider";
 export * from "./ByYearPostList";
 export * from "./Footer";
 export * from "./Link";
+export * from "./JapowdbCallout";
 export * from "./MdxImage";
 export * from "./MdxShowcaseWrapper";
 export * from "./PostListHeader";
